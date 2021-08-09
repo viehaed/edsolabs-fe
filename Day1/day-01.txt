@@ -1,1 +1,41 @@
-
+Sự khác nhau giữa tên miền (domain name) và một địa chỉ IP ?
+Những dữ liệu trên Internet được lưu trữ ở đâu ạ?
+Khi nào thì nên dùng headless browser truy cập web?
+còn công cụ nào nó giống như github nữa không?
+việc Máy chủ được đặt xa như vậy thì việc truyền tải thông tin có ổn định hay không ?
+Headless Browser là gì ?
+Cách thức hoạt động của trình duyệt web như nào ạ?
+TCP và IP có điểm khác nhau là gì và khi hoạt động web thì hai giao thức này có thể thực hiện độc lập nhau không ạ ?
+Tại sao lại ưu tiên dùng Chrome hơn là các web browser khác như microsoft egg, firefox, safari... Điểm nổi trổi hơn của Chrome so với các web browser khác?
+Tính bảo mật của trình duyệt web với thiết bị người dùng.
+Chrome có ưu điểm gì hơn so với các trình duyệt khác ?
+Các giao thức giao tiếp ngoài HTTP và sự khác biệt giữa chúng, giao thức nào hiện đang được sử dụng rộng rãi hiện nay ?
+Các thành phần của tên miền?
+HTTP và HTTPS khác nhau điểm nào?
+Sự khác nhau giữa "git pull" and "git fetch"?
+Lợi ích của headless browser ? Khi nào thì nên sử dụng headless browser
+Khi client gửi một requests đến server thì làm sao server tìm kiếm nhanh chóng nội dung để trả về requests đó cho phía client
+Cách xác định Subdomain 
+Sự khác biệt giữa URL và URI ?
+Công ty có sử dụng công cụ quản lý source code repository nào khác ngoài github không ạ ?
+So sánh public DNS và private DNS.
+Bản chất của WWW là gì và cách thức hoạt động của WWW
+Server là máy tính mà chứa webpages, sites hoặc apps. Vậy có phải máy tính đó phải chạy liên tục 24/24 không? Có phải bất kì ai sở hữu máy tính đều có thể làm máy chủ  ? Điều kiện để biến máy tính đó có thể làm máy chủ ( cấu hình máy ? dung lượng máy ? ,v..vv. ).
+Sự khác biệt giữa HTTP và TCP.
+Tại sao khi gõ địa chi trang web không cần tới www và http mà vẫn cho ra được kết quả?
+Ưu, nhược điểm về hosting của linux, window, unix?
+Nên dùng command line hay git cli? Các command line các a hay dùng nhất là gì ?
+Các Browser hiện nay đều cho phép xem mã nguồn của trang web. Vậy những hacker phát hiện ra lỗ hổng bảo mật trong trang web đó có phải từ đó không hay là một cách nào khác?
+DNS thì chỉ có một máy chủ duy nhất hay mỗi quốc gia thì có một máy chủ ? Bởi vì em thấy có rất nhiều các trang web khác nhau thì phải đòi hỏi máy chủ có bộ nhớ lưu trữ lớn
+Hosting ảnh hương như thế nào đến SEO ?
+Các anh có thể cho em biết thêm về giả mạo DNS được không ạ
+Tại vào khi vào một số trang web mặc dù bằng giao thức HTTPS nhưng vẫn bị cảnh báo là trang web không an toàn
+"Module 1:
+- Headless browser và DOM có phải là một không ? Nếu không thì 2 phần này có tương tác gì, với nhau như thế nào ?
+- 2 trang web có thể trùng địa chỉ ip nhưng khác domain name ? Vì trên thế giới có rất nhiều trang web, liệu có đủ địa chỉ ip cho mỗi trang web.
+- làm sao để sử dụng git trong khi làm việc team được tốt nhất, tránh việc conflic ?
+- có nên click vào ""Allow edits by maintainers
+"" khi tạo pull request tới upstream ?
+- khi fork repo về github cá nhân của em, người khác khi vào repositories của em cũng sẽ nhìn thấy repo edsolabs-fe, thì có ảnh hưởng gì đến khóa học hay công ty không?
+- khi chạy lệnh ""git fetch upstream"" thì phần remote origin trên máy của em có thay đổi và cập nhật theo upstream không?
+Phân biệt intranet và extranet? công ty có đang sử dụng một kiểu tương tự không
