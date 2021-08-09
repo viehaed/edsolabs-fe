@@ -1,0 +1,13 @@
+Module 1 - Định Hướng - Internet/web
+1.Khi client gửi một requests đến server thì làm sao server tìm kiếm nhanh chóng nội dung để trả về requests đó cho phía client
+2. Sự khác nhau giữa web và internet
+
+Module 1 - Định Hướng - Web Browsers
+1.Sự khác biệt giữa URL và URI ?
+
+Module1- Định hướng- Domain Name System(DNS)
+1. Điểm yếu của DNS là gì? Cách khắc phục và kiểm tra rò rỉ DNS bằng cách nào?
+
+Module 1 - Định hướng -  Hosting
+1. Có các cách làm để bảo mật hosting một cách hiệu quả và tránh bị tấn công?
+
