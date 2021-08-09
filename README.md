@@ -1,4 +1,4 @@
-Chào các bạn học viên khóa học FrontEnd của Edsolabs.
+Chào các bạn học viên khóa học FrontEnd của [Edsolabs](https://edsolabs.com/).
 
 Đây sẽ là kênh git chung của cả lớp để các bạn có thể nộp các bài tập hàng ngày cho các thầy cô, anh chị mentor.
 
