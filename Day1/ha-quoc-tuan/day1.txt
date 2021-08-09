@@ -1,0 +1,12 @@
+ha-quoc-tuan
+
+pull request tới branch
+
+- Headless browser và DOM có phải là một không ? Nếu không thì 2 phần này có tương tác gì, với nhau như thế nào ?
+- 2 trang web có thể trùng địa chỉ ip nhưng khác domain name ? Vì trên thế giới có rất nhiều trang web, liệu có đủ địa chỉ ip cho mỗi trang web.
+- làm sao để sử dụng git trong khi làm việc team được tốt nhất, tránh việc conflic ?
+- có nên click vào "Allow edits by maintainers
+" khi tạo pull request tới upstream ?
+- khi fork repo về github cá nhân của em, người khác khi vào repositories của em cũng sẽ nhìn thấy repo edsolabs-fe, thì có ảnh hưởng gì đến khóa học hay công ty không?
+- khi chạy lệnh "git fetch upstream" thì phần remote origin trên máy của em có thay đổi và cập nhật theo upstream không?
+
