@@ -1,0 +1,19 @@
+Tổng hợp câu hỏi:
+
+1. Bản chất của WWW là gì và cách thức hoạt động của WWW
+
+2. Tại sao khi gõ địa chi trang web không cần tới www và http mà vẫn cho ra được kết quả?
+
+3. Các Browser hiện nay đều cho phép xem mã nguồn của trang web. Vậy những hacker phát hiện ra lỗ hổng bảo mật trong 
+trang web đó có phải từ đó không hay là một cách nào khác?
+
+4. DNS thì chỉ có một máy chủ duy nhất hay mỗi quốc gia thì có một máy chủ ? Bởi vì em thấy có rất nhiều các trang web 
+khác nhau thì phải đòi hỏi máy chủ có bộ nhớ lưu trữ lớn
+
+5. Các anh có thể cho em biết thêm về giả mạo DNS được không ạ
+
+6. Tại vào khi vào một số trang web mặc dù bằng giao thức HTTPS nhưng vẫn bị cảnh báo là trang web không an toàn
+
+7. Em thấy có giới thiệu về "The 10 best web hosting services". Vậy cho em hỏi 10 web hosting đó có thể sử dụng chính nó để làm lưu trữ và duy trì website của nó không ạ hay phải sử dụng một bên thứ 3 nào nữa
+
+8. Em thấy đa số các bài giảng trên mạng và thực tế lập trình viên dùng rất nhiều command git thay vì git cli. Cho em hỏi ưu điểm về việc dùng command git ạ? 
