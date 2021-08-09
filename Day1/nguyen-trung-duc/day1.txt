@@ -1,0 +1,11 @@
+Câu hỏi day 1 :
+Module 1 :
+1.Sự khác nhau giữa URL và URI (Em có đọc doc và tra gg thì thấy 2 khái niệm này 
+giống nhau nhưng có trang thì bảo khác )
+2.Theo e đọc thì thấy DNS cơ bản là một hệ thống chuyển đổi các tên miền website 
+mà chúng ta đang sử dụng, ở dạng www.tenmien.com sang một địa chỉ IP dạng số 
+tương ứng với tên miền đó và ngược lại.Vậy cách thức nó hoạt động chuyển đổi như thế nào
+ạ ?
+3.Làm sao để làm việc với team bằng Git mà tránh được conflict ạ
+4.Việc tạo pull request có ích thế nào trong việc review code ạ ?
+Em xin cám ơn !
