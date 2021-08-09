@@ -1,0 +1,6 @@
+- Module 1 - Định hướng -  Hosting	
+        Làm thế nào để bảo mật hosting hiệu quả?
+- Module 1 - Định hướng - DNS	
+        Một domain hoạt động như thế nào?
+- Module 1 - Định hướng - Git basic	
+        Khi nào thêm 'git add .' trước 'git commit -m "" '
