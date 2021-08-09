@@ -18,6 +18,6 @@ Khóa học đi thực tiễn các kiến thức, kĩ năng để các bạn có
 - B8: Các thầy cô, anh chị mentor sẽ comment những lỗi trong bài làm của các bạn, hãy chú ý đọc comment và resolve chúng. Những bài làm đạt yêu cầu sẽ đc merge vào git chung của khóa học.
 - B9: Đầu ngày, chạy `git fetch upstream` để tiếp tục lấy những bài học mới nhất từ giảng viên và những bài chữa của các bạn học viên khác.
 Với những bước thực hiện trên, bạn đã nắm đc kha khá quy trình git trong 1 dự án thực tế.
-Nếu có câu hỏi gì cần thảo luận, trao đổi, trên github chung của cả lớp có phần hỏi đáp. Bạn có thể đưa ra vấn đề tại đây: (edsolabs-fe/discussions)[https://github.com/viehaed/edsolabs-fe/discussions]
+Nếu có câu hỏi gì cần thảo luận, trao đổi, trên github chung của cả lớp có phần hỏi đáp. Bạn có thể đưa ra vấn đề tại đây: [Góc trao đổi](https://github.com/viehaed/edsolabs-fe/discussions)
 
 *Chúc các bạn thành công! :)*
