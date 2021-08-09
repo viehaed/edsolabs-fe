@@ -1,0 +1,47 @@
+Timestamp	Họ và tên	Ngày học	Buổi học số mấy?	Câu hỏi thuộc nội dung module nào?	Nội dung câu hỏi	Trả lời
+8/7/2021 16:44:16	Trần Trí Duệ	2	3	Web	Phân biệt HTTP và HTTPS	
+8/9/2021 9:38:58	Nguyễn Văn Sơn	9/8/2021		Module 1- Định Hướng - Internet/Web	Sự khác nhau giữa Internet và World Wide Web.	"_ Inter net ( interconnected network  - mạng kết nối )
+   + Bản chất là phần cứng ( máy tính, cáp mạng, máy chủ, vệ tinh, router, .. )
+   + Hoạt động trên giao thức IP (Internet Protocol)
+    + Độc lập, có internet thì mới có www  
+    + Các máy tính được xác định trên internet qua địa chỉ IP
+_ WWW (World Wide Web) 
+   + Bản chất là phần mềm ( chữ, hình ảnh, video )
+   + Hoạt động trên giao thức HTTP ( Hyper Text Transfer Protocol) 
+   + Xác định dựa trên Url ( Uniform Resource Locator )"
+8/9/2021 9:54:18	Ngô Chung Á Âu	09/08/2021		Module 1 - Định Hướng - Internet/Web	Sự khác nhau giữa web và internet	"_Web bao gồm tất cả các trang web mà có thể xem trực tuyến trên Internet bằng thiết bị phần cứng của mình.
+_ thông qua một số trình duyệt như Mozilla Firefox, Google Chrome
+_ Truy cập vào một trang web bằng địa chỉ ip hoặc tên miền
+_ Một trang web sẽ có mục đích riêng (giáo dục, tin tức, thương mại, giải trí)"
+8/9/2021 10:15:09	Lê Việt Dũng	09/8/2021		 Module 1 - Định Hướng -  Domain Name System (DNS)	Sự khác nhau giữa tên miền (domain name) và một địa chỉ IP ?	"_ IP address (Internet protocol address) : Là một địa chỉ dạng số để 
+định danh mỗi máy tính trên mạng internet, bao gồm 4 bit (IPV4), mỗi bit cách nhau bởi 1 dấu .
+_ Domain Name là tên của một website trên internet thay thế cho địa chỉ IP (tên miền này là cố định), 
+đóng vai trò như một địa chỉ nhà để người dùng truy cập website dễ dàng hơn, bao gồm các phần cách nhau 
+bởi dấu chấm, để biểu thị các thông tin như quốc gia, loại (tổ chức, giáo dục, thuộc chính phủ gov), tên website do chủ sở hữu đăng ký, có thể bao gồm cả chữ và số"
+8/9/2021 10:18:36	Nguyễn Cao Hoàng	Day1		Module 1 - Định hướng - Internet/web	Những dữ liệu trên Internet được lưu trữ ở đâu ạ?	
+8/9/2021 10:19:03	Ngô Chung Á Âu	09/08/2021		Module 1 - Định Hướng - Web Browsers	Khi nào thì nên dùng headless browser truy cập web?	
+8/9/2021 10:21:29	nguyễn hữu ánh	8/9/2021		Định hướng git basic	còn công cụ nào nó giống như github nữa không?	git lab, Bitbucket, AWS CodeCommit,  GitBucket, Gitea,..
+8/9/2021 10:22:49	nguyễn hữu ánh	8/09/2021		Định hướng webhotting	việc Máy chủ được đặt xa như vậy thì việc truyền tải thông tin có ổn định hay không ?	"Tùy thuộc vào client ở đâu, có cách xa vị trí đặt máy chủ hay không, và tùy thuộc vào đường truyền mạng
+Ví dụ: mấy ngày đứt cáp quang tuyến quốc tế thì ở VN truy cập đi các website đặt tại nước ngoài bị chậm "
+8/9/2021 10:34:01	Trần Công Tâm	9/8/2021		Module 1 - Định Hướng - Web Browsers	Headless Browser là gì ?	
+8/9/2021 10:44:15	Lê Việt Dũng	09/8/2021		Module 1 - Định hướng web-Brower	Cách thức hoạt động của trình duyệt web như nào ạ?	
+8/9/2021 10:54:27	Trần Thị Khánh Linh	09/8/2021		Module 1 - Định hướng - Internet/web	TCP và IP có điểm khác nhau là gì và khi hoạt động web thì hai giao thức này có thể thực hiện độc lập nhau không ạ ?	
+8/9/2021 11:15:32	Đỗ Văn Huy	09/08/2021		Module 1 - Định Hướng - Web Browsers	Tại sao lại ưu tiên dùng Chrome hơn là các web browser khác như microsoft egg, firefox, safari... Điểm nổi trổi hơn của Chrome so với các web browser khác?	
+8/9/2021 11:15:47	Nguyễn Văn Sơn	9/8/2021		Module 1 - Định Hướng - Web Browsers	Tính bảo mật của trình duyệt web với thiết bị người dùng.	
+8/9/2021 11:18:54	Tạ Đức Chiến 	9/8/2021		Module 1 - Định Hướng - Web Browsers	Chrome có ưu điểm gì hơn so với các trình duyệt khác ?	
+8/9/2021 11:22:26	Trần Mạnh Quân	9/8/2021		Module 1 - Định hướng - Internet/web	Các giao thức giao tiếp ngoài HTTP và sự khác biệt giữa chúng, giao thức nào hiện đang được sử dụng rộng rãi hiện nay ?	
+8/9/2021 11:33:14	Ngô Chung Á Âu	09/08/2021		Module 1 - Định Hướng -  Domain Name System (DNS)	Các thành phần của tên miền?	"Gồm 2 phần chính : Tên + phần mở rộng ( Ví dụ: edsolabs.com => edsolabs là tên , com là phần mở rộng)
+phần mở rộng : (.vn, .com, .jp, .edu, .org, .tk, ...)"
+8/9/2021 11:38:49	Ngô Chung Á Âu	09/08/2021		Module 1 - Định hướng - HTTP/Networks	HTTP và HTTPS khác nhau điểm nào?	
+8/9/2021 11:43:32	Vũ Thị Thu Hà	09/08/2021		Module 1 - Định Hướng - Git basic	Sự khác nhau giữa "git pull" and "git fetch"?	
+8/9/2021 12:28:30	Trần Mạnh Quân	9/8/2021		Module 1 - Định hướng - Web Browser	Lợi ích của headless browser ? Khi nào thì nên sử dụng headless browser	
+8/9/2021 12:48:58	Nguyễn Trung Nam	09/08/2021		Module 1 - Định Hướng - Internet/web	Khi client gửi một requests đến server thì làm sao server tìm kiếm nhanh chóng nội dung để trả về requests đó cho phía client	
+8/9/2021 13:00:56	Trần Mạnh Quân	8/9/2021		Module 1 - Định hướng - DNS	Cách xác định Subdomain 	
+8/9/2021 13:08:00	Nguyễn Trung Nam	09/08/2021		Module 1 - Định Hướng - Web Browsers	Sự khác biệt giữa URL và URI ?	
+8/9/2021 13:28:34	Trần Công Tâm	9/8/2021		Module 1 - Định Hướng -  Git basic	Công ty có sử dụng công cụ quản lý source code repository nào khác ngoài github không ạ ?	
+8/9/2021 13:35:25	Nguyễn Văn Sơn	9/8/2021		Module 1 -DNS 	So sánh public DNS và private DNS.	
+8/9/2021 13:40:14	Trương Thanh Tùng	9/8/2021		Module 1 - Định Hướng - Internet/Web	Bản chất của WWW là gì và cách thức hoạt động của WWW	
+8/9/2021 13:50:23	Trương Thanh Tùng	9/8/2021		Module 1 - Định Hướng - Internet/Web	Server là máy tính mà chứa webpages, sites hoặc apps. Vậy có phải máy tính đó phải chạy liên tục 24/24 không? Có phải bất kì ai sở hữu máy tính đều có thể làm máy chủ  ? Điều kiện để biến máy tính đó có thể làm máy chủ ( cấu hình máy ? dung lượng máy ? ,v..vv. ).	
+8/9/2021 14:04:55	Nguyễn Văn Sơn	8/9/2021		Module 1 - Định Hướng - HTTP/Networks	Sự khác biệt giữa HTTP và TCP.	
+8/9/2021 14:10:56	Trương Thanh Tùng	9/8/2021		Module 1 - Định hướng - Internet/Web	Tại sao khi gõ địa chi trang web không cần tới www và http mà vẫn cho ra được kết quả?	
+8/9/2021 14:14:35	Ngô Chung Á Âu	09/08/2021		Module 1 - Định hướng - Web hosting	Ưu, nhược điểm về hosting của linux, window, unix?	
