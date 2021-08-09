@@ -1,1 +1,9 @@
-cau hoi day1
+Nên dùng command line hay git cli? Các command line các a hay dùng nhất là gì ạ?
+
+Phân biệt intranet và extranet? công ty có đang sử dụng một kiểu tương tự không ạ
+
+Thế nào là một web browser an toàn
+
+Http cookies là gì? Có cách nào hacker có thể "trộm" cookies? cách phòng tránh điều đó
+
+Các lợi ích của shared hosting
