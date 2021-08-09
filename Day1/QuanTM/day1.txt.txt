@@ -1,0 +1,6 @@
+1. Các giao thức giao tiếp ngoài HTTP và sự khác biệt giữa chúng, giao thức nào hiện đang được sử dụng rộng rãi hiện nay ?
+2. Lợi ích của headless browser ? Khi nào thì nên sử dụng headless browser
+3. Cách xác định Subdomain 
+4. Sự khác biệt giữa Websocket và HTTP
+5. Sau khi upload web của mình lên 1 host, làm sao để truy cập web thông qua host đấy
+6. Cách để làm việc với 2 tài khoản git trên cùng một máy
