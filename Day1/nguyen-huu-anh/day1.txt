@@ -1,1 +1,13 @@
-câu 1
+-Định hướng internet/web
+
+-Định hướng webbrowsers
+
+-Định hướng Domain name system
+
+-Định hướng HTTP/Networks
+
+-Định hướng webhotting
+Máy chủ web được đặt xa như vậy thì việc truyền tải thông tin có ổn định hay không ?
+
+-Định hướng git basic
+còn công cụ nào nó giống như github nữa không?
