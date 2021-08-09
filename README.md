@@ -20,4 +20,4 @@ Khóa học đi thực tiễn các kiến thức, kĩ năng để các bạn có
 Với những bước thực hiện trên, bạn đã nắm đc kha khá quy trình git trong 1 dự án thực tế.
 Nếu có câu hỏi gì cần thảo luận, trao đổi, trên github chung của cả lớp có phần hỏi đáp. Bạn có thể đưa ra vấn đề tại đây: (edsolabs-fe/discussions)[https://github.com/viehaed/edsolabs-fe/discussions]
 
-*Chúc các bạn thành công*
+*Chúc các bạn thành công! :)*
