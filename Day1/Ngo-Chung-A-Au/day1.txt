@@ -1,5 +1,5 @@
 1. Sự khác nhau giữa web và internet?
 2. Khi nào nên sử dụng headless browser để truy cập web?
 3. Các thành phần của tên miền?
-4. http và https khác nhau điểm nào?
+4. http và https khác nhau ở điểm nào?
 5. Ưu, nhược điểm về hosting của unix, linux, window?
