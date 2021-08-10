@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .top {
+            border-top: thin solid black;
+        }
+
+        .bottom {
+            border-bottom: thin solid black;
+        }
+
+        .left {
+            border-left: thin solid black;
+        }
+
+        .right {
+            border-right: thin solid black;
+        }
+
+        .hour td {
+            text-align: right;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: thin solid black;
+            border-right: thin solid black;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <table cellspacing="0" class="top">
+            <tr>
+                <td class="left" rowspan="2">Days</td>
+                <td colspan="6" align="center">Time</td>
+            </tr>
+            <tr class="hour">
+                <td>8:00</td>
+                <td>9:00</td>
+                <td>10:00</td>
+                <td>11:00</td>
+                <td>11:30</td>
+                <td>12:30</td>
+            </tr>
+            <tr>
+                <td class="left">Mon</td>
+                <td>Course 1</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td rowspan="5" align="center">B <br> R <br> E <br> A <br> K
+                </td>
+                <td>Course 5</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="left">Tue</td>
+                <td colspan="2">&nbsp;</td>
+                <td>Course 2</td>
+                <td>Course 4</td>
+                <td>Course 1</td>
+            </tr>
+            <tr>
+                <td class="left">Wed</td>
+                <td>Course 3</td>
+                <td colspan="2">&nbsp;</td>
+                <td>Course 2</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="left">Thr</td>
+                <td rowspan="2">Course 4</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td rowspan="2" colspan="2" align="center">Thesis</td>
+            </tr>
+            <tr>
+                <td class="left">Fri</td>
+
+                <td>&nbsp;</td>
+                <td>Course 1</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
