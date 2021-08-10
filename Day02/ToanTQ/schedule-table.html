@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schedule-table</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+        .context-align{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>schedule-table</h1>
+    <table>
+        <tr>
+            <td rowspan="2">Days</td>
+            <td colspan="7" class="context-align">Time</td>
+          
+        </tr>
+        <tr>
+            <td>8:00</td>
+            <td>9:00</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td>11:30</td>
+            <td>12:30</td>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td>Course 1</td>
+            <td>Course 2</td>
+            <td>Course 3</td>
+            <td rowspan="5" class="context-align">B<br>R<br>E<br>A<br>K</td>
+            <td>Course 5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tue</td>
+            <td colspan="2"></td>
+            <td>Course 2</td>
+            <td>Course 4</td>
+            <td>Course 1</td>
+        </tr>
+        <tr>
+            <td>wed</td>
+            <td>Course 3</td>
+            <td colspan="2"></td>
+            <td>Course 2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Thr</td>
+            <td rowspan="2">Course 4</td>
+            <td>Course 2</td>
+            <td>Course 3</td>
+            <td rowspan="2" colspan="2" class="context-align">Thesis</td>
+        </tr>
+        <tr>
+            <td>Fri</td>
+            <td>Course 2</td>
+            <td>Course 1</td>
+        </tr>
+    </table>
+</body>
+
+</html>

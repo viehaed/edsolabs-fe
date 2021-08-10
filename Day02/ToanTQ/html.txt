@@ -1,0 +1,12 @@
+- HTML(HyperText Markup Language), là ngôn ngữ đánh dấu được thiết kế ra để tạo nên các trang web trên World Wide Web. 
+Tuy nhiên, nếu chỉ riêng HTML thôi thì khá đơn điệu bởi vì nó chỉ có thể cung cấp các trang web tĩnh; nhằm đáp ứng nhu cầu 
+ngày càng tăng về các tính năng ấn tượng hơn.
+
+- HTML5 là phiên bản thứ 5 của ngôn ngữ HTML, được giới thiệu bởi World Wide Web Consortium (W3C). HTML5 vẫn sẽ giữ lại 
+những đặc điểm cơ bản của HTML4 và bổ sung thêm các đặc tả nổi trội của XHTML, DOM cấp 2, đặc biệt là JavaScript.
+ + HTML5 đã bổ sung thêm các thẻ Semantic giúp Code bằng HTML5 rõ ràng và nhất quán, nó đơn giản, dễ hiểu và rất dễ đọc.
+ + HTML5 giúp SEO thân thiện, nó cung cấp lợi ích tối ưu hóa công cụ tìm kiếm.
+ + Nâng cấp sử dụng Local storage thay cho Cookies.
+ + HTML5 sử dụng web SQL databases, application cache để lưu dữ liệu tạm thay cho cache.
+ + HTML5 hỗ trợ nhiều loại điều khiển form input type đa dạng.
+ + Hỗ trợ âm thanh và video, sử dụng các thẻ SVG, canvas  thay cho một công nghệ như, Flash, VML và silver light.
