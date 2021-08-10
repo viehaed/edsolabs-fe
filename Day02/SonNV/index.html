@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="HTML là gì? Thẻ HTML meta" />
+    <title>Exercise day-02</title>
+    <style>
+      table {
+        width: 40%;
+        margin: 200px auto;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 5px;
+        border: 1px solid black;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+
+      <tr>
+        <td rowspan="2">Days</td>
+        <td colspan="6" class="text-center">Time</td>
+      </tr>
+
+      <tr class="text-right">
+        <td>8:00</td>
+        <td>9:00</td>
+        <td>10:00</td>
+        <td>11:00</td>
+        <td>11:30</td>
+        <td>12:30</td>
+      </tr>
+
+      <tr>
+        <td>Mon</td>
+        <td>Course 1</td>
+        <td>Course 2</td>
+        <td>Course 3</td>
+        <td rowspan="5" class="text-center">B<br />R<br />E<br />A<br />K</td>
+        <td>Course 5</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tue</td>
+        <td colspan="2"></td>
+        <td>Course 2</td>
+        <td>Course 4</td>
+        <td>Course 1</td>
+      </tr>
+
+      <tr>
+        <td>Wed</td>
+        <td>Course 3</td>
+        <td colspan="2"></td>
+        <td>Course 2</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Thr</td>
+        <td rowspan="2">Course 4</td>
+        <td>Course 2</td>
+        <td>Course 3</td>
+        <td colspan="2" rowspan="2" class="text-center">Thesis</td>
+      </tr>
+      
+      <tr>
+        <td>Fri</td>
+        <td></td>
+        <td>Course 1</td>
+      </tr>
+    </table>
+  </body>
+</html>
