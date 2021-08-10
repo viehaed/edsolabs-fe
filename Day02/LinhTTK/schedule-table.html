@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+    td{
+        width: 8%;
+        height: 22px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+    }
+    table{
+        width: 35%;
+    }
+    .time{
+        text-align: right;
+        padding-right: 3px;
+        padding-bottom: 2px;
+    }
+    #heading{
+        text-align: center;
+    }
+    #break{
+        text-align: center;
+    }
+    #thesis{
+        text-align: center;
+    }
+    .days{
+        width: 4%;
+        padding-left: 3px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="days" rowspan="2" >Days</td>
+      <td id="heading" colspan="6" >Time</td>
+    </tr>
+    <tr>
+      <td class="time" >8:00</td>
+      <td class="time" >9:00</td>
+      <td class="time" >10:00</td>
+      <td class="time" >11:00</td>
+      <td class="time" >11:30</td>
+      <td class="time" >12:30</td>
+    </tr>
+    <tr>
+      <td class="days">Mon</td>
+      <td>Course 1</td>
+      <td>Course 2</td>
+      <td>Course 3</td>
+      <td id="break" rowspan="5" >B</br>R</br>E</br>A</br>K</td>
+      <td>Course 5</td>
+    </tr>
+    <tr>
+      <td class="days">Tue</td>
+      <td colspan="2"></td>
+      <td>Course 2</td>
+      <td>Course 4</td>
+      <td>Course 1</td>
+    </tr>
+    <tr>
+      <td class="days">Wed</td>
+      <td>Course 3</td>
+      <td colspan="2"></td>
+      <td>Course 2</td>
+    </tr>
+    <tr>
+      <td class="days">Thr</td>
+      <td rowspan="2">Course 4</td>
+      <td>Course 2</td>
+      <td>Course 3</td>
+      <td id="thesis" rowspan="2" colspan="2" >Thesis</td>
+    </tr>
+    <tr>
+      <td class="days">Fri</td>
+      <td></td>
+      <td>Course 1</td>
+    </tr>
+  </table>
+</body>
+</html>
