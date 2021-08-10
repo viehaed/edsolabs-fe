@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập Demo</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0 auto;
+		padding: 0;
+	}
+	 th{
+            width: 100px;
+	 }
+	
+	 .listtime {
+	 	text-align: right;
+	 }
+	 .rbeak {
+	 	text-align: center;
+	 }
+	 .thesis {
+	 	text-align: center;
+	 }
+	/* td:first-child{
+	 	text-align: center;
+	 }*/
+</style>
+<body>
+ <table border="1">
+        <tr>
+            <th rowspan="2">Days</th>
+            <th colspan="6" >Time</th>
+           
+        </tr>
+        <tr class="listtime">
+            <td>8:00</td>
+            <td>9:00</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td>11:30</td>
+            <td>12:00</td>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td>Course1</td>
+            <td>Course2</td>
+            <td>Course3</td>
+            <th rowspan="5" class="rbeak">
+            	R<br/>B<br />E<br />A<br />K
+            </th>
+            <td>Course5</td>
+        </tr>
+        <tr>
+            <td>Tue</td>
+            <td colspan="2"></td>
+            <td>Course2</td>
+            <td>Course4</td>
+            <td>Course1</td>
+        </tr>
+          <tr>
+            <td>Wed</td>
+            <td>Course3</td>
+            <td colspan="2"></td>
+            <td>Course2</td>
+            <td></td>
+        </tr>  
+        <tr>
+            <td>Thr</td>
+            <td rowspan="2">Course4</td>
+            <td>Course2</td>
+            <td>Course3</td>
+            <td  rowspan="2" colspan="2" class="thesis">Thesis</td>
+        </tr> 
+         <tr>
+            <td>Fri</td>
+            <td></td>
+            <td>Course1</td>
+        </tr>
+    </table>
+</body>
+</html>
