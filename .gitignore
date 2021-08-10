@@ -33,16 +33,3 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
-# Main env file
-.env
-
-# System Files
-.DS_Store
-Thumbs.db
-ormconfig.json
-.vscode
-
-## Local volume database file
-database/*
-.env.local
