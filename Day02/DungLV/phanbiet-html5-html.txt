@@ -1,0 +1,16 @@
+Sự Khác biệt chính giữa HTML và HTML5
+
+
+
+-HTML5 được tích hợp video và âm thanh trong khi HTML thì không có.
+-HTML tương thích với hầu hết tất cả các trình duyệt trong khi HTML5 được hỗ trợ bởi hầu hết các trình duyệt hiện đại như Firefox, Mozilla và Chrome, Safari v.v. 
+-Trong HTML, JavaScript và giao diện trình duyệt sẽ chạy trong cùng một luồng. Trong khi trong HTML5, chúng ta có thể chạy JavaScript ở chế độ nền với sự trợ giúp của Web Worker API có thể chạy trong các luồng khác nhau.
+-Trong HTML, muốn làm đồ họa vectơ được thì cần đến công cụ khác như Siliver light, Flash, v.v. Trong khi trong HTML5 vector được hỗ trợ theo mặc định, nó có sẵn Canvas và SVG.
+-Trong HTML, thẻ applet được sử dụng để hiển thị các applet và thẻ đối tượng được giới thiệu). Trong HTML5, thẻ applet đã bị xóa.
+-Trong HTML, thẻ <a> được sử dụng làm mỏ neo cũng như để tham chiếu đến một liên kết trong khi trong HTML5, thẻ <a> chỉ được sử dụng làm siêu liên kết.
+-Trong HTML, thẻ <acronym> được sử dụng để hiển thị chữ viết tắt trong khi trong HTML5, thẻ này được thay thế bằng thẻ <abbr>.
+-HTML không thể xử lý cú pháp không chính xác và các lỗi khác trong khi HTML5 có khả năng xử lý các lỗi.
+-Trong HTML5, thẻ <table> có thể chỉ có một thuộc tính border và giá trị bằng 0 hoặc 1. Trong khi trong HTML <table> có rất nhiều thuộc tính.
+-Trong HTML, giao tiếp giữa máy khách (Client-side) và Máy chủ (Server - side) sẽ xảy ra bằng cách sử dụng Streaming và Long pooling vì nó không hỗ trợ Socket trong khi HTML5 có hỗ trợ Web socket
+
+
