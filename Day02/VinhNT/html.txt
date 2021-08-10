@@ -1,0 +1,38 @@
+Phân biệt HTML và HTML5
+    1. Khai báo Doctype
+        HTML: dài dòng
+        HTML5: đơn giản
+    2. Mã hóa kí tự
+        HTML: dài
+        HTML5: đơn giản hơn
+    3. Âm thanh và video
+        HTML: không hỗ trợ
+        HTML5: có hỗ trợ
+    4. Đồ họa vecto
+        HTML: phải sử dụng công nghệ khác như Flash, VML...
+        HTML5: có sẵn, ví dụ: canvas, SVG
+    5. Hỗ trợ địa lí
+        HTML: không thể có được vị trí địa lý thực tế của một người đang duyệt bất kì trang web nào
+        HTML5: JS Geolocation API trong HTML5 cho phép xác định vị trí của người dùng đang duyệt bất kì trang web nào
+    6. Bộ nhớ
+        HTML: cung cấp bộ nhớ cục bộ thay vì cookie
+        HTML5: sử dụng cookie để lưu trữ dữ liệu
+    7. Vẽ hình
+        HTML: không thể vẽ các hình cơ bản
+        HTML5: có thể vẽ các hình cơ bản
+    8. Hỗ trợ JS    
+        HTML: cho phép chạy JS trong trình duyệt
+        HTML5: cho phép chạy mã JS trong nền
+    9. Hỗ trợ trình duyệt   
+        HTML: sử dụng với các trình duyệt cũ
+        HTML5: dử dụng với các trình duyệt mới
+    10. Web Socket
+        HTML: không khả dụng
+        HTML5: có thể thiết lập các kênh giao tiếp song song với một máy chủ bằng Web Socket
+    11. Sửa lỗi
+        HTML: không có quy trình xử lý các mã HTML không chính xác về mặt cấu trúc
+        HTML5: hỗ trợ xử lý lỗi liên tục thông qua quy trình xử lý lỗi ứng biến
+    12. Các thuộc tính async, charset..
+        HTML: không có
+        HTML5: có
+            
