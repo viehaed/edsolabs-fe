@@ -1,0 +1,5 @@
+-HTML không cho phép JavaScript chạy trong web browser, trong khi đó HTML5 hỗ trợ hoàn toàn cho JavaScript để chạy nền
+-HTML5 hỗ trợ nhiều loại điều khiển form, ví dụ: ngày giờ, email, số lượng, khoảng, số điện thoại, URL, tìm kiếm,...,html thì k
+-HTML5 sử dụng web SQL databases, application cache để lưu dữ liệu tạm, trong khi đó,
+HTML chỉ có cache của trình duyệt được dùng cho mục đích này.
+-HTML5 có audio phiên bản cao và hỗ trợ video
