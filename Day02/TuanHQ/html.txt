@@ -1,0 +1,27 @@
+PHÂN BIỆT HTML VÀ HTML 5
+
+HTML5 là phiên bản tối ưu, mạnh mẽ hơn các phiên bản HTML trước.
+
+HTML - HTML5
+
+- HTML: không hỗ trợ audio và video, sử dụng flash player để hỗ trợ
+- HTML 5: hỗ trợ điều khiển audio và video với thẻ <audio> và <video>
+
+- HTML: sử dụng cookie để lưu trữ dữ liệu tạm thời
+- HTML 5: sử dụng sql databases, application cache: local storage, lưu trữ offline
+
+- HTML: không cho phép chạy JS trên trinh duyệt
+- HTML 5: cho phép JS chạy ở chế độ nền với sự trợ giúp của Web Worker API có thể chạy trong các luồng khác nhau.
+
+- HTML: HTML tương thích với tất cả các trình duyệt 
+- HTML 5:  được hỗ trợ bởi tất cả các trình duyệt mới như Chrome, Safari,...
+
+- HTML: Các phần tử như <header>, <footer>,...
+- HTML 5: có thêm các thẻ sematic mới: <header>, <footer>, <article>, <section>, <nav>,
+
+- HTML: HTML không cho phép kéo và thả 
+ HTML 5: HTML5 cho phép các hiệu ứng kéo và thả .
+
+
+
+
