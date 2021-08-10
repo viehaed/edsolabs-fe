@@ -1,0 +1,26 @@
+So sánh HTML và HTML5
+
+1. Khai báo
+- HTML: thẻ <scrip>,<link> vẫn còn type
+- HTML5: không cần khai báo type
+2. Âm thanh, video, đồ họa
+- HTML: cần phải có thêm ứng dụng thứ 3
+- HTML5: có các thẻ <audio>,<video>,<canvas> hỗ trợ 
+3. Vị trí:
+-HTML: không thể có được vị trí địa lý thực tế của một người đang duyệt bất kì trang web nào
+-HTML5: Sử dụng JavaScript Geolocation API để theo dõi vị trí người dùng truy cập bất kì trang web nào
+4. Bộ nhớ:
+-HTML: Sử dụng bộ nhớ cache làm bộ nhớ tạm thời
+-HTML5: Lưu trữ trong SQL, Web Storage,...
+5. Xử lí lỗi:
+-HTML: không thể xử lí cú pháp không chính xác
+-HTML5: có thể xử lí cú pháp không chính xác và các lỗi khác
+6. Đồ họa
+-HTML: muốn làm đồ họa vecto phải sử dụng VML, Flash,...
+-HTML5: hỗ trợ làm đồ họa là Canvas và SVG
+7. Trình duyệt
+-HTML: tương thích với tất cả các trình duyệt
+-HTML5: một số trình duyệt mới hỗ trợ hoàn toàn HTML5
+8. Giao tiếp
+-HTML: không hỗ trợ Web Socket
+-HTML5: Hỗ trợ Web Socket
