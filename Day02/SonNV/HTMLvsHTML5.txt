@@ -1,0 +1,19 @@
+- HTML  : Không hỗ trợ Video và Âm thanh
+- HTML5 : Được tích hợp sẵn chức năng hỗ trợ video, âm thanh với thẻ
+
+- HTML  : Muốn làm đồ họa vector thì phải sử dụng Sliver light, Adobe Flash, VML
+- HTML5 : Đồ họa vector được hỗ trợ mặc định với Canvas và SVG.
+
+- HTML  : Tương thích với tất cả các trình duyệt
+- HTML5 : Có một vài trình duyệt không hỗ trợ hoàn toàn HTML5
+
+- HTML  : HTML không cho phép kéo và thả hiệu ứng
+- HTML5 : HTML5 cho phép kéo và thả các hiệu ứng.
+
+- HTML  : Mã hóa ký tự HTML dài hơn
+- HTML5 : Khai báo mã hóa ký tự HTML5 rất đơn giản.
+
+- HTML  : HTML sử dụng bộ nhớ cache của trình duyệt làm bộ nhớ tam thời.
+- HTML5 : HTML5 có nhiều tùy chọn để lưu trữ ví dụ như Application cache, SQL database, Web storage.
+Chúng ta có thể chạy JS trong nền bằng JS API có sẵn cho việc lưu trữ.
+
