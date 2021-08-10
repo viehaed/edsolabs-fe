@@ -1,0 +1,16 @@
+HTML
+    - HTML không hỗ trợ Video và Âm thanh
+    - HTML hỗ trợ theo dõi vị trí người dùng nhưng quá trình này rất khó khăn nếu người dùng sử dụng thiết bị di động.
+    - HTML sử dụng bộ nhớ cache của trình duyệt làm bộ nhớ tam thời.
+    - Trong HTML, Giao tiếp giữa Client và Server bằng Streaming là Long Pooling 
+    - HTML tương thích với tất cả các trình duyệt
+    - Trong HTML, muốn làm đồ họa vector thì phải sử dụng Sliver light, Adobe Flash, VML ...
+    - Trong HTML, giao diện trình duyệt tương tác với người dùng và Javascript trong cùng luồng. Điều này khiến cho hiệu suất trang web thấp
+    - HTML không thể xử lý cú pháp không chính xác và các lỗi.
+HTML5
+    - HTML5 hỗ trợ cho nhiều ứng dụng hơn so với HTML.
+    - HTML5 sử dụng web SQL databases, application cache còn HTML chỉ dùng cache của trình duyệt. Do đó, nó sở hữu tính năng lưu dữ liệu tạm.
+    - HTML5 hỗ trợ JavaScript vận hành mượt mà trên web browser, còn HTML ở những phiên bản cũ hơn thì không thể thực hiện điều này.
+    - HTML5 không bị phụ thuộc vào SGML. Nhờ vậy mà sản phẩm lập trình có độ tương thích cao hơn.
+    - HTML5 cho phép sử dụng MathML và SVG cho văn bản, nhưng trong HTML thì hoàn toàn không hỗ trợ.
+    - HTML5 tích hợp một số element mới mẻ và quan trọng như summary, time, audio, command, data, datalist, details, canvas, mark, video… Bên cạnh đó, nó còn được loại bỏ các elements lỗi thời trong HTML.
