@@ -1,6 +1,0 @@
-Câu hỏi:
-    câu hỏi 1: sự khác nhau giữa internet và web?
-    câu hỏi 2: dữ liệu trên internet được lưu trữ ở đâu?
-    câu hỏi 3: Điểm nổi bật của chrome hơn các web browser khác?
-    câu hỏi 4: Http và https khác nhau ở điểm nào?
-    câu hỏi 5: cách kiểm tra xem đã add folder hoặc file chưa
