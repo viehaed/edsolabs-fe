@@ -1,0 +1,10 @@
+*Sự khác nhau giữa HTML và HTML 5
+HTML5 : hỗ trợ SVG ,Canvas và các hình dạng vector
+HTML : Không hỗ trợ 
+HTML5 : sử dụng web SQL databases, application cache để lưu dữ liệu tạm 
+HTML : chỉ lưu dữ liệu tạm ở trình duyệt
+HTML 5 : hỗ trợ nhiều loại điều khiển form : datetime , number , url , email,...
+HTML 5 : có semantic HTML : cải thiện ngữ nghĩa cho element ,dùng để các web browser dễ nhận dạng các component và
+mục đích sử dụng chúng để cải thiện các trải nghiệm người dùng và thân thiện hơn 
+với cách thể hiện 1 trang web
+HTML : chỉ sử dụng các thẻ div nên khó phân biệt các chức năng hiển thị của trang web
