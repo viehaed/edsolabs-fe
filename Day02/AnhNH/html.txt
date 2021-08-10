@@ -1,0 +1,17 @@
+phân biệt html và html5
+-html
+không hỗ trợ video, âm thanh
+Khai báo HTML Doctype dài dòng
+Có thể vẽ vectơ với sự trợ giúp của các công nghệ khác như Silverlight, Flash, VML, v.v
+HTML cung cấp bộ nhớ cục bộ thay vì cookie.
+Nó cho phép chạy JavaScript trong trình duyệt.
+Bạn có thể sử dụng HTML với tất cả các trình duyệt cũ.
+HTML ít thân thiện với thiết bị di động hơn.
+-html5
+hỗ trợ video, âm thanh
+Khai báo DOCTYPE trong HTML5 rất đơn giản
+Đồ họa vectơ là một phần của HTML5, ví dụ: canvas, SVG
+Html5 sử dụng cookie để lưu trữ dữ liệu.
+Nó cho phép chạy mã JavaScript trong nền.
+có thể sử dụng HTML5 với tất cả các trình duyệt mới.
+HTML5 thân thiện với thiết bị di động.
