@@ -25,6 +25,7 @@ Khóa học đi thực tiễn các kiến thức, kĩ năng để các bạn có
 - Lấy code mới nhất trên nhánh `upstream/main` hàng ngày.
 - Có thể checkout sang các nhánh `upstream/day-xx` để tham khảo bài tập đã nộp của các bạn khác nhưng tuyệt đối ko merge code đó sang nhánh của mình.
 - Bài tập gửi lên đc checkout từ nhánh `upstream/main`, chỉ chứa bài tập ngày hôm nay, ko merge chung với bài tập của những ngày khác.
+- Tạo pull request vào branch `day-xx` tương ứng với nội dung buổi học hôm đó. 
 - Với những bước thực hiện trên, bạn đã nắm đc kha khá quy trình git trong 1 dự án thực tế.
   Nếu có câu hỏi gì cần thảo luận, trao đổi, trên github chung của cả lớp có phần hỏi đáp. Bạn có thể đưa ra vấn đề tại đây: [Góc trao đổi](https://github.com/viehaed/edsolabs-fe/discussions)
 
