@@ -1,0 +1,19 @@
+PHÂN BIỆT HTML VÀ HTML 5
+1, HTML
+ - HTML là viết tắt của cụm HyperText Markup Language
+ - Là ngôn ngữ đánh dấu siêu văn bản. 
+ - Cung cấp cấu trúc cho nội dung và ý nghĩa của website bằng hình thức xác định các yếu tố như tiêu đề, hình ảnh, đoạn văn... 
+ - HyperText còn được hiểu là một đoạn text bất kỳ nhưng lại chứa link dẫn đến nguồn thông tin khác như địa chỉ web, âm thanh...
+2, HTML5
+ - HTML5 là phiên bản thứ 5 của HTML 
+ - Là một ngôn ngữ lập trình cấu trúc và trình bày nội dung cho World Wide Web.
+ - HTML5 sở hữu khả năng tương thích với những phiên bản HTML trước đó
+ - Xác định một ngôn ngữ đánh đánh dấu duy nhất có thể viết bằng cú pháp ngôn ngữ HTML hoặc XHTML.
+3, So sánh HTML và HTML5
+ - HTML5 hỗ trợ cho nhiều ứng dụng hơn so với HTML.
+ - HTML5 sử dụng web SQL databases, application cache còn HTML chỉ dùng cache của trình duyệt.
+ - HTML5 hỗ trợ JavaScript vận hành mượt mà trên web browser, còn HTML ở những phiên bản cũ hơn thì không thể thực hiện điều này.
+ - HTML5 không bị phụ thuộc vào SGML, trái ngược với HTML. Nhờ vậy mà sản phẩm lập trình có độ tương thích cao hơn.
+ - HTML5 cho phép sử dụng MathML và SVG cho văn bản, nhưng trong HTML thì hoàn toàn không hỗ trợ.
+ - HTML5 tích hợp một số element mới mẻ và quan trọng như summary, time, audio, command, data, datalist, details, canvas, mark, video… 
+ - HTML5 loại bỏ các elements lỗi thời trong HTML.
