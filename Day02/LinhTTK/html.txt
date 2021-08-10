@@ -1,0 +1,27 @@
+HTML :
+Khai báo HTML Doctype dài dòng.
+Mã hóa ký tự HTML dài hơn.
+Âm thanh và video không phải là phần HTML.
+Có thể vẽ vectơ với sự trợ giúp của các công nghệ khác như Silverlight, Flash, VML, v.v
+HTML cung cấp bộ nhớ cục bộ thay vì cookie.
+Trong HTML, không thể vẽ các hình dạng cơ bản.
+Cho phép chạy JavaScript trong trình duyệt.
+Có thể sử dụng HTML với tất cả các trình duyệt cũ. 
+Có thể sử dụng bộ nhớ cache của trình duyệt làm bộ nhớ tạm thời.
+HTML ít thân thiện với thiết bị di động hơn.
+HTML không cho phép kéo và thả hiệu ứng.
+Các thuộc tính như async, charset và ping không có trong HTML.
+
+Còn với HTML 5 : 
+Khai báo DOCTYPE trong HTML5 rất đơn giản.
+Khai báo mã hóa ký tự HTML5 rất đơn giản.
+Âm thanh và video là một phần HTML5.
+Đồ họa vectơ là một phần của HTML5, ví dụ: canvas, SVG.
+Html5 sử dụng cookie để lưu trữ dữ liệu.
+Trong Html5, có thể vẽ các hình dạng cơ bản.
+Cho phép chạy mã JavaScript trong nền.
+Có thể sử dụng HTML5 với tất cả các trình duyệt mới.
+có thể sử dụng ứng dụng (cơ sở dữ liệu và lưu trữ web) Cache làm bộ nhớ tạm thời.
+HTML5 thân thiện với thiết bị di động.
+Các thuộc tính async, ping, charset và là một phần của HTML5.
+HTML5 cho phép kéo và thả các hiệu ứng.
