@@ -1,0 +1,47 @@
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    td{
+        width: 8%;
+        height: 22px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+    }
+    table{
+        width: 35%;
+    }
+    .time{
+        text-align: right;
+        padding-right: 3px;
+        padding-bottom: 2px;
+        font-weight: bold;
+    }
+    #heading{
+        text-align: center;
+        background-color: #99fb98;
+    }
+    #break{
+        text-align: center;
+    }
+    #thesis{
+        text-align: center;
+    }
+    .days{
+        width: 4%;
+        padding-left: 3px;
+    }
+    #col{
+        background-color: #cccccc;
+    }
+    td#break{
+        height: 40px;
+    }
+    pre{
+        width: 10px;
+    }
+    pre p{
+        margin: -16px;
+        padding-left: 48px;
+        font-size: 15px;
+    }
