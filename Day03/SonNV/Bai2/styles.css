@@ -1,0 +1,28 @@
+table {
+    width: 80%;
+    margin: 100px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 5px;
+    border: 1px solid black;
+  }
+  .text-right {
+    text-align: right;
+    font-weight: bold;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .bg {
+    background-color: palegreen ;
+  }
+  .bg-color {
+    background: #CCCC;
+  }
+  .down {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+  }
