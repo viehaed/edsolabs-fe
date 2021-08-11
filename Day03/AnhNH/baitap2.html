@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập 2</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        width: 650px;
+        table-layout: fixed;
+    }
+
+    td {
+        border: 2px solid black;
+        padding: 5px 5px;
+    }
+
+    th {
+        border: 2px solid black;
+        text-align: right;
+        padding: 5px 5px;
+    }
+
+    .column__ngay {
+        padding-left: 5px;
+        width: 45px;
+    }
+
+    .td__text-center {
+        text-align: center;
+    }
+
+    .td__Blank {
+        background-color: #ccc;
+    }
+
+    .time {
+        background-color: palegreen;
+        text-align: center;
+    }
+
+    span {
+        display: inline-block;
+        width: 5px;
+        min-height: 1px;
+        word-wrap: break-word;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td rowspan="2" class="column__ngay">Days</td>
+            <td colspan="6" class="time">Time</td>
+        </tr>
+        <tr>
+            <th>8:00</th>
+            <th>9:00</th>
+            <th>10:00</th>
+            <th>11:00</th>
+            <th>11:30</th>
+            <th>12:30</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td class="column__ngay">Mon</td>
+                <td>Course1</td>
+                <td>Course2</td>
+                <td>Course3</td>
+                <td rowspan="5" class="td__text-center"><span>BREAK</span></td>
+                <td>Course5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="column__ngay">Tue</td>
+                <td colspan="2" class="td__Blank"></td>
+                <td>Course2</td>
+                <td>Course4</td>
+                <td>Course1</td>
+            </tr>
+            <tr>
+                <td class="column__ngay">Wed</td>
+                <td>Course3</td>
+                <td colspan="2" class="td__Blank"></td>
+                <td>Course2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="column__ngay">Thr</td>
+                <td rowspan="2">Course4</td>
+                <td>Course2</td>
+                <td>Course3</td>
+                <td colspan="2" rowspan="2" class="td__text-center">Thesis</td>
+            </tr>
+            <tr>
+                <td class="column__ngay">Fri</td>
+                <td class="td__Blank"></td>
+                <td>Course1</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
