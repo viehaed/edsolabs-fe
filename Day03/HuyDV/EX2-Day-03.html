@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* td{
+            border: 1px solid #000;
+        } */
+        table{
+            border-collapse: collapse;
+        }
+        tr > *{
+            width: 80px;
+            padding:3px 5px;
+        }
+        td:first-child{
+            width: 50px;
+        }
+        th{
+            text-align: right;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .bg--light-green{
+            background-color: #99fb98;
+        }
+        .text-column span{
+            display: inline-block;
+            width: 10px;
+            word-wrap: break-word;
+        }
+        .disabled{
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" >
+        <thead>
+            <tr>
+                <td rowspan="2">Days</td>
+                <td colspan="6" class="text-center bg--light-green">Time</td>
+            </tr>
+            <tr>
+                <th>8:00</th>
+                <th>9:00</th>
+                <th>10:00</th>
+                <th>11:00</th>
+                <th>11:30</th>
+                <th>12:30</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mon</td>
+                <td>Course 1</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td rowspan="5" class="text-column text-center"><span >BREAK</span></td>
+                <td>Course 5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td >Tue</td>
+                <td class="disabled" colspan="2"></td>
+                <td>Course 2</td>
+                <td>Course 4</td>
+                <td>Course 1</td>
+            </tr>
+            <tr>
+                <td>Wed</td>
+                <td>Course 3</td>
+                <td class="disabled" colspan="2"></td>
+                <td>Course 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Thr</td>
+                <td rowspan="2">Course 4</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td class="text-center" colspan="2" rowspan="2">Thesis</td>
+            </tr>
+            <tr>
+                <td>Fhr</td>
+                <td>Course 1</td>
+                <td>Course 1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
