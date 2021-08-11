@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập Day3</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0 auto;
+		padding: 0;
+	}
+    table {
+        border-collapse: collapse;
+        width: 30%;
+    }
+    th {
+        font-size: 16px;
+        padding: 5px 5px;
+    }
+    .daytime{
+        background-color: palegreen;
+    }
+	 .listtime {
+	 	text-align: right;
+	 }
+	 .rbeak , .thesis {
+	 	text-align: center;
+	 }
+	
+   .Bgcolor {
+       background-color: #ccc;
+   }
+   span {
+   display:block;
+   width: 20px;
+   word-break: break-word;
+   }
+</style>
+<body>
+    <table border="1">
+        <tr >
+            <th rowspan="2">Days</th>
+            <th colspan="6" class="daytime">Time</th>
+           
+        </tr>
+        <tr class="listtime">
+            <th>8:00</th>
+            <th>9:00</th>
+            <th>10:00</th>
+            <th>11:00</th>
+            <th>11:30</th>
+            <th>12:00</th>
+        </tr>
+        <tr>
+            <th>Mon</th>
+            <th>Course1</th>
+            <th>Course2</th>
+            <th>Course3</th>
+            <th rowspan="5">
+            	<span>RBEAK</span>
+            </th>
+            <th>Course5</th>
+        </tr>
+        <tr>
+            <th>Tue</th>
+            <th colspan="2" class="Bgcolor"></th>
+            <th>Course2</th>
+            <th>Course4</th>
+            <th>Course1</th>
+        </tr>
+          <tr>
+            <th>Wed</th>
+            <th>Course3</th>
+            <th colspan="2"  class="Bgcolor"></th>
+            <th>Course2</th>
+            <th></th>
+        </tr>  
+        <tr>
+            <th>Thr</th>
+            <th rowspan="2">Course4</th>
+            <th>Course2</th>
+            <th>Course3</th>
+            <th  rowspan="2" colspan="2" class="thesis">Thesis</th>
+        </tr> 
+         <tr>
+            <th background:red >Fri</th>
+            <th  class="Bgcolor"></th>
+            <th>Course1</th>
+        </tr>
+    </table>
+</body>
+</html>
