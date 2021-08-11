@@ -42,9 +42,15 @@ tr .thesis-text {
 }
 
 tr .break-text {
-    text-align: center;
     padding: 10px;
     font-size: 20px;
+}
+.break-text span {
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    word-break: break-word;
+    text-align: center;
 }
 .time-color {
     background-color: #99fb98;
