@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>schedule-table</title>
     <style>
-        table{
-            width: 100%;
+        table {
+            width: 500px;
         }
+
         table,
         th,
         td {
@@ -20,19 +21,29 @@
         th,
         td {
             padding: 5px;
+            width: 75px;
         }
-        .context-align{
+
+        .context-align {
             text-align: center;
+        }
+
+        .context-size {
+            padding: 50%;
+            display: block;
+            width: 0;
+            word-wrap: break-word;
         }
     </style>
 </head>
+
 <body>
     <h1>schedule-table</h1>
     <table>
         <tr>
             <td rowspan="2">Days</td>
             <td colspan="7" class="context-align">Time</td>
-          
+
         </tr>
         <tr>
             <td>8:00</td>
@@ -47,7 +58,7 @@
             <td>Course 1</td>
             <td>Course 2</td>
             <td>Course 3</td>
-            <td rowspan="5" class="context-align">B<br>R<br>E<br>A<br>K</td>
+            <td rowspan="5" class="context-align"><span class="context-size">BREAK</span></td>
             <td>Course 5</td>
             <td></td>
         </tr>
