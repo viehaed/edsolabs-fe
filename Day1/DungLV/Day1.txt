@@ -1,2 +1,0 @@
--Sự khác nhau giữa tên miền (domain name) và một địa chỉ IP ?
--Cách thức hoạt động của trình duyệt web như nào ạ?
