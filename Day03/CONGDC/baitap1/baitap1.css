@@ -1,0 +1,22 @@
+h1{
+	color: #00ff08;
+}
+h2{
+	color: #dda0e2;
+}
+p{
+	color: #204dff;
+}
+
+span{
+	color: #5f7eff;
+	margin: 5px;
+}
+span:last-child{
+	color: #380bf2;
+	background-color: #ffff00;
+}
+span:first-child{
+	color: #380bf2;
+	background-color: #ffff00;
+}

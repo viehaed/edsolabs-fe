@@ -1,0 +1,31 @@
+table{
+    border-collapse: collapse ;
+}
+table , tr,th{
+    border:1px solid black;
+    font-weight: 500;
+}
+.time{
+    height: 30px;
+    background-color:#99fb98;
+}
+th{
+    height:30px;
+    width:80px;
+}
+.times-text{
+    font-weight: 600;
+    text-align: right;
+    height:30px;
+    width:80px;
+}
+.break{
+    width: 20px;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin-left: 30px;
+}
+
+.spacecolor{
+    background-color: #cccccc;
+}
