@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+}
+h1{
+    color: lightgreen;
+}
+h2{
+    color: lightpink;
+}
+p{
+    color: blue;
+}
+p span{
+    background-color:yellow;
+}
