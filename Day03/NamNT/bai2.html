@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="bai2.css">
+
+</head>
+
+<body>
+    <table border="1" cellspacing="0">
+        <colgroup>
+            <col span="1">
+            <col span="6">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td rowspan="2">Days</td>
+                <td colspan="6">Time</td>
+            </tr>
+            <tr>
+                <td class="time">8:00</td>
+                <td class="time">9:00</td>
+                <td class="time">10:00</td>
+                <td class="time">11:00</td>
+                <td class="time">11:30</td>
+                <td class="time">12:30</td>
+            </tr>
+            <tr>
+                <td>Mon</td>
+                <td>Course 1</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td rowspan="5">
+                    <p>BREAK</p>
+                </td>
+                <td>Course 5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tue</td>
+                <td colspan="2" class="bgr"></td>
+                <td>Course 2</td>
+                <td>Course 4</td>
+                <td>Course 1</td>
+            </tr>
+            <tr>
+                <td>Wed</td>
+                <td>Course 3</td>
+                <td colspan="2" class="bgr"></td>
+                <td>Course 2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Thr</td>
+                <td rowspan="2">Course 4</td>
+                <td>Course 2</td>
+                <td>Course 3</td>
+                <td rowspan="2" colspan="2">Thesis</td>
+            </tr>
+            <tr>
+                <td>Fri</td>
+                <td class="bgr"></td>
+                <td>Course 1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
