@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width:60%;
+}
+#HTime{
+    text-align: center;
+    background-color: palegreen;
+}
+td {
+    width: 200px;
+    border: 1px solid black;
+    padding: 8px 10px 8px 5px;
+}
+.day {
+    width:100px;
+}
+
+#time th {
+    text-align: right;
+    border: 1px solid black;
+    padding: 8px 5px 8px 5px;
+    
+}
+
+#break {
+    font-size: 18px;
+    /* box-sizing: border-box; */
+}
+
+#thesis {
+    text-align: center;
+}
+.gray{
+    background-color:#ccc;
+}
