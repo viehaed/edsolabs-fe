@@ -1,0 +1,17 @@
+.container {
+    color: #0000FF;
+    padding-left: 10px;
+}
+
+.container h1 {
+    color: #00FF00;
+}
+
+.container h2 {
+    color: #FF00FF
+}
+
+.container p span {
+    background-color: #FFFF00;
+    font-weight: bold;
+}
