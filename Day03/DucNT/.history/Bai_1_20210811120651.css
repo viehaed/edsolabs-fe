@@ -1,0 +1,21 @@
+body {
+    margin: auto;
+}
+
+p mar gin-left: 20px;
+
+}
+h1 {
+    color: green;
+}
+h2 {
+    color: pink;
+}
+h4,
+h5 {
+    color: blue
+}
+.text_css {
+    background-color: yellow;
+    font-weight: bolder;
+}
