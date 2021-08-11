@@ -1,0 +1,29 @@
+** Phân biệt HTML và HTML 5
+
+* HTML : 
+-HTML viết tắt của từ Hyper Text Markup Language có nghĩa là Ngôn ngữ đánh dấu siêu văn bản. HTML được dung để phát triển Website
+-HTML không hỗ trợ Video và Âm thanh
+-HTML hỗ trợ theo dõi vị trí người dùng nhưng quá trình này rất khó khan nếu người dùng sử dụng thiết bị di động
+-HTML sử dụng bộ nhớ cache của trình duyệt làm bộ nhớ tạm thời
+-Trong HTML, giao tiếp giữa Client và Server bằng Streaming là Long Pooling vì không được hỗ trợ Web Socket
+-HTML tương thích với tất cả các trình duyệt
+-Trong HTML, muốn làm đồ họa vector thì phải sử dụng Sliver light, Adobe Flash,…
+-Trong HTML, giao diện trình duyệt tương tác với người dùng và JS trong cùng luồng, Điều này khiến cho hiệu suất trang web thấp
+-HTML không thể xử lỹ cú pháp không chính xác và các lỗi
+
+* HTML5 :
+-HTML là phiên bản thứ 5 của HTML với nhiều chức năng mới được cải tiến
+-HTML 5 được tích hợp sẵn chức năng hỗ trợ video, âm thanh
+-HTML 5 sử dụng Javascript Gelocation API để theo dõi vị trí bất cứ người dùng nào đang truy cập
+-HTML 5 có nhiều tùy chọn để lưu trữ ví dụ như Application cache, SQL database, Web storage. Chúng ta có thể chạy JS trong nền bằng JS API có sẵn cho việc lưu trữ
+-Trong HTML5 có hỗ trợ Web Socket giúp giao tiếp song song giữa Server và Client
+-Chỉ có một số trình duyệt hiện đại hỗ trợ hoàn toàn HTML5 như : Firefox, Chrome, Safari,..
+-HTML đồ họa vector được hỗ trợ mặc định với Canvas và SVG
+-Trong HTML5, với JS Web Worker API cho phép JS và giao diện trình duyệt chạy trên các luồng khác nhau
+-HTML5 có thể xử lý cú pháp không chính xác và các lỗi khác
+
+
+* Các thẻ mới xuất hiện trong HTML 5
+- Các tag định nghĩa như : <article>,<aside>,<header>,<footer>,<section>,<main>,…
+- Tag đồ họa : <canvas>,<svg>
+- Tag multimedia: <audio>,<video>,<embed>,…

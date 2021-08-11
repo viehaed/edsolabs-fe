@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Table Color</title>
+</head>
+<body>
+    <style type="text/css">
+    table {
+        border-collapse:collapse;
+    }
+    td {
+        border: 1px solid black;
+    }
+    .days {
+        text-align: left;
+        width: 50px;
+        padding-left: 5px;
+        line-height: 26px;
+    }
+    .title {
+        background-color: palegreen;
+        line-height: 26px;
+        text-align: center;
+    }
+    .time {
+        font-weight: bold;
+        line-height: 26px;
+        padding-right: 5px;
+        width: 86px;
+        text-align: right;
+    }
+    .cr {
+        text-align: left;
+        padding-left: 5px;
+        line-height: 26px;
+    }
+    .center {
+        text-align: center;
+    }
+    div {
+        width: 5px;
+        margin: auto;
+        word-wrap: break-word;
+    }
+    .bg {
+        background-color:#ccc;
+    }
+    </style>
+    <table>
+        <tbody>
+            <tr>
+                <td class="days" rowspan="2">Days</td>
+                <td class="title" colspan="6">Time</td>
+            </tr>
+            <tr>
+                <td class="time">8:00</td>
+                <td class="time">9:00</td>
+                <td class="time">10:00</td>
+                <td class="time">11:00</td>
+                <td class="time">11:30</td>
+                <td class="time">12:00</td>
+            </tr>
+            <tr>
+                <td class="cr">Mon</td>
+                <td class="cr">Course 1</td>
+                <td class="cr">Course 2</td>
+                <td class="cr">Course 3</td>
+                <td class="center" rowspan="5">
+                    <div>BREAK</div>
+                </td>
+                <td class="cr">Course 5</td>
+                <td class="cr"></td>
+            </tr>
+            <tr>
+                <td class="cr">Tue</td>
+                <td class="bg" colspan="2"></td>
+                <td class="cr">Course 2</td>
+                <td class="cr">Course 4</td>
+                <td class="cr">Course 1</td>
+            </tr>
+            
+            <tr>
+                <td class="cr">Wed</td>
+                <td class="cr">Course 3</td>
+                <td class="bg" colspan="2"></td>
+                <td class="cr">Course 2</td>
+                <td class="cr"></td>
+            </tr>
+            <tr>
+                <td class="cr">Thr</td>
+                <td class="cr" rowspan="2">Course 4</td>
+                <td class="cr">Course 2</td>
+                <td class="cr">Course 3</td>
+                <td class="center" rowspan="2" colspan="2">Thesis</td>
+            </tr>
+            <tr>
+                <td class="cr">Fri</td>
+                <td class="bg"></td>
+                <td class="cr">Course 1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
