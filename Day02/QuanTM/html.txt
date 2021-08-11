@@ -1,0 +1,10 @@
+- HTML5 hỗ trợ audio và video control, HTML cần sử dụng flash player
+- HTML5 sử dụng cache của app và sql database để chứa offline data, HTML sử dụng cookies
+- HTML5 cho phép Javascript chạy ở background
+- Vector Graphic được tích hợp sẵn vào HTML5
+- HTML5 có thể vẽ được các hình tròn, tam giác, etc...
+- HTML5 chỉ có thể chạy được ở các browser mới, HTML chạy được ở mọi browser
+- HTML5 hoạt động với điện thoại tốt hơn
+- HTML5 có Semantic HTML tags, HTML không có
+- HTML5 xử lí được lỗi cú pháp
+- Một vài tag bị lược bỏ hoặc thay đổi ở HTML5 như center, big, etc..
