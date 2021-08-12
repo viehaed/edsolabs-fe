@@ -28,6 +28,9 @@
     top: 742px;
     border: 1px dashed rgba(255, 255, 255, 0.4);
 }
+a {
+    text-decoration: none;
+}
 .or {
     position: absolute;
     width: 15px;
