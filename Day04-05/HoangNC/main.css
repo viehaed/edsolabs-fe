@@ -40,6 +40,10 @@
     line-height: 17px;
     color: #FFFFFF;
 }
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
 .btn_secondary {
     position: absolute;
     width: 342px;
