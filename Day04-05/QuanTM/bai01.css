@@ -19,9 +19,9 @@ h2 {
   font-size: 1.3rem;
 }
 a {
-  display: grid;
   text-decoration: none;
   font-size: 13.3333px;
+  display: grid;
   place-items: center;
 }
 
@@ -31,36 +31,43 @@ a {
   place-items: center;
   height: 100vh;
   width: 414px;
-  padding: 0.5rem 1.5rem;
+  padding: 3.1rem 1.8rem;
 }
 .login {
   background-image: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
 }
-@media screen and (max-height: 750px) {
+@media screen and (max-height: 896px) {
   .container {
-    height: 750px;
+    height: 896px;
   }
 }
+.logo {
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
 .login-welcome {
-  display: grid;
-  justify-items: center;
-  color: white;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-bottom: 0.3rem;
 }
 .login-welcome h2 {
-  font-weight: 400;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
 }
 .login-welcome h1 {
   font-weight: 800;
+  color: #ffffff;
+  line-height: 2.5rem;
 }
 .form-container {
   width: 100%;
-  margin: 2rem 0;
+  margin: 2.3rem 0;
 }
 .login-input {
   background: #fff;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   margin-bottom: 0.8rem;
-  height: 3rem;
+  height: 4rem;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -78,7 +85,7 @@ a {
   width: 100%;
   border-radius: 2rem;
   color: #fff;
-  height: 3rem;
+  height: 4rem;
 }
 .continue-btn {
   background-color: #78258b;
