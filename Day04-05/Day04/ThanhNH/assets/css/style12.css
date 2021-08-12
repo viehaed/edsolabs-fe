@@ -25,6 +25,8 @@ body {
     background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
 }
 
+/* Header */
+
 .header .phoneInformation {
     display: flex;
     padding: 12px 14px 0px 22px;
@@ -47,6 +49,8 @@ body {
     top: 2px;
 }
 
+/* Banner */
+
 .banner {
     padding: 0 30px;
     padding-bottom: 10px;
@@ -59,6 +63,7 @@ body {
     letter-spacing: 0px;
     text-align: center;
 }
+
 
 .titleBanner .titleBannerHead {
     font-size: 20px;
@@ -77,6 +82,8 @@ body {
     text-align: center;
     margin-top: 6px;
 }
+
+/* content */
 
 .content {
     margin-top: 37px;
@@ -132,6 +139,9 @@ body {
     line-height: 19px;
     letter-spacing: 0px;
     text-align: center;
+    outline: none;
+    border: none;
+    color: #fff;
 }
 
 .btn.btnTop {
