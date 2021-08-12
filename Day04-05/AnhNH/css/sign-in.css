@@ -11,9 +11,9 @@
   src: url(../font/FontsFree-Net-SFProText-Regular.ttf);
   font-family: SFProText;
 }
- a{
-   text-decoration: none;
- }
+a {
+  text-decoration: none;
+}
 .container {
   width: 414px;
   min-height: 896px;
@@ -142,18 +142,27 @@
   width: 350px;
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px dashed rgba(255, 255, 255, 0.4);
-  border-left: none;
-  border-bottom: none;
-  border-right: none;
   font-family: SFProDisplay;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
 }
-.btn_secondary{
+.rank hr {
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  width: 150px;
+}
+.rank label {
+  flex-grow: 1;
+}
+
+.btn_secondary {
   margin: 32px auto 0px auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.28);
@@ -168,6 +177,6 @@
   text-align: center;
   color: #ffffff;
 }
-.btn_secondary:hover{
+.btn_secondary:hover {
   background: rgba(247, 213, 213, 0.28);
 }
