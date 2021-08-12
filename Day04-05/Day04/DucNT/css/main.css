@@ -1,0 +1,15 @@
+html,
+body {
+    font-size: 15px;
+    font-family: SFProDisplay-Regular;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: SFProDisplay-Regular;
+    src: url('../font/FontsFree-Net-SFProDisplay-Regular.ttf');
+}

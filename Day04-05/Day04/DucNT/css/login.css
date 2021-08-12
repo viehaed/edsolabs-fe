@@ -1,0 +1,187 @@
+    /* Container */
+    
+    .container {
+        background: linear-gradient(180deg, #E5B2CA 0%, #CD82DE 100%);
+        position: absolute;
+        height: 896px;
+        top: calc(50% - 450px);
+        left: calc(50% - 200px);
+        bottom: 0;
+        width: 414px;
+        padding-left: 31px;
+        padding-right: 30px;
+    }
+    /* Header */
+    
+    .header {
+        display: flex;
+        height: 44px;
+        line-height: 44px;
+        justify-content: space-between;
+    }
+    
+    .header_time {
+        color: #ffffff;
+    }
+    
+    .header_right {
+        display: flex;
+    }
+    
+    .icon_ {
+        color: #ffffff;
+    }
+    
+    .icon {
+        color: #ffffff;
+        padding-right: 15px;
+    }
+    /* End Header */
+    /* Content */
+    
+    .main_img {
+        margin-top: 10px;
+    }
+    
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 227px;
+        height: 71px;
+        left: 130px;
+    }
+    
+    .context_one {
+        color: #ffffff;
+        opacity: 0.8;
+        font-weight: lighter;
+        font-size: 20px;
+        margin: 10px auto;
+    }
+    
+    .context_two {
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 35px;
+    }
+    
+    .content_field {
+        margin-top: 35px;
+        width: 342px;
+        height: 74px;
+        position: absolute;
+        top: 420px;
+        left: 70px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        border: 0;
+        background: #ffffff;
+        text-align: left;
+        margin: 8px auto;
+        border: 2px solid #ffffff;
+        padding: 14px 10px;
+        outline: none;
+        width: 270px;
+        padding-left: 60px;
+        height: 35px;
+        /* font-size: 15px;
+    font-family: SFProDisplay-Regular; */
+        border-radius: 37px;
+    }
+    
+    input[type="text"] {
+        background-image: url('../img/person.png');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position-x: 20px;
+        background-position-y: center;
+        /* background-position: 15px center; */
+    }
+    
+    input[type="password"] {
+        background-image: url('../img/key.png');
+        background-repeat: no-repeat;
+        background-size: 12px;
+        /* background-position-x: left;
+    background-position-y: center; */
+        background-position: 23px center;
+    }
+    
+    input::placeholder {
+        color: #000000;
+        font-weight: bold;
+    }
+    
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #78258B;
+        border: 1px solid #78258B;
+        width: 342px;
+        height: 70px;
+        border-radius: 37px;
+        margin: 10px auto;
+        cursor: pointer;
+        /* box-shadow: 5px 5px 15px#ffffff; */
+    }
+    
+    .content_hor {
+        position: absolute;
+        width: 342px;
+        height: 16px;
+        left: 70px;
+        top: 723px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .content_hor_1,
+    .content_hor_2,
+    .content_hor_3 {
+        color: #ffffff;
+    }
+    
+    .content_hor_2 {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+    
+    .content_hor_3,
+    .content_hor_1 {
+        font-size: 7px;
+        opacity: 0.6;
+    }
+    /* End Content */
+    /* Footer */
+    
+    .content_footer {
+        position: absolute;
+        width: 342px;
+        height: 70px;
+        cursor: pointer;
+        left: 70px;
+        top: 781px;
+        background: rgba(255, 255, 255, 0.28);
+        box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+        border-radius: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+    }
+    
+    .content_footer:hover {
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0.5));
+    }
+    /* End Footer */
