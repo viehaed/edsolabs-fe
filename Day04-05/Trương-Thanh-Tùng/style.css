@@ -1,0 +1,198 @@
+body{
+    background-color: #e9e9e9;
+    font-family: SF Display;
+}
+button {
+    font-family: SF Display;
+}
+input::placeholder {
+    font-family: SF Display;
+}
+.box {
+    background: linear-gradient(180deg, rgba(229,178,202,1) 0%, rgba(205,130,222,1) 100%);
+    width: 414px;
+    height:896px;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 414px;
+    height: 44px;
+    font-weight: 500;
+    color:white;
+}
+.time {
+    padding-left: 21px;
+    padding-top: 10.33px;
+}
+.battery {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 10.33px;
+    padding-right: 9px;
+}
+.battery img {
+    padding-right: 6.33px;
+}
+.cellular {
+    width: 18.77px;
+    height: 10.67px;
+}
+.wifi {
+    width: 16.93px;
+    height: 11px;
+}
+.battery-icon {
+    width: 24.33px;
+    height: 11.33px;
+}
+.logo-header {
+    margin: 0 auto;
+}
+.logo {
+    width: 353px;
+    height: 290px;
+}
+.welcome {
+    text-align: center;
+    padding-top: 5px;
+    color:white;
+}
+.welcome p,h1 {
+    margin: 0;
+}
+.welcome h1 {
+    margin: 6px 0;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+}
+.welcome p{
+    color: rgba(255, 255, 255, 0.75);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+.content {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.username, .password {
+    width: 342px;
+    height: 74px;
+    border-radius: 37px;
+    background-color: white;
+    margin: 8px 0;
+    text-align: center;
+    
+}
+.content input {
+    position: relative;
+    border: none;
+    width: 210px;
+    margin: 20px 0;
+    padding: 10px 0;
+    margin-right: 30px;
+}
+/* .username {
+    display: block;
+}
+.username::before {
+    position: absolute;
+    content: '';
+    background: url(/img/user.png);
+    width:14.04px;
+    height: 13.91px;
+    margin: auto 0;
+}
+.password::before {
+    position: absolute;
+    content: '';
+    background: url(/img/key.png);
+    width:11.22px;
+    height: 18.86px;
+} */
+.content img {
+    padding-right: 30px;
+    margin: -3px auto;
+}
+
+.btn {
+    display: block;
+    width: 342px;
+    text-align: center;
+    font-weight: 700;
+    color:white;
+    font-size: 16px;
+    border: none;
+
+}
+.continue-btn {
+    margin: 39px 0 26px;
+}
+.btn a {
+    text-decoration:none;
+    border-radius: 37px;
+    color:white;
+}
+.continue-link {
+    background: #78258B;
+    padding: 27px 39%;
+}
+.footer {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+    color: white;
+
+}
+.option-text{
+    margin-bottom: 48px;
+}
+
+.text {
+    position: relative;
+}
+.text::before {
+    content: "";
+        display: block;
+        width: 140px;
+        border: 1px dashed rgba(255, 255, 255, 0.4);
+        top: 50%;
+        position: absolute;
+        margin-left: 10px;
+}
+.text::after {
+    content: "";
+        display: block;
+        width: 140px;
+        border: 1px dashed rgba(255, 255, 255, 0.4);
+        top: 50%;
+        position: absolute;
+        left: 27px;
+}
+.create-acc {
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    padding: 25px 30%;
+}
+@font-face {
+    font-family: SF Display;
+    src: url(/font/FontsFree-Net-SFProDisplay-Regular.ttf);
+  }
+  
