@@ -1,0 +1,37 @@
+/* Sử dụng lại css của form login, và thay đổi css cho form creat */
+/*================ form create ================*/
+.container__create {
+  background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+}
+
+.title__create-account {
+  width: 296px;
+}
+
+.banner__create-account {
+  width: calc(100% - 132px);
+  max-height: 290px;
+  margin: 0px auto;
+}
+
+.button-create-account {
+  margin-bottom: 32px;
+  background: #52439a;
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+
+.button-create-account:hover {
+  opacity: 0.8;
+  transition: all 800ms ease;
+}
+
+.button-create__login {
+  margin: 32px auto 45px;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+
+.button-create__login:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transition: all 800ms ease;
+}

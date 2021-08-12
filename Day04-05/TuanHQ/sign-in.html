@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/sign-in.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- status bar -->
+      <div class="status-bar">
+        <div class="status-bar__time">9:41</div>
+
+        <div class="status-bar__icon">
+          <img src="./img/Cellular Connection.svg" alt="connection" /><img
+            src="./img/Wifi.svg"
+            alt="Wifi"
+          /><img src="./img/Battery.svg" alt="Battery" />
+        </div>
+      </div>
+
+      <!-- img -->
+      <div class="banner">
+        <img src="./img/Mask Group.png" alt="" />
+      </div>
+
+      <!-- title -->
+      <div class="title">
+        <p>Welcome Back!</p>
+        <h2>Please, Log In.</h2>
+      </div>
+
+      <!-- form -->
+      <div class="form-login">
+        <!-- login -->
+        <form action="">
+          <input
+            class="input-login icon icon-user"
+            type="email"
+            placeholder="johnsondoe@gmail.com"
+          />
+
+          <input
+            class="input-login icon icon-key"
+            type="password"
+            placeholder="**************"
+          />
+
+          <button class="button-form button-login">
+            Continue
+            <span class="icon-continue"
+              ><i class="fas fa-chevron-right"></i
+            ></span>
+          </button>
+        </form>
+
+        <!-- or -->
+        <div>
+          <fieldset class="fieldset">
+            <legend>Or</legend>
+          </fieldset>
+        </div>
+        <!-- create -->
+
+        <form action="./sign-up.html">
+          <button class="button-form button-create">Create an Account</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
