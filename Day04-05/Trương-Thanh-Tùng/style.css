@@ -4,9 +4,12 @@ body{
 }
 button {
     font-family: SF Display;
+    color: white;
 }
 input::placeholder {
     font-family: SF Display;
+    font-weight: bold;
+
 }
 .box {
     background: linear-gradient(180deg, rgba(229,178,202,1) 0%, rgba(205,130,222,1) 100%);
@@ -92,18 +95,32 @@ input::placeholder {
 }
 .content {
     padding-top: 20px;
+} 
+.input-field {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .username, .password {
+    background-color: white;
+    text-align: center;
+    
+}
+.input-content {
+    margin: 8px 0;
     width: 342px;
     height: 74px;
     border-radius: 37px;
-    background-color: white;
-    margin: 8px 0;
-    text-align: center;
-    
+}
+.input-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 37px;
+    background-color:#52439A;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
 }
 .content input {
     position: relative;
@@ -158,10 +175,6 @@ input::placeholder {
     background: #78258B;
     padding: 27px 39%;
 }
-.create-link {
-    background-color:#52439A;
-    padding: 27px 31%;
-}
 .footer {
     display: inline-block;
     text-align: center;
@@ -171,7 +184,7 @@ input::placeholder {
 
 }
 .option-text{
-    margin-bottom: 48px;
+    margin-bottom: 57px;
 }
 
 .text {
