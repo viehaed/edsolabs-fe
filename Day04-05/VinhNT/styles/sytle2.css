@@ -1,0 +1,212 @@
+main{
+    display: flex;
+    justify-content: center;
+
+}
+#container{
+    position: relative;
+    width: 414px;
+    height: 896px;
+
+}
+#background{
+    position: absolute;
+    width: 414px;
+    height: 896px;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+}
+#status_bar{
+    top: 0%;
+    left: 0%;
+    height: 44px;
+    margin-bottom: 10px;
+}
+#time_display{
+    position: absolute;
+    width: 54px;
+    height: 21px;
+    top:13px;
+    left: 21px;
+}
+#time_display > span{
+    font-family: myFont;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#icon_display{
+    position: absolute;
+    width: 71px;
+    height: 21px;
+    left: 325px;
+    top: 15px
+}
+@font-face {
+    font-family: myFont;
+    src: url(./font/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+#mask_group{
+    margin: 0 30px 5px 30px;
+}
+#welcome_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome_text >p{
+    margin: 0;
+    font-family: myFont;
+    font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: rgba(255, 255, 255, 0.75);
+margin-bottom: 6px;
+}
+#welcome_text > h1{
+    margin: 0;
+    font-family: myFont;
+font-style: normal;
+font-weight: 800;
+font-size: 34px;
+line-height: 41px;
+color: #FFFFFF;
+}
+#input{
+    margin: 37px 36px 0 36px;
+}
+#input > form > div{
+    background-color: white;
+    border-radius: 37px;
+    height: 74px;
+    position: relative;
+    margin-bottom: 14px;
+}
+#input > form > div>img{
+    position:absolute;
+}
+input{
+    font-family: myFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    border: none;
+    position: absolute;
+    top: 28px;
+    left: 60px;
+    width: 240px;
+    outline: none;
+}
+
+#user_img{
+    top: 30px;
+    left: 22px;
+}
+#key_img{
+    top:28px;
+    left:24px;
+}
+#submit_button{
+    left: 5px;
+    width: 320px;
+    background-color: inherit;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.3px;
+    color: #FFFFFF;
+}
+#submit_button:hover{
+    cursor: pointer;
+    background-color: #796EAF;
+}
+#submit_holder{
+    background-color: #52439A!important;
+    box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25)
+}
+#submit_holder:hover{
+    cursor: pointer;
+    background-color: #796EAF!important;
+}
+#submit_holder span{
+    position: absolute;
+    color: white;
+    top: 31px;
+    left: 205px;
+}
+#separate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+    position: relative;
+    padding-bottom: 32px;
+}
+#separate span{
+    font-family: myFont;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+
+color: #FFFFFF;
+}
+#first_line{
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    height: 1px;
+    width: 148px;
+    position: absolute;
+    left: 5px;
+}
+#second_line{
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    height: 1px;
+    width: 148px;
+    position: absolute;
+    left: 187px;
+}
+#link_button{
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+    border-radius: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#link_button:hover{
+    cursor: pointer;
+    background-color: rgba(210, 207, 207, 0.28);
+}
+#link_button div{
+    font-family: myFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    height: 74px;
+}
+#link_button div a{
+    position: absolute;
+    top: 27px;
+    left: 150px;    
+}
+#link_button div a:link, a:visited {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+#link_button div a:link:active, a:visited:active {
+    color: (internal value);
+    text-decoration: none;
+  }
