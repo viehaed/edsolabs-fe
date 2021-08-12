@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -13,20 +12,6 @@
     width: 414px;
     height: 896px;
     background: #FFFFFF;
-}
-.line7 {
-    position: absolute;
-    width: 148px;
-    left: 36px;
-    top: 742px;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
-}
-.line8 {
-    position: absolute;
-    width: 148px;
-    left: 230px;
-    top: 742px;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
 }
 a {
     text-decoration: none;
@@ -43,7 +28,28 @@ a {
     line-height: 17px;
     color: #FFFFFF;
 }
+.or::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 148px;
+    left: -170px;
+    top: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+.or::after {
+    content: "";
+    position: absolute;
+    width: 148px;
+    left: 36px;
+    top: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
 button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn_secondary:hover {
     cursor: pointer;
     opacity: 0.8;
 }
