@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    position: relative;
+    width: 414px;
+    height: 896px;
+    margin: auto;
+    background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+  }
+  
+  .container img:first-child {
+    position: relative;
+  }
+  .container #img2 {
+    position: relative;
+    margin: 10px 66px 0px 66px;
+  }
+  .hello {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input input {
+    position: relative;
+    width: 342px;
+    height: 74px;
+    border: none;
+    border-radius: 37px;
+    padding-left: 60px;
+  }
+  .input div {
+    position: relative;
+  }
+  .input #i1 {
+    position: absolute;
+    top: 54px;
+    left: 20px;
+    z-index: 999;
+  }
+  .input #i2 {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    z-index: 999;
+  }
+  .input #user {
+    margin-top: 27px;
+    margin-bottom: 0px;
+  }
+  .input #password {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .input #button1 {
+    width: 342px;
+    height: 74px;
+    border-radius: 37px;
+    color: white;
+    background-color: #78258b;
+    border: none;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  }
+  
+  #button1:hover {
+    background-color: #a323c0;
+  }
+  #seperate {
+    text-align: center;
+    border-style: dashed;
+    border-color: white;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    width: 342px;
+    margin: 32px 36px 0px 36px;
+  }
+  #button2 {
+    width: 342px;
+    height: 70px;
+    margin: 32px 36px 45px 36px;
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+  }
+  #button2:hover{
+      background-color: #BD1FE1;
+  }
+  
