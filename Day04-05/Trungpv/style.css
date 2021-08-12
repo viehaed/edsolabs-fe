@@ -1,0 +1,140 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+ /*css container Singup.html*/
+.container_sig {
+	background-color: #9183DE;
+	width: 414px;
+	height: 880px;
+}
+/*END*/
+.container {
+	width: 414px;
+	height: 880px;
+	/*background-image: linear-gradient(to right, #E5B2CA 100%, to bottom #DDA2D1);*/
+	background-color: #E5B2CA;
+	
+}
+.nav {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav_list {
+	padding-left: 29px;
+	margin: auto 0px;
+}
+.nav_list li {
+	font-weight: bold;
+	color: white;
+}
+
+.nav_items {
+	display: inline-block;
+	list-style: none;
+	margin: 0 5px;
+}
+.container_content {
+	width: 353px;
+	height: 797px;
+	/*background-color: blue;*/
+}
+.img_content {
+	height: 290px;
+	width: 353px;
+	/*background-color: violet;*/
+}
+img {
+	width: 353px;
+	height: 290px;
+}
+.content_bottom_img {
+	text-align: center;
+	padding-bottom: 43px;
+	color: white;
+}
+.content_bottom_img span {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	display: block;
+}
+.content_bottom_img p {
+	font-size: 34px;
+	font-weight: bold;
+}
+.input_login {
+	text-align: center;
+	padding-bottom: 34px;
+}
+input {
+	position: relative;
+    max-width: 100%;
+    width: 291px;
+    height: 70px;
+    margin-bottom: 12px;
+    border-radius: 40px;
+    outline: none;
+    padding-left: 57px;
+    border: 1px solid white;
+}
+
+button.btn_bg {
+	width: 342px;
+	height: 67px;
+	margin-bottom: 12px;
+	border-radius: 40px;
+	border: 1px solid white;
+	background-color: #78258B;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+}
+.with_icon i {
+	position: absolute;
+	padding-left: 20px;
+	margin-bottom: 20px;
+	z-index: 1;
+	padding-top: 28px;
+}
+button.btn_bg:hover {
+	background-color: #9234A8;
+}
+.ordol {
+	text-align: center;
+	display: flex;
+	padding-bottom: 30px;
+}
+.ordol p {
+	margin-top: 0px;
+	color: white;
+	font-size: 16px;
+}
+.ordol img {
+	width: 150px;
+	height: 2px;
+	display:flex;
+	margin: 7px 3px;
+}
+.with_icon1 {
+		padding-bottom: 42px;
+}
+.with_icon1	  button{
+	width: 342px;
+	height: 67px;
+	margin-bottom: 12px;
+	border-radius: 40px;
+	border: 1px solid white;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	color: white;
+	background-color: #E0CFE3;
+}
+.with_icon1 button:hover {
+ 	background-color: #F1E2F4;
+}
+
