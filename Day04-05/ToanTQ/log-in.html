@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Log in</title>
+</head>
+
+<body>
+    <main>
+        <section class="status">
+            <nav class="status__bar">
+                <ul>
+                    <li class="status__time">
+                        <span class="status__time--style">9:41</span>
+                    </li>
+                    <li class="status__group">
+                        <span class="status__group--type">
+                            <i class="fas fa-signal"></i>
+                        </span>
+                        <span class="status__group--type">
+                            <i class="fas fa-wifi"></i>
+                        </span>
+                        <span class="status__group--type">
+                            <i class="fas fa-battery-full"></i>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="logo">
+            <div class="container logo__content">
+                <div class="logo__img">
+                    <img src="images/Frame.png" alt="logo">
+                </div>
+                <div class="logo__title">
+                    <h1>Log In to Brand</h1>
+                </div>
+            </div>
+        </section>
+        <section class="form" >
+            <form class="container form__group" action="sign-up.html">
+                <div class="group__button">
+                    <div class="button__facebook group__button--bg">
+                        <span class="button__facebook--icon"></span>
+                        <span class="button__text">Facebook</span>
+                    </div>
+                    <div class="button__google group__button--bg">
+                        <span class="button__google--icon"></span>
+                        <span class="button__text">Google</span>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Or Log In Using Email</legend>
+                </fieldset>
+                <div class="input__group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password">
+                    <div class="forgot__pass">
+                        <a href="">Forgot Password</a>
+                    </div>
+                </div>
+                <button class="btn__login">
+                    login
+                </button>
+                <div class="link__sign">
+                    <span>New to Brand? <a href="sign-up.html">Sign Up</a></span>
+                </div>
+            </form>
+        </section>
+        <section class="pattern">
+            <div class="pattern__img"></div>
+        </section>
+    </main>
+</body>
+
+</html>

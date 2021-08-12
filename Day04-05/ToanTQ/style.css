@@ -1,0 +1,232 @@
+@font-face {
+    font-family: SF-Prp;
+    src: url(fonts/FontsFree-Net-SFProText-Regular.ttf);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: SF-Prp;
+    background-color: #e5e5e5;
+    font-size: 1.6rem;
+}
+
+main {
+    max-width: 414px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+fieldset {
+    border-top: solid 1px #253274;
+    text-align: center;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #253274;
+    padding: 0 0.8rem;
+}
+
+
+
+.status {
+    margin: 2.8rem 0;
+}
+
+.status__bar>ul {
+    display: flex;
+    padding: 1.6rem 1.4rem 1.6rem 3rem;
+    justify-content: space-between;
+}
+
+.status__time--style,
+.status__group--type {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.container {
+    padding: 0 3.5rem;
+}
+
+.logo__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4rem;
+    color: #253274;
+}
+
+.form {
+    margin-top: 3.8rem;
+}
+
+.group__button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.8rem;
+}
+
+.button__facebook:hover,.button__google:hover{
+    transform: translateY(-0.5rem);
+    transition: transform 0.5s;
+}
+
+.group__button--bg {
+    transform: translateY(0);
+    cursor: pointer;
+    border-radius: 0.8rem;
+    padding: 1.5rem 2.5rem;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.06);
+    flex: none;
+    flex-grow: 1;
+    margin: 0 1.2rem;
+}
+
+.button__google--icon {
+    background: url('images/icons8-google\ 1.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+.button__facebook--icon {
+    background: url('images/facebook-f 1.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+.button__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #253274;
+}
+
+.input__group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.8rem;
+
+}
+
+.input__group label {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: rgba(37, 50, 116, 0.6)
+    
+}
+
+.input__group input {
+    width: 100%;
+    padding: 1.8rem 1.2rem;
+    border: 1px solid rgba(37, 50, 116, 0.28);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 1.6rem;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #253274;
+}
+
+.forgot__pass {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: #253274;
+    margin-bottom: 1.6rem;
+}
+
+.Terms__Condition{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: #253274;
+    margin-bottom: 1.6rem;
+}
+
+.Terms__Condition strong{
+    font-weight: 600;
+    color: #253274;
+}
+
+.btn__login {
+    width: 100%;
+    height: 64px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 1.6rem;
+    background-color: #7189FF;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 0.2rem;
+}
+
+.btn__login:hover{
+    background-color: #253274;
+    transition: background-color 0.7s;
+}
+
+.link__sign {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #253274;
+}
+
+.link__sign a {
+    color: #7189FF;
+}
+
+.pattern {
+    margin-top: 8rem;
+}
+
+.pattern__img {
+    width: 100%;
+    background: url("images/pattern\ 1\ 1.png");
+    height: 16rem;
+}
