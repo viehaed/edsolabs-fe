@@ -14,6 +14,12 @@ input::placeholder {
     height:896px;
     margin: 0 auto;
 }
+.sign-up-box {
+    background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+    width: 414px;
+    height:896px;
+    margin: 0 auto;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -152,6 +158,10 @@ input::placeholder {
     background: #78258B;
     padding: 27px 39%;
 }
+.create-link {
+    background-color:#52439A;
+    padding: 27px 31%;
+}
 .footer {
     display: inline-block;
     text-align: center;
@@ -191,8 +201,11 @@ input::placeholder {
     border-radius: 37px;
     padding: 25px 30%;
 }
+.login-btn {
+    padding: 25px 43%;
+}
 @font-face {
     font-family: SF Display;
-    src: url(/font/FontsFree-Net-SFProDisplay-Regular.ttf);
+    src: url(./font/FontsFree-Net-SFProDisplay-Regular.ttf);
   }
   
