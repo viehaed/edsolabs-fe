@@ -1,0 +1,237 @@
+@font-face {
+    font-family: SF-font;
+    src: url('../font/SFProDisplay-Regular.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: SF-font;
+}
+
+.register-block {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 414px;
+    height: 896px;
+    background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+}
+
+.head {
+    width: 100%;
+    height: 44px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    padding-left: 21px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.list-icon {
+    display: flex;
+    padding-right: 14px;
+
+}
+
+.list-icon i{
+    font-size: 15px;
+    color: white;
+}
+
+.list-icon .fa-wifi{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.main {
+    width: 353px;
+    margin: 10px 30px 45px 30px;
+}
+
+.image-block {
+    margin: auto;
+    width: 282px;
+    height: 290px;
+    background-image: url('../images/img2.png');
+    background-size: cover;
+}
+
+.image-block > img {
+    height: 100%;
+    width: 100%;
+}
+
+.text-block {
+    margin: auto;
+    margin-top: 5px;
+    width: 100%;
+    height: 71px;
+}
+
+.text-block div {
+    text-align: center;
+    color: white;
+}
+
+.text1 {
+    height: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.text2 {
+    margin-top: 6px;
+    height: 41px;
+    font-size: 34px;
+    line-height: 41px;
+    font-weight: 800;
+}
+
+form {
+    margin: auto;
+    margin-top: 37px;
+    width: 342px;
+}
+
+.input-block {
+    width: 100%;
+}
+
+.input-block > input {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 37px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
+.email input {
+    max-height: 74px;
+    padding: 27px 60px;
+    font-weight: 600;
+    font-size: 15px;
+    background-image: url('../images/user.png');    
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    background-position-y: center ;
+    background-position-x: 22px;
+}
+
+.password {
+    margin-top: 14px;
+}
+
+.password input {
+    max-height: 72px;
+    padding: 27px 50px;
+    font-weight: 600;
+    font-size: 15px;   
+    background-image: url('../images/key.png');
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    background-position-y: center ;
+    background-position-x: 22px;
+}
+
+.submit {
+    position: relative;
+    margin-top: 14px;
+}
+
+.submit i {
+    position: absolute;
+    color: white;
+    right: 118px;
+    top: 30px;
+}
+
+.submit input {
+    background-color: #52439A;
+    max-height: 70px;
+    padding: 27px 0px;
+    font-weight: 600;
+    font-size: 19px;   
+    text-align: center;
+    color: white;
+}
+
+.submit input:hover {
+    cursor: pointer;
+    background-color: #52439aa1;
+}
+
+.line {
+    margin: auto;
+    margin-top: 32px;
+    width: 342px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.line::before {
+    content: "";
+    font-size: 14px;
+    height: 1px;
+    width: 148px;
+    border-top: 2px dashed white;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+}
+
+.line::after {
+    content: "";
+    height: 1px;
+    width: 148px;
+    border-top: 2px dashed beige;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+.login {
+    margin: auto;
+    margin-top: 32px;
+    width: 342px;
+    height: 70px;
+}
+
+.login a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF47;
+    border-radius: 37px;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 70px;
+}
+
+.login a:hover {
+    background-color: #ffffff9a;
+}
