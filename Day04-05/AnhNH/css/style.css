@@ -14,7 +14,14 @@
 a {
   text-decoration: none;
 }
-.container {
+.bg__sihn-up {
+  width: 414px;
+  min-height: 896px;
+  margin: auto;
+  margin-top: 10px;
+  background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+}
+.bg__sign-in {
   width: 414px;
   min-height: 896px;
   margin: auto;
@@ -56,6 +63,7 @@ a {
   width: 353px;
   height: 290px;
   margin: 10px auto 5px auto;
+  text-align: center;
 }
 .container .title .title__welcome {
   font-family: SFProDisplay;
@@ -117,16 +125,16 @@ a {
 .passWord {
   margin: 0px auto 14px auto;
 }
-.button__create__login {
+.button__create {
   margin: 0px auto 32px auto;
   text-align: center;
-  background: #78258b;
-  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  background: #52439a;
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
   align-content: center;
   justify-content: center;
   border: none;
 }
-.button__create__login p {
+.button__create p {
   font-family: SFProDisplay;
   font-style: normal;
   font-weight: bold;
@@ -135,7 +143,28 @@ a {
   text-align: center;
   color: #ffffff;
 }
-.button__create__login:hover {
+.button__create:hover {
+  background: #6451be;
+}
+.button__login {
+  margin: 0px auto 32px auto;
+  text-align: center;
+  background: #78258b;
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  align-content: center;
+  justify-content: center;
+  border: none;
+}
+.button__login p {
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+.button__login:hover {
   background: #7f3391;
 }
 .rank {
@@ -163,7 +192,7 @@ a {
   flex-grow: 1;
 }
 
-.btn_secondary {
+.btn__secondary-up {
   margin: 32px auto 0px auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.28);
@@ -179,6 +208,25 @@ a {
   color: #ffffff;
   border: none;
 }
-.btn_secondary:hover {
-  background: rgba(247, 213, 213, 0.28);
+.btn__secondary-up:hover {
+  background: rgba(248, 232, 232, 0.28);
+}
+.btn__secondary-in {
+  margin: 32px auto 0px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  align-content: center;
+  justify-content: center;
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+}
+.btn__secondary-in:hover {
+  background: rgba(252, 179, 179, 0.28);
 }

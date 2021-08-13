@@ -14,7 +14,7 @@
 a {
   text-decoration: none;
 }
-.container {
+.bg__sihn-up{
   width: 414px;
   min-height: 896px;
   margin: auto;
@@ -125,6 +125,7 @@ a {
   box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
   align-content: center;
   justify-content: center;
+  border: none;
 }
 .button__create__login p {
   font-family: SFProDisplay;
@@ -177,6 +178,7 @@ a {
   line-height: 19px;
   text-align: center;
   color: #ffffff;
+  border: none;
 }
 .btn_secondary:hover {
   background: rgba(248, 232, 232, 0.28);
