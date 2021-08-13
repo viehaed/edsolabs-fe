@@ -1,13 +1,11 @@
 main{
     display: flex;
     justify-content: center;
-
 }
 #container{
     position: relative;
     width: 414px;
     height: 896px;
-
 }
 #background{
     position: absolute;
@@ -47,7 +45,7 @@ main{
 }
 @font-face {
     font-family: myFont;
-    src: url(./font/FontsFree-Net-SFProDisplay-Regular.ttf);
+    src: url(../font/FontsFree-Net-SFProDisplay-Regular.ttf);
 }
 #mask_group{
     margin: 0 30px 5px 30px;
@@ -62,20 +60,20 @@ main{
     margin: 0;
     font-family: myFont;
     font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-color: rgba(255, 255, 255, 0.75);
-margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 6px;
 }
 #welcome_text > h1{
     margin: 0;
     font-family: myFont;
-font-style: normal;
-font-weight: 800;
-font-size: 34px;
-line-height: 41px;
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+    color: #FFFFFF;
 }
 #input{
     margin: 37px 36px 0 36px;
@@ -103,7 +101,6 @@ input{
     width: 240px;
     outline: none;
 }
-
 #user_img{
     top: 30px;
     left: 22px;
@@ -150,26 +147,28 @@ input{
 }
 #separate span{
     font-family: myFont;
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 17px;
-
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    position: relative;
+    color: #FFFFFF;
 }
-#first_line{
-    border-top: 1px dashed rgba(255, 255, 255, 0.4);
-    height: 1px;
+#separate span::before{
+    content: "";
+    border: 1px dashed rgba(255, 255, 255, 0.4);
     width: 148px;
     position: absolute;
-    left: 5px;
+    right:22px;
+    top:7px;  
 }
-#second_line{
-    border-top: 1px dashed rgba(255, 255, 255, 0.4);
-    height: 1px;
+#separate span::after{
+    content: "";
+    border: 1px dashed rgba(255, 255, 255, 0.4);
     width: 148px;
     position: absolute;
-    left: 187px;
+    left:24px;
+    top:7px;  
 }
 #link_button{
     background: rgba(255, 255, 255, 0.28);
@@ -177,36 +176,23 @@ color: #FFFFFF;
     border-radius: 37px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    text-align: center;
 }
 #link_button:hover{
     cursor: pointer;
     background-color: rgba(210, 207, 207, 0.28);
 }
-#link_button div{
-    font-family: myFont;
-    font-style: normal;
+#link_button a{
+    padding: 28px 0 28px 0;
+    font-family: myFont;   
     font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-    height: 74px;
 }
-#link_button div a{
-    position: absolute;
-    top: 27px;
-    left: 150px;    
-}
-#link_button div a:link, a:visited {
+#link_button a:link, a:visited {
     color: #FFFFFF;
     cursor: pointer;
     text-decoration: none;
-  }
-  
-#link_button div a:link:active, a:visited:active {
+}
+#link_button a:link:active, a:visited:active {
     color: (internal value);
     text-decoration: none;
-  }
+}
