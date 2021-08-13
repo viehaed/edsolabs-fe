@@ -52,20 +52,21 @@
         width: 227px;
         height: 71px;
         left: 130px;
+        line-height: 10px;
     }
     
     .context_one {
         color: #ffffff;
         opacity: 0.8;
         font-weight: lighter;
-        font-size: 20px;
-        margin: 10px auto;
+        margin: 15px 20px 15px 0px;
     }
     
     .context_two {
         color: #ffffff;
         font-weight: bolder;
-        font-size: 35px;
+        width: 250px;
+        margin-left: 60px;
     }
     
     .content_field {
@@ -125,9 +126,15 @@
         border: 1px solid #78258B;
         width: 342px;
         height: 70px;
+        /* color: greenyellow; */
         border-radius: 37px;
         margin: 10px auto;
         cursor: pointer;
+        /* font-weight: 700;
+        font-style: normal; */
+        /* font-size: 16px;
+        line-height: 19px;
+        color: red; */
         /* box-shadow: 5px 5px 15px#ffffff; */
     }
     
@@ -136,30 +143,38 @@
         width: 342px;
         height: 16px;
         left: 70px;
-        top: 723px;
+        top: 739px;
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
     
-    .content_hor_1,
-    .content_hor_2,
-    .content_hor_3 {
+    fieldset {
+        border: 0;
+        border-top: 1px dotted #ffffff;
+        width: 200px;
+        padding-left: 150px;
+    }
+    
+    h4 {
+        padding: 0 15px;
         color: #ffffff;
-    }
-    
-    .content_hor_2 {
-        margin-left: 14px;
-        margin-right: 14px;
-    }
-    
-    .content_hor_3,
-    .content_hor_1 {
-        font-size: 7px;
-        opacity: 0.6;
+        font-weight: 200;
     }
     /* End Content */
     /* Footer */
+    
+    input[type="button"] {
+        outline: none;
+        border: 0px solid;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        background: none;
+        cursor: pointer;
+    }
     
     .content_footer {
         position: absolute;
@@ -167,18 +182,13 @@
         height: 70px;
         cursor: pointer;
         left: 70px;
-        top: 781px;
+        top: 787px;
         background: rgba(255, 255, 255, 0.28);
         box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
         border-radius: 37px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 16px;
-        line-height: 19px;
-        color: #ffffff;
     }
     
     .content_footer:hover {

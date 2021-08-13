@@ -58,21 +58,21 @@
     width: 227px;
     height: 71px;
     left: 130px;
+    line-height: 10px;
 }
 
 .context_one {
     color: #ffffff;
     opacity: 0.8;
     font-weight: lighter;
-    font-size: 20px;
-    margin: 10px auto;
+    margin: 20px 20px;
 }
 
 .context_two {
     color: #ffffff;
     font-weight: bolder;
-    font-size: 35px;
     width: 250px;
+    margin-left: 25px;
 }
 
 span {
@@ -152,7 +152,7 @@ button {
     width: 342px;
     height: 16px;
     left: 70px;
-    top: 723px;
+    top: 743px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -175,30 +175,54 @@ button {
     opacity: 0.6;
 }
 
+button h3 {
+    color: #ffffff;
+}
+
+fieldset {
+    border: 0;
+    border-top: 1px dotted #ffffff;
+    width: 200px;
+    padding-left: 150px;
+}
+
+h4 {
+    padding: 0 15px;
+    color: #ffffff;
+    font-weight: 200;
+}
+
 
 /* End Content */
 
 
 /* Footer */
 
-.content_footer {
-    position: absolute;
-    width: 342px;
-    cursor: pointer;
-    height: 70px;
-    left: 70px;
-    top: 781px;
-    background: rgba(255, 255, 255, 0.28);
-    box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
-    border-radius: 37px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+input[type="submit"] {
+    outline: none;
+    border: 0px solid;
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
     line-height: 19px;
     color: #ffffff;
+    background: none;
+    cursor: pointer;
+}
+
+.content_footer {
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    cursor: pointer;
+    left: 70px;
+    top: 790px;
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content_footer:hover {
