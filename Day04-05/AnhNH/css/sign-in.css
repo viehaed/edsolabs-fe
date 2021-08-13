@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  src: url(../font/FontsFree-Net-SFProDisplay-Regular.ttf);
+  font-family: SFProDisplay;
+}
+@font-face {
+  src: url(../font/FontsFree-Net-SFProText-Regular.ttf);
+  font-family: SFProText;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 414px;
+  min-height: 896px;
+  margin: auto;
+  margin-top: 10px;
+  background: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+}
+.container .statusBar {
+  height: 44px;
+  width: 100%;
+  display: flex;
+}
+.container .statusBar .statusBar__time {
+  flex: 1;
+  line-height: 44px;
+}
+.statusBar .statusBar__time .statusBar__time-show {
+  font-family: SFProText;
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  display: inline-block;
+  padding-left: 21px;
+}
+.container .statusBar .statusBar__show {
+  flex: 1;
+  text-align: right;
+  line-height: 44px;
+  padding-right: 14px;
+}
+.statusBar .statusBar__show .statusBar__show-img {
+  display: inline-block;
+  padding: 0px 2px;
+}
+.container .avatar {
+  width: 353px;
+  height: 290px;
+  margin: 10px auto 5px auto;
+}
+.container .title .title__welcome {
+  font-family: SFProDisplay;
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+.container .title .title__name {
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+}
+.form-group {
+  width: 342px;
+  height: 74px;
+  background: #ffffff;
+  border-radius: 37px;
+  display: flex;
+  align-items: center;
+}
+.form-group .icon {
+  margin: 0px 20px;
+}
+.form-group .text {
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3c3c43;
+  border: none;
+  flex-grow: 1;
+  padding-right: 20px;
+}
+.form-group .text input {
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3c3c43;
+  border: none;
+  width: 100%;
+}
+.form-group .text input:focus {
+  border: none;
+  outline: none;
+}
+.userName {
+  margin: 37px auto 14px auto;
+}
+.passWord {
+  margin: 0px auto 14px auto;
+}
+.button__create__login {
+  margin: 0px auto 32px auto;
+  text-align: center;
+  background: #78258b;
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  align-content: center;
+  justify-content: center;
+  border: none;
+}
+.button__create__login p {
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+.button__create__login:hover {
+  background: #7f3391;
+}
+.rank {
+  text-align: center;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.rank hr {
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  width: 150px;
+}
+.rank label {
+  flex-grow: 1;
+}
+
+.btn_secondary {
+  margin: 32px auto 0px auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  align-content: center;
+  justify-content: center;
+  font-family: SFProDisplay;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+}
+.btn_secondary:hover {
+  background: rgba(247, 213, 213, 0.28);
+}
