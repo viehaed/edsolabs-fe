@@ -1,0 +1,22 @@
+main.signUp {
+    background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+}
+
+.container .imgSignUp {
+    padding: 10px 66px 5px 66px;
+}
+
+.container .buttonCreateAccount {
+    background: #52439A;
+    transition: all ease-in-out 0.5s;
+}
+
+.container .loginConvert:hover {
+    background: #7d6cce;
+    transition: all ease-in-out 0.5s;
+}
+
+.input .buttonCreateAccount:hover {
+    background: #cecece1f;
+    transition: all ease-in-out 0.5s;
+}
