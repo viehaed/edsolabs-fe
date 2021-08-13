@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style_Register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -23,7 +24,7 @@
         <!-- Phần chính -->
         <div class="main">
             <!-- Ảnh nền -->
-            <div class="img_create">
+            <div class="img img_create">
                 <img src="../assets/img/img-create.png" alt="đây là ảnh nền mục create">
             </div>
             <!-- Tên trang -->
@@ -32,25 +33,27 @@
                 <p>Let's get Started</p>
             </div>
             <!-- Form đăng nhậP -->
-            <div class="form_create">
-                <div class="user">
+            <form class="form">
+                <div class="user style_input">
                     <img src="../assets/icon/user.png">
                     <input type="text" placeholder="Username" >
                 </div>
-                <div class="password">
+                <div class="password style_input">
                     <img src="../assets/icon/key.png">
                     <input type="password" placeholder="Password">
                 </div>
-                <div class="continue">
+                <button class="create style_input sumbit" type="submit">
                     <span>Create an Account</span>
-                </div>
-            </div>
+                </button>
+            </form>
             <div class="or">
-                <span>-------------------- </span><span> Or </span><span> -------------------- </span>
+                <span> Or </span>
             </div>
-            <div class="login">
-                <span><a href="/login/login.html">Log In</a></span>
-            </div>
+            <a href="/login/login.html">
+                <div class="login change_page">
+                    Log In
+                </div>
+            </a>
         </div>
     </div>
 </body>

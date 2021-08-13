@@ -16,21 +16,12 @@ body {
     font-family: sfPro;
 }
 
-/* Style phần container */
-.container{
-    margin: auto;
-    width: 414px;
-    height: 896px;
-    background: linear-gradient(180deg, #E5B2CA 0%, #CD82DE 100%);
-}
-
 /* Style thanh status */
 .status_bar {
     color: white;
     height: 44px;
     width: 414px;
     position: relative;
-    /* line-height: 44px; */
 }
 .left_status_bar {
     position: absolute;
@@ -56,26 +47,35 @@ body {
     margin-left: 5px;
 }
 
+/* Style phần container */
+.container{
+    margin: auto;
+    width: 414px;
+    height: 896px;
+}
+
 /* Style main */
 .main {
     width: 414px;
 }
 
 /* Style ảnh nền */
-.img_login {
+.img {
     width: 353px;
     height: 290px;
     margin-top: 10px;
     overflow: hidden;
-    margin-left: 31px;
     position: relative;
+    margin: auto;
 }
-.img_login > img {
+.img > img {
     width: 423px;
     position: absolute;
     left: -55px;
     top: -80px;
 }
+
+/* Style title page */
 .title_page {
     text-align: center;
 }
@@ -94,11 +94,11 @@ body {
 }
 
 /* Style Form login */
-.form_login {
+.form {
     margin-top: 37px;
 }
 
-.form_login > div {
+.form .style_input {
     width: 342px;
     height: 74px;
     margin: auto;
@@ -107,14 +107,14 @@ body {
     position: relative;
 }
 
-.form_login img {
+.form img {
     width: 13px;
     position: absolute;
     top: 30px;
     left: 22px;
 }
 
-.form_login input {
+.form input {
     position: absolute;
     left: 60px;
     width: 185px;
@@ -125,19 +125,19 @@ body {
     outline: none;
 }
 
-.form_login .password {
+.form .password {
     margin-top: 14px;
 }
 
-.form_login .continue {
-    background-color: #78258B;
+.form .sumbit {
     text-align: center;
-    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
     margin-top: 14px;
     line-height: 70px;
     cursor: pointer;
+    margin-left: 31px;
+    border: none;
 }
-.continue > span {
+.sumbit > span {
     font-weight: 700;
     font-size: 16px;
     color: white;
@@ -153,7 +153,17 @@ body {
     margin-bottom: 32px;
 }
 
-.create {
+.or::before {
+    content: "-------------------- ";
+}
+
+.or::after {
+    content: "--------------------";
+}
+
+
+/* Style chuyển trang */
+.change_page {
     width: 342px;
     height: 74px;
     margin: auto;
@@ -168,13 +178,12 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
-
-.create > span > a {
+a {
     color: white;
     text-decoration: none;
 }
 
-.create > span > a:visited{
+.change_page > span > a:visited{
     color: white;
     text-decoration: none;
 }
