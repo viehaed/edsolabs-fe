@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
-    <link rel="stylesheet" href="./icofont/icofont.min.css">
+    <title>Sign In</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -16,42 +15,28 @@
 
 <body>
     <div class="main main-login">
-        <div class="header">
-            <span class="header__time">9:41</span>
-            <div class="header__icons">
-                <div class="header__icon">
-                    <i class="fas fa-signal"></i>
-                </div>
-                <div class="header__icon">
-                    <i class="fas fa-wifi"></i>
-                </div>
-                <div class="header__icon">
-                    <i class="fas fa-battery-full"></i>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <!-- <img src="./img/image_log-in.svg" alt="" class="container__background-image"> -->
+        <header class="header">
             <img src="./img/login.png" alt="" class="container__background-image">
+        </header>
+        <div class="container">
             <div class="container__title">
                 <span class="container__title-welcome">Welcome Back!</span>
-                <h1 class="container__title-login">Please, Log In</h1>
+                <h1 class="container__title-login">Please, Log In.</h1>
             </div>
             <div class="container__form">
-                <form action="" id="login">
+                <form action="" id="form">
                     <div class="form__user form__input">
                         <i class="far fa-user input__icon"></i>
-                        <input type="text" class="btn-base">
+                        <input type="text" class="btn-base" placeholder="Username">
                     </div>
                     <div class="form__password form__input">
                         <img src="./img/key.svg" alt="" class="input__icon">
-                        <input type="password" class="btn-base">
+                        <input type="password" class="btn-base" placeholder="Password">
                     </div>
-                    <div class="form__continue ">
-                        <button class="form__continue-submit btn-base"><span>
-                                Continue <i class="fas fa-greater-than"></i>
-
-                            </span></button>
+                    <div class="form__submit ">
+                        <button type="submit" class="btn-submit btn-base">
+                            <span>Continue <i class="fas fa-greater-than"></i></span>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -60,11 +45,10 @@
                     <legend>Or</legend>
                 </fieldset>
             </div>
-            <div class="container__create-account">
-                <button class="container__register btn-base"><a href="./sign-up.html" class="link-switch">Create an
-                        Account</a></button>
-            </div>
         </div>
+        <footer class="footer">
+            <a href="./sign-up.html" class="footer__switch-link btn-base">Create an Account</a>
+        </footer>
     </div>
 </body>
 
