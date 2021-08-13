@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    width: 414px;
+    height: 896px;
+    background:linear-gradient(180deg, #E5B2CA 0%, #CD82DE 100%);
+    position:fixed;
+    top: 10%;
+    left: 40%;
+}
+
+.img {
+    margin-left: 31px;
+    margin-right: 30px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 227px;
+    height: 71px;
+    left: 94px;
+    top: 349px;
+}
+
+.textfirst {
+    width: 137px;
+    height: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.textsecond {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+    color: #FFFFFF;
+    margin: 6px 0px;
+}
+
+.inputpassword {
+    position: absolute;
+    width: 342px;
+    height: 72px;
+    left: 36px;
+    top: 545px;
+    background: #FFFFFF;
+    border-radius: 37px;
+}
+
+.pass {
+    position: absolute;
+    width: 133px;
+    height: 17px;
+    left: 56px;
+    top: 28px;
+    font-family: SF Pro Display Regular;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+
+.inputuser {
+    position: absolute;
+    width: 342px;
+    height: 74px;
+    left: 36px;
+    top: 457px;
+    background: #FFFFFF;
+    border-radius: 37px;
+}
+
+.user {
+    position: absolute;
+    width: 13.04px;
+    height: 13.91px;
+    left: 21.87px;
+    top: 29.89px;
+}
+
+.icon{
+    width: 414px;
+    height: 44px;
+    position: relative;
+    background-image:none
+}
+
+i.icon.fas.fa-chevron-right {
+    margin-inline:-20px;
+}
+
+.fas {
+    height: 50px;
+    width: 50px;
+}
+
+.textmail {
+    position: absolute;
+    width: 185px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    border: none;
+    color: black;
+    outline: none;
+}
+
+.btn {
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    left: 36px;
+    top: 631px;
+    background: #78258B;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+}
+.btn_cotinue {
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    left: 126px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.or {
+    position: absolute;
+    width: 15px;
+    height: 16px;
+    left: 200px;
+    top: 733px;
+    font-family: SF Pro Display Regular;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.key{
+    position: absolute;
+    width: 10.22px;
+    height: 18.68px;
+    left: 21.87px;
+    top: 26.33px;
+}
+
+.lineone {
+    position: absolute;
+    width: 148px;
+    left: 36px;
+    top: 742px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+.linetwo {
+    position: absolute;
+    width: 148px;
+    left: 230px;
+    top: 742px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+.create_acc {
+    position: absolute;
+    width: 149px;
+    height: 19px;
+    left: 96px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.create{
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    left: 36px;
+    top: 781px;
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+}
+
+a:hover {
+    background: #78258B ;
+    color: #fff;
+}
+
+/*interface sign-up*/
+.sign-up {
+    width: 414px;
+    height: 896px;
+    background:linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
+    position:fixed;
+    top: 10%;
+    left: 40%;
+}
+
+.btn1 {
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    left: 36px;
+    top: 631px;
+    background: #52439A;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+}
+.btn_acc{
+    position: absolute;
+    width: 149px;
+    height: 19px;
+    left: 96px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+#Login a:hover {
+    background: #52439A ;
+    color: #fff;
+}
