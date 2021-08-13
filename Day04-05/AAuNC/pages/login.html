@@ -24,11 +24,13 @@
 
             <div class="main">
                 <div class="image-block"></div>
+
                 <div class="text-block">
                     <div class="text1">Welcome Back!</div>
                     <div class="text2">Please, Log In.</div>
                 </div>
-                <form action="" method="post">
+
+                <form action="/" method="post">
                     <div class="input-block email">
                         <input type="email" name="email" placeholder="johnsondoe@nomail.com">
                     </div>
@@ -37,16 +39,15 @@
                     </div>
                     <div class="input-block submit">
                         <i class="fas fa-chevron-right"></i>
-                        <input type="button" value="Continue">
+                        <input type="submit" value="Continue">
                     </div>
-                    <p class="line">Or</p>
-                    <div class="input-block register">
-                        <input 
-                            type="button" 
-                            value="Create an Account"
-                            onclick="window.location.href='register.html'">
-                    </div>                  
                 </form>
+                
+                <p class="line">Or</p>
+                
+                <div class="register">
+                    <a href="./register.html">Create an Account</a>
+                </div>
             </div>
         </div>
     </div>

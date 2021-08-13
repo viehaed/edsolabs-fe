@@ -98,7 +98,6 @@ form {
     margin: auto;
     margin-top: 37px;
     width: 342px;
-    height: 300px;
 }
 
 .input-block {
@@ -182,8 +181,9 @@ form {
 }
 
 .line {
+    margin: auto;
     margin-top: 32px;
-    width: 100%;
+    width: 342px;
     position: relative;
     text-align: center;
     font-size: 14px;
@@ -212,20 +212,26 @@ form {
 }
 
 .login {
+    margin: auto;
     margin-top: 32px;
+    width: 342px;
+    height: 70px;
 }
 
-.login input {
-    background: #FFFFFF47;
-    max-height: 70px;
-    padding: 27px 0px;
+.login a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF47;
+    border-radius: 37px;
+    font-size: 19px;
     font-weight: 600;
-    font-size: 19px;   
-    text-align: center;
     color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 70px;
 }
 
-.login input:hover {
-    cursor: pointer;
-    background: #ffffff9a;
+.login a:hover {
+    background-color: #ffffff9a;
 }
