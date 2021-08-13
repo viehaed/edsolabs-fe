@@ -1,0 +1,112 @@
+@font-face {
+  font-family: sfPro;
+  src: url(./font/FontsFree-Net-SFProText-Medium-1.ttf);
+}
+* {
+  font-family: sfPro;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 414px;
+  height: 896px;
+  background: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+}
+.sign-up {
+  background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+}
+.image {
+  margin: 10px 30px 0 31px;
+}
+.title {
+  width: 227px;
+  height: 71px;
+  text-align: center;
+  display: inline;
+  color: #ffffff;
+  padding: 0px;
+}
+.title p, h2 {
+  margin: 6px;
+}
+#form {
+  margin-top: 37px !important;
+}
+.input-box {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #a0a0a0;
+  border-radius: 37px;
+  overflow: hidden;
+  width: 342px;
+  height: 74px;
+  margin: 0 36px 14px 36px;
+}
+.input-box input {
+  position: relative;
+  background: #fff;
+  border: none;
+  width: 230px;
+  outline: none;
+}
+.input-box img {
+  padding: 30px 25px 30px 22px;
+}
+::placeholder {
+  color: #3C3C43;
+}
+.btn {
+  margin: 0 36px 0px 36px;
+  width: 342px;
+  height: 70px;
+  border: 0px;
+  border-radius: 37px;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+}
+.btn-continue {
+  background: #78258b;
+}
+.btn-create {
+
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  border-radius: 37px;
+}
+.btn-sign-up {
+  background: #52439a;
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+.btn-login {
+  margin-bottom: 45px;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+
+:hover.btn-continue,
+:hover.btn-create {
+  background: #7825a4;
+}
+:hover.btn-sign-up,
+:hover.btn-login {
+  background: #5243ba;
+}
+.line {
+  text-align: center;
+  border: 1px solid transparent;
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+  width: 342px;
+  margin: 32px 36px  ;
+  padding: 0;
+}
+legend {
+  color: white;
+}
+a {
+  font-family: sfPro;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+}
+
