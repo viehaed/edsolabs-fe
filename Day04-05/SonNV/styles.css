@@ -29,7 +29,7 @@
 .title p, h2 {
   margin: 6px;
 }
-.form {
+#form {
   margin-top: 37px !important;
 }
 .input-box {
@@ -109,3 +109,4 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" >
       <img src="image/StatusBar.svg" alt="device" />
       <img src="image/MaskGroup1.svg" alt="logo" class="image" />
       <div class="title">
         <p>Welcome back</p>
         <h2>Please, Log In.</h2>
       </div>
-      <div class="form">
+      <form id="form" action="./sign-up.html">
         <div class="input-box">
           <span><img src="image/user.svg" alt="user" /></span>
           <input type="User" placeholder="Username" />
@@ -30,10 +30,8 @@
         <fieldset class="line">
           <legend>&emsp; Or &emsp;</legend>
         </fieldset>
-        <a href="./sign-up.html">
-            <button class="btn btn-create">Login</button>
-          </a>
-      </div>
+            <button class="btn btn-create" type="submit">Login</button>
+      </form>
     </div>
   </body>
 </html>
