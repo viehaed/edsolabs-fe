@@ -18,7 +18,9 @@
     --white-color: #FFF;
 }
 
-* {
+*,
+::after,
+::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -120,10 +122,17 @@ body {
     margin-bottom: 32px;
     cursor: pointer;
 }
+
+.btn-continue>a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
 .btn-continue:hover {
     opacity: 0.8;
-    transition:opacity ease-out .5s ;
+    transition: opacity ease-out .5s;
 }
+
 .icon-continue {
     position: absolute;
     top: 20px;
@@ -154,10 +163,12 @@ legend {
     border-radius: 37px;
 
 }
+
 .btn-create:hover {
     opacity: 0.8;
-    transition:opacity ease-out .5s ;
+    transition: opacity ease-out .5s;
 }
+
 .btn-create>a {
     font-family: pro;
     padding: 26px 99.7px;
@@ -176,9 +187,11 @@ legend {
     height: 896px;
     background: linear-gradient(180deg, #9183DE 0%, #A094E3 100%);
 }
+
 legend {
     font-size: 14px;
 }
+
 .btn-ca {
     font-family: pro;
     font-weight: 500;
@@ -199,14 +212,17 @@ legend {
     margin-bottom: 32px;
     cursor: pointer;
 }
+
 .btn-ca:hover {
     opacity: 0.8;
-    transition:opacity ease-out .5s ;
+    transition: opacity ease-out .5s;
 }
+
 .btn-login:hover {
     opacity: 0.8;
-    transition:opacity ease-out .5s ;
+    transition: opacity ease-out .5s;
 }
+
 .btn-login>a {
     font-family: pro;
     padding: 26px 144.9px;
@@ -218,6 +234,7 @@ legend {
     font-weight: 500;
     /* letter-spacing: 0.8px; */
 }
+
 .btn-login {
     margin: 0 auto;
     width: 342px;
@@ -227,12 +244,14 @@ legend {
     border-radius: 37px;
 
 }
+
 .btn-pass {
     font-weight: 600;
     font-size: 15px;
-    color:rgba(60, 60, 67, 1);
-    
+    color: rgba(60, 60, 67, 1);
+
 }
+
 .img-header-login {
     text-align: center;
 }
