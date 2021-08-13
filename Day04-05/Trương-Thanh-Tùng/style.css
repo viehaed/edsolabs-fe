@@ -9,7 +9,9 @@ button {
 input::placeholder {
     font-family: SF Display;
     font-weight: bold;
-
+}
+input {
+    outline: none;
 }
 .box {
     background: linear-gradient(180deg, rgba(229,178,202,1) 0%, rgba(205,130,222,1) 100%);
@@ -121,6 +123,9 @@ input::placeholder {
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
+}
+.input-btn:hover {
+    cursor: pointer;
 }
 .content input {
     position: relative;
