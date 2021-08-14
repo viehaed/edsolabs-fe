@@ -1,0 +1,11 @@
+
+/* Stylev container */
+.container{
+    background: linear-gradient(180deg, #E5B2CA 0%, #CD82DE 100%);
+}
+
+/* Style sumbit continue */
+.form .continue{
+    background-color: #78258B;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+}

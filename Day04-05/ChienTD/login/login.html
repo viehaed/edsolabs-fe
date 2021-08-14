@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style_Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Thanh status -->
+        <div class="status_bar">
+            <div class="left_status_bar"><span>9:41</span></div>
+            <div class="right_status_bar">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- Phần chính -->
+        <div class="main">
+            <!-- Ảnh nền -->
+            <div class="img">
+                <img src="../assets/img/img-login.png" alt="đây là ảnh nền mục login">
+            </div>
+            <!-- Tên trang -->
+            <div class="title_page">
+                <p>Welcome Back!</p>
+                <p>Please, Log In.</p>
+            </div>
+            <!-- Form đăng nhậP -->
+            <form class="form">
+                <div class="user style_input">
+                    <img src="../assets/icon/user.png">
+                    <input type="text" value="johnsondoe@nomail.com">
+                </div>
+                <div class="password style_input">
+                    <img src="../assets/icon/key.png">
+                    <input type="password" value="ádasdasdasdasdsdđáádasd">
+                </div>
+                <button class="continue style_input sumbit" type="submit">
+                    <span>Continue <i class="fas fa-chevron-right"></i></span>
+                </button>
+            </form>
+            <div class="or">
+                <span> Or </span>
+            </div>
+            <a href="/register/register.html">
+                <div class="create change_page">
+                    Create an Account
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
