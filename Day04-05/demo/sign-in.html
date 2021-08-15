@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Sign In</title>
+  </head>
+  <body class="sign-in-page">
+    <main class="container">
+      <img src="./assets/images/img1.png" alt="" class="page-image" />
+      <h4>Welcome Back!</h4>
+      <h2>Please, Log In.</h2>
+      <form action="" method="post" class="form form-sign-in">
+        <div class="form-row">
+          <i class="icon icon-user"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="johnsondoe@nomail.com"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-row">
+          <i class="icon icon-key"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="********************"
+          />
+        </div>
+        <button type="submit" class="btn">
+          Continue <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="separator">Or</div>
+        <a href="sign-up.html" class="btn btn-link"> Create an Account </a>
+      </form>
+    </main>
+  </body>
+</html>

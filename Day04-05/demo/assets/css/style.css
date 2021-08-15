@@ -1,0 +1,294 @@
+/* FONTFACE */
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-BlackItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-HeavyItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-HeavyItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-LightItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-LightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-SemiboldItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-UltralightItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-UltralightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SFProDisplay-ThinItalic.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* COMMON STYLE */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: "SF Pro Display";
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 414px;
+  min-width: 320px;
+  width: 100%;
+  padding: 52px 30px 45px 30px;
+}
+
+.btn {
+  border-radius: 37px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  transition: background-color 0.5s;
+}
+
+.btn.btn-link {
+  text-decoration: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 0;
+}
+
+.page-image {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ICONS */
+.icon {
+  background: url(../images/css_sprites.png);
+  width: 12px;
+  height: 20px;
+  display: inline-block;
+}
+.icon.icon-key {
+  background-position: -10px -10px;
+}
+.icon.icon-user {
+  background-position: -75px -10px;
+}
+.icon.icon-chevron-right {
+  background-position: -42px -10px;
+}
+
+/* TYPOGRAPHY */
+h2,
+h4 {
+  text-align: center;
+}
+h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 41px;
+  margin: 6px 0 37px 0;
+}
+
+.separator {
+  text-align: center;
+  position: relative;
+  margin: 32px 0 30px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  height: 0;
+  width: 42%;
+  position: absolute;
+  top: 50%;
+  border: dashed 1px;
+}
+.separator::before {
+  left: 0;
+}
+.separator::after {
+  right: 0;
+}
+
+/* FORM STYLE */
+.form {
+  padding: 0 6px;
+}
+.form .form-row {
+  margin-bottom: 14px;
+  position: relative;
+}
+.form input {
+  border: 0;
+  border-radius: 37px;
+  line-height: 18px;
+  width: 100%;
+  padding: 28px 60px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.form input::placeholder {
+  font-size: 15px;
+}
+.form input:focus {
+  border: 0;
+  outline: none;
+}
+.form input[type="password"] {
+  padding: 27px 60px;
+}
+form .form-row .icon {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+}
+form .btn .icon {
+  margin-left: 8px;
+}
+
+/* THEME & COLOR */
+h2 {
+  color: #fff;
+}
+h4 {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn {
+  color: #fff;
+}
+.form input:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form input::placeholder {
+  color: #000;
+}
+.separator {
+  color: #fff;
+}
+.separator::before,
+.separator::after {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* SIGN IN PAGE */
+body.sign-in-page {
+  background: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+}
+form.form-sign-in .btn {
+  background: rgba(120, 37, 139, 0.8);
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+}
+form.form-sign-in .btn:hover {
+  background-color: rgba(120, 37, 139, 0.6);
+}
+form.form-sign-in .btn-link {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+form.form-sign-in .btn-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* SIGN UP PAGE */
+body.sign-up-page {
+  background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+}
+form.form-sign-up .btn {
+  background: rgba(82, 67, 154, 1);
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+form.form-sign-up .btn:hover {
+  background: rgba(82, 67, 154, 0.8);
+}
+form.form-sign-up .btn-link {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+form.form-sign-up .btn-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
