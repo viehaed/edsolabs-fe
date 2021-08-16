@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+main.todolist {
+    background: linear-gradient(180deg, #E5B2CA 0%, #CD82DE 100%);
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+}
+
+.container .todolist__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todolist__list--title h2 {
+    margin: 10px 0;
+}
+
+.todolist__item {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.todolist__item input {
+    margin-right: 10px;
+}
+
+.todolist__item label {
+    font-size: 20px;
+}
