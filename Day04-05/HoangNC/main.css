@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    src: url(./FontsFree-Net-SFProDisplay-Regular.ttf);
+    font-family: SF Pro Display Regular;
+}
+.login, .regis {
+    position: relative;
+    width: 414px;
+    height: 896px;
+    background: #FFFFFF;
+}
+a {
+    text-decoration: none;
+}
+.or {
+    position: absolute;
+    width: 15px;
+    height: 16px;
+    left: 200px;
+    top: 733px;
+    font-family: SF Pro Display Regular;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+.or::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 148px;
+    left: -170px;
+    top: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+.or::after {
+    content: "";
+    position: absolute;
+    width: 148px;
+    left: 36px;
+    top: 8px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn_secondary:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn_secondary {
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    left: 36px;
+    top: 781px;
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+}
+.regis_second {
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+.btn_secondary-text {
+    position: absolute;
+    width: 149px;
+    height: 19px;
+    left: 97px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn_primary {
+    position: absolute;
+    width: 342px;
+    height: 70px;
+    left: 36px;
+    top: 631px;
+    background: #78258B;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+    border-radius: 37px;
+    border: none;
+}
+.regis_pri {
+    background: #52439A;
+    box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+.btn_primary-text {
+    position: absolute;
+    width: 90px;
+    height: 19px;
+    left: 126px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.icon {
+    margin-left: 5px;
+}
+.btn_primary-text-regis {
+    position: absolute;
+    width: 149px;
+    height: 19px;
+    left: 96px;
+    top: 26px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.input_password {
+    position: absolute;
+    width: 342px;
+    height: 72px;
+    left: 36px;
+    top: 545px;
+    background: #FFFFFF;
+    border-radius: 37px;
+}
+.key{
+    position: absolute;
+    width: 10.22px;
+    height: 18.68px;
+    left: 21.87px;
+    top: 26.33px;
+}
+.pass {
+    position: absolute;
+    width: 133px;
+    height: 17px;
+    left: 56px;
+    top: 28px;
+    font-family: SF Pro Display Regular;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #3C3C43;
+    border: none;
+    outline: none;
+}
+.input_user {
+    position: absolute;
+    width: 342px;
+    height: 74px;
+    left: 36px;
+    top: 457px;
+    background: #FFFFFF;
+    border-radius: 37px;
+}
+.user {
+    position: absolute;
+    width: 13.04px;
+    height: 13.91px;
+    left: 21.87px;
+    top: 29.89px;
+}
+.user_text {
+    position: absolute;
+    width: 185px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 227px;
+    height: 71px;
+    left: 94px;
+    top: 349px;
+}
+.frame-regis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 269px;
+    height: 71px;
+    left: 72px;
+    top: 349px;
+}
+.title-first {
+    width: 137px;
+    height: 24px;
+    left: 45px;
+    top: 0px;
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.75);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+.title-second {
+    height: 41px;
+    left: 0px;
+    top: 30px;  
+    font-family: SF Pro Display Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #FFFFFF;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+.mask-img {
+    position: absolute;
+    width: 353px;
+    height: 290px;
+    left: 31px;
+    top: 54px;
+}
+.mask-img-regis {
+    position: absolute;
+    width: 282px;
+    height: 290px;
+    left: 66px;
+    top: 54px;
+}
+.status-bar {
+    position: absolute;
+    height: 44px;
+    left: 0;
+    right: 0;
+    top: 0; 
+}
+.time {
+    position: absolute;
+    height: 18px;
+    left: 21px;
+    top: 14px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+}
+.conn {
+    position: absolute;
+    height: 11px;
+    right: 14px;
+    left: 324px;
+    top: 17px;
+}
+.con-img {
+    position: absolute;
+    height: 11px;
+    right: 70px;
+    left: 348px;
+    top: 17px;
+}
+.wifi {
+    position: absolute;
+    height: 11px;
+    right: 35px;
+    bottom: 16px;
+    top: 3px;
+}
+.bat {
+    position: absolute;
+    height: 11px;
+    right: 4px;
+    top: 3px;
+}
+.bg {
+    position: absolute;
+    width: 414px;
+    height: 896px;
+    left: 0px;
+    top: 0px;
+}
