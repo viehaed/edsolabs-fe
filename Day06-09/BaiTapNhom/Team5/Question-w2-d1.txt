@@ -1,104 +1,120 @@
-Nguyễn Trung Nam : 
+Câu hỏi JavaScript BaSic
 
-A. Variables
+
 1. Cú pháp khai báo biến trong ES5 và ES6 ?
+
 2. Cách khai báo biến var (ES5) và let, const (ES6) có điểm gì khác nhau?
+
 3. Biến local và global có điểm gì khác nhau ?
+
 4. Khi khai báo một biến let x = 10; trong một chương trình. Sau đó ta muốn gán lại giá trị đó bằng 20 theo cú pháp var x = 20; thì có được hay không?  Tại sao ?
+
 5. Có hay không nên sử dụng biến var trong khai báo? Tại sao ?
+
 6. Scope của một biến là gì ?
 
-B. Conditionals
 7. Câu điều kiện trong javascript có giống và khác gì so với các ngôn ngữ lập trình khác hay không ?
+
 8. Sử dụng câu lệnh điều kiện trong những trường hợp nào thì hợp lí ?
+
 9. Cú pháp khai báo câu điều kiện toán tử 3 ngôi ?
+
 10. Sự giống và khác nhau giữa câu điều kiện toán tử 3 ngôi và if else
 
-C. Function
 11. Function là gì ? Có mấy loại function ?
+
 12. Function trong ES5 và ES6 có điểm gì giống và khác nhau ?
+
 13. Hàm có return và không có return có điểm gì khác nhau ?
+
 14. Hàm Arrow function trong ES6 có ưu điểm gì so với các hàm còn lại ?
+
 15. Phân biệt parameter (tham số) vs argument (đối số)
 
+16.Scope của 1 biến trong JS là gì ?
 
-Nguyễn Trung Đức 
+17.Có mấy cách thể hiện của Scope ?
 
-1.Scope của 1 biến trong JS là gì ?
-2.Có mấy cách thể hiện của Scope ?
-3.Lợi ích khi sử dụng Scope là gì ?
-4.Toán tử "this" dùng trong JS dùng để làm gì ?
-5.Sự khác biệt về cách sử dụng Foo giữa "function Foo(){}" và
+18.Lợi ích khi sử dụng Scope là gì ?
+
+19.Toán tử "this" dùng trong JS dùng để làm gì ?
+
+20.Sự khác biệt về cách sử dụng Foo giữa "function Foo(){}" và
 var Foo = function(){}" là gì ?
-6.Giải thích về Arrays trong JS là gì ?
-7.Vòng lặp sử dụng var hoặc let trong JS có gì khác nhau?
-8.Sự khác biệt của number++ và ++number là gì?
-9."use strict" có tác dụng gì?
-10.Khai báo nhiều biến cùng tên trong cùng phạm vi có được không?
-11.Có bao nhiêu loại vòng lặp trong JS ?
-12.Sự khác biệt giữa vòng lặp For và forEach ?
-13.Có thể thêm thuộc tính vào một String hay không?
-14.2 key cùng tên trong object sẽ gây ra vấn đề gì?
-15.Dữ liệu được lưu trữ trong sessionStorage bị xóa khi nào?
 
+21.Giải thích về Arrays trong JS là gì ?
 
-Trần Quốc Toàn 
+22.Vòng lặp sử dụng var hoặc let trong JS có gì khác nhau?
 
-iterator 
-1. Trong JavaScript ES6, sự khác biệt giữa iterable và iterator là gì?
-2. Tại sao phải sử dụng iterator?
-3. array, object có phải là Iterable?
-4. Cấu trúc của Iterable?
+23.Sự khác biệt của number++ và ++number là gì?
 
-Objects
-5. Cấu trúc của 1 object? array có phải là object?
-6. Có bao nhiêu cách dể khai báo 1 object trong javascript?
-7. Điêu gì sảy ra khi so sánh 2 object có cùng 1 thuộc tính? giải thích?
-8. Nếu gán cho property của 1 object là kiểu number thì kiểu của property đó là gì?
-9. Có bao nhiêu thuộc tính trong object?
-10. có bao nhiêu cách để tạo ra 1 bản sao object?
+24."use strict" có tác dụng gì?
 
-classes
-11. class có phải là 1 object không?
-12. oop là gì? các đặc tính cơ bản của oop?
-13. sự khác biệt giữa typeof và instanceof là gì?
-14. trong class có được hoisting không?
+25.Khai báo nhiều biến cùng tên trong cùng phạm vi có được không?
 
+26.Có bao nhiêu loại vòng lặp trong JS ?
 
-Phùng Đắc Nhật Minh Nhật Minh :
+27.Sự khác biệt giữa vòng lặp For và forEach ?
 
- A. Modules : 
-	1. Module trong Js gì ? Tại sao lại phải sử dụng Module khi code Js ?
-	2. Có các kiểu Import nào khi sử dụng Module nào ?
-	3. Có các kiểu Export nào khi sử dụng Module nào ?
- 
- B. Promises :
-	4. Promises trong Js là gì ? Tại Sao phải dùng Promises
-	(là kn sinh ra để sử lý bất đồng bộ, sử lý callback hell , ES6 có Promise )
-	5. resolve và reject trong Executor Function là gì ?
-	( resolve(): sử lý khi logic function thành công ; reject(): sử lý khi logic thất bại)
-	6. Các function thường dùng trong promise ?
-	( .then():thực thi khi promise resolve() /
-	  .catch():thực thi khi promise reject()/
-	  .finally(): thực thi khi promise chạy xong 
-	  .all():đồng thời chạy các function Async ;.resolve();.reject() / )
-	7. Promise có các trạng thái hoạt động nào ? lấy ví dụ cho 1 phiên làm việc của Promise.
-	(Pendding , Fulfilled , Rejected)
-	8. Cách hoạt động của hàm .then() ? Lý do thay thế được Callback ?
-	( Giá trị return của function trước sẽ là tham số truyền vào của function sau
+28.Có thể thêm thuộc tính vào một String hay không?
 
- C. Async-Await:
-	9. Sync và Async là gì ?
-	( Sync: đồng bộ (thứ tự code chạy tuần tự )
-	  Async: bất đồng bộ )
-	10. Lấy 1 vài ví dụ về hàm Async ?
-	11. CallBack là gì ? CallBack Hell là gì ?
- 	12. Lý do sử dụng Async-Await ở ES7 ? Có nên thay thế hoàn toàn Promise bằng Async-Await không ? Vì sao ?
-	(Không vì có các trường hớp function này không cần giá trì của function trên thì có thể chạy đồng thời bằng Promise.all())
- 
+29.2 key cùng tên trong object sẽ gây ra vấn đề gì?
 
- D. Request: 
+30.Dữ liệu được lưu trữ trong sessionStorage bị xóa khi nào?
 
-	13. Request là gì ? Response là gì ?
-	14. Có các phương thức Request nào ? Sự khác nhau giữa get và post
+31. Trong JavaScript ES6, sự khác biệt giữa iterable và iterator là gì?
+
+32. Tại sao phải sử dụng iterator?
+
+33. array, object có phải là Iterable?
+
+34. Cấu trúc của Iterable?
+
+35. Cấu trúc của 1 object? array có phải là object?
+
+36. Có bao nhiêu cách dể khai báo 1 object trong javascript?
+
+37. Điêu gì sảy ra khi so sánh 2 object có cùng 1 thuộc tính? giải thích?
+
+38. Nếu gán cho property của 1 object là kiểu number thì kiểu của property đó là gì?
+
+39. Có bao nhiêu thuộc tính trong object?
+
+40. có bao nhiêu cách để tạo ra 1 bản sao object?
+
+41. class có phải là 1 object không?
+
+42. oop là gì? các đặc tính cơ bản của oop?
+
+43. sự khác biệt giữa typeof và instanceof là gì?
+
+44. trong class có được hoisting không?
+
+45. Module trong Js gì ? Tại sao lại phải sử dụng Module khi code Js ?
+
+46. Có các kiểu Import nào khi sử dụng Module nào ?
+
+47. Có các kiểu Export nào khi sử dụng Module nào ? 
+
+48. Promises trong Js là gì ? Tại Sao phải dùng Promises
+
+49. resolve và reject trong Executor Function là gì ?
+
+50.Các function thường dùng trong promise ?
+	
+51. Promise có các trạng thái hoạt động nào ? lấy ví dụ cho 1 phiên làm việc của Promise.
+
+52. Cách hoạt động của hàm .then() ? Lý do thay thế được Callback ?
+
+53. Sync và Async là gì ?
+
+54. Lấy 1 vài ví dụ về hàm Async ?
+
+55. CallBack là gì ? CallBack Hell là gì ?
+
+56. Lý do sử dụng Async-Await ở ES7 ? Có nên thay thế hoàn toàn Promise bằng Async-Await không ? Vì sao ?
+
+57. Request là gì ? Response là gì ?
+
+58. Có các phương thức Request nào ? Sự khác nhau giữa get và post
 
