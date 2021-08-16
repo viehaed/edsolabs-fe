@@ -1,0 +1,79 @@
+1. Sự khác biệt giữa JS thuần và JS khi sử dụng Jquery?
+2. Hoisting trong Javascript xảy ra như thế nào?
+3. Trong suốt quá trình là có nên sử dụng Use strict thường xuyên không?
+4. Thêm thuộc tính vào constructor thì xảy ra điều gì?
+5. Có thể thêm thuộc tính vào một string hay không?
+6. Kiểu của Kiểu của nummber trả về kết quả gì?
+7. Set giá trị vượt quá độ dài của mảng trong Javascript thì xảy ra vấn đề gì?
+8. Arguments object trong JavaScript là gì? Làm thế nào để lấy được kiểu dữ liệu của các argument được truyền vào một function?
+9. Sự khác nhau giữa trạng thái view và trạng thái session là gì?
+10. Có bao nhiều kiểu hộp thoại(Dialog) có sẵn trong JS?
+11. Sự khác nhau của hàm call và hàm bind là gì?
+12. Đặt object làm key thì chúng sẽ hoạt động như thế nào?
+13. Javascript global execution context tạo ra 2 thứ: global object và từ khóa "this"?
+14. 2 key cùng tên trong object sẽ gây ra vấn đề gì?
+15. Khai báo nhiều biến cùng tên trong cùng phạm vi có được không?
+16. Truyền object như tham số để so sánh các object với nhau thì xảy ra vấn đề gì?
+17.  Khởi tạo đối tượng có từ khóa new và không có từ khóa new khác gì nhau?
+18. Hàm static trong Js là gì?
+19. falsy value và  truthy value là gì ?
+20. Variables là gì ? . 'export' và 'import' là gì?
+21. sự khác nhau giữa null và underfined ?
+22. Khi sử dụng từ khóa this trong arrow function nên lưu ý điều gì?
+23. Sự khác biệt của i++ và ++i là gì?
+24. Phương thức setInterval trả về cái gì?
+25. Có thể thêm thuộc tính vào một string hay không?
+26. Đặt object làm key thì chúng sẽ hoạt động như thế nào?
+27. Constructor là gì?
+28. Khi nào cần sử dụng async và defer trong javascript?
+29. Giải thích về Arrays trong JavaScript?
+30. Toán tử == và === trong Javascript khác nhau như thế nào?
+31. "use strict" có tác dụng gì?
+32. Oject key được coi là kiểu gì?
+33.Tác dụng của continue là gì?
+34. Toán tử TypeOf hoạt động như thế nào?
+35. Điều gì xảy ra khi khai báo biến có khoảng trắng?
+36. Mục đích của Self Invoking Function trong JS là gì?
+37. Có bao nhiêu scope trong javascript?
+38. Làm thế nào để hủy cấu trúc của mảng?
+39. Các kiểu dữ liệu trong JS?
+40. Đối số là gì? Làm thế nào để lấy kiểu đối số được truyền cho một hàm?
+41. Vòng lặp sử dụng var hoặc let có gì khác nhau?
+42. Có những cách nào để tạo một array rỗng?
+43. 'this' trong JS là gì? Nó hoạt động như thế nào?
+44. 'let' và 'const' trong JS là gì? So sánh 'var', 'let', 'const'?
+45. Làm cách nào để chuyển đổi một chuỗi thành boolean?
+46. Từ khóa 'new' là gì? Nó giải quyết những vấn đề gì? Khi nào thì dùng 'new'?
+47.Trong các class của JS thì có thể sử dụng tất cả 4 tính chất như tính đóng gói, tính kế thừa, tính đa hình và trừu tượng hay không?
+48. Hàm arrow function trong JS có tác dụng gì?
+49. Biến toàn cục và biến cục bộ khác nhau như thế nào?
+50. Hàm clearTimeout() trong JS dùng để hủy hành động nhưng nếu muốn sau một khoảng thời gian mới thực hiện hành động đó thì hàm clearTimeout() phải sử dụng như nào?
+51. Câu lệnh break kết hợp với vòng lặp để làm gì?
+52. Ưu điểm của for…of và for in, forEach?
+53. Event Loop được thực hiện như thế nào?
+55. Nếu không có tham số truyền vào thì Math.max() với Math.min() có sự thay đổi như thế nào?
+56. Sự khác biệt giữa Function Declaration và Function Expression ?
+57. Nếu một biến không có từ khóa thì khi gọi tới biến đó thì điều gì sẽ xảy ra?
+58. First-class function trong JavaScript là gì?
+59. Tại sao cần callback?
+60. Có thể truy cập biến và phần tử của modules để sử dụng không?
+61. Sự khác biệt giữa event.preventDefault() và event.stopPropagation()?
+62. Sự khác biệt giữa Function.prototype.bind, Function.prototype.apply?
+63. Sự khác biệt giữa Function.prototype.apply và Function.prototype.call?
+64. Trong Javascript ta có mấy cách để truy cập thuộc tính của một object?
+65. For...in và for...of khác nhau như nào?
+66. Callback là gì?
+67. Trường hợp nào thì sử dụng var, let, const?
+68. Dùng Ternary operator và if else có gì khác nhau? Trường hợp nào thì dùng ternary operator?
+69. Lập trình bất đồng bộ trong JS là gì?
+70. Callback hell là gì? Callback hell gây ra vấn đề gì?
+71. Kết quả trả về của function khi không có return?
+72. Có nên sử dụng global scope không? Vì sao?
+73. some() và every() khác nhau như nào?
+74. Khi khai báo biến, đặt tên biến trùng nhau thì điều gì sẽ xảy ra?
+75. Các phần tử trong mảng có bắt buộc phải cùng kiểu dữ liệu không?
+76. NaN là gì?
+77. Tác dụng của Break và continue?
+78. Cộng 1 số với 1 chuỗi thì ra kết quá như nào?
+
+
