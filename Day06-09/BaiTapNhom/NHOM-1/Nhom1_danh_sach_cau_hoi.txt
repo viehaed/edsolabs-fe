@@ -23,7 +23,6 @@
 
 11-2 key cùng tên trong object sẽ gây ra vấn đề gì?
 
-
 12-Module là gì? (Module)
 
 13-Kiểu của kiểu number trả về kết quả gì?
