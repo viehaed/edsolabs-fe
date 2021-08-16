@@ -1,0 +1,112 @@
+
+`LIST CÂU HỎI JAVASCRIPT NHOM 1`
+
+1-Classes trong javaScript là gì ?
+
+2-(array)giải thích về Arrays trong JavaScript?
+
+3-(array)có thể đưa bao nhiêu kiểu dữ liệu vào mảng (array)?
+
+4-(array)kiểu dữ liệu của mảng (array) là gì?
+
+5-Phân biệt giữ const, var , let .?
+
+6-Các kiểu dữ liệu trong JS
+
+7-Nên đặt tên biến như nào cho hợp lý (variable)
+
+8-(array)-có bao nhiêu các để tạo ra 1 array?
+
+9-Sự khác biệt của number++ và ++number là gì?
+
+10-(object) Khái niệm Object trong javascript là gì?
+
+11-2 key cùng tên trong object sẽ gây ra vấn đề gì?
+
+12-Module là gì? (Module)
+
+13-Kiểu của kiểu number trả về kết quả gì?
+
+14-Import, export là gì (Module)
+
+15-(array)-Phương thức some()
+
+16-Phạm vi của một biến trong JavaScript là gì?
+
+17-đối tượng trong js có thể kế thừa thuộc tính từ đối tượng khác không
+
+18-Khác nhau giữa null và undefined?
+
+19-Có những các nào để clone một mảng?
+
+20-Điểm khác nhau giữa GET và POST?
+
+21-for là gì ,nó được dùng để làm gì ?
+
+22-cú pháp vòng for ?
+
+23-Bạn có thể đưa giá trị thứ 1 , 2, 3 ra ngoài điều kiện for ko  ?
+
+24-for of là gì ?
+
+25-for of duyệt tăng dần , giảm dần hay có thể duyệt theo cả 2 cách ?
+
+26-for in là gì ? mục đích sử dụng ? 
+
+27-lời khuyên khi dùng các vòng for ?
+
+28-Function chỉ có thể có 1 đối số ?
+
+29-while là gì ?
+
+30-cú pháp của vòng lặp while ?
+
+31-do while là gì ? 
+
+32-sự khác nhau giữa while và do while ?
+
+33-Tất cả các object đều có prototypes ?
+
+34-Truthy và Falsy là gì ?
+
+35-Trình tự thực thi của vòng for ?
+
+36-Có mấy cách để thêm js vào file HTML 
+
+37-Prototype là gì?
+
+38-Tại sao prototype lại quan trọng trong Javascript?
+
+39-promise là gì?
+
+40-phướng thức của object:
+
+41-Định nghĩa JavaScript là gì?
+
+42-Scope là gì?
+
+43- Global scope là gì?
+
+44-Local scope là gì?
+
+45-Hoisting biến gì?
+
+46-Hoisting function gì?
+
+47-sự khác nhau giữa == & ===
+
+48-Từ khóa ""This "" trong js dùng để làm gì
+
+49-Async/// await là gì
+
+50-callback là gì , tại sao lại cần callbacks
+
+51-các loại function trong js là gì , liệt kê ?
+
+52-Set giá trị vượt quá độ dài của mảng trong Javascript thì xảy ra vấn đề gì?
+
+53-sự khác biệt giữa for và while ?
+
+54-for in có duyệt được string ko ?
+
+55-khi nào dùng do while thay vì while?
