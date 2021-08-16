@@ -1,0 +1,64 @@
+1. Lập trình đồng bộ là gì?
+2. Lập trình bất đồng bộ là gì ?
+3. Javascript là ngôn ngữ lập trình đồng bộ hay bất đồng bộ ?
+4. Ưu điểm và nhược điểm của lập trình đồng bộ ?
+5. Ưu điểm và nhược điểm của lập trình bất đồng bộ
+6. Sự bất đồng bộ trong javascript diễn ra khi nào?
+7. Javascript sử dụng single thread hay multi thread?
+8. Xử lý đơn luồng là gì?
+9. Xử lý đa luồng là gì?
+10. Có những cách nào để sử lý bất đồng bộ trong javascript?
+11. Các hàm callback thường gặp trong javascript? 
+12. Logic sắp xếp của hàm sort trong javascript?
+13. Sự khác biệt của phạm vị truy? cập giữa của 2 biến khai báo bằng var và let 
+14. "Có thể sử dụng biến được khai báo bởi từ khóa let bên ngoài dấu ""{ }"" không?
+15. khi gọi một biến chưa được khởi tạo và sau đó khai báo biến đó bằng từ khóa let, thì giá trị của biến đó khi được gọi là gì?
+16. Nguyên nhân gây ra callback hell và những bất cập mà nó mang đến
+17. Phân biệt then(resolve, reject) và then(resolve).catch(reject) trong promise?
+18. Phân biệt named export và default export?
+19. "Giữa async/await và promises thì nên sử dụng cái nào? vì sao?
+20. Kết hợp promises với generator có tác dụng gì?
+21. Promises là gì? 
+22. Khi ở trạng thái rejected thì Promises trả về kết quả thuộc kiểu gì?
+23. NaN === NaN là đúng hay là sai?
+24. Các cách khai báo Object trong javascript?
+25. Sau khi khai báo object, ta có thể thêm thuộc tính và phương thức từ bên ngoài hay cần phải sửa lại object?
+26. Kết quả của biểu thức sau: 5 + "5"?
+27. Khác nhau giữa null và undefined?
+28. Hàm anonymous là gì và khi nào thì sử dụng nó?
+29. Khác biệt giữa Function Declaration và Function Expression?
+30. Sự khác nhau khi sử dụng dấu ngoặc [ ] và toán tử dot . để truy cập Object là gì?
+31. sự khác nhau giữa Declaration Function, Expression Function, Arrow Function
+32. Thêm thuộc tính vào constructor thì xảy ra điều gì?
+33. giá trị thisArg trong forEach được sử dụng khi nào ?
+34. ưu và nhược điểm của forEach so với for, while
+35. ưu nhược điểm của forEach so với map 
+36. accumulator biến tích lũy trong Reduce là gì ? 
+37. Truyền object như tham số để so sánh các object với nhau thì xảy ra vấn đề gì?
+38. sự khác nhau giữa var, let và const 
+39. nên sử dụng Rest parameters trong es6 khi nào ? 
+40. Khi nào thì nên dùng arrow function 
+41. Cách phòng tránh callback hell
+42. Khi sử dụng từ khóa this trong arrow function nên lưu ý điều gì?
+43. Sự khác nhau khi sử dụng dấu ngoặc [ ] và toán tử dot để truy cập Object là gì?
+44. 2 key cùng tên trong object sẽ gây ra vấn đề gì?
+45. Làm thế nào để so sánh 2 object trong javascript
+46. Javascript Variables có thể khai báo lại được không ?
+47. Javascript có các kiểu dữ liệu nào ?
+48. Biểu thức sau trả về giá trị gì:  null && "test" ?
+49. Biểu thức sau trả về giá trị gì: null || 1
+50. Các cách khai báo Function trong Js 
+51. Trong Js, Function là một đối tượng, đúng hay sai ?
+52. Có thể thay đổi 1 Array được khai báo với từ khóa Const được không ? Ví dụ: const arr =[1]
+53. Sự khác biệt giữa for...in và for...of
+54. Break, Continue có thể sử dụng bên trong các hàm map(), filter(), reduce(), find(), đúng hay sai ?
+55. "Có thể sử dụng biến var trước, sau đó mới khai báo được không ? Ví dụ:
+x = 12;
+var x;"
+56. setTimeOut là đồng bộ hay bất đồng bộ ?
+57. "Cho câu lệnh sau:
+import type from ""types.js"" 
+Biến type ở đây được gán giá trị hay gán tham chiếu ?"
+58. sự khác biệt giữa Put và Patch request
+59. Khi Promise throw 1 error thì thì Promise sẽ được resolve với undefined, rejected hay vào trạng thái pending ?
+60. Khi Promise.then() trả về undefined thì Promise sẽ được resolve hay reject ?
