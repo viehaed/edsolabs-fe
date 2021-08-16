@@ -1,0 +1,110 @@
+/* global style */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px #4057d8;
+}
+.container {
+  width: 50vw;
+  height: inherit;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+}
+.todo-container {
+  width: 100%;
+  text-align: center;
+}
+.add-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+.add-input {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+.add-input::placeholder {
+  font-size: 1rem;
+}
+.add-btn {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  width: 3rem;
+  background-color: #4057d8;
+}
+.add-btn:focus,
+.add-btn:hover {
+  background-color: #667bf0;
+}
+.todo-list {
+  padding: 1rem 0;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.edit-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  gap: 1rem;
+}
+.tick {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.tick:hover,
+.tick:focus {
+  box-shadow: 0 0 3px #4057d8;
+}
+.edit-input {
+  padding: 3px;
+  color: #4057d8;
+  font-weight: bold;
+  word-break: break-word;
+  width: 30vw;
+  text-align: start;
+}
+.button-container {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+.edit-btn i:hover,
+.edit-btn i:focus {
+  color: rgb(30, 172, 30);
+}
+.delete-btn i:hover,
+.delete-btn i:focus {
+  color: rgb(204, 43, 43);
+}
