@@ -1,0 +1,2 @@
+- Bài tập nhóm nộp vào folder `BaiTapNhom/[Tên Nhóm]` do 1 đại diện nhóm commit.
+- Các nhóm khác có thể tham khảo bài tập nhóm của nhau sau khi kết thúc mini game.
