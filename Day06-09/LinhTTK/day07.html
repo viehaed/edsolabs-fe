@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework day07</title>
+</head>
+<body>
+  <script>
+    //Bài tập 1
+    var list = [
+      {
+        number: 1,
+        name: 'Nguyễn Văn Sơn',
+        group: 1,
+        rank: null
+      },
+
+      {
+        number: 2,
+        name: 'Nguyễn Hữu Ánh',
+        group: 1,
+        rank: null
+      },
+
+      {
+        number: 3,
+        name: 'Trần Mạnh Quân',
+        group: 4,
+        rank: 'Nhóm trưởng'
+      },
+
+      {
+        number: 4,
+        name: 'Hà Quốc Tuấn',
+        group: 3,
+        rank: 'Nhóm trưởng'
+      },
+
+      {
+        number: 5,
+        name: 'Hoàng Ngọc Thành',
+        group: 1,
+        rank: null
+      },
+
+      {
+        number: 6,
+        name: 'Vũ Thị Thu Hà',
+        group: 2,
+        rank: null
+      },
+
+      {
+        number: 7,
+        name: 'Phan Văn Trung',
+        group: 2,
+        rank: null
+      },
+
+      {
+        number: 8,
+        name: 'Nguyễn Cao Hoàng',
+        group: 2,
+        rank: null
+      },
+
+      {
+        number: 9,
+        name: 'Phùng Đắc Nhật Minh',
+        group: 5,
+        rank: 'Nhóm trưởng'
+      },
+
+      {
+        number: 10,
+        name: 'Lê Việt Dũng',
+        group: 1,
+        rank: 'Nhóm trưởng'
+      },
+
+      {
+        number: 11,
+        name: 'Đỗ Chí Công',
+        group: 2,
+        rank: null
+      },
+
+      {
+        number: 12,
+        name: 'Trần Công Tâm',
+        group: 3,
+        rank: null
+      },
+
+      {
+        number: 13,
+        name: 'Trương Thanh Tùng',
+        group: 3,
+        rank: null
+      },
+
+      {
+        number: 14,
+        name: 'Tạ Đức Chiến',
+        group: 3,
+        rank: null
+      },
+
+      {
+        number: 15,
+        name: 'Nguyễn Trọng Vĩnh',
+        group: 3,
+        rank: null
+      },
+
+      {
+        number: 16,
+        name: 'Ngô Chung Á Âu',
+        group: 4,
+        rank: null
+      },
+
+      {
+        number: 17,
+        name: 'Trần Thị Khánh Linh',
+        group: 2,
+        rank: 'Nhóm trưởng'
+      },
+
+      {
+        number: 18,
+        name: 'Phan Tiến Thành ',
+        group: 4,
+        rank: null
+      },
+
+      {
+        number: 19,
+        name: 'Đỗ Văn Huy',
+        group: 4,
+        rank: null
+      },
+
+      {
+        number: 20,
+        name: 'Nguyễn Trung Đức',
+        group: 5,
+        rank: null
+      },
+      
+      {
+        number: 21,
+        name: 'Nguyễn Trung Nam',
+        group: 5,
+        rank: null
+      },
+      
+      {
+        number: 22,
+        name: 'Trần Quốc Toàn',
+        group: 5,
+        rank: null
+      },
+
+    ]
+    console.log(list);
+
+    //Bài tập 2
+    var infoIntern = {
+        STT1:     '1            Nguyễn Văn Sơn      1       ',
+        STT2:     '2            Nguyễn Hữu Ánh      1       ',
+        STT3:     '3            Trần Mạnh Quân      4       Nhóm trưởng',
+        STT4:     '4            Hà Quốc Tuấn        3       Nhóm trưởng',
+        STT5:     '5            Hoàng Ngọc Thành    1       ',
+        STT6:     '6            Vũ Thị Thu Hà       2       ',
+        STT7:     '7            Phan Văn Trung      2       ',
+        STT8:     '8            Nguyễn Cao Hoàng    2       ',
+        STT9:     '9            Phùng Đắc Nhật Minh 5       Nhóm trưởng',
+        STT10:    '10           Lê Việt Dũng        1       Nhóm trưởng',
+        STT11:    '11           Đỗ Chí Công         2       ',
+        STT12:    '12           Trần Công Tâm       3       ',
+        STT13:    '13           Trương Thanh Tùng   3       ',
+        STT14:    '14           Tạ Đức Chiến        3       ',
+        STT15:    '15           Nguyễn Trọng Vĩnh   3       ',
+        STT16:    '16           Ngô Chung Á Âu      4       ',
+        STT17:    '17           Trần Thị Khánh Linh 2       Nhóm trưởng',
+        STT18:    '18           Phan Tiến Thành     4       ',
+        STT19:    '19           Đỗ Văn Huy          4       ',
+        STT20:    '20           Nguyễn Trung Đức    5       ',
+        STT21:    '21           Nguyễn Trung Nam    5       ',
+        STT22:    '22           Trần Quốc Toàn      5       ',
+    };
+    console.log(infoIntern);
+
+    //Bài tập 3 :
+    console.log('Số học viên trong lớp :' + list.length);
+
+    var listClassMonitor = list.filter(function(listClassMonitor, index) {
+      return listClassMonitor.rank === 'Nhóm trưởng';
+    })
+    console.log('Số nhóm trưởng trong lớp:'+ listClassMonitor.length);
+
+    var gr = new Set(list.map(list => list.group)).size;
+    console.log("Số nhóm trong lớp:" + gr);
+
+    //Bài tập 4 
+    console.log("Số lượng sinh viên trong lớp:" + Object.keys(infoIntern).length);
+    
+    var count = Object.values(list).filter(function(count,index){
+      return count.rank === 'Nhóm trưởng'
+    });
+    console.log(count);
+    
+    //Bài tập 5 xóa bạn học viên thứ nhất ra khỏi danh sách lớp
+    const a1 = list.slice(0, 0);
+    const a2 = list.slice(1, list.length);
+    const newarr = a1.concat(a2)
+    console.log(newarr);
+
+    //Bài tập 6 xóa học viên số 7 ra khỏi danh sách
+    const a3 = list.slice(0, 6);
+    const a4 = list.slice(7, list.length);
+    const newarr1 = a3.concat(a4)
+    console.log(newarr1);
+
+    //Bài tập 7 lấy tên của học viên thứ 9
+    var member = list.find(function(member,index){
+      return member.number == 9;
+    });
+    console.log('Học viên thứ 9 : ' + member.name);
+
+    //Bài tập 8 
+    var classMonitor2 = list.find(function(classMonitor2,index){
+      return classMonitor2.group === 2 && classMonitor2.rank === 'Nhóm trưởng'
+    });
+    console.log('Số thứ tự của nhóm trưởng nhóm 2 : ' + classMonitor2.number);
+    //Bài tập 9 
+    console.log(list.sort((a, b) => a.name !== b.name ? a.name < b.name ? -1 : 1 : 0));
+    // Bài tập 10
+    var nameNumber = [];
+    var numberFE ={
+      listnumber: list
+    }
+    for (let i = 0; i < numberFE.listnumber.length; i++) {
+      nameNumber.push(numberFE.listnumber[i].name.split(" ").slice(-1));
+    }
+    console.log(nameNumber);
+    //Bài tập 11 
+    var newList = nameNumber;
+    newList.sort();
+    console.log('Sắp xếp tên theo thứ tự bảng chữ cái :' + newList )
+    //Bài tập 14_1
+    var newList1 = list.slice(0, 5);
+    var newList2 = list.slice(-6, -1);
+    var addList = newList1.concat(newList2);
+    console.log(addList);
+    
+    var addList = newList2.concat(newList1);
+    console.log(addList);//Bài tập 14_2
+    
+    //Bài tập 15
+    let newArray = list.slice(0, 5)
+    newArray.sort(() => Math.random() - 0.5)
+    console.log(newArray);
+
+    //Bài tập 16
+    var chia = list.filter( ds => ds.number % 3 === 0);
+    console.log('Danh sách các học viên có số thứ tự chia hết cho 3', chia);
+    
+    //Bài tập 17
+    var listStudent = list.slice(0, 5);
+    var boss = listStudent.findIndex(ds => ds.number) === -1 ? false : true;
+    if(boss){
+      console.log('Năm học viên đầu có người làm nhóm trưởng');
+    }else{
+      console.log('Năm học viên đầu không có người làm nhóm trưởng');
+    }
+
+    //Bài tập 18 
+    var listStudent = list.slice(0, 5);
+    var boss = listStudent.findIndex(ds => ds.number === false) === -1 ? true : false;
+    if(boss){
+      console.log('Năm học viên đầu có được làm nhóm trưởng');
+    }else{
+      console.log('Năm học viên đầu không được làm nhóm trưởng');
+    }
+
+    //Bài tập 19
+    var maHV = list.map(({number, name, group}) =>{
+      return `${name.split("").pop()}_${number}_${group}`
+    });
+    console.log('Mã học viên theo quy tắc sau:' + maHV);
+
+    //Bài tập 20
+    list.reverse();
+    console.log(list);
+  </script>
+</body>
+</html>
