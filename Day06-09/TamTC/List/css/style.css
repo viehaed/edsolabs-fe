@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px 0;
+}
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#input {
+  width: 50%;
+}
+#root {
+  margin-top: 20px;
+}
+.item {
+  list-style: none;
+  display: flex;
+  min-height: 36px;
+}
+.info {
+  width: 300px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+.actions {
+  /* flex: 1; */
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.update-form {
+  display: none;
+}
+.toggle-update {
+  display: inline-block;
+}
