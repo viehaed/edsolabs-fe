@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Multiply every element in the array with 10:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction);
+
+document.getElementById("demo").innerHTML = newArr;
+
+function myFunction(num) {
+  return num * 10;
+}
+</script>
+
+</body>
+</html>
