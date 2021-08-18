@@ -278,21 +278,16 @@ topFiveStu(2,4)
 
 console.log("Bài tập 28")
 function getStuWithPointAndTime(x,y,z){
+    const result = [];
     const data = getStuWithPoint(x,y);
-    const dayArr = [1,2,3,4,5,6,7]
-    const result = (data.filter((e) => {
-        for(let i = 0; i<dayArr.length;i++){
-            if(e.points[i].point === z){
-                return true
-                break;  
-            } 
-        }
-        
-    })).map((o) => ({
-        id : o.id,
-        name : o.name,
-        totalPoint : o.total
-    }))
+    const dayArr_28 = dayArr.slice(x-1,y)
+    data.map((e)=>{
+        dayArr_28.map((o)=>{
+            if(e.points[o-1].point===z){
+                result.push(e)
+            }
+        })
+    })
     console.log(result)
 }
 getStuWithPointAndTime(2,4,7);
@@ -312,8 +307,10 @@ function getPair(x,y){
     }
     
     console.log(result)
+    
+
 }
-getPair(2,4)
+getPair(1,5)
 
 console.log("Bài tập 30")
 function getGroupTotalPoint(x,y){
