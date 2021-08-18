@@ -56,18 +56,14 @@ console.log("Bài tập 3")
 let stuNum = array.length;
 console.log("Số lượng học sinh trong lớp là "+stuNum);
 let leadNum = 0;
-for (let i = 0; i<stuNum; i++){
-    if(array[i][3] == 1) leadNum++
-}
+leadNum = array.filter((e) => e[3] === 1).length
 console.log("Số lượng nhóm trưởng là " + leadNum);
 console.log("Số lượng nhóm là " + leadNum);
 
 console.log("Bài tập 4");
 console.log("số thành viên trong lớp là "+ data[Object.keys(data)[Object.keys(data).length - 1]].stt)
 let leadNumber = 0;
-for (const property in data){
-    if(data[property].nhomtruong == 1) leadNumber++
-}
+leadNumber = Object.keys(data).length
 console.log("số lượng nhóm trưởng là " +leadNum);
 
 console.log("Bài tập 5");
@@ -84,10 +80,8 @@ console.log("Bài tập 7");
 console.log("Tên của học viên có số thứ tự thứ 9 là "+array[8][1])
 
 console.log("Bài tập 8")
-for (let i = 0; i<stuNum; i++){
-    if((array[i][2] == 2) && (array[i][3] == 1)) 
-        console.log("Số thứ tự nhóm trưởng nhóm 2 là "+array[i][0])
-}
+var lead2 = array.filter((e) => e[2]===2 && e[3]===1)
+console.log("Số thứ tự nhóm trưởng nhóm 2 là " +lead2[0][0])
 
 console.log("Bài tập 9")
 const array9 = array.map((x) => x);
@@ -102,11 +96,11 @@ console.log(array9)
 
 console.log("Bài tập 10")
 const nameArr =[];
-for (let i = 0; i<array.length; i++){
-    var fullName = array[i][1].split(" ");
-    var lastName = fullName[fullName.length -1];
-    nameArr.push(lastName);
-}
+array.map((e) => {
+    e = e[1].split(" ");
+    var lastName = e[e.length -1];
+    nameArr.push(lastName)
+})
 console.log("Mảng chứa tên các thành viên trong lớp là "+nameArr +" ");
 
 console.log("Bài tập 11")
@@ -166,35 +160,19 @@ array15.sort(function(a,b){
 console.log(array15)
 
 console.log("Bài tập 16")
-for(const property in data){
-    if(data[property].stt % 3 == 0) console.log(data[property])
-}
+console.log(Object.values(data).f((e) => e.stt %3 === 0))
+
 
 console.log("Bài tập 17")
 const array17 = array.slice(0,5)
-for (let i = 0; i<array17.length; i++){
-    if(array[i][3] == 1){
-        console.log("Có bạn làm nhóm trưởng trong ̀5 bạn đầu tiên");
-        break;
-    }
-}
+console.log("Trong 5 bạn có người làm nhóm trưởng là " + array17.some((e) => e[3]=== 1))
 
 console.log("Bài tập 18")
 const array18 = array.slice(0,5)
-for (const ele of array18){
-    if(ele[3] == 1){
-        console.log("Bạn số "+ele[0]+" là nhóm trưởng")
-    }else{
-        console.log("Bạn số "+ele[0]+" không là nhóm trưởng")
-    }
-}
+console.log("Cả 5 bạn đều làm nhóm trưởng là "+array18.every((e) => e[3] === 1))
 
 console.log("Bài tập 19")
-for (const ele of array){
-    // var id = (ele[1].concat(ele[0])).concat(ele[2])
-    var id = ele[1].concat("_").concat(ele[0]).concat("_").concat(ele[2])
-    console.log("Mã học viên của học viên số "+ele[0]+ " là "+id)
-}
+console.log(array.map((e) => e[1].concat("_").concat(e[0]).concat("_").concat(e[2])))
 
 console.log("Bài tập 20")
 console.log(array.reverse())
