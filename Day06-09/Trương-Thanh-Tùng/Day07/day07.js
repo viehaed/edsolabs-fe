@@ -283,25 +283,15 @@ console.log('Danh sách học viên có STT chia hết cho 3',copyList6);
 console.log('Bài 17:');
 
 const fifthStu = listStudent2.slice(0,5);
-for(const ele of fifthStu){
-    if(ele.teamLeader === 1){
-        console.log('5 bạn đầu tiên có bạn ',ele.name,' làm nhóm trưởng');
-        break;
-    }
-};
+const result17 = fifthStu.some((st) => st.teamLeader == 1);
+console.log(result17);
 
 // ===============Bài 18======================
 console.log('Bài 18:');
 
-console.log(fifthStu)
-for(const ele of fifthStu){
-    if(ele.teamLeader === 1){
-        console.log('Bạn số', ele.id, 'làm nhóm trưởng')
-    } else {
-        console.log('Bạn số', ele.id, 'không làm nhóm trưởng')
-
-    }
-};
+console.log(fifthStu);
+const result18 = fifthStu.every((st) => st.teamLeader === 1)
+console.log(result18)
 // ===============Bài 19======================
 console.log('Bài 19:');
 
