@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+  }
+ 
+  body{
+    background: #4d244e;
+    font-family: sans-serif;
+    border-top: 5px solid #aa8e8d;
+  }
+  /* title */
+  h1{
+    color: #aa8e8d;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+  }
+  
+  .container{
+    width: 300px;
+    height: 405px;
+    position: absolute;
+    top: 10%;
+    left: 0px; 
+    right: 0px;
+    margin: 0px auto;
+  }
+
+  label{
+    background: #ae5f75;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #2C3E50;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 11px;
+    text-indent: 20px;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+
+  }
+  label h2 span{
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #fff;
+  }
+input {
+    float: right;
+}
+h2 {
+    padding-right: 10px;
+}

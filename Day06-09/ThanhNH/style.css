@@ -1,0 +1,32 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 200px;
+    min-height: 200px;
+    background: orange;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.todoList {
+    list-style-type: none;
+}
+
+input {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}

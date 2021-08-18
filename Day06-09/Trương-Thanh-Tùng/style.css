@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background: radial-gradient(circle, rgb(218, 181, 198) 0%, rgba(235,157,171,1) 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 450px;
+    height: 100vh;
+    position: relative;
+    font-family: SF Display Pro;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+.box {
+    position: absolute;
+    width: 350px;
+    max-height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+}
+.content-box {
+    width: 350px;
+    height: 450px;
+    max-height: auto;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(231, 231, 231) 100%);
+    box-shadow: 0px 7px 30px rgba(62, 9, 11, 3);
+    border-radius: 5px;
+
+}
+.title-box {
+    height: 180px;
+    background: #ce5557; 
+    position: relative;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.title-box h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family:Franchise;
+    font-size: 50px;
+}
+.content {
+    padding: 10px 20px;
+}
+.content form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #8e979c;
+}
+.add-field > * {
+    background:transparent;
+    border: none;
+    height: 35px;
+}
+.content input[type='text'] {
+    width: 100%;
+    outline: none;
+    color: #6c717b;
+    padding-right: 10px;
+}
+.add-btn {
+    background-color: teal;
+    margin-left: 10px;
+    transition: 0.5s;
+    padding: 0 10px;
+}
+.add-btn:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
+.content ul {
+    margin-left: 0;
+    padding: 0;
+    letter-spacing: 0;
+    height: 200px;
+    overflow: auto;
+
+}
+.content li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content li i {
+    color: #6c717b;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.content li i {
+    transition: 0.5s;
+}
+.content li i:hover {
+    transition: scale(1.25);
+}
+/* -------------------- */
+@font-face {
+    font-family: Franchise;
+    src: url(./assets/font/Franchise.ttf);
+}
+@font-face {
+    font-family: SF Display Pro;
+    src: url(./assets/font/FontsFree-Net-SFProDisplay-Regular.ttf);
+}

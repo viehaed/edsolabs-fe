@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <header class="header">
+        <h2>Todo List ToanTQ</h2>
+    </header>
+    <main>
+        <ul>
+            <li class="checked">tìm hiểu về tổng quan về JavasCript</li>
+            <li >tìm hiểu về Variables</li>
+            <li >tìm hiểu về Data Types</li>
+            <li >tìm hiểu về Conditionals và loops</li>
+            <li >tìm hiểu về function và addEventListener</li>
+            <li >tìm hiểu về DOM, virtual dom</li>
+        </ul>
+    </main>
+
+    <script>
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function (ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+
+    </script>
+</body>
+</html>
