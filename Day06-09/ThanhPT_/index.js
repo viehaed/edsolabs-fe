@@ -291,41 +291,73 @@ console.log(ArrName);
  const NameNoMatch =ArrName.filter((item,index)=> ArrName.indexOf(item)=== index);
  console.log(NameNoMatch);
 
+ /**cau13
+  * Dựa vào danh sách từ bài tập 10, lấy ra cái tên trong lớp có nhiều người có nhất
+  */
+ //Lay ra danh sach ten nhu bai 10
+ console.log('-------cau13-----');
+const names = students.map(
+    (o) => o.fullName.split(" ")[o.fullName.split(" ").length - 1]
+  );
+  
+  // Dem su xuat hien cua ten bang field count va sap xep chung tu lon den nho
+  const countNames = names
+    .map((o) => ({
+      fullName: o,
+      count: names.filter((e) => e == o).length,
+    }))
+    .sort((a, b) => b.count - a.count);
+  
+  // Lay ra tan so xuat hien lon nhat
+  const maxCount = countNames[0].count;
+  
+  // Lay ra danh sach cac ten co tan so xuat hien lon nhat, luu y trong 1 lop co the co nhieu ten co the lon nhat nen day phai la 1 mang.
+  const nameMaxCount = countNames
+    .filter((o) => o.count == maxCount)
+    .map((o) => o.fullName);
+
+    console.log(nameMaxCount);
+  
+  // Loc cac ten trung nhau
 
  /** cau 14
   * cho 5 ban dau tien , bo sung 5 ban moi vao dau mang
   */
   console.log('-------cau14-----');
- const fiveStudentfirst = students.slice(0,5)
- for (let i = 0; i < 5; i++)
- {
-     fiveStudentfirst.unshift(students[fiveStudentfirst.length+i])
- }
+  const newArr = students.slice(0, 5)
+  // let addArr = data.slice(-6, -1)
+  const totalArr = newArr.concat(students.slice(students.length-5))
+  console.log(totalArr)
 
  /** cau 15
   * Cho danh sách 5 học viên đầu tiên, thực hiện tráo đổi thứ tự theo tên các học viên.
   */
   console.log('-------cau15-----');
-  let list5 = [];
-  let listName= [];
-  for (let i = 0; i < 5; i++) {
-      list5.push(students[i].fullName.split(" "));
-  }
-  for (let i = 0; i < list5.length; i++) {
-      listName.push(list5[i][list5[i].length - 1]);
-  }
-  const listName15 = listName.sort((a, b) => a.localeCompare(b));
+//   let list5 = [];
+//   let listName= [];
+//   for (let i = 0; i < 5; i++) {
+//       list5.push(students[i].fullName.split(" "));
+//   }
+//   for (let i = 0; i < list5.length; i++) {
+//       listName.push(list5[i][list5[i].length - 1]);
+//   }
+//   const listName15 = listName.sort((a, b) => a.localeCompare(b));
+
+const list5 = students.slice(0, 5)
+list5.sort(function (a, b) {
+    const nameA = a.fullName.split(" ").pop()
+    const nameB = b.fullName.split(" ").pop()
+    return nameA.localeCompare(nameB)
+})
+console.log("Danh sách 5 thành viên theo thứ tự tăng dần bảng chữ cái: ", list5)
 
 /** cau 16
  * Dựa vào danh sách ở bài tập 2, lấy ra danh sách các học viên có số thứ tự chia hết
 cho 3.
  */
- console.log('-------cau16-----');
-for (let i = 0; i < students.length; i++) {
-    if (students[i].id % 3 == 0) {
-        console.log(students[i])
-    }
-}
+console.log('-------cau16-----');
+const student3 = Object.values(studentsObj).filter(item => item.id % 3 === 0)
+console.log(student3)
 
 
 /** cau 17
@@ -334,49 +366,51 @@ nào làm nhóm trưởng hay ko?
  */
 console.log('-------cau17-----');
 
-let checkLead = 0;
-for (let i = 0; i < 5; i++) {
-    if (students[i].leader) {
-        checkLead++;
-    }
-}
-if (checkLead > 0) {
-    console.log("5 bạn đầu tiên có bạn là trưởng nhóm")
-} else {
-    console.log("5 bạn đầu tiên không bạn nào làm trưởng nhóm")
-}
+const student0to5 = students.slice(0, 5);
+
+const result = student0to5.some((o) => o.leader == true);
+
+console.log(result);
+// let checkLead = 0;
+// for (let i = 0; i < 5; i++) {
+//     if (students[i].leader) {
+//         checkLead++;
+//     }
+// }
+// if (checkLead > 0) {
+//     console.log("5 bạn đầu tiên có bạn là trưởng nhóm")
+// } else {
+//     console.log("5 bạn đầu tiên không bạn nào làm trưởng nhóm")
+// }
 
 /** cau 18
  * Cho danh sách mảng 5 học viên đầu tiên, thử kiểm tra tất cả các bạn 5 bạn đó có đc
 làm nhóm trưởng hay ko?
  */
 console.log('-------cau18-----');
-let dem = 0;
-for (let i = 0; i < 5; i++) {
-    if (students[i].leader == false) {
-        dem++;
-    }
-}
-if (dem > 0) {
-    console.log("trong nhóm có  tất cả " + dem + "bạn là không thể làm leader!")
-}
+let first5 = students.slice(0, 5)
+let checkLeader = first5.every(item => item.leader == true)
+console.log(checkLeader)
 
 
 /** cau 19
  * Tạo mã học viên theo quy tắc Tên_số thứ tự _ số nhóm. ( thực hiện ghép chuỗi)
  */
 console.log('-------cau19-----');
-let stName = [];
-for (let i = 0; i < students.length; i++) {
-    stName.push(students[i].fullName.split(" "))
-}
-let newName = [];
-for (let i = 0; i < stName.length; i++) {
-    newName.push(stName[i][stName[i].length - 1])
-}
-for (let i = 0; i < listStudent.length; i++) {
-    listStudent[i].ma = newName[i] + "_" + students[i].id + "_" + students[i].nameGroup
-}
+// let stName = [];
+// for (let i = 0; i < students.length; i++) {
+//     stName.push(students[i].fullName.split(" "))
+// }
+// let newName = [];
+// for (let i = 0; i < stName.length; i++) {
+//     newName.push(stName[i][stName[i].length - 1])
+// }
+// for (let i = 0; i < listStudent.length; i++) {
+//     listStudent[i].ma = newName[i] + "_" + students[i].id + "_" + students[i].nameGroup
+// }
+// console.log(listStudent)
+
+let listStudent = students.map(item =>  item.fullName + "_" + item.id + "_" + item.nameGroup)
 console.log(listStudent)
 
 
@@ -386,3 +420,4 @@ console.log(listStudent)
  console.log('-------cau20-----');
 
  students.reverse()
+//  console.log(students);
