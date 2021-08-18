@@ -110,12 +110,22 @@ console.log(nameArr1)
 
 console.log("Bài tập 12")
 const nameArr2 = nameArr.map((x) => x);
-const uniqueNames = nameArr2.filter((x, i, a) => a.indexOf(x) == i)
+const uniqueNames = new Set(nameArr2)
 console.log(uniqueNames)
 
 console.log("Bài tập 13")
 const nameArr3 = nameArr.map((x) => x);
-const duplicateName = nameArr3.filter((x,i,a) => a.indexOf(x) !== i)
+const countNames = nameArr3
+  .map((o) => ({
+    name: o,
+    count: nameArr3.filter((e) => e == o).length,
+  }))
+  .sort((a, b) => b.count - a.count);
+const maxCount = countNames[0].count;
+const nameMaxCount = countNames
+  .filter((o) => o.count == maxCount)
+  .map((o) => o.name);
+const duplicateName = new Set(nameMaxCount);
 console.log(duplicateName);
 
 console.log("Bài tập 14 a")
