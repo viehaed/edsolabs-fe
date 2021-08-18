@@ -155,9 +155,9 @@ let todogr = Object.values(list).filter(function(todogr,index) {
 
 // bài 5 
 let reset1 = listStudent.filter(function(reset1, index){
-    return reset1.stt !=1
+    return reset1.stt != 1
 });
-// console.log(reset1)
+console.log(reset1)
 
 // bài 6
 listStudent.splice(6,1)
@@ -190,13 +190,19 @@ listName.sort(function(a, b) {
 // // bai 12 
 let loopName = [...new Set(listName)];
 // bai13
-
+const nameTodo = listStudent.map((o) => o.name.split(" ")[o.name.split(" ").length - 1]
+ );
+ const countNames = nameTodo.map((o) => ({name: o,count: nameTodo.filter((e) => e == o).length,
+   })).sort((a, b) => b.count - a.count);
+ const maxCount = countNames[0].count;
+ const nameMaxCount = countNames.filter((o) => o.count == maxCount).map((o) => o.name);
+ const abC = new Set(nameMaxCount);
+ 
 // //bai 14 
 const memberfive = listStudent.slice(0, 5);
 for (let i = 0; i < 5; i++) {
     memberfive.push(listStudent[memberfive.length + i]);
 }
-
 
 // //bai 14
 const membersix = listStudent.slice(0, 5);
@@ -205,18 +211,24 @@ for (let i = 0; i < 5; i++) {
 }
 
 // bai15
-
+let newList = listStudent.slice(0, 5)
+newList.sort(function (a, b) {
+   let nameOne = a.name.split(" ").pop()
+   let nameTow = b.name.split(" ").pop()
+   return nameOne.localeCompare(nameTow)
+})
+// console.log(newList)
 // // bai16 
 let baGa = Object.values(list).filter(function(baGa, i){
     return baGa.stt % 3 === 0;
 })
 // bai 17
-listStudent.splice(0, 5);
-let fiveUp = listStudent.findIndex((x) => x.level) === -1 ? false : true;
+const studentEd = listStudent.slice(0, 5);
+const result = studentEd.some((o) => o.level == "Nhóm Trưởng");
 
 //bai 18 
 let fiveUpone = listStudent.findIndex((x) => x.level === false) === -1 ? false : true;
-
+console.log(fiveUpone);
 // bai 19 
 let upString = listStudent.map(({ stt, name, group }) => {
     return `${name.split(" ").pop()} - ${stt} - ${group}`;
