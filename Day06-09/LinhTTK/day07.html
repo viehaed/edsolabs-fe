@@ -239,18 +239,31 @@
     //Bài tập 9 
     console.log(list.sort((a, b) => a.name !== b.name ? a.name < b.name ? -1 : 1 : 0));
     // Bài tập 10
-    var nameNumber = [];
-    var numberFE ={
-      listnumber: list
-    }
-    for (let i = 0; i < numberFE.listnumber.length; i++) {
-      nameNumber.push(numberFE.listnumber[i].name.split(" ").slice(-1));
-    }
-    console.log(nameNumber);
+    const names = list.map(
+      (o) => o.name.split(" ")[o.name.split(" ").length - 1]
+    );
+    console.log(names);
     //Bài tập 11 
-    var newList = nameNumber;
+    var newList = names;
     newList.sort();
     console.log('Sắp xếp tên theo thứ tự bảng chữ cái :' + newList )
+    //Bài tập 13
+    const countListNames = names
+    .map((o) => ({
+      name: o,
+        count: names.filter((e) => e == o).length,
+    }))
+    .sort((a, b) => b.count - a.count);
+
+    const maxCount = countListNames[0].count;// Lay ra tan so xuat hien lon nhat
+
+    const nameMaxCount = countListNames// Lay ra danh sach cac ten co tan so xuat hien lon nhat
+      .filter((o) => o.count == maxCount)
+      .map((o) => o.name);
+
+    const nameMember = new Set(nameMaxCount);// Loc cac ten trung nhau
+
+    console.log(nameMember);
     //Bài tập 14_1
     var newList1 = list.slice(0, 5);
     var newList2 = list.slice(-6, -1);
@@ -271,21 +284,13 @@
     
     //Bài tập 17
     var listStudent = list.slice(0, 5);
-    var boss = listStudent.findIndex(ds => ds.number) === -1 ? false : true;
-    if(boss){
-      console.log('Năm học viên đầu có người làm nhóm trưởng');
-    }else{
-      console.log('Năm học viên đầu không có người làm nhóm trưởng');
-    }
+    var list5 = listStudent.some((o) => o.rank == "Nhóm trưởng");
+    console.log(list5);
 
     //Bài tập 18 
     var listStudent = list.slice(0, 5);
-    var boss = listStudent.findIndex(ds => ds.number === false) === -1 ? true : false;
-    if(boss){
-      console.log('Năm học viên đầu có được làm nhóm trưởng');
-    }else{
-      console.log('Năm học viên đầu không được làm nhóm trưởng');
-    }
+    var list6 = listStudent.every((o) => o.rank == "Nhóm trưởng");
+    console.log(list6);
 
     //Bài tập 19
     var maHV = list.map(({number, name, group}) =>{
