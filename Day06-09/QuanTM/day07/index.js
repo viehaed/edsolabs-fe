@@ -150,14 +150,14 @@ const monitorObjTotal = Object.values(people).filter(
 
 // Bai 5
 //Khong thay doi Array goc, neu thay doi Array goc thi su dung Array.shift
-const deleteFirst = people.filter((person) => person.id != 1);
+const deleteFirst = people.filter((person) => person.id !== 1);
 
 //Bai 6
 //Khong thay doi Array goc, neu thay doi Array goc thi su dung indexOf va Splice
-const deleteSeventh = people.filter((person) => person.id != 7);
+const deleteSeventh = people.filter((person) => person.id !== 7);
 
 //Bai 7
-const memberNinth = people.find((person) => (person.id = 9)).name;
+const memberNinth = people.find((person) => person.id === 9).name;
 
 //Bai 8
 const group2ndMonitor = people.find(
@@ -193,9 +193,7 @@ const maxOccurenceNames = count.filter((item) => item.occurence === maxValue);
 
 //Bai 14
 const first5member = people.slice(0, 5);
-for (let i = 0; i < 5; i++) {
-  first5member.unshift(people[first5member.length + i]);
-}
+people.slice(first5member.length, first5member.length + 5).concat(first5member);
 
 //Bai 15
 first5member.sort((a, b) => {
@@ -210,15 +208,9 @@ const divisibleBy3 = Object.values(peopleObj).filter(
 );
 
 //Bai 17
-first5member.splice(0, 5);
-const anyMonitor =
-  first5member.findIndex((person) => person.isMonitor) === -1 ? false : true;
-
+const anyMonitor = first5member.some((person) => person.isMonitor === true);
 //Bai 18
-const areAllMonitor =
-  first5member.findIndex((person) => person.isMonitor === false) === -1
-    ? true
-    : false;
+const areAllMonitor = first5member.every((person) => person.isMonitor === true);
 
 //Bai 19
 const memberCode = people.map(({ id, name, group }) => {
