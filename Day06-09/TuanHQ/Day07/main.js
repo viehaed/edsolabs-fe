@@ -459,16 +459,31 @@ console.log("========== Bài 13==========");
 let name_b13 = "";
 let count = 0;
 
-for (const item of listName_b10) {
-  let temp = listName_b10.filter((s) => s === item);
-  if (temp.length > count) {
-    count = temp.length;
-    name_b13 = item;
-  }
-}
+// for (const item of listName_b10) {
+//   let temp = listName_b10.filter((s) => s === item);
+//   if (temp.length > count) {
+//     count = temp.length;
+//     name_b13 = item;
+//   }
+// }
 
-console.log("Tên xuất hiện nhiều lần nhất: " + name_b13);
-console.log("Số lần: " + count);
+let countNames = listName_b10
+  .map((item) => ({
+    name: item,
+    count: listName_b10.filter((s) => s === item).length,
+  }))
+  .sort((a, b) => b.count - a.count);
+
+// danh sach cac ten xuat hien nhieu nhat
+const nameMaxCount = countNames
+  .filter((item) => item.count === countNames[0].count)
+  .map((item) => item.name); //danh sách chỉ lấy tên
+
+const result = new Set(nameMaxCount);
+
+console.log("Các tên xuất hiện nhiều nhất: ");
+console.log(result);
+console.log("Số lần: " + countNames[0].count);
 
 // Bài tập 14: Cho danh sách 5 bạn học viên đầu tiên, hãy bổ sung thêm 5 bạn học viên nữa vào đuôi mảng.
 console.log("========== Bài 14==========");
@@ -579,23 +594,31 @@ console.log("========== Bài 17==========");
 
 let listStudents_b17 = listStudents.slice(0, 5);
 
-listStudents_b17 = listStudents_b17.filter((item) => item.isLeader === true);
+// listStudents_b17 = listStudents_b17.filter((item) => item.isLeader === true);
+// console.log("Các bạn nhóm trưởng trong 5 bạn đầu tiên: ");
+// console.log(listStudents_b17);
 
-console.log("Các bạn nhóm trưởng trong 5 bạn đầu tiên: ");
-console.log(listStudents_b17);
+let result_b17 = listStudents_b17.some((item) => item.isLeader === true);
+
+console.log(result_b17 ? "Có nhóm trưởng" : "Không có nhóm trưởng");
 
 // Bài tập 18: Cho danh sách mảng 5 học viên đầu tiên, thử kiểm tra tất cả các bạn 5 bạn đó có đc làm nhóm trưởng hay ko?
 console.log("========== Bài 18==========");
 
 let listStudents_b18 = listStudents.slice(0, 5);
 
-listStudents_b18 = listStudents_b18.filter((item) => item.isLeader === true);
+// listStudents_b18 = listStudents_b18.filter((item) => item.isLeader === true);
 
-if (listStudents_b18.length === 5) {
-  console.log("Tất cả là nhóm trưởng");
-} else {
-  console.log("Tất cả không phải là nhóm trưởng");
-}
+// if (listStudents_b18.length === 5) {
+//   console.log("Tất cả là nhóm trưởng");
+// } else {
+//   console.log("Tất cả không phải là nhóm trưởng");
+// }
+
+let result_b18 = listStudents_b18.every((item) => item.isLeader === true);
+console.log(
+  result_b18 ? "Tất cả là nhóm trưởng" : "Không phải tất cả là nhóm trưởng"
+);
 
 // Bài tập 19: Tạo mã học viên theo quy tắc Tên_số thứ tự _ số nhóm. ( thực hiện ghép chuỗi).
 console.log("========== Bài 19==========");
