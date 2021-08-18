@@ -140,6 +140,7 @@ console.table(arrlist);
 
 // Bài 2
 
+// .assign(): sao chép thành new obj
 console.log("--- Bài 2 ---");
 const objList = Object.assign({}, arrlist);
 console.table(objList);
@@ -147,6 +148,7 @@ console.table(objList);
 // Bài 3
 
 console.log("--- Bài 3 ---");
+// Set() lưu trữ giá trị duy nhất cả primitive and reference type
 const peopleTotal = arrlist.length;
 const leader = arrlist.filter((person) => person.position == "leader").length;
 const groupTotal = new Set(arrlist.map((person) => person.teamNumber)).size;
@@ -157,6 +159,8 @@ console.log("số nhóm : " + groupTotal);
 // //bài 4
 
 console.log("--- Bài 4 ---");
+
+//Object.values trả về mảng có values của obj tham chiếu
 const peopleObjTotal = Object.values(objList).length;
 const monitorObjTotal = Object.values(objList).filter(
   (person) => person.position == "leader"
@@ -192,7 +196,7 @@ const leader2 = arrlist.find(
 console.log("Thứ tự của nhóm trưởng nhóm 2 là : " + leader2);
 
 // bài 9
-
+// localeCompare trả về 1 hoặc -1 khi so sánh các chuỗi , nếu a.localeCompare(b) / a<b trả về 1
 console.log("--- Bài 9 ---");
 const sortPp = arrlist
   .map((e) => e)
@@ -233,6 +237,7 @@ const countNames = firstNames
   }))
   .sort((a, b) => b.count - a.count);
 const maxCount = countNames[0].count;
+console.log(maxCount);
 const nameMaxCount = countNames
   .filter((o) => o.count == maxCount)
   .map((o) => o.name);
@@ -251,6 +256,8 @@ for (let i = 0; i < 5; i++) {
 console.log(first5member);
 
 //bài 15
+
+// pop() lấy ra phần tử cuối của array
 console.log("--- Bài 15 ---");
 const first5membernew = arrlist.slice(0, 5);
 first5membernew.sort((a, b) => {
@@ -266,6 +273,7 @@ const arr16 = arrlist.filter((e) => e.id % 3 == 0);
 console.log(arr16);
 
 //bài 17
+// 1 value trong array thỏa mãn điều tiện some() , trả về true
 console.log("--- Bài 17 ---");
 const student0to5 = arrlist.slice(0, 5);
 
@@ -274,6 +282,7 @@ const result1 = student0to5.some((o) => o.position == "leader");
 console.log("1 trong 5 bạn là nhóm trưởng ?" + result1);
 
 //bài 18
+// tất cả value trong array thỏa mãn điều tiện every() , trả về true
 console.log("--- Bài 18 ---");
 const student0to5new = arrlist.slice(0, 5);
 
