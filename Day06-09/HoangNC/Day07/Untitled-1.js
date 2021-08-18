@@ -220,6 +220,17 @@ console.log(bai12)
 // Bai 13
 console.log('----Bai 13----')
 
+var listName = bai10.slice()
+
+var countName = listName.map((e) => ({
+    name: e,
+    count: listName.filter((i) => i == e).length,
+})).sort((a, b) => b.count - a.count)
+
+var maxCount = listName.Count;
+listName = listName.filter((i) => i.count == maxCount).map((i) => i.name)
+
+console.log(new Set(listName))
 // Bai 14
 console.log('----Bai 14----')
 var stuList = dss.slice(0,5)
@@ -227,17 +238,8 @@ var stuList5last = dss.slice(6,11)
 console.log(stuList.concat(stuList5last))
 // Bai 15
 console.log('----Bai 15----')
-stuList.sort(function(a, b) {
-    var nameA = a.name
-    var nameB = b.name
-    if (nameA < nameB) {
-        return -1
-    }
-    if (nameA > nameB) {
-        return 1
-    }
-    return 0
-})
+stuList.sort(function() {
+    return 0.5 -Math.random()})
 console.table(stuList)
 
 
@@ -250,7 +252,7 @@ console.table(cau16);
 
 // Bai 17
 console.log('----Bai 17----')
-var bai17 = dss.some(function(bai17, index) {
+var bai17 = stuList.some(function(bai17, index) {
     return bai17.vtn === 'Nhom truong';
 })
 console.log(bai17)
@@ -258,7 +260,7 @@ console.log(bai17)
 
 // Bai 18
 console.log('----Bai 18----')
-var bai18 = dss.every(function(bai18, index) {
+var bai18 = stuList.every(function(bai18, index) {
     return bai18.vtn === 'Nhom truong';
 })
 console.log(bai18)
