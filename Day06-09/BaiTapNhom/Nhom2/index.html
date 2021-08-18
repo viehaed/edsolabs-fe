@@ -205,23 +205,62 @@
         console.log(member.map(list=>list.name));
     }
     inputNameGroup(Math.floor((Math.random() * 5) + 1));
-
     //Bài tập 24
-    function inputPoint(id, dayID, point){
-        var memberInfo = list.find( o => o.id === id); //tìm trong list duyệt xem id nào trùng với mã học viên
-        if (!memberInfo.points){
-            memberInfo.points = []// kiểm tra đk và khởi tạo mảng trong points
+    let dataStudent = JSON.parse(JSON.stringify(list));
+
+    function createPoint(data) {
+        data.map((data) => (data.points = []));
         }
-        memberInfo.points.push({
+
+        function importPoint(id, dayName, point) {
+        const dataNew = dataStudent.filter((data) => data.id == id);//check id
+        if (dataNew.find((data) => data?.points === undefined)) {
+            createPoint(dataNew);
+    }
+    let idDay = dataNew.map((data) => data.points.length + 1);
+    let points = {
+        idDay: idDay[0],
+        dayName: dayName,
+        point: point,
+    };
+    dataNew.map((data) => data.points.push(points));
+    }
+    importPoint(17, "Day 02", 7);
+    console.log(dataStudent);
+    /*
+    Bài 24 : Cách của thành viên khác
+    var add = (id, dayID, point) =>{
+        var member = List.find(l => l.id === id);
+        if (!member.points){
+            member.points = [];
+        }
+        member.points.push({
             dayID,
-            dayName:'thứ ' + Math.floor((Math.random() * 7) + 2),
+            //dayName: 'thứ ' + Math.floor((Math.random() * 7) + 1),
+            dayName: 'ngày ' + Math.floor((Math.random() * 31) + 1),
             point,
         });
-        console.log(memberInfo);
+        console.log(member);
     }
-    console.log(inputPoint(17, '05',7));
-
+    add(6, 01, 6)
+    */
     //Bài tập 25
+    listDay = ["Day 01", "Day 02", "Day 03", "Day 04", "Day 05"];
+    function createPointOneWeek(id) {
+        for (let i = 0; i < 7; i++) {
+            let pointRandom = Math.floor(Math.random() * 11);
+            importPoint(id, listDay[i], pointRandom);
+        }
+    }
+    function pointStudent() {
+        dataStudent.forEach((data) => {
+            createPointOneWeek(data.id);
+        });
+    }
+    pointStudent();
+    console.log(dataStudent);
+    /*
+    Bài tập 25 : Cách của thành viên khác
     var addPoints = (id, dayName, point) =>{
         var memberInfo = list.find( o => o.id === id); //tìm trong list duyệt xem id nào trùng với mã học viên
         if (!memberInfo.points){
@@ -241,46 +280,73 @@
         }
         console.log(list);
     }
-    point(6)
-    //Bài tập 26
-    function sumTotalPoint(x,y) {
-        var copyList = list.slice();
-        const tempArray = copyList.map((member) => {
-            const totalPoints = member.points.reduce((total, item) =>{
-                const {dayID, point} = item
-                if (dayID >= x && dayID <= y) {
-                    return total + point
-                }
-                return total
-            }, 0);
-            member.totalPoints = Math.ceil(totalPoints * 100) / 100
-            return member;
-        })
-        return tempArray
+    point(6)*/
+    // Bài tập 26
+    const copyDataStudent = JSON.parse(JSON.stringify(dataStudent));
+    function sumTotalPoint(arrayPoint) {
+        let sum = 0;
+        for (let i = 0; i < arrayPoint.length; i++) {
+            sum += arrayPoint[i].point;
+        }
+        return sum;
     }
-    sumTotalPoint(2,4)
+    function getSumTotalPoint(x, y) {
+    const arrTotalPoint = copyDataStudent.map(
+        (data) =>
+        (data = {
+            id: data.id,
+            name: data.name,
+            totalPoint: data.points.slice(x - 1, y + 1),
+            group: data.group.groupId,
+        })
+    );
+    arrTotalPoint.map((data) => (data.totalPoint =  sumTotalPoint(data.totalPoint)));
+    return arrTotalPoint;
+    }
+    console.log(getSumTotalPoint(2, 5));
+    
+    /*Bài tập 26 : Cách của thành viên khác
+    function bai26(x,y) {
+    var copyList = listStudent.slice();
+    const tempArr = copyList.map((person) => {
+        const totalPoints = person.points.reduce((total, item) => {
+            const {dayID, point} = item
+            if (dayID >= x && dayID <= y) {
+                return total + point
+            }
+            return total
+        }, 0);
+        // Add totalPoints vào danh sach
+        person.totalPoints = Math.ceil(totalPoints * 100) / 100
+        return person;
+    })
+    return tempArr
+    }
+    bai26(2,4)
+    */
     //Bài tập 27
     function topMax(x,y){
-        var topPoint = sumTotalPoint(x,y)
+        var topPoint = getSumTotalPoint(x,y)
         topPoint.sort((a, b) =>{
-            return b.totalPoints - a.totalPoints;
+            return b.totalPoint - a.totalPoint;
         })
         console.log(topPoint.slice(0, 5))
     }
     topMax(2,4)
     //Bài tập 28
     function listName(x,y,z){
-        var namePoint = sumTotalPoint(x,y)
+        var namePoint = getSumTotalPoint(x,y)
         var checkTotalPoint = namePoint.filter((member) => member.totalPoints === z)
         if(!checkTotalPoint){
             return namePoint
         }
-        var listNameMember = namePoint.map(({id, name, totalPoints}) => {
-            return `ID: ${id}_Name: ${name}_Tổng điểm: ${totalPoints}`
+        var listNameMember = namePoint.map(({id, name, totalPoint}) => {
+            return `ID: ${id}_Name: ${name}_Tổng điểm: ${totalPoint}`
         })
         console.log(listNameMember)
     }
     listName(2,4)
+    
     </script>
 </body>
 </html>
