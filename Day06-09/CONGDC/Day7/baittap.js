@@ -1,267 +1,276 @@
  //cau 1 
- var listStudent = [
+ const listStudent = [
     {
-        stt: 1,
-        hvt: 'Nguyễn Văn Sơn',
-        nhom: 1,
-        vtt: ''
+        id: 1,
+        name: 'Nguyễn Văn Sơn',
+        group: 1,
+        position: 'Member'
     },
     {
-        stt: 2,
-        hvt: 'Nguyễn Hữu Ánh',
-        nhom: 1,
-        vtt: ''
+        id: 2,
+        name: 'Nguyễn Hữu Ánh',
+        group: 1,
+        position: 'Member'
     },
     {
-        stt: 3,
-        hvt: 'Trần Mạnh Quân',
-        nhom: 4,
-        vtt: 'Nhóm trưởng'
+        id: 3,
+        name: 'Trần Mạnh Quân',
+        group: 4,
+        position: 'Leader'
     },
     {
-        stt: 4,
-        hvt: 'Hà Quốc Tuấn',
-        nhom: 3,
-        vtt: 'Nhóm trưởng'
+        id: 4,
+        name: 'Hà Quốc Tuấn',
+        group: 3,
+        position: 'Leader'
     },
     {
-        stt: 5,
-        hvt: 'Hoàng Ngọc Thành',
-        nhom: 1,
-        vtt: ''
+        id: 5,
+        name: 'Hoàng Ngọc Thành',
+        group: 1,
+        position: 'Member'
     },
     {
-        stt: 6,
-        hvt: 'Vũ Thị Thu Hà',
-        nhom: 2,
-        vtt: ''
+        id: 6,
+        name: 'Vũ Thị Thu Hà',
+        group: 2,
+        position: 'Member'
     },
     {
-        stt: 7,
-        hvt: 'Phan Văn Trung',
-        nhom: 2,
-        vtt: ''
+        id: 7,
+        name: 'Phan Văn Trung',
+        group: 2,
+        position: 'Member'
     },
     {
-        stt: 8,
-        hvt: 'Nguyễn Cao Hoàng',
-        nhom: 2,
-        vtt: ''
+        id: 8,
+        name: 'Nguyễn Cao Hoàng',
+        group: 2,
+        position: 'Member'
     },
     {
-        stt: 9,
-        hvt: 'Phùng Đắc Nhật Minh',
-        nhom: 5,
-        vtt: 'Nhóm trưởng'
+        id: 9,
+        name: 'Phùng Đắc Nhật Minh',
+        group: 5,
+        position: 'Leader'
     },
     {
-        stt: 10,
-        hvt: 'Lê Việt Dũng',
-        nhom: 1,
-        vtt: 'Nhóm trưởng'
+        id: 10,
+        name: 'Lê Việt Dũng',
+        group: 1,
+        position: 'Leader'
     },
     {
-        stt: 11,
-        hvt: 'Đỗ Chí Công',
-        nhom: 2,
-        vtt: ''
+        id: 11,
+        name: 'Đỗ Chí Công',
+        group: 2,
+        position: 'Member'
     },
     {
-        stt: 12,
-        hvt: 'Trần Công Tâm',
-        nhom: 3,
-        vtt: ''
+        id: 12,
+        name: 'Trần Công Tâm',
+        group: 3,
+        position: 'Member'
     },
     {
-        stt: 13,
-        hvt: 'Trương Thanh Tùng',
-        nhom: 3,
-        vtt: ''
+        id: 13,
+        name: 'Trương Thanh Tùng',
+        group: 3,
+        position: 'Member'
     },
     {
-        stt: 14,
-        hvt: 'Tạ Đức Chiến',
-        nhom: 3,
-        vtt: ''
+        id: 14,
+        name: 'Tạ Đức Chiến',
+        group: 3,
+        position: 'Member'
     },
     {
-        stt: 15,
-        hvt: 'Nguyễn Trọng Vĩnh',
-        nhom: 3,
-        vtt: ''
+        id: 15,
+        name: 'Nguyễn Trọng Vĩnh',
+        group: 3,
+        position: 'Member'
     },
     {
-        stt: 16,
-        hvt: 'Ngô Chung Á Âu',
-        nhom: 4,
-        vtt: ''
+        id: 16,
+        name: 'Ngô Chung Á Âu',
+        group: 4,
+        position: 'Member'
     },
     {
-        stt: 17,
-        hvt: 'Trần Thị Khánh Linh',
-        nhom: 2,
-        vtt: 'Nhóm trưởng'
+        id: 17,
+        name: 'Trần Thị Khánh Linh',
+        group: 2,
+        position: 'Leader'
     },
     {
-        stt: 18,
-        hvt: 'Phan Tiến Thành',
-        nhom: 4,
-        vtt: ''
+        id: 18,
+        name: 'Phan Tiến Thành',
+        group: 4,
+        position: 'Member'
     },
     {
-        stt: 19,
-        hvt: 'Đỗ Văn Huy',
-        nhom: 4,
-        vtt: ''
+        id: 19,
+        name: 'Đỗ Văn Huy',
+        group: 4,
+        position: 'Member'
     },
     {
-        stt: 20,
-        hvt: 'Nguyễn Trung Đức',
-        nhom: 5,
-        vtt: ''
+        id: 20,
+        name: 'Nguyễn Trung Đức',
+        group: 5,
+        position: 'Member'
     },
     {
-        stt: 21,
-        hvt: 'Nguyễn Trung Nam',
-        nhom: 5,
-        vtt: ''
+        id: 21,
+        name: 'Nguyễn Trung Nam',
+        group: 5,
+        position: 'Member'
     },
     {
-        stt: 22,
-        hvt: 'Trần Quốc Toàn',
-        nhom: 5,
-        vtt: ''
+        id: 22,
+        name: 'Trần Quốc Toàn',
+        group: 5,
+        position: 'Member'
     }
 ];
 // cau 2
-var Student = Object.assign({},listStudent);
+
+const Student = Object.assign({},listStudent);
 
 // bai 3
 console.log('Số thành viên trong lớp học là : '+listStudent.length);
-var loc = listStudent.filter(function(loc,index){
-    return loc.vtt === 'Nhóm trưởng';
+const loc = listStudent.filter(function(loc,index){
+    return loc.position === 'Member';
 });
 
-console.log('Số nhóm trưởng trong lớp là: '+loc.length);
-
-var ln = new  Set(listStudent.map(listStudent => listStudent.nhom)).size;
-console.log("Số nhóm trong lớp là: "+ln); 
+const ln = new  Set(listStudent.map(listStudent => listStudent.group)).size;
 
 
 // cau 4
-var dem = Object.values(listStudent).length;
+const dem = Object.values(listStudent).length;
 
-
-var locOb = Object.values(listStudent).filter(function(locOb,index){
-    return locOb.vtt === 'Nhóm trưởng';
+const locOb = Object.values(listStudent).filter(function(locOb,index){
+    return locOb.position === 'Member';
 });
 
 // Câu 5
-var loai = listStudent.filter(function(loai,index){
-        return loai.stt != 1;
+const loai = listStudent.filter(function(loai,index){
+        return loai.id != 1;
 });
-console.log(loai);
-
 
 // Câu 6 
 
-var loai2 = listStudent.filter(function(loai,index){
-    return loai.stt != 7;
+const loai2 = listStudent.filter(function(loai,index){
+    return loai.id != 7;
 });
-console.log(loai);
 
 // Câu 7
-var tenso9 = listStudent.find(function(tenso9,index){
-    return tenso9.stt === 9; 
+const tenso9 = listStudent.find(function(tenso9,index){
+    return tenso9.id === 9; 
 });
 
-console.log(tenso9.hvt);
+console.log(tenso9.name);
 
 // Câu 8
-var nt2 = listStudent.find(function(nt2,index){
-    return nt2.nhom === 2 && nt2.vtt === 'Nhóm trưởng'
+const nt2 = listStudent.find(function(nt2,index){
+    return nt2.group === 2 && nt2.position === 'Member'
 });
-console.log(nt2.stt);
+console.log(nt2.id);
 
 // Câu 9 
-var sortList = listStudent.sort(function(a,b){
-    return a.hvt.localeCompare(b.hvt);
+const sortList = listStudent.sort(function(a,b){
+    return a.name.localeCompare(b.name);
 });
 
 //Câu 10
 
-var hvt1 = listStudent.map(({hvt}) => {
-    var hvt12 = hvt.lastIndexOf(" ");
-    return hvt = hvt.slice(hvt12);
+const name1 = listStudent.map(({name}) => {
+    const name12 = name.lastIndexOf(" ");
+    return name = name.slice(name12);
 });
-console.log(hvt1);
+console.log(name1);
  // Câu 11
- hvt1.sort(function(a,b){
+ name1.sort(function(a,b){
     return a.localeCompare(b);
 });
 
 // Câu 12
- var hvt2 =  [...new Set(hvt1)];
-console.log(hvt2);
+ const name2 =  [...new Set(name1)];
+console.log(name2);
 // Câu 13
-var count = hvt1.filter((item,index) => hvt1.indexOf(item) != item).length;
+const countNames = name1
+  .map((o) => ({
+    name: o,
+    count: name1.filter((e) => e == o).length,
+  }))
+  .sort((a, b) => b.count - a.count);
 
+  const maxCount = countNames[0].count;
 
-console.log("Số tên trùng nhau là : " +count);
+  const nameMaxCount = countNames
+  .filter((o) => o.count == maxCount)
+  .map((o) => o.name);
+const result = new Set(nameMaxCount);
 
+console.log(result);
 
 // Câu 14
 
-var student5 = listStudent.splice(0,5);
+const student5 = listStudent.splice(0,5);
 for (let index = 0; index < 5; index++) {
     student5.push(listStudent[student5.length + index]);
 }
 console.log(student5);
 
 // Câu 14
-var student6 = listStudent.splice(0,5);
+const student6 = listStudent.splice(0,5);
+console.log(student6);
 for (let index = 0; index < 5; index++) {
     student6.unshift(listStudent[student6.length + index]);
 }
-console.log(student6);
+
 
 //Câu 15
 
-var studen11 = listStudent.splice(0,5);
-var sortList1 = studen11.sort(function(a,b){
-    return a.hvt.localeCompare(b.hvt);
+const studen11 = listStudent.splice(0,5);
+const sortList1 = studen11.sort(function(a,b){
+    return a.name.localeCompare(b.name);
 });
 
 // Câu 16
 
-var chia3 = Object.values(Student).filter(function(chia3,index){
-    return chia3.stt % 3 === 0;
+const div3 = Object.values(Student).filter(function(div3,index){
+    return div3.id % 3 === 0;
 });
-console.log(chia3);
-
+console.log(div3);
 // Câu 17 
 
-var student8 = listStudent.splice(0,5);
-var test = student8.findIndex(function(test,index){
-        test.vtt === 'Nhóm trưởng';
-});
-var test2 = (test === -1 ? 'Không có' : 'Có');
-console.log(student8);
-console.log(test2);
+const student8 = listStudent.splice(0,5);
+
+const result1 = student8.some((o) => o.position == "Leader");
+
+console.log(result1);
 
 // Câu 18 
 
+const student9 = listStudent.splice(0,5);
+const result2 = student8.some((o) => o.position == "Member");
 
-var test3 = (test === -1 ? 'Có' : 'Không');
-console.log(test3);
+console.log(result2);
+
 
 // Câu 19 
 
-var studen10 = listStudent.map(({stt,hvt,nhom}) => {
-    var hvt5 = hvt.split(" ").pop();
-    return '${hvt5}_${stt}_${nhom}';
+const studen10 = listStudent.map(({id,name,group}) => {
+    
+const name5 = listStudent.map(({name}) => {
+    const name12 = name.lastIndexOf(" ");
+    return name = name.slice(name12);
+});
+    return name+'_'+id+'_'+group;
 
 });
+console.log(studen10);
 
 // Câu 20 
 
