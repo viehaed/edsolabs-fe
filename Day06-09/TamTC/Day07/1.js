@@ -284,16 +284,8 @@ const dataObj = {
 // // BÀI 4
 // const total = Object.keys(dataObj).length;
 // console.log("Number person: ", total)
-
-// const numberLeader = dataObj => {
-//     let count = 0
-//     for (const item of Object.values(dataObj)) {
-//         if (item.position === "Nhóm trưởng")
-//             count++
-//     }
-//     return count
-// }
-// console.log("Number leader: ", numberLeader(data))
+// const numberLeader = Object.values(dataObj).filter(item => item.position === "Nhóm trưởng").length
+// console.log("Number leader: ", numberLeader)
 ///////////////////////////////////////////
 // BÀI 5
 // const newArr = data.splice(0, 1)
@@ -314,53 +306,39 @@ const dataObj = {
 ///////////////////////////////////////////
 // BÀI 9
 // data.sort(function (a, b) {
-//     let nameA = a.name.split(" ")
-//     let nameB = b.name.split(" ")
-//     let lastA = nameA[nameA.length - 1]
-//     let lastB = nameB[nameB.length - 1]
-//     return lastA.localeCompare(lastB)
+//     let nameA = a.name.split(" ").pop()
+//     let nameB = b.name.split(" ").pop()
+//     return nameA.localeCompare(nameB)
 // })
 // console.log("Danh sách lớp theo thứ tự tăng dần bảng chữ cái: ", data)
 ///////////////////////////////////////////
 // BÀI 10
-// let lastNameArr = []
-// data.forEach(item => {
-//     let name = item.name.split(" ")
-//     lastNameArr.push(name[name.length - 1])
-// })
+// let lastNameArr = data.map(item => item.name.split(" ").pop())
 // console.log("Danh sách tên: ", lastNameArr)
 ///////////////////////////////////////////
 // BÀI 11
-// let lastNameArr = []
-// data.forEach(item => {
-//     let name = item.name.split(" ")
-//     lastNameArr.push(name[name.length - 1])
-// })
-
-// const result = lastNameArr.sort((a, b) => a.localeCompare(b));
+// let result = data.map(item => item.name.split(" ").pop())
+    // .sort((a, b) => a.localeCompare(b))
 // console.log(result);
 ///////////////////////////////////////////
 // BÀI 12
-// let lastNameArr = []
-// data.forEach(item => {
-//     let name = item.name.split(" ")
-//     let person = name[name.length - 1]
-//     if (lastNameArr.indexOf(person) === -1)
-//         lastNameArr.push(person)
-// })
-// console.log(lastNameArr)
+// let lastNameArr = data.map(item => item.name.split(" ").pop())
+// let result = new Set(lastNameArr)
+// console.log(result)
 ///////////////////////////////////////////
 // BÀI 13
-// let lastNameArr = []
-// data.forEach(item => {
-//     let name = item.name.split(" ")
-//     lastNameArr.push(name[name.length - 1])
-// })
-// const result = lastNameArr.sort((a, b) =>
-//     lastNameArr.filter(v => v === a).length - lastNameArr.filter(v => v === b).length
-// ).pop()
-// console.log(result + " là tên trong lớp có nhiều nhất")
-
+// let names = data.map(item => item.name.split(" ").pop())
+// let lastNameArr = names.map(item => {
+//     return {
+//         name: item,
+//         count: names.filter(value => item === value).length
+//     }
+// }).sort((a, b) => a.count - b.count)
+// let maxCount = lastNameArr.pop().count;
+// let nameMaxCount = lastNameArr.filter(item => item.count === maxCount)
+//                                 .map(value => value.name)
+// let result = new Set(nameMaxCount)
+// console.log(result)
 ///////////////////////////////////////////
 // BÀI 14-1
 // let newArr = data.slice(0, 5)
@@ -374,52 +352,31 @@ const dataObj = {
 // let totalArr = addArr.concat(newArr)
 // console.log(totalArr)
 ///////////////////////////////////////////
-
 // BÀI 15
 // let newArr = data.slice(0, 5)
 // newArr.sort(function (a, b) {
-//     let nameA = a.name.split(" ")
-//     let nameB = b.name.split(" ")
-//     let lastA = nameA[nameA.length - 1]
-//     let lastB = nameB[nameB.length - 1]
-//     return lastA.localeCompare(lastB)
+//     let nameA = a.name.split(" ").pop()
+//     let nameB = b.name.split(" ").pop()
+//     return nameA.localeCompare(nameB)
 // })
 // console.log("Danh sách 5 thành viên theo thứ tự tăng dần bảng chữ cái: ", newArr)
 ///////////////////////////////////////////
 // BÀI 16
-// const result = dataObj => {
-//     let newArr = []
-
-//     for (const item of Object.values(dataObj)) {
-//         if (item.stt % 3 === 0)
-//             newArr.push(item)
-//     }
-//     return newArr
-// }
-// console.log(result(dataObj)
-// )
+// const result = Object.values(dataObj).filter(item => item.stt % 3 === 0)
+// console.log(result)
 ///////////////////////////////////////////
 // BÀI 17
 // let newArr = data.slice(0, 5)
-// let result = newArr.filter(item => {
-//     return item.position === "Nhóm trưởng"
-// })
+// let result = newArr.some(item =>  item.position === "Nhóm trưởng")
 // console.log(result)
 ///////////////////////////////////////////
 // BÀI 18
 // let newArr = data.slice(0, 5)
-// let result = newArr.every(item => {
-//     return item.position === "Nhóm trưởng"
-// })
-// if (result)
-//     console.log("Tất cả đều là lớP trưởng")
-// else
-//     console.log("Không phải tất cả đều là lớp trưởng")
+// let result = newArr.every(item => item.position === "Nhóm trưởng")
+// console.log(result)
 ///////////////////////////////////////////
 // BÀI 19
-// let result = data.map(item => {
-//     return item.name + "_" + item.stt + "_" + item.group
-// })
+// let result = data.map(item =>  item.name + "_" + item.stt + "_" + item.group)
 // console.log(result)
 ////////////////////////////////////////////
 // BÀI 20
