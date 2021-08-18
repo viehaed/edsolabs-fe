@@ -243,10 +243,16 @@
       (o) => o.name.split(" ")[o.name.split(" ").length - 1]
     );
     console.log(names);
+
     //Bài tập 11 
     var newList = names;
     newList.sort();
     console.log('Sắp xếp tên theo thứ tự bảng chữ cái :' + newList )
+
+    //Bài tập 12
+    const cateNames = [...new Set(names)];
+    console.log(cateNames);
+
     //Bài tập 13
     const countListNames = names
     .map((o) => ({
@@ -264,12 +270,13 @@
     const nameMember = new Set(nameMaxCount);// Loc cac ten trung nhau
 
     console.log(nameMember);
+    
     //Bài tập 14_1
     var newList1 = list.slice(0, 5);
     var newList2 = list.slice(-6, -1);
     var addList = newList1.concat(newList2);
     console.log(addList);
-    
+
     //Bài tập 14_2
     var addList = newList2.concat(newList1);
     console.log(addList);
