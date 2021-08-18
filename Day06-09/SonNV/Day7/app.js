@@ -270,130 +270,117 @@ var objStudents = {
     groupPosition: false,
   },
 };
+
 //-----Bai 3
-// var groups = 0
-// for(var i = 0 ; i < listStudents.length ; i++){
-//     if (listStudents[i].groupPosition) {
-//       groups++;
-//     }
-// }
-// console.log("So hoc vien trong lop : " + listStudents.length);
-// console.log("So lop truong trong lop : " + groups);
-// console.log("So nhom trong lop : " + groups);
+console.log("So hoc vien trong lop : " + listStudents.length);
+console.log(
+  "So lop truong trong lop : " +
+    listStudents.filter((x) => x.groupPosition == true).length
+);
+console.log(
+  "So nhom trong lop : " +
+    listStudents.filter((x) => x.groupPosition == true).length
+);
 
 //-----Bai 4
-
-// let countStudentObj = Object.keys(objStudents).length;
-// console.log(`So thanh vien trong lop la ${countStudentObj}`);
+console.log(`So thanh vien trong lop la ${Object.keys(objStudents).length}`);
+console.log(
+  `So nhom truong la : ${
+    Object.values(objStudents).filter((x) => x.groupPosition == true).length
+  }`
+);
+console.log(`Si so thanh vien trong lop la ${Object.keys(objStudents).length}`);
 
 //-----Bai 5
-
-//  listStudents.shift();
-//  console.log(listStudents);
+const resetList = [...listStudents];
+console.log(resetList.shift());
 
 //-----Bai 6
-
-//  listStudents.splice(6,1);
-//  console.log(listStudents);
+const resetList1 = [...listStudents];
+console.log(resetList1.splice(6, 1));
 
 //-----Bai 7
+console.log(listStudents.filter((x) => x.id == 9)[0].name);
+console.log(listStudents);
 
-// for (let i = 0; i < listStudents.length; i++) {
-//   if (listStudents[i].id === 9) {
-//     console.log(`Thanh vien stt 9 la ${listStudents[i].name}`);
-//   }
-// }
 
 // ---- Bai 8
-
-// for(let i = 0 ; i< listStudents.length ; i++) {
-//   if (listStudents[i].groupNumber === 2 && listStudents[i].groupgroupPosition) {
-//     console.log(`Nhom truong nhom 2 la : ${listStudents[i].id}`);
-//   }
-// }
-
+console.log(
+  listStudents.filter((x) => x.groupNumber == 2 && x.groupPosition === true)[0]
+    .id
+);
 // ---- Bai 9
-
-//  console.log(listStudents.sort((a, b) => a.name.localeCompare(b.name)));
+const resetList2 = [...listStudents];
+console.log(resetList2.sort((a, b) => a.name.localeCompare(b.name)));
 
 // ----- Bai 10
 
-// let listName = [];
-// listStudents.map((item) => {
-//   items = item.name.split(" ").slice(-1);
-//   listName.push(items.join(" "));
-// });
-// console.log("Danh sách tên học viên trong lớp: ");
-// console.log(listName);
+let listName = [];
+listStudents.map((item) => {
+  let items = item.name.split(" ").slice(-1);
+  listName.push(items.join(" "));
+});
+console.log("Danh sách tên học viên trong lớp: ");
+console.log(listName);
+
 
 /// ------- Bai 11
-
-// console.log(listName.sort());
+const resetListName = [...listName]
+console.log(resetListName.sort((a, b) => a.localeCompare(b)));
 
 /// ----- Bai 12
 
-// function unName(arr) {
-//   return Array.from(new Set(arr))
-// }
-//  console.log(unName(listName));
+  console.log(...new Set(listName))
 
 //----- Bai 13
+const resetListName1 = [...listName]
+const countNames = resetListName1
+  .map((o) => ({
+    name: o,
+    count: resetListName1.filter((e) => e == o).length,
+  }))
+  .sort((a, b) => b.count - a.count);
+const maxCount = countNames[0].count;
+const nameMaxCount = countNames
+  .filter((o) => o.count == maxCount)
+  .map((o) => o.name);
 
-/////////////////////////////
-// fiveStudents = listStudents.slice(0, 5);
-// console.log(fiveStudents);
+const result = new Set(nameMaxCount);
+console.log(result);
+
+// List 5 Student
+const fiveStudents= listStudents.slice(0, 5);
 
 // ----Bai 14
-// console.log(fiveStudents.concat(listStudents.slice(5, 10)));
+console.log(fiveStudents.concat(listStudents.slice(5, 10)));
 
 // // ----Bai 14
-// console.log(listStudents.slice(5, 10).concat(fiveStudents)); 
+
+console.log(listStudents.slice(5, 10).concat(fiveStudents));
 
 //----- Bai 15;
-// let listNames = [];
-// fiveStudents.map((item) => {
-//   items = item.name.split(" ").slice(-1);
-//   listNames.push(items.join(" "));
-// });
-// console.log(listNames.sort());
+let listNames = [];
+fiveStudents.map((item) => {
+  items = item.name.split(" ").slice(-1);
+  listNames.push(items.join(" "));
+});
+console.log(listNames.sort());
 
 // ----Bai 16
 
-// var newArr = Object.values(objStudents).filter((x) => x.id % 3 == 0);
-// console.log(newArr);
+var newArr = Object.values(objStudents).filter((x) => x.id % 3 == 0);
+console.log(newArr);
 
 // ----Bai 17
-// var count = 0;
-// for (let i = 0; i < fiveStudents.length; i++) {
-//   if (fiveStudents[i].groupPosition) {
-//     count++;
-//   }
-// }
-// if (count > 0) {
-//   console.log("Trong 5 bạn co ban lam nhom truong");
-// }
-// else {
-//   console.log("Trong 5 bạn khong co ban nao lam nhom truong");
-// }
 
+console.log(listStudents.slice(0, 5).some((student) => student.groupPosition == true));
 // ----Bai 18
-// var countLeader = 0;
-// for (let i = 0; i < fiveStudents.length; i++) {
-//   if (fiveStudents[i].groupPosition) {
-//     countLeader++;
-//   }
-// }
-// if (countLeader == 5) {
-//   console.log("Ca 5 ban deu la nhom truong !");
-// } else {
-//   console.log("Co ban khong lam nhom truong !");
-// }
+console.log(listStudents.slice(0, 5).every((student) => student.groupPosition == true ));
 
 // ------- Bai 19
-// console.log(listStudents.map((student)=> {
-//   return student.name+"_"+student.id+"_"+student.groupNumber;
-// }));
+console.log(listStudents.map((student)=> {
+  return student.name+"_"+student.id+"_"+student.groupNumber;
+}));
 // ------- Bai 20
 
-// console.log(listStudents.reverse());
-
+console.log(listStudents.reverse());
