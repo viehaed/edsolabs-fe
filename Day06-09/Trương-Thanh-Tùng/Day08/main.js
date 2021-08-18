@@ -200,13 +200,13 @@ function addPoint(stId, day, point){
         list24[stId-1].points = [];
         list24[stId-1].points.push({
             dayId : day,
-            dayName : "Thứ " + day,
+            dayName : "Ngày " + day,
             point : point,
         })
     } else {
         list24[stId-1].points.push({
             dayId : day,
-            dayName : "Thứ " + day,
+            dayName : "Ngày " + day,
             point : point,
         })
     }
