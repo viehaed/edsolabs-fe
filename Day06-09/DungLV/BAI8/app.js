@@ -198,41 +198,39 @@ let myClass = [{
     }
 ];
 //----------------------BÀI22
-// function getNameAuto(x) {
-//     let emtyArr = [];
-//     if (x > myClass.length) {
-//         return "Nhập quá số lượng sinh viên"
-//     } else {
-//         for (let i = 0; i < x; i++) {
-//             let randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
-//             while (emtyArr.includes(randomClass)) {
-//                 randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
-//             }
-//             emtyArr.push(randomClass.split(" ").pop())
-//         }
-//     }
-//     return emtyArr
-// }
-// console.log(getNameAuto(10));
-//-----------------------BÀI23
-
-// function getNameInGroup(number) {
-//     let nameInGroup = []
-//     if (number > 5) {
-//         return "Chỉ có 5 nhóm trong lớp"
-//     } else {
-//         let arr = []
-//         arr = myClass.filter(item => item.group.groupId === number)
-//         arr.forEach(item => nameInGroup.push(item.name.split(" ").pop()))
-//     }
-//     return nameInGroup
-// }
-// console.log(getNameInGroup(1));
-
+function getNameAuto(x) {
+    let emtyArr = [];
+    if (x > myClass.length) {
+        return "Nhập quá số lượng sinh viên"
+    } else {
+        for (let i = 0; i < x; i++) {
+            let randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
+            while (emtyArr.includes(randomClass)) {
+                randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
+            }
+            emtyArr.push(randomClass.split(" ").pop())
+        }
+    }
+    return emtyArr
+}
+console.log(getNameAuto(10));
+// -----------------------BÀI23
+function getNameInGroup(number) {
+    let nameInGroup = []
+    if (number > 5) {
+        return "Chỉ có 5 nhóm trong lớp"
+    } else {
+        let arr = []
+        arr = myClass.filter(item => item.group.groupId === number)
+        arr.forEach(item => nameInGroup.push(item.name.split(" ").pop()))
+        console.log(arr);
+    }
+    return nameInGroup
+}
+console.log(getNameInGroup(4));
 //-----------------------BÀI24
-
 function updatePoint(id, date, coin) {
-    let updateClass = [...myClass]
+    let updateClass = JSON.parse(JSON.stringify(myClass))
     updateClass.forEach(item => {
         item.points = [{
                 dayID: 2,
@@ -273,12 +271,10 @@ function updatePoint(id, date, coin) {
     })
     return updateClass
 }
-
 console.log(updatePoint(1, 5, 9)); //Sẽ chỉnh sửa điểm có id = 22, date = 5
-
 //------------------------BÀI25
 function updatePointByDay() {
-    let newClass = [...myClass];
+    let newClass = JSON.parse(JSON.stringify(myClass));
     newClass.forEach(item => {
         item.points = [{
                 dayID: 2,
@@ -311,14 +307,11 @@ function updatePointByDay() {
                 point: Math.floor(Math.random() * 10)
             }
         ]
-
     })
     return newClass;
 }
 console.log(updatePointByDay());
-
 //----------------------BÀI26
-
 function getSumPoint(x, y) {
     let listStudent = updatePointByDay();
     listStudent.forEach((item) => {
@@ -331,7 +324,6 @@ function getSumPoint(x, y) {
     return listStudent
 }
 console.log(getSumPoint(2, 3));
-
 // ---------------------BÀI27
 function getMaxCoin() {
     let getStudents = getSumPoint(2, 4);
@@ -341,7 +333,6 @@ function getMaxCoin() {
     return getStudents.slice(0, 5)
 }
 console.log(getMaxCoin())
-
 //---------------------BÀI28
 function bai28(x, y, z) {
     let newArr = getSumPoint(x, y);
@@ -363,7 +354,6 @@ function bai28(x, y, z) {
     })
 }
 console.log(bai28(2, 3, 9));
-
 //------------------BÀI29
 // -------------------support function bai 29 30---------------
 function support(x, y) {
@@ -381,25 +371,20 @@ function support(x, y) {
     return newArr;
 }
 //--------------------- BÀI29 ----------------------
-
 function bai29(x, y) {
     let newArr = support(x, y);
     let valueArr = newArr.map(item => {
         return item.sort((a, b) => b.sums - a.sums)
     })
-    let output = valueArr.map((item, index) => {
-        return {
-            hocvien1: item[0].name,
-            hocvien2: item[item.length - 1].name,
-            groupName: item[0].group.groupId
-        }
-    })
+    let output = valueArr.map(item => ({
+        hocvien1: item[0].name,
+        hocvien2: item[item.length - 1].name,
+        groupName: item[0].group.groupId
+    }))
     console.log(valueArr);
     console.log(output);
 }
-
 bai29(2, 6);
-
 //  --------------------- BÀI30 -------------------------
 function sumGroup(x, y) {
     let newArr = support(x, y);
