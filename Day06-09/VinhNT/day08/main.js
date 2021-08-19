@@ -245,6 +245,7 @@ stuList.map((e) => {
 console.log(stuList)
 
 pointData = JSON.parse(JSON.stringify(stuList))
+console.log(pointData)
 console.log("Bài tập 26")
 function getStuWithPoint(x,y){
     const range = Array.from({length:y-x+1},(_,i) => x +i)
@@ -292,48 +293,62 @@ function getStuWithPointAndTime(x,y,z){
 }
 getStuWithPointAndTime(2,4,7);
 
+
+
+const groupArr = Array.from(new Set(stuList.map((e) => e.group.groupId)))
+
 console.log("Bài tập 29")
 function getPair(x,y){
     const data = getStuWithPoint(x,y);
-    const result = [];
-    for (let i = 1; i<=5;i++){
-        const subData = data.filter(e => e.groupId === i)
+    let result = [];
+    groupArr.map((o) => {
+        
+        const subData = data.filter(e => e.groupId === o)
         const sortData = subData.sort(function(a,b){
             return b.total - a.total
         })
         let m = sortData.pop().name
         let n = sortData.shift().name
-        result.push({hocvien1 : n, hocvien2:m, groupName: i})
-    }
-    
+        result.push({hocvien1 : n, hocvien2:m, groupName: o})
+    })    
     console.log(result)
-    
-
 }
 getPair(1,5)
-
+        
 console.log("Bài tập 30")
 function getGroupTotalPoint(x,y){
     const data = getStuWithPoint(x,y);
     const result = [];
-    for (let i =1; i<=5;i++){
-        const subData = data.filter(e => e.groupId === i)
+    groupArr.map((o)=>{
+
+        const subData = data.filter(e => e.groupId === o)
         let groupTotal = 0;
         subData.forEach((e)=>{
             groupTotal  += e.total; 
         })
         result.push({
-            groupName: i,
+            groupName: o,
             totalPoint: groupTotal,
             points: subData.map((e) =>({
                 hocvien: e.name,
                 totalPoint: e.total
             }))
         })        
-    }
+    })
     console.log(result)
-}
-getGroupTotalPoint(2,4)
+    }
+
+getGroupTotalPoint(2,4)        
+        
+        
+        
+    
+    
+    
+    
+
+
+
 
 
 
