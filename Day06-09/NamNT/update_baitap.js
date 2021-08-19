@@ -274,6 +274,8 @@ var Hocvien = {
     DSHH: class_hocvien
 }
 
+console.log(mang_hocvien);
+
 // bài 3
 //đếm số lượng học viên trong lớp
 console.log("Số lượng học viên :" + mang_hocvien.length);
@@ -329,13 +331,11 @@ function sapxep(a, b) {
 // mang_hocvien.sort(sapxep);
 
 // bài 10
-/*
 var arr_Name = []
 mang_hocvien.filter((value) => {
     arr_Name.push(value.name.split(" ").slice(-1));
 })
 console.log("Arr Name:" + arr_Name);
-*/
 // bài 11
 
 // arr_Name.sort((a, b) => {
