@@ -305,14 +305,80 @@ function support(x,y) {
       },0)
     }
   })
-  return updateList29;
+
+  const arrMain = []
+  for (let i = 1; i <= 5; i++) {
+      var arr = [];
+      updateList29.forEach(element => {
+        if (element.group === i) {
+          arr.push(element);
+        }
+      });
+      arrMain.push(arr);
+  }
+
+  arrMain.forEach((x) => {
+    x.sort((a,b) => b.sumPoint - a.sumPoint)
+  })
+
+  var done = arrMain.map((x) => {
+    return{
+      hocvien1 : x[0].name,
+      hocvien2 : x[x.length -1].name,
+      group : x[0].group,
+    }
+  })
+
+  return done;
 }
 console.log(support(2,5));
 
+// Bài30
+console.log("-----------------------------")
+console.log("Bài 30")
+const list30 = cloneArr(list25);
+function totalPointGroup(x,y){
+  const updateList30 = list30.map((o) => {
+    return {
+      group : o.group.groupId,
+      name : o.name,
+      sumPoint : o.points.reduce((accumulator,currentValue) => {
+        return currentValue.dayID >= x && currentValue.dayID <= y ? accumulator + currentValue.point : accumulator
+      },0)
+    }
+  })
+  
+  var getGroup = [];
+  for (let i = 1; i <= 5; i++) {
+    var a = [];
+    updateList30.forEach(element => {
+      if (element.group === i) {
+        a.push(element);
+      }
+    });
+    getGroup.push(a);
+  }
+  
+  const bai30 = getGroup.map((o) => {
+    return {
+      group : o[0].group,
+      totalPoint : o.reduce((accumulator,currentValue) => {
+        return accumulator + currentValue.sumPoint
+      }, 0),
+      point : o.map((r) => {
+        return {
+          hocvien : r.name,
+          point : r.sumPoint
+        }
+      })
+    }
+  })
 
+  console.log(bai30)
+}
 
-
-// deep copy
+totalPointGroup(2,5)
+// Clone Array
 function cloneArr(list) {
   return JSON.parse(JSON.stringify(list)); 
 }
