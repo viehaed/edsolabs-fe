@@ -267,8 +267,8 @@ updateClass.forEach(item => {
     ]
 })
 updateClass.forEach(item => {
-    if (item.points[date - 1].dayID === date && item.id === id) {
-        item.points[date - 1].point = coin;
+    if (item.points[date - 2].dayID === date && item.id === id) {
+        item.points[date - 2].point = coin;
     }
 })
 return updateClass
