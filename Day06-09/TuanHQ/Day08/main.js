@@ -301,6 +301,7 @@ const enterScoreClass = () => {
       // tạo điểm random
       let point = getRandomInt(11) - 1;
       // tạo obj điểm để thêm vào obj học vien
+      // const points = { id: d.dayId, name: d.dayName, point };
       const points = { ...d, point };
       // nếu chưa cố key points thì tạo mói
       if (!("points" in s)) {
@@ -520,13 +521,9 @@ const totalPointGroup = (dayId_X, dayId_Y) => {
 
   // chạy từng nhóm
   groups.map((group) => {
-    /**
-     * tổng điểm nhóm
-     */
+    /** tổng điểm nhóm */
     let totalPointGroup = 0;
-    /**
-     * điểm các thành viên trong nhóm
-     */
+    /** điểm các thành viên trong nhóm  */
     let points = [];
 
     data_b30.map((student) => {
@@ -537,10 +534,8 @@ const totalPointGroup = (dayId_X, dayId_Y) => {
         totalPointGroup += student.totalPoint;
 
         //tạo obj với key là tên của học viên và value là tổng điểm của học viên trong khoảng x - y
-        let obj = {};
-        obj[`${student.name}`] = student.totalPoint;
 
-        points.push(obj);
+        points.push({ name: student.name, totalPoint: student.totalPoint });
       }
     });
 
