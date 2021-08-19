@@ -266,7 +266,8 @@ const totalGroupPoint = (startDate, endDate) => {
       group,
       totalGroupPoint: Math.floor(totalGroupPoint * 100) / 100,
       points: groupMember.map(({ name, totalPoint }) => ({
-        [name]: totalPoint,
+        name,
+        totalPoint,
       })),
     };
   });
