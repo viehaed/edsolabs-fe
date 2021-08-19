@@ -275,29 +275,9 @@ scoreSimulator();
 
 //Bai 26
 
-// const getTotalPointInRange = (startDate, endDate) => {
-//    const copyMyClass = [...myClass];
-
-//     const tempArr = copyPeople.map((person) => {
-//       //calculate the total point in provided range
-//       const totalPoint = person.points.reduce((total, item) => {
-//         const { dayName, point } = item;
-//         const dayInNum = parseInt(dayName.split(" ").pop());
-//         if (dayInNum >= startDate && dayInNum <= endDate) {
-//           return total + point;
-//         }
-//         return total;
-//       }, 0);
-//       // add new property and return the item
-//       person.totalPoint = Math.ceil(totalPoint * 100) / 100;
-//       return person;
-//     });
-
-//     return tempArr;
-//   };
 const getTotalPointInRange = (startDate, endDate) => {
-    const copyMyClass = [...myClass];
-    if (startDate > endDate || startDate < 0 || endDate < 0) {
+    const copyMyClass =  JSON.parse(JSON.stringify(myClass));
+    if (startDate > endDate || startDate <= 0 || endDate <= 0 ||endDate > 5) {
         return "Ngày bắt đầu và kết thúc không hợp lệ"
     }
     copyMyClass.forEach((person) => {
@@ -320,21 +300,28 @@ const getTotalPointInRange = (startDate, endDate) => {
     });
     return tempArr;
 }
-// console.log(getTotalPointInRange(2, 4));
+console.log(getTotalPointInRange(2, 4));
 
 
 // Bai 27
 const getTopFiveStudent = (startDate, endDate) => {
     const totalPointArr = getTotalPointInRange(startDate, endDate);
+    if((typeof totalPointArr)=="string"){
+        return totalPointArr
+    }
     totalPointArr.sort((a, b) => {
         return b.totalPoint - a.totalPoint;
     });
     return totalPointArr.slice(0, 5);
 };
+// console.log(getTopFiveStudent(0,4));
 
 //Bai 28
 const getListMemberBy = (dayin, dayout, point) => {
     let array = getTotalPointInRange(dayin, dayout);
+    if((typeof array)=="string"){
+        return array
+    }
     let arrByPoint = array.filter(preson => {
         const getPresonByPoint = preson.points.some(item =>
             item.point == Math.ceil(point * 100) / 100
@@ -352,36 +339,12 @@ const getListMemberBy = (dayin, dayout, point) => {
 
 
 
-// Bài tập 29: Viết hàm trả ra cặp học viên trong đó 1 bạn học tốt nhất sẽ bắt cặp với 1 bạn kém
-// nhất trong cùng 1 nhóm, tham số đầu vào (x,y) với x là ngày bắt đầu, y là ngày kết thúc. kết quả
-// đầu ra [{hocvien1, học vien2, groupName}]
-// const conectGroup = (startDate, endDate) => {
-//     const totalPointArr = getTotalPointInRange(startDate, endDate);
-//     let arrListGroup = [];
-//     let outPush = [];
-//     for (let i = 0; i < 5; i++) {
-//         const tempArr = totalPointArr.filter((person) => {
-//             return Object.values(person.group)[0] == i
-//         }).sort((a, b) => b.totalPoint - a.totalPoint);
-//         arrListGroup.push(tempArr);
-//     }
-
-//     let valueArr = newArr.map(item => {
-//         return item.sort((a, b) => b.sums - a.sums)
-//     })
-//     // console.log(arrListGroup);
-//     let output = arrListGroup.map(item => {
-//         return {
-//             hocvien1: item[0].name,
-//             hocvien2: item[item.length - 1].name,
-//             groupName: item[0].group.groupId
-//         }
-//     })
-//     console.log(output);
-//     // console.log(arrListGroup);
-// }
+// Bài tập 29: 
 const conectGroup = (startDate, endDate) => {
     let local = getTotalPointInRange(startDate, endDate);
+    if((typeof local)=="string"){
+        return local
+    }
     let newArr = [];
     for (let i = 1; i <= 5; i++) {
         let subArr = [];
@@ -411,8 +374,11 @@ const conectGroup = (startDate, endDate) => {
 
 
 // bài 30
-  const totalGroupPoint = (startDate, endDate) => {
+const totalGroupPoint = (startDate, endDate) => {
     let local = getTotalPointInRange(startDate, endDate);
+    if((typeof local)=="string"){
+        return local
+    }
     let newArr = [];
     for (let i = 1; i <= 5; i++) {
         let subArr = [];
@@ -430,14 +396,15 @@ const conectGroup = (startDate, endDate) => {
                 return accument + Math.floor(student.totalPoint)
             }, 0),
             point: item.map((item, index) => {
-                var key = item.name
+
                 return {
-                    [key]: totalPoint= `${item.totalPoint}`
+                    hocvien: item.name,
+                    tottalPoint: totalPoint = `${item.totalPoint}`
                 }
             })
         }
         return coppy
     })
     return outputArr;
-  };
-// console.log(totalGroupPoint(1,5));
+};
+console.log(totalGroupPoint(3,7));
