@@ -259,17 +259,21 @@ const data = JSON.parse(JSON.stringify(list))
 // // BÀI 26
 const getStudentsByDay = (x, y) => {
     return data.map(item => {
+        let filterDay = item.points.filter(point => point.dayID >= x && point.dayID <= y)
+        totalPoint = filterDay.reduce((sum, value) => sum + value.point, 0)
         return {
             id: item.id,
             name: item.name,
             groupName: item.group.groupID,
-            points: item.points,
-            filterDay: item.points.filter(point => point.dayID >= x && point.dayID <= y)
+            totalPoint: totalPoint,
+            filterDay: filterDay
         }
     })
 }
-const getTotalPoints = (x, y, getStudentsByDay) => {
-    //lọc lấy ds từ 2 đến 3
+
+
+const getTotalPoints = (x, y) => {
+    //lọc lấy ds từ x đến y
     let filterArr = getStudentsByDay(x, y)
     return filterArr.map(s => {
         return {
@@ -278,45 +282,63 @@ const getTotalPoints = (x, y, getStudentsByDay) => {
         }
     })
 }
-console.log("BÀI 26", getTotalPoints(2, 3, getStudentsByDay))
+console.log("BÀI 26", getTotalPoints(2, 3))
 ////////////////////////////////////////////
 // BÀI 27
-const getFiveStudentsByMaxPoints = (x, y, getFive) => {
-    let fiveStudents = getFive(x, y, getStudentsByDay)
+const getFiveStudentsByMaxPoints = (x, y) => {
+    let fiveStudents = getTotalPoints(x, y, getStudentsByDay)
     return fiveStudents.sort((a, b) => b.totalPoint - a.totalPoint).slice(0, 5)
 }
-console.log("BÀI 27: ", getFiveStudentsByMaxPoints(2, 4, getTotalPoints))
+console.log("BÀI 27: ", getFiveStudentsByMaxPoints(2, 4))
 ////////////////////////////////////////////////////////////////
 // BÀI 28
-const getStudentsByPoint = (x, y, z, getStudentsByDay) => {
+const getStudentsByPoint = (x, y, z) => {
     let filterArr = getStudentsByDay(x, y)
-
     let filterArrByPoint = filterArr.filter(student => student.filterDay.some(s => s.point === z))
-    return filterArrByPoint.map(item => {
-        return {
+    return filterArrByPoint.map(item => (
+        {
             id: item.id,
             name: item.name,
-            totalPoint: item.points.reduce((sum, value) => sum + value.point, 0)
+            totalPoint: item.filterDay.reduce((sum, value) => sum + value.point, 0)
+        })
+    )
+}
+console.log("BÀI 28: ", getStudentsByPoint(2, 4, 8))
+//////////////////////////////////////////////////
+// BÀI 29
+const pairGroup = (x, y) => {
+    let filterArr = getStudentsByDay(x, y)
+    let groups = filterArr.map(student => student.groupName)
+    let groupArr = [...new Set(groups)]
+    return groupArr.map(group => {
+        let groupStudent = filterArr.filter(item => item.groupName === group)
+        let sortStudent = groupStudent.sort((a, b) => a.totalPoint - b.totalPoint)
+        return {
+            firstStudent: sortStudent[0].name,
+            lastStudent: sortStudent[sortStudent.length - 1].name,
+            groupName: group
         }
     })
 }
-console.log("BÀI 28: ", getStudentsByPoint(2, 4, 8, getStudentsByDay))
-//////////////////////////////////////////////////
+console.log("BÀI 29: ", pairGroup(2, 4))
+///////////////////////////////////////////////////
 //BÀI 30
-// const getTotalPointByGroup = (x, y, getStudentsByDay) => {
-//     let filterArr = getStudentsByDay(x, y)
-//     let filterArrByGroup = filterArr.filter(student => student.groupName === 3)
-//     return filterArrByGroup.map(item => {
-//         console.log('sf', item)
-//         return {
-//             groupName: item.groupName,
-//             totalPoint: item.filterDay.reduce((s, v) => s + v.filterDay.reduce((sum, value) => sum + value.point, 0)),
-//             points: [{
-//                 hocVien: item.name,
-//                 totalPoint: item.totalPoint,
-//             }]
-//         }
-//     })
-// }
+const getTotalPointByGroup = (x, y) => {
+    let filterArr = getStudentsByDay(x, y)
+    let groups = filterArr.map(student => student.groupName)
+    let groupArr = [...new Set(groups)]
+    return groupArr.map(group => {
+        let groupStudent = filterArr.filter(item => item.groupName === group)
+        return groupStudent.map(g => {
+            let totalPointStudent = g.filterDay.reduce((sum, value) => sum + value.point, 0)
+            let totalGroup = groupStudent.reduce((sum, value) => sum + value.totalPoint, 0)
+            return {
+                groupName: g.groupName,
+                totalPoint: totalGroup,
+                points: [g.name, totalPointStudent]
+            }
+        })
+    })
+}
 
-// console.log("BÀI 29: ", getTotalPointByGroup(2, 4, getStudentsByDay))
+console.log("BÀI 30: ", getTotalPointByGroup(2, 4))
