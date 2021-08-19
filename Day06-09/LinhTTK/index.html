@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework day08</title>
+</head>
+<body>
+    <script>
+    //Bài tập 21
+    var list = [
+    {
+        id: 1,
+        name: "Nguyễn Văn Sơn",
+        
+            groupid: 1,
+            position: "member",
+        
+    },
+    {
+        id: 2,
+        name: "Nguyễn Hữu Ánh",
+       
+            groupid: 1,
+            position: "member",
+        
+    },
+    {
+        id: 3,
+        name: "Trần Mạnh Quân",
+        
+            groupid: 4,
+            position: "leader",
+        
+    },
+    {
+        id: 4,
+        name: "Hà Quốc Tuấn",
+        
+            groupid: 3,
+            position: "leader",
+        
+    },
+    {
+        id: 5,
+        name: "Hoàng Ngọc Thành",
+        
+            groupid: 1,
+            position: " ",
+        
+    },
+    {
+        id: 6,
+        name: "Vũ Thị Thu Hà",
+        
+            groupid: 2,
+            position: " ",
+        
+    },
+    {
+        id: 7,
+        name: "Phan Văn Trung",
+        
+            groupid: 2,
+            position: " ",
+        
+    },
+    {
+        id: 8,
+        name: "Nguyên Cao Hoàng",
+        
+            groupid: 2,
+            position: " ",
+        
+    },
+    {
+        id: 9,
+        name: "Phùng Đắc Nhật Minh",
+        
+            groupid: 5,
+            position: "leader",
+        
+    },
+    {
+        id: 10,
+        name: "Lê Việt Dũng",
+        
+            groupid: 1,
+            position: "leader",
+        
+    },
+    {
+        id: 11,
+        name: "Đỗ Chí Công",
+        
+            groupid: 2,
+            position: " ",
+        
+    },
+    {
+        id: 12,
+        name: "Trần Công Tâm",
+        
+            groupid: 3,
+            position: " ",
+        
+    },
+    {
+        id: 13,
+        name: "Trương Thanh Tùng",
+       
+            groupid: 3,
+            position: " ",
+        
+    },
+    {
+        id: 14,
+        name: "Tạ Đưc Chiến",
+        
+            groupid: 3,
+            position: " ",
+        
+    },
+    {
+        id: 15,
+        name: "Nguyễn Trọng Vĩnh",
+        
+            groupid: 3,
+            position: " ",
+        
+    },
+    {
+        id: 16,
+        name: "Ngô Chúng Á Âu",
+        
+            groupid: 4,
+            position: " ",
+        
+    },
+    {
+        id: 17,
+        name: "Trần Thị Khánh Linh",
+        
+            groupid: 2,
+            position: "leader",
+        
+    },
+    {
+        id: 18,
+        name: "Phan Tiến Thành",
+        
+            groupid: 4,
+            position: " ",
+        
+    },
+    {
+        id: 19,
+        name: "Đỗ Văn Huy",
+        
+            groupid: 4,
+            position: "",
+        
+    },
+    {
+        id: 20,
+        name: "Nguyễn Trung Đức",
+       
+            groupid: 5,
+            position: " ",
+        
+    },
+    {
+        id: 21,
+        name: "Nguyễn Trung Nam",
+        
+            groupid: 5,
+            position: " ",
+        
+    },
+    {
+        id: 22,
+        name: "Trần Quốc Toàn",
+        
+            groupid: 5,
+            position: " ",
+          
+    },
+    ]
+    console.log(list);
+
+    //Bài tập 22 
+    function inputNames(x) {
+        const shuffled = list.sort(() => 0.5 - Math.random());
+        let selected = shuffled.slice(0, x);
+        console.log(selected);
+    }
+    inputNames(Math.floor(Math.random() *22)+ 1);
+
+    //Bài tập 23
+    function inputNameGroup(x){
+        var member = list.filter(function(member, index){
+            return member.groupid == x;
+        })
+        console.log(member.map(list=>list.name));
+    }
+    inputNameGroup(Math.floor((Math.random() * 5) + 1));
+    //Bài tập 24
+    var addPoints = (id, dayName, point) => {
+    var member = list.find((person) => person.id === id)
+        if(!member.points) {
+            member.points = []
+        }
+        member.points.push({
+                dayID: d,
+                dayName,
+                point,
+        })
+    }
+    //Bài tập 25
+    function createPoint(x) {
+    for (d = 1; d <= x; d++){
+        for (var i = 1; i <= list.length; i++) {
+            addPoints(i, 'Ngay' + d, Math.floor(Math.random() *10))
+        }
+    }
+    console.log(list)
+    }
+    createPoint(7);
+    // Bài tập 26
+    function getSumTotalPoint(x,y) {
+    var copyList = list.slice();
+    const tempArr = copyList.map((person) => {
+        const totalPoints = person.points.reduce((total, item) => {
+            const {dayID, point} = item
+            if (dayID >= x && dayID <= y) {
+                return total + point
+            }
+            return total
+        }, 0);
+        // Add totalPoints vào danh sach
+        person.totalPoints = Math.ceil(totalPoints * 100) / 100
+        return person;
+    })
+    return tempArr
+    }
+    getSumTotalPoint(2,4)
+    
+    //Bài tập 27
+    function topMax(x,y){
+        var topPoint = getSumTotalPoint(x,y)
+        topPoint.sort((a, b) =>{
+            return b.totalPoint - a.totalPoint;
+        })
+        console.log(topPoint.slice(0, 5))
+    }
+    topMax(2,4)
+    //Bài tập 28
+    function listName(x,y,z){
+        var namePoint = getSumTotalPoint(x,y)
+        var checkTotalPoint = namePoint.filter((member) => member.totalPoints === z)
+        if(!checkTotalPoint){
+            return namePoint
+        }
+        var listNameMember = namePoint.map(({id, name, totalPoints}) => {
+            return `ID: ${id}_Name: ${name}_Tổng điểm: ${totalPoints}`
+        })
+        console.log(listNameMember)
+    }
+    listName(2,4,17)
+    
+    //Bài tập 29
+    const getUniqueGroups = (arr) => {
+        const arrGroup = arr.map((person) => person.groupid);
+        return [...new Set(arrGroup)];
+    };
+    const pairGroup = (x, y) => {
+    const totalPointArr = getSumTotalPoint(x,y);
+    const groups = getUniqueGroups(totalPointArr);
+    console.log(getUniqueGroups.length)
+    return groups.map((group) => {
+        const groupMember = totalPointArr
+            .filter((item) => item.groupid === group)
+            .sort((a, b) => a.totalPoints - b.totalPoints);
+        return {
+            firstMember: groupMember[0],
+            secondMember: groupMember[groupMember.length - 1],
+            group,
+        };
+        });
+    };
+    console.log(pairGroup(2,4));
+    //Bài tập 30
+    const totalGroupPoint = (x, y) => {
+        const totalPointArr = getSumTotalPoint(x,y);
+        const groups = getUniqueGroups(totalPointArr);
+        return groups.map((group) => {
+            const groupMember = totalPointArr.filter((item) => item.groupid === group);
+            const totalGroupPoint = groupMember.reduce(
+                (total, item) => total + item.totalPoints,
+                0
+            );
+            return {
+                group,
+                totalGroupPoint: Math.floor(totalGroupPoint * 100) / 100,
+                points: groupMember.map(({ name, totalPoints }) => ({
+                Ten: name,
+                Diem: totalPoints
+                })),
+            };
+        });
+    };
+    console.log(totalGroupPoint(2,4));
+    </script>
+</body>
+</html>
