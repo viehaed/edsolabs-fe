@@ -4,178 +4,178 @@ var listStudent = [
     {   
     id: 1, 
     name: 'Nguyen Van Son',
-    group: {
+    
         groupid: 1, 
         position: ""
-    }
+    
 }, 
     {   
     id: 2, 
     name: 'Nguyen Huu Anh',
-    group: {
+    
         groupid: 1, 
         position: ""
-    }
+    
 }, 
     {   
     id: 3, 
     name: 'Tran Manh Quan',
-    group: {
+    
         groupid: 4, 
         position: 'Nhom truong'
-    }
+    
 }, 
     {   
     id: 4, 
     name: 'Ha Quoc Tuan',
-    group: {
+    
         groupid: 3, 
         position: 'Nhom truong'
-    }
+    
 }, 
     {   
     id: 5, 
     name: 'Hoang Ngoc Thanh',
-    group: {
+    
         groupid: 1, 
         position: ""
-    }
+    
 }, 
     {   
     id: 6, 
     name: 'Vu Thi Thu Ha',
-    group: {
+    
         groupid: 2, 
         position: ""
-    }
+    
 }, 
     {   
     id: 7, 
     name: 'Phan Van Trung',
-    group: {
+    
         groupid: 2, 
         position: ""
-    }
+    
 }, 
     {   
     id: 8, 
     name: 'Nguyen Cao Hoang',
-    group: {
+    
         groupid: 2, 
         position: ""
-    }
+    
 }, 
     {   
     id: 9, 
     name: 'Phung Dac Nhat Minh',
-    group: {
+    
         groupid: 5, 
         position: 'Nhom truong'
-    }
+    
 }, 
     {   
     id: 10,
     name:  'Le Viet Dung',
-    group: {
+    
         groupid: 1, 
         position: 'Nhom truong'
-    }
+    
 }, 
     {   
     id: 11,
     name:  'Do Chi Cong',
-    group: {
+    
         groupid: 2, 
         position: ""
-    }
+    
 }, 
     {   
     id: 12,
     name:  'Tran Cong Tam',
-    group: {
+    
         groupid: 3, 
         position: ""
-    }
+    
 }, 
     {   
     id: 13,
     name:  'Truong Thanh Tung',
-    group: {
+    
         groupid: 3, 
         position: ""
-    }
+    
 }, 
     {   
     id: 14,
     name:  'Ta Duc Chien',
-    group: {
+    
         groupid: 3, 
         position: ""
-    }
+    
 }, 
     {   
     id: 15,
     name:  'Nguyen Trong Vinh',
-    group: {
+    
         groupid: 3, 
         position: ""
-    }
+    
 }, 
     {   
     id: 16,
     name:  'Ngo Chung A Au',
-    group: {
+    
         groupid: 4, 
         position: ""
-    }
+    
 }, 
     {   
     id: 17,
     name:  'Tran Thi Khanh Linh',
-    group: {
+    
         groupid: 2, 
         position: 'Nhom truong'
-    }
+    
 }, 
     {   
     id: 18,
     name:  'Phan Tien Thanh',
-    group: {
+    
         groupid: 4, 
         position: ""
-    }
+    
 }, 
     {   
     id: 19,
     name:  'Do Van Huy',
-    group: {
+    
         groupid: 4, 
         position: ""
-    }
+    
 }, 
     {   
     id: 20,
     name:  'Nguyen Trung Duc',
-    group: {
+    
         groupid: 5, 
         position: ""
-    }
+    
 }, 
     {   
     id: 21,
     name:  'Nguyen Trung Nam',
-    group: {
+    
         groupid: 5, 
         position: ""
-    }
+    
 }, 
     {   
     id: 22,
     name:  'Tran Quoc Toan',
-    group: {
+    
         groupid: 5, 
         position: ""
-    }
+    
 }
 ];
 
@@ -192,7 +192,7 @@ cau22(6)
 //Bai 23
 function cau23(x) {
     var find23 = listStudent.filter(function(find23, index) {
-        return find23.group.groupid === x
+        return find23.groupid === x
     })
     console.log(find23.map(listStudent => listStudent.name))
 }
@@ -219,7 +219,7 @@ function bai25(x) {
     }
     console.log(listStudent)
 }
-bai25(5)
+bai25(15)
 
 //Bai 26
 
@@ -248,7 +248,7 @@ function bai27(x,y) {
     })
     console.log(topPoint.slice(0, 5))
 }
-bai27(2,4)
+// bai27(2,4)
 
 //Bai 28
 
@@ -262,7 +262,43 @@ function bai28(x, y, z) {
 bai28(2, 4)
 
 //Bai 29
-function bai29(x, y) {
-    var namePoint = bai26(x, y)
+const getUniqueGroups = (arr) => {
+    const arrGroup = arr.map((person) => person.groupid);
+    return [...new Set(arrGroup)];
+  };
+const pairGroup = (x, y) => {
+    const totalPointArr = bai26(x, y);
+    const groups = getUniqueGroups(totalPointArr);
+    console.log(getUniqueGroups.length)
+    return groups.map((group) => {
+      const groupMember = totalPointArr
+        .filter((item) => item.groupid === group)
+        .sort((a, b) => a.totalPoints - b.totalPoints);
+      return {
+        firstMember: groupMember[0],
+        secondMember: groupMember[groupMember.length - 1],
+        group,
+      };
+    });
+  };
 
-}
+  //Bai 30
+  const totalGroupPoint = (x, y) => {
+    const totalPointArr = bai26(x, y);
+    const groups = getUniqueGroups(totalPointArr);
+    return groups.map((group) => {
+      const groupMember = totalPointArr.filter((item) => item.groupid === group);
+      const totalGroupPoint = groupMember.reduce(
+        (total, item) => total + item.totalPoints,
+        0
+      );
+      return {
+        group,
+        totalGroupPoint: Math.floor(totalGroupPoint * 100) / 100,
+        points: groupMember.map(({ name, totalPoints }) => ({
+          Ten: name,
+          Diem: totalPoints
+        })),
+      };
+    });
+  };
