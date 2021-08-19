@@ -366,27 +366,34 @@ return students.map(item => {
 console.log(bai28(2, 3, 9));
 
 
+// -------------------support function bai 29 30---------------
+function support (x,y) {
+    let local = getSumPoint(x, y);
+    let newArr = [];
+    for (let i = 1; i <= 5; i++) {
+        let subArr = [];
+        local.forEach(item => {
+            if (item.group.groupId === i) {
+                subArr.push(item);
+            }
+        })
+        newArr.push(subArr);
+    }
+    return newArr;
+}
 //--------------------- BÀI29 ----------------------
 
 function bai29(x, y) {
 
-let local = getSumPoint(x, y);
-let newArr = [];
-for (let i = 1; i <= 5; i++) {
-    let subArr = [];
-    local.forEach(item => {
-        if (item.group.groupId === i) {
-            subArr.push(item);
-        }
-    })
-    newArr.push(subArr);
-}
+let newArr = support(x,y);
+
+console.log(newArr);
 
 let valueArr = newArr.map(item => {
     return item.sort((a, b) => b.sums - a.sums)
 })
 
-let output = valueArr.map((item, index) => {
+let output = valueArr.map(item => {
     return {
         hocvien1: item[0].name,
         hocvien2: item[item.length - 1].name,
@@ -403,33 +410,18 @@ bai29(2, 6);
 //  --------------------- BÀI30 -------------------------
 
 function sumGroup(x, y) {
-let local = getSumPoint(x, y);
-let newArr = [];
-for (let i = 1; i <= 5; i++) {
-    let subArr = [];
-    local.forEach(item => {
-        if (item.group.groupId === i) {
-            subArr.push(item)
-        }
-    })
-    newArr.push(subArr);
-}
-let outputArr = newArr.map(item => {
-    let coppy = {
+    let newArr = support(x,y);
+    let outputArr = newArr.map(item => ({
         groupName: item[0].group.groupId,
-        totalPoint: item.reduce((accument, student) => {
+        totalPoints: item.reduce((accument, student) => {
             return accument + student.sums
         }, 0),
-        point: item.map((item, index) => {
-            var key = `Hocvien${index+1}`
-            return {
-                [key]: `TotalPoin = ${item.sums}`
-            }
-        })
-    }
-    return coppy
-})
-console.log(outputArr);
+        point: item.map(item => ({
+            name: item.name,
+            totalPoint: item.sums
+        }))
+    }))
+    console.log(outputArr);
 }
 
 sumGroup(4, 5)
