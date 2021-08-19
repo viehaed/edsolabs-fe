@@ -197,7 +197,7 @@ let myClass = [{
 
 }
 ];
-// ----------------------BÀI22
+//----------------------BÀI22
 function getNameAuto(x) {
 let emtyArr = [];
 if (x > myClass.length) {
@@ -214,7 +214,7 @@ if (x > myClass.length) {
 return emtyArr
 }
 console.log(getNameAuto(10));
-//-----------------------BÀI23
+// -----------------------BÀI23
 
 function getNameInGroup(number) {
 let nameInGroup = []
@@ -230,9 +230,8 @@ return nameInGroup
 console.log(getNameInGroup(1));
 
 //-----------------------BÀI24
-
 function updatePoint(id, date, coin) {
-let updateClass = [...myClass]
+let updateClass = JSON.parse(JSON.stringify(myClass))
 updateClass.forEach(item => {
     item.points = [{
             dayID: 2,
@@ -274,11 +273,11 @@ updateClass.forEach(item => {
 return updateClass
 }
 
-console.log(updatePoint(22, 5, 10));//Sẽ chỉnh sửa điểm có id = 22, date = 5
+console.log(updatePoint(1, 5, 9)); //Sẽ chỉnh sửa điểm có id = 22, date = 5
 
 //------------------------BÀI25
 function updatePointByDay() {
-let newClass = [...myClass];
+let newClass = JSON.parse(JSON.stringify(myClass));
 newClass.forEach(item => {
     item.points = [{
             dayID: 2,
@@ -317,7 +316,7 @@ return newClass;
 }
 console.log(updatePointByDay());
 
-//-----------------------BÀI26
+//----------------------BÀI26
 
 function getSumPoint(x, y) {
 let listStudent = updatePointByDay();
@@ -330,7 +329,7 @@ listStudent.forEach((item) => {
 })
 return listStudent
 }
-console.log(getSumPoint(2, 4));
+console.log(getSumPoint(2, 3));
 
 // ---------------------BÀI27
 function getMaxCoin() {
@@ -342,7 +341,7 @@ return getStudents.slice(0, 5)
 }
 console.log(getMaxCoin())
 
-// ---------------------BÀI28
+//---------------------BÀI28
 function bai28(x, y, z) {
 let newArr = getSumPoint(x, y);
 let students = newArr.filter(item => {
@@ -362,44 +361,37 @@ return students.map(item => {
     }
 })
 }
-
 console.log(bai28(2, 3, 9));
 
-
+//------------------BÀI29
 // -------------------support function bai 29 30---------------
-function support (x,y) {
-    let local = getSumPoint(x, y);
-    let newArr = [];
-    for (let i = 1; i <= 5; i++) {
-        let subArr = [];
-        local.forEach(item => {
-            if (item.group.groupId === i) {
-                subArr.push(item);
-            }
-        })
-        newArr.push(subArr);
-    }
-    return newArr;
+function support(x, y) {
+let local = getSumPoint(x, y);
+let newArr = [];
+for (let i = 1; i <= 5; i++) {
+    let subArr = [];
+    local.forEach(item => {
+        if (item.group.groupId === i) {
+            subArr.push(item);
+        }
+    })
+    newArr.push(subArr);
+}
+return newArr;
 }
 //--------------------- BÀI29 ----------------------
 
 function bai29(x, y) {
-
-let newArr = support(x,y);
-
-console.log(newArr);
-
+let newArr = support(x, y);
 let valueArr = newArr.map(item => {
     return item.sort((a, b) => b.sums - a.sums)
 })
-
-let output = valueArr.map(item => {
+let output = valueArr.map((item, index) => {
     return {
         hocvien1: item[0].name,
         hocvien2: item[item.length - 1].name,
         groupName: item[0].group.groupId
     }
-
 })
 console.log(valueArr);
 console.log(output);
@@ -408,20 +400,18 @@ console.log(output);
 bai29(2, 6);
 
 //  --------------------- BÀI30 -------------------------
-
 function sumGroup(x, y) {
-    let newArr = support(x,y);
-    let outputArr = newArr.map(item => ({
-        groupName: item[0].group.groupId,
-        totalPoints: item.reduce((accument, student) => {
-            return accument + student.sums
-        }, 0),
-        point: item.map(item => ({
-            name: item.name,
-            totalPoint: item.sums
-        }))
+let newArr = support(x, y);
+let outputArr = newArr.map(item => ({
+    groupName: item[0].group.groupId,
+    totalPoints: item.reduce((accument, student) => {
+        return accument + student.sums
+    }, 0),
+    point: item.map(item => ({
+        name: item.name,
+        totalPoint: item.sums
     }))
-    console.log(outputArr);
+}))
+console.log(outputArr);
 }
-
 sumGroup(4, 5)
