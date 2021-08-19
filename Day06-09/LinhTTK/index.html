@@ -260,7 +260,7 @@
                 id: data.id,
                 name: data.name,
                 totalPoint: data.points.slice(x - 1, y + 1),
-                group: data.group.groupId,
+                group: data.group.groupid,
             })
         );
         arrTotalPoint.map((data) => (data.totalPoint =  sumTotalPoint(data.totalPoint)));
