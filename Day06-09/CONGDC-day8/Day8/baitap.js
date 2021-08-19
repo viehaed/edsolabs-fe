@@ -275,3 +275,45 @@ function listName(x,y,z){
     console.log(listNameMember)
 }
 listName(2,4)
+// Câu 29
+const getUniqueGroups = (arr) => {
+  const arrGroup = arr.map((person) => person.groupid);
+  return [...new Set(arrGroup)];
+};
+const pairGroup = (x, y) => {
+const totalPointArr = getSumTotalPoint(x,y);
+const groups = getUniqueGroups(totalPointArr);
+console.log(getUniqueGroups.length)
+return groups.map((group) => {
+  const groupMember = totalPointArr
+      .filter((item) => item.groupid === group)
+      .sort((a, b) => a.totalPoints - b.totalPoints);
+  return {
+      firstMember: groupMember[0],
+      secondMember: groupMember[groupMember.length - 1],
+      group,
+  };
+  });
+};
+console.log(pairGroup(2,4));
+// Câu 30
+const totalGroupPoint = (x, y) => {
+  const totalPointArr = getSumTotalPoint(x,y);
+  const groups = getUniqueGroups(totalPointArr);
+  return groups.map((group) => {
+      const groupMember = totalPointArr.filter((item) => item.groupid === group);
+      const totalGroupPoint = groupMember.reduce(
+          (total, item) => total + item.totalPoints,
+          0
+      );
+      return {
+          group,
+          totalGroupPoint: Math.floor(totalGroupPoint * 100) / 100,
+          points: groupMember.map(({ name, totalPoints }) => ({
+          Ten: name,
+          Diem: totalPoints
+          })),
+      };
+  });
+};
+console.log(totalGroupPoint(2,4));
