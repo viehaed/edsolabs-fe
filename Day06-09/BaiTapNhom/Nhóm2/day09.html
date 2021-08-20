@@ -277,18 +277,36 @@
     }
     bai40()
     //Bài tập 41
+    function bai41(){
         const stringName = nameMember.toString();
         var bai41 = stringName.split('Thanh,')
         console.log(bai41);
+    }
+    bai41();
+    
     //Bài tập 42
-
+    function bai42() {
+        const listNames = listStudent.map((l) => l.name.split(" ").pop());
+        const stringNames = listNames.join(" ");
+        console.log("Chia đội")
+        const endThanh = stringNames.toUpperCase().split(/(THÀNH)\s/);
+        console.log(endThanh)
+    }
+    bai42()
     //Bài tập 43
+    function bai43() {
+        const listNames = listStudent.map((l) => l.name.split(" ").pop());
+        const stringNames = listNames.join(" ");
+        console.log("Chia đội")
+        const startThanh = stringNames.toUpperCase().split(/\s(?=THÀNH)/);
+        console.log(startThanh)
+    }
+    bai43()
     
     //Bài tập 44
     function bai44(){
         const stringName = nameMember.toString();
-        const doubleString = stringName + stringName;
-        console.log(doubleString);
+        console.log(stringName.repeat(2));//lặp chuỗi với số lần xác định
     }
     bai44();
     //Bài tập 45
