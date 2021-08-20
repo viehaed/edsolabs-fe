@@ -365,12 +365,6 @@ function totalPointGroup(x,y){
       totalPoint : o.reduce((accumulator,currentValue) => {
         return accumulator + currentValue.sumPoint
       }, 0),
-      point : o.map((r) => {
-        return {
-          hocvien : r.name,
-          point : r.sumPoint
-        }
-      })
     }
   })
 
