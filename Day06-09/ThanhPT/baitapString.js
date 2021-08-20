@@ -225,12 +225,12 @@ bạn Ánh, tiếp theo là bạn …, cuối cùng là bạn Toàn”
 // console.log(connectString);
 
 const connectString = () => {
-  return peopleNames
+  return nameAll
     .map((name, index) => {
       if (index === 0) {
         return `Bạn ${name}`;
       }
-      if (index === peopleNames.length - 1) {
+      if (index === nameAll.length - 1) {
         return `, cuối cùng là bạn ${name}`;
       }
       return `, tiếp theo là bạn ${name}`;
