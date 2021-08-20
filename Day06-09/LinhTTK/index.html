@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework day09</title>
+</head>
+<body>
+    <script>
+    var listStudent = [
+        {
+            id: 1,
+            name: 'Nguyen Van Son',
+
+            groupid: 1,
+            position: ""
+
+        },
+        {
+            id: 2,
+            name: 'Nguyen Huu Anh',
+
+            groupid: 1,
+            position: ""
+
+        },
+        {
+            id: 3,
+            name: 'Tran Manh Quan',
+
+            groupid: 4,
+            position: 'Nhom truong'
+
+        },
+        {
+            id: 4,
+            name: 'Ha Quoc Tuan',
+
+            groupid: 3,
+            position: 'Nhom truong'
+
+        },
+        {
+            id: 5,
+            name: 'Hoang Ngoc Thanh',
+
+            groupid: 1,
+            position: ""
+
+        },
+        {
+            id: 6,
+            name: 'Vu Thi Thu Ha',
+
+            groupid: 2,
+            position: ""
+
+        },
+        {
+            id: 7,
+            name: 'Phan Van Trung',
+
+            groupid: 2,
+            position: ""
+
+        },
+        {
+            id: 8,
+            name: 'Nguyen Cao Hoang',
+
+            groupid: 2,
+            position: ""
+
+        },
+        {
+            id: 9,
+            name: 'Phung Dac Nhat Minh',
+
+            groupid: 5,
+            position: 'Nhom truong'
+
+        },
+        {
+            id: 10,
+            name: 'Le Viet Dung',
+
+            groupid: 1,
+            position: 'Nhom truong'
+
+        },
+        {
+            id: 11,
+            name: 'Do Chi Dung',
+
+            groupid: 2,
+            position: ""
+
+        },
+        {
+            id: 12,
+            name: 'Tran Cong Tam',
+
+            groupid: 3,
+            position: ""
+
+        },
+        {
+            id: 13,
+            name: 'Truong Thanh Tung',
+
+            groupid: 3,
+            position: ""
+
+        },
+        {
+            id: 14,
+            name: 'Ta Duc Chien',
+
+            groupid: 3,
+            position: ""
+
+        },
+        {
+            id: 15,
+            name: 'Nguyen Trong Vinh',
+
+            groupid: 3,
+            position: ""
+
+        },
+        {
+            id: 16,
+            name: 'Ngo Chung A Au',
+
+            groupid: 4,
+            position: ""
+
+        },
+        {
+            id: 17,
+            name: 'Tran Thi Khanh Linh',
+
+            groupid: 2,
+            position: 'Nhom truong'
+
+        },
+        {
+            id: 18,
+            name: 'Phan Tien Thanh',
+
+            groupid: 4,
+            position: ""
+
+        },
+        {
+            id: 19,
+            name: 'Do Van Huy',
+            groupid: 4,
+            position: ""
+
+        },
+        {
+            id: 20,
+            name: 'Nguyen Trung Duc',
+            groupid: 5,
+            position: ""
+
+        },
+        {
+            id: 21,
+            name: 'Nguyen Trung Nam',
+
+            groupid: 5,
+            position: ""
+
+        },
+        {
+            id: 22,
+            name: 'Tran Linh',
+
+            groupid: 5,
+            position: ""
+
+        }
+    ];
+   //console.log(listStudent);
+    let dataStudent = JSON.parse(JSON.stringify(listStudent));
+    
+    //Bài tập 31~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const names = dataStudent.map((o) => o.name.split(" ")[o.name.split(" ").length - 1]);
+    function bai31(){
+        console.log(names);
+    }
+    bai31();
+
+    //Bài tập 32~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    const nameMember = dataStudent.map((o) => o.name.split(" ")[o.name.split(" ").length - 1]);
+    function bai32(){
+        const stringName = nameMember.toString();
+        console.log(stringName);
+    }
+    bai32();
+
+    //Bài tập 33 
+    function bai33(){
+        const stringName = nameMember.toString();
+        const arrayName = stringName.split(',');
+        console.log(arrayName);
+    }
+    bai33();
+
+    //Bài tập 34
+    function bai34(){
+        const stringName = nameMember.toString();
+        console.log(stringName.split("Linh").length-1);
+    }
+    bai34();
+
+    //Bài tập 35
+    function bai35(){
+        const stringName = nameMember.toString();
+        const arrayName = stringName.split(',');
+        const indexName = arrayName.indexOf('Linh');
+        console.log(indexName + 1);
+    }
+    bai35();
+
+    //Bài tập 36
+    function bai36(){
+        const stringName = nameMember.toString();
+        const arrayName = stringName.split(',');
+        const indexName = arrayName.lastIndexOf('Linh');
+        console.log(indexName + 1);
+    }
+    bai36();
+    //Bài tập 37
+    function bai37(){
+        var key = /^L/
+        var count = 0;
+        for (var i = 0; i < names.length; i++){
+            var word = key.test(names[i])
+            if(word == true){
+                count++;
+            }
+        }
+        console.log(count);
+    }
+    bai37();
+    //Bài tập 38
+    function bai38() {
+        var key1 =/^L/
+        var keyWord = /h$/
+        var count = 0;
+        for (var i = 1; i < names.length; i++){
+            var word1 = key1.test(names[i])
+            var newWord = keyWord.test(names[i])
+            if(word1 == true && newWord == true)
+                count++;
+        }
+        console.log(count);
+    }
+    bai38();
+    //Bài tập 39 
+    function bai39(x){
+        const stringName = nameMember.toString();
+        console.log(stringName.split(x).length-1);
+    }
+    bai39('L');
+    //Bài tập 40
+    function bai40(){
+        console.log("Bạn " + names[0])
+        for (var i = 1; i < names.length-1; i++){
+            console.log(",tiếp theo là " + names[i])
+        }
+        //console.log()
+    }
+    bai40()
+    //Bài tập 41
+    function bai41(){
+        const stringName = nameMember.toString();
+        var bai41 = stringName.split('Thanh,')
+        console.log(bai41);
+    }
+    bai41();
+    
+    //Bài tập 42
+    function bai42() {
+        const listNames = listStudent.map((l) => l.name.split(" ").pop());
+        const stringNames = listNames.join(" ");
+        console.log("Chia đội")
+        const endThanh = stringNames.toUpperCase().split(/(THÀNH)\s/);
+        console.log(endThanh)
+    }
+    bai42()
+    //Bài tập 43
+    function bai43() {
+        const listNames = listStudent.map((l) => l.name.split(" ").pop());
+        const stringNames = listNames.join(" ");
+        console.log("Chia đội")
+        const startThanh = stringNames.toUpperCase().split(/\s(?=THÀNH)/);
+        console.log(startThanh)
+    }
+    bai43()
+    
+    //Bài tập 44
+    function bai44(){
+        const stringName = nameMember.toString();
+        console.log(stringName.repeat(2));//lặp chuỗi với số lần xác định
+    }
+    bai44();
+    //Bài tập 45
+    function bai45(){
+        const stringName = nameMember.toString();
+        const change = stringName.replaceAll('Dung', 'Tuan');
+        console.log(change);
+    }
+    bai45();
+
+</script>
+</body>
+</html>
