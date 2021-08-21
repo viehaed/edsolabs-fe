@@ -28,6 +28,7 @@ const createOneWeekScore = (curStudent) => {
 
 const scoreSimulator = () => {
   people.forEach((person) => {
+    person.points = [];
     createOneWeekScore(person);
   });
   didSimulate = true;

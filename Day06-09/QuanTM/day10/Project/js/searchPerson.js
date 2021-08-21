@@ -16,7 +16,7 @@ const searchPerson = (name) => {
   const curStudent = people.filter((person) => {
     return person.name.toUpperCase().includes(name);
   });
-  console.log(people);
+
   return curStudent.map((student) => {
     return {
       ...student,
