@@ -14,9 +14,9 @@ const classRank = (person) => {
 
 const searchPerson = (name) => {
   const curStudent = people.filter((person) => {
-    const lName = person.name.split(" ").pop().toUpperCase();
-    return lName === name;
+    return person.name.toUpperCase().includes(name);
   });
+  console.log(people);
   return curStudent.map((student) => {
     return {
       ...student,
