@@ -1,181 +1,5 @@
-const data = [
-  {
-    id: 1,
-    name: "Nguyễn Văn Sơn",
-    group: {
-      groupID: 1,
-      position: "member",
-    },
-  },
-  {
-    id: 2,
-    name: "Nguyễn Hữu Ánh",
-    group: {
-      groupID: 1,
-      position: "member",
-    },
-  },
-  {
-    id: 3,
-    name: "Trần Mạnh Quân",
-    group: {
-      groupID: 4,
-      position: "leader",
-    },
-  },
-  {
-    id: 4,
-    name: "Hà Quốc Tuấn",
-    group: {
-      groupID: 3,
-      position: "leader",
-    },
-  },
-  {
-    id: 5,
-    name: "Hoàng Ngọc Thành",
-    group: {
-      groupID: 1,
-      position: "member",
-    },
-  },
-  {
-    id: 6,
-    name: "Vũ Thị Thu Hà",
-    group: {
-      groupID: 2,
-      position: "member",
-    },
-  },
-  {
-    id: 7,
-    name: "Phan Văn Trung",
-    group: {
-      groupID: 2,
-      position: "member",
-    },
-  },
-  {
-    id: 8,
-    name: "Nguyễn Cao Hoàng",
-    group: {
-      groupID: 2,
-      position: "member",
-    },
-  },
-  {
-    id: 9,
-    name: "Phùng Đắc Nhật Minh",
-    group: {
-      groupID: 5,
-      position: "leader",
-    },
-  },
-  {
-    id: 10,
-    name: "Lê Việt Dũng",
-    group: {
-      groupID: 1,
-      position: "leader",
-    },
-  },
-  {
-    id: 11,
-    name: "Đỗ Chí Công",
-    group: {
-      groupID: 2,
-      position: "member",
-    },
-  },
-  {
-    id: 12,
-    name: "Trần Công Tâm",
-    group: {
-      groupID: 3,
-      position: "member",
-    },
-  },
-  {
-    id: 13,
-    name: "Trương Thanh Tùng",
-    group: {
-      groupID: 3,
-      position: "member",
-    },
-  },
-  {
-    id: 14,
-    name: "Tạ Đức Chiến",
-    group: {
-      groupID: 3,
-      position: "member",
-    },
-  },
-  {
-    id: 15,
-    name: "Nguyễn Trọng Vĩnh",
-    group: {
-      groupID: 3,
-      position: "member",
-    },
-  },
-  {
-    id: 16,
-    name: "Ngô Chung A Âu",
-    group: {
-      groupID: 4,
-      position: "member",
-    },
-  },
-  {
-    id: 17,
-    name: "Trần Thị Khánh Linh",
-    group: {
-      groupID: 2,
-      position: "leader",
-    },
-  },
-  {
-    id: 18,
-    name: "Phan Tiến Thành",
-    group: {
-      groupID: 4,
-      position: "member",
-    },
-  },
-  {
-    id: 19,
-    name: "Đỗ Văn Huy",
-    group: {
-      groupID: 4,
-      position: "member",
-    },
-  },
-  {
-    id: 20,
-    name: "Nguyễn Trung Đức",
-    group: {
-      groupID: 5,
-      position: "member",
-    },
-  },
-  {
-    id: 21,
-    name: "Nguyễn Trung Nam",
-    group: {
-      groupID: 5,
-      position: "member",
-    },
-  },
-  {
-    id: 22,
-    name: "Trần Quốc Toàn",
-    group: {
-      groupID: 5,
-      position: "member",
-    },
-  },
-];
+import data from "./module/data.js";
+import * as commonFn from "./module/common.js";
 console.log(data);
 
 // Bài tập về xử lý chuỗi
@@ -198,11 +22,7 @@ console.log(data_31);
 // Bài tập 32: Từ danh sách tên bài 31, viết hàm chuyển danh sách lớp về 1 chuỗi.
 console.log("==============Bai 32==============");
 
-const mergeName = (arr) => {
-  return arr.join(" ");
-};
-
-const data_32 = mergeName(data_31);
+const data_32 = commonFn.mergeName(data_31);
 console.log(data_32);
 
 // Bài tập 33: Từ kết quả bài tập 32, thực hiện chuyển ngược về danh sách tên học viên như bài 31.
@@ -214,12 +34,8 @@ console.log(data_33);
 // Bài tập 34: Từ chuỗi gồm tên các học viên ( kết quả bài 32 ), viết hàm để đếm xem lớp có bao nhiêu bạn tên A, với A là tham số truyền vào.
 console.log("==============Bai 34==============");
 
-const countName = (strName, name) => {
-  return strName.split(name).length - 1;
-};
-
-console.log(countName(data_32, "Tuấn"));
-console.log(countName(data_32, "Thành"));
+console.log(commonFn.countName(data_32, "Tuấn"));
+console.log(commonFn.countName(data_32, "Thành"));
 
 // Bài tập 35: Từ chuỗi gồm tên các bạn học viên ( kết quả bài 32 ), viết hàm tìm xem bạn tên A đầu tiên đứng thứ bao nhiêu trong danh sách lớp.
 console.log("==============Bai 35==============");
@@ -316,7 +132,7 @@ mergeNameWithStringConnect(
 console.log("==============Bai 41==============");
 
 const khongChoiVoiThanh = (strName) => {
-  return strName.split("Thành");
+  return strName.split("Thành").map((name) => name.trim());
 };
 
 console.log(khongChoiVoiThanh(data_32));

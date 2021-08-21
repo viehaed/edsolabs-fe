@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lí học viên</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./asset/style/reset.css" />
+    <link rel="stylesheet" href="./asset/style/style.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">QUẢN LÍ HỌC VIÊN</header>
+
+    <section class="container">
+      <form>
+        <!-- search -->
+        <div class="search-bar">
+          <div class="search-bar__left">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="text"
+              id="nameStudent"
+              placeholder="Tên học viên"
+            />
+          </div>
+          <div class="search-bar__right">
+            <i class="fas fa-keyboard"></i>
+            <i class="fas fa-microphone-alt"></i>
+          </div>
+        </div>
+        <!-- button -->
+        <div class="container-button">
+          <button class="button" id="generatorPoint" type="button">
+            Giả lập điểm
+          </button>
+          <button class="button" id="findStudentByName" type="button">
+            Tra cứu điểm
+          </button>
+        </div>
+      </form>
+
+      <p id="notification"></p>
+    </section>
+    <!-- output -->
+    <div class="table-result" id="table-result">
+      <table>
+        <thead>
+          <tr>
+            <td>STT</td>
+            <td>Tên đầy đủ</td>
+            <td>Nhóm</td>
+            <td>Vị trí</td>
+            <td>Tổng điểm</td>
+            <td>Xếp hạng nhóm</td>
+            <td>Xếp hạng lớp</td>
+          </tr>
+        </thead>
+        <tbody id="result"></tbody>
+      </table>
+    </div>
+
+    <div id="result-list"></div>
+
+    <!--  -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
