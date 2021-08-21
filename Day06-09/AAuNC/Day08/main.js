@@ -194,7 +194,7 @@ function remakeArrStudents(){
       pointForStudent(S.id, i, Math.floor(Math.random()*10));
     }
   }
-  return listStudent;
+  return JSON.stringify(listStudent);
 }
 
 console.log(remakeArrStudents())
