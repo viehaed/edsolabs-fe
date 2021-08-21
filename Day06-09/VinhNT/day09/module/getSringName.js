@@ -1,4 +1,4 @@
-import { nameArr } from "./bai31.js";
+import { nameArr } from "./getLastNameArr.js";
 export{string}
 function getStringName(list){
     let result = ' ';

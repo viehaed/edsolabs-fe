@@ -1,62 +1,43 @@
-import getLastName,{nameArr}  from "./module/bai31.js";
-import getStringName,{string} from "./module/bai32.js";
 import stuList from "./module/data.js";
+import getLastName,{nameArr}  from "./module/getLastNameArr.js";
+import getStringName,{string} from "./module/getSringName.js";
+import stringBackToArr from "./module/stringBackToArr.js";
+import countStuA from "./module/countStuA.js";
+import firstStuAIndex from "./module/firstStuAIndex.js";
+import lastStuAIndex from "./module/lastStuAIndex.js";
+import countNameIncludeA from "./module/countNameIncludeA.js";
+import countNameStartWithA from "./module/countNameStartWithA.js";
+import countNameStartWithAEndWithB from "./module/countNameStartWithAEndWithB.js";
 
 console.log("Bài tập 31")
-
 console.log(getLastName(stuList));
 
 console.log("Bài tập 32")
-
-
 console.log(getStringName(nameArr))
 
 console.log("Bài tập 33")
-
-function stringBackToArr(str){
-    return str.split(" ")
-}
 console.log(stringBackToArr(string))
 
 console.log("Bài tập 34")
-function countStuA(a){
-    return string.split(a).length - 1;
-}
 console.log(countStuA("Thành"))
 
 console.log("Bài tập 35")
-function firstStuAIndex(a){
-    return string.split(" ").indexOf(a) + 1
-}
 console.log(firstStuAIndex("Sơn"))
 
 console.log("Bài tập 36")
-function lastStuAIndex(a){
-    return string.split(" ").lastIndexOf(a) + 1
-}
+
 console.log(lastStuAIndex("Thành"))
 
 console.log("Bài tập 37")
-function countNameStartWithA(a){
-    return string.split(" ").filter((e)=>e.startsWith(a.toUpperCase())).length
-}
+
 console.log(countNameStartWithA("t"))
 
 console.log("Bài tập 38")
-function countNameStartWithAEndWithB(a,b){
-    return string.split(" ").filter((e)=>
-        e.startsWith(a.toUpperCase()) && e.endsWith(b.toLowerCase())
-    ).length
-}
+
 console.log(countNameStartWithAEndWithB("t","n"))
 
 console.log("Bài tập 39")
-function countNameIncludeA(a){
-    return string.split(" ")
-        .filter((e)=>
-            e.includes(a.toUpperCase()) || e.includes(a.toLowerCase())
-        ).length
-}
+
 console.log(countNameIncludeA("ô"))
 
 console.log("Bài tập 40")
