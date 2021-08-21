@@ -303,7 +303,7 @@ console.log(b42.split("Thành"));
 function bai42() {
     
   return b42.split("Thành").map((e, index) => {
-    let team = e.trim().split(" "); // [] length = số người từng  đội
+    let team = e.split(" "); // [] length = số người từng  đội
     team.push("Thành");
     console.log(team);
 
@@ -317,7 +317,7 @@ console.log("------bài43");
 function bai43() {
     
     return b42.split("Thành").map((e, index) => {
-        let team = e.trim().split(" ");
+        let team = e.split(" ");
         team.unshift("Thành")
         return `Đội ${index +1} gồm :[${team.join(", ")}],`
     })
