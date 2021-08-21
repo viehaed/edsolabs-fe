@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+
+    <main>
+        <form action="" id="fm" >
+            <i class="fas fa-search"></i>
+            <input type="text" name="dl" placeholder="Tên học viên " value="">
+            <div class="btn">
+                <button id="emulatorPoint" >Giả lập điểm </button>
+                <button id="findPoint"type="submit" >Tra cứu điểm </button>
+            </div>
+        </form>
+        <div>
+            <!-- <p>STT:</p>
+            <p>Tên đầy đủ:</p>
+            <p>Vị trí:</p>
+            <p>Tổng điểm:</p>
+            <p>Day1:9 | Day1:10 | ...</p>
+            <p>Xếp hạng nhóm :</p>
+            <p>Xếp hạng lớp :</p> -->
+            <ul id="ul">
+                <li id="STT"></li>
+                <li id="name"></li>
+                <li id="group"></li>
+                <li id="position"></li>
+                <li id="sumPoint"></li>
+                <li id="pointByDay"></li>
+                <li id="rankInGroup"></li>
+                <li id="rankInClass"></li>
+            </ul>
+
+        </div>
+    </main>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

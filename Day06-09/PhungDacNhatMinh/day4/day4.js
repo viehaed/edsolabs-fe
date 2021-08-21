@@ -2,6 +2,8 @@ import arrStudentEdsoLabs from "./modules/data.js";
 import firstName from "./modules/firstName.js"
 import convertToString from "./modules/convertToString.js";
 import convertToArray from "./modules/convertToArray.js";
+let a = JSON.stringify(arrStudentEdsoLabs)
+console.log(a);
 // bài 31
 console.log("------bài 31");
 console.log(arrStudentEdsoLabs);
