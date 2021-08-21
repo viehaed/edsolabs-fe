@@ -1,3 +1,4 @@
+import Data from "./liststudent.json"
 var listStudent = [{
         id: 1,
         name: "Nguyễn Văn Sơn",
@@ -195,7 +196,6 @@ function bai38(a, b) {
         item = item.toLowerCase();
         return item.startsWith(a.toLowerCase()) && item.endsWith(b.toLowerCase())
     }).length
-
 }
 console.log(`Lớp có ${bai38("t", "h")} bạn`);
 //BÀI 39
@@ -285,3 +285,5 @@ function bai45() {
     return newListStudent.replaceAll("Dũng", "Tuấn")
 }
 console.log(bai45())
+
+console.log(Data)

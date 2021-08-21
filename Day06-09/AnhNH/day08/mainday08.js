@@ -390,7 +390,6 @@ function support(x, y) {
     return newArr;
 }
 //--------------------- BÀI29 ----------------------
-
 function bai29(x, y) {
     let newArr = support(x, y);
     let valueArr = newArr.map(item => {
