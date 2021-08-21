@@ -199,21 +199,20 @@ let myClass = [{
 ];
 //----------------------BÀI22
 function getNameAuto(x) {
-let emtyArr = [];
-if (x > myClass.length) {
-    return "Nhập quá số lượng sinh viên"
-} else {
-    for (let i = 0; i < x; i++) {
-        let randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
-        while (emtyArr.includes(randomClass)) {
-            randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
+    let emtyArr = [];
+    if (x > myClass.length) {
+        return "Nhập quá số lượng sinh viên"
+    } else {
+        for (let i = 0; i < x; i++) {
+            let randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
+            while (emtyArr.includes(randomClass)) {
+                randomClass = myClass[Math.floor(Math.random() * myClass.length)].name;
+            }
+            emtyArr.push(randomClass.split(" ").pop())
         }
-        emtyArr.push(randomClass.split(" ").pop())
     }
+    return emtyArr
 }
-return emtyArr
-}
-console.log(getNameAuto(10));
 // -----------------------BÀI23
 
 function getNameInGroup(number) {
@@ -227,7 +226,6 @@ if (number > 5) {
 }
 return nameInGroup
 }
-console.log(getNameInGroup(1));
 
 //-----------------------BÀI24
 function updatePoint(id, date, coin) {
@@ -277,42 +275,41 @@ console.log(updatePoint(1, 5, 9)); //Sẽ chỉnh sửa điểm có id = 22, dat
 
 //------------------------BÀI25
 function updatePointByDay() {
-let newClass = JSON.parse(JSON.stringify(myClass));
-newClass.forEach(item => {
-    item.points = [{
-            dayID: 2,
-            dayName: "thứ 2",
-            point: Math.floor(Math.random() * 10)
-        },
-        {
-            dayID: 3,
-            dayName: "thứ 3",
-            point: Math.floor(Math.random() * 10)
-        },
-        {
-            dayID: 4,
-            dayName: "thứ 4",
-            point: Math.floor(Math.random() * 10)
-        },
-        {
-            dayID: 5,
-            dayName: "thứ 5",
-            point: Math.floor(Math.random() * 10)
-        },
-        {
-            dayID: 6,
-            dayName: "thứ 6",
-            point: Math.floor(Math.random() * 10)
-        },
-        {
-            dayID: 7,
-            dayName: "thứ 7",
-            point: Math.floor(Math.random() * 10)
-        }
-    ]
-
-})
-return newClass;
+    let newClass = JSON.parse(JSON.stringify(myClass));
+    newClass.forEach(item => {
+        item.points = [{
+                dayID: 2,
+                dayName: "thứ 2",
+                point: Math.floor(Math.random() * 10)
+            },
+            {
+                dayID: 3,
+                dayName: "thứ 3",
+                point: Math.floor(Math.random() * 10)
+            },
+            {
+                dayID: 4,
+                dayName: "thứ 4",
+                point: Math.floor(Math.random() * 10)
+            },
+            {
+                dayID: 5,
+                dayName: "thứ 5",
+                point: Math.floor(Math.random() * 10)
+            },
+            {
+                dayID: 6,
+                dayName: "thứ 6",
+                point: Math.floor(Math.random() * 10)
+            },
+            {
+                dayID: 7,
+                dayName: "thứ 7",
+                point: Math.floor(Math.random() * 10)
+            }
+        ]
+    })
+    return newClass;
 }
 console.log(updatePointByDay());
 
@@ -366,19 +363,21 @@ console.log(bai28(2, 3, 9));
 //------------------BÀI29
 // -------------------support function bai 29 30---------------
 function support(x, y) {
-let local = getSumPoint(x, y);
-let newArr = [];
-for (let i = 1; i <= 5; i++) {
-    let subArr = [];
-    local.forEach(item => {
-        if (item.group.groupId === i) {
-            subArr.push(item);
-        }
-    })
-    newArr.push(subArr);
+    let local = getSumPoint(x, y);
+    let newArr = [];
+    for (let i = 1; i <= 5; i++) {
+        let subArr = [];
+        local.forEach(item => {
+            console.log(item);
+            if (item.group.groupId === i) {
+                subArr.push(item);
+            }
+        })
+        newArr.push(subArr);
+    }
+    return newArr;
 }
-return newArr;
-}
+console.log(support(2,6));
 //--------------------- BÀI29 ----------------------
 
 function bai29(x, y) {
