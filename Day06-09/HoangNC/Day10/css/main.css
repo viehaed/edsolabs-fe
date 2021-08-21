@@ -2,10 +2,10 @@
     position: absolute;
     width: 800px;
     height: 74px;
-    left: 36px;
+    left: 100px;
     top: 100px;
     background: #FFFFFF;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     border-radius: 37px;
 }
 .icon {
@@ -14,6 +14,7 @@
     height: 13.91px;
     left: 21.87px;
     top: 29.89px;
+    color: #ccc;
 }
 #user-text {
     position: absolute;
@@ -22,7 +23,7 @@
     left: 60px;
     top: 28px;
     font-style: normal;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 18px;
     border: none;
     color: #3C3C43;
@@ -37,12 +38,12 @@
 }
 .btn1 {
     position: absolute;
-    left: 240px;
+    left: 300px;
     top: 200px;
 }
 .btn2 {
     position: absolute;
-    left: 460px;
+    left: 500px;
     top: 200px;
 }
 #showInfor {
