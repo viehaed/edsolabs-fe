@@ -4,12 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUẢN LÝ HỌC VIÊN</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <header>
+            <input type="search" name="search" id="search" placeholder="Tên học viên">
+            <div class="button-bar">
+                <button type="button" id="btnCreatePoints">Giả lập điểm</button>
+                <button type="button" id="btnCheck">Tra cứu điểm</button>
+            </div>
+        </header>
+        <footer>
+            <div class="info-student">
+                <div class="infor-row">
+                    <div class="label">STT</div>
+                    <div id="id"></div>
+                </div>
+                <div class="infor-row">
+                    <div class="label">Họ tên</div>
+                    <div id="name"></div>
+                </div>
+                <div class="infor-row">
+                    <div class="label">Nhóm</div>
+                    <div id="groupId"></div>
+                </div>
+                <div class="infor-row">
+                    <div class="label">Chức vụ</div>
+                    <div id="position"></div>
+                </div>
+                <div class="infor-row">
+                    <div class="label">Tổng điểm</div>
+                    <div id="total"></div>
+                </div>
+                <div class="infor-table">
+                    <table>
+                        <tr>
+                            <td rowspan="2">Bảng điểm</td>
+                            <td>Day01</td>
+                            <td>Day02</td>
+                            <td>Day03</td>
+                            <td>Day04</td>
+                            <td>Day05</td>
+                            <td>Day06</td>
+                            <td>Day07</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
     
+                <div class="infor-row">
+                    <div class="label">Vị trí trong nhóm</div>
+                    <div id="groupId"></div>
+                </div>
+                <div class="infor-row">
+                    <div class="label">Vị trí trong lớp</div>
+                    <div id="classId"></div>
+                </div>
+            </div>
+        </footer>
+    </main>
 
-    <script type="module" src="main.js"></script>
-
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
