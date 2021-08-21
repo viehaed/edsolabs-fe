@@ -31,12 +31,12 @@ function bai37(x) {
 };
 console.log(bai37("H"))
 
-// Bai 38
+// Bai tap 38
 function bai38(x, y) {
     return bai33.filter((o) => o.startsWith(x) && o.endsWith(y)).length;
 };
 console.log(bai38("H", "g"))
-// Bai 39
+// Bai tap 39
 function bai39(x) {
     var patt = new RegExp(x)
     var count = 0;
@@ -49,26 +49,26 @@ function bai39(x) {
     console.log(count)
 }
 bai39('a')
-// Bai 40
+// Bai tap 40
 function bai40() {
     var arrB = bai33.slice();
     var arrA = arrB.pop();
     return `Bạn ${arrB.join(" tiếp theo là bạn ")} cuối cùng là bạn ${arrA}`;
 }
 console.log(bai40());
-// Bai 41
+// Bai tap 41
 var bai41 = bai32.split('Thanh')
 console.log(bai41)
-// Bai 42 Tìm khoảng trống sau Thanh
+// Bai tap 42 Tìm khoảng trống sau Thanh
 const bai42 = bai32.split(/(?<=Thanh)\s/);
 console.log(bai42)
-// Bai 43  Tìm khoảng trống trước Thanh
+// Bai tap 43  Tìm khoảng trống trước Thanh
 const bai43 = bai32.split(/\s(?=Thanh)/);
 console.log(bai43)
-// Bai 44
+// Bai tap 44
 var bai44 = bai32.concat(' ' + bai32)
 console.log(bai44)
-// Bai 45
+// Bai tap 45
 var bai45 = bai32.replaceAll("Dung", "Tuan")
 console.log(bai45)
 

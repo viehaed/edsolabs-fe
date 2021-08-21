@@ -154,15 +154,15 @@ var listStudent = [
 
     }
 ];
-// Bai 31
+// Bai tap 31
 export const firstName = listStudent.map((o) => o.name.split(" ")[o.name.split(" ").length - 1]
 );
 console.log(firstName);
 
-// Bai 32
+// Bai tap 32
 export const bai32 = firstName.join(" ");
 console.log(bai32)
-// Bai 33
+// Bai tap 33
 export const bai33 = bai32.split(' ')
 console.log(bai33)
 
