@@ -1,0 +1,65 @@
+.input {
+    position: absolute;
+    width: 800px;
+    height: 74px;
+    left: 50%;
+    top: 100px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+    transform: translateX(-50%);
+}
+.icon {
+    position: absolute;
+    top: 29.89px;
+    color: #ccc;
+    z-index: 99999;
+    right: 2%;
+    font-size: 20px;
+}
+#nameStudent {
+    position: absolute;
+    width: 700px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 18px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+.btn {
+    border: none;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+.btn1 {
+    position: absolute;
+    left: 35%;
+    top: 220px;
+}
+.btn2 {
+    position: absolute;
+    left: 60%;
+    top: 220px;
+    transform: translateX(-50%);
+}
+#showInfor {
+    position: absolute;
+    top: 300px;
+    left: 40px;
+}
+
+span {
+    background-color: yellowgreen;
+}
