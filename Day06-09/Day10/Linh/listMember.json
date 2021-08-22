@@ -1,0 +1,155 @@
+[
+    {
+        "id":1,
+        "name":"Nguyễn Văn Sơn",
+        "groupid":1,
+        "position":""
+    },
+
+    {
+        "id":2,
+        "name":"Nguyễn Hữu Ánh",
+        "groupid":1,
+        "position":""
+    },
+
+    {
+        "id":3,
+        "name":"Trần Mạnh Quân",
+        "groupid":4,
+        "position":"Nhóm trưởng"
+    },
+
+    {
+        "id":4,
+        "name":"Hà Quốc Tuấn",
+        "groupid":3,
+        "position":"Nhóm trưởng"
+    },
+
+    {
+        "id":5,
+        "name":"Hoàng Ngọc Thành",
+        "groupid":1,
+        "position":""
+    },
+
+    {
+        "id":6,
+        "name":"Vũ Thị Thu Hà",
+        "groupid":2,
+        "position":""
+    },
+
+    {
+        "id":7,
+        "name":"Phan Văn Trung",
+        "groupid":2,
+        "position":""
+    },
+
+    {
+        "id":8,
+        "name":"Nguyễn Cao Hoàng",
+        "groupid":2,
+        "position":""
+    },
+
+    {
+        "id":9,
+        "name":"Phùng Đắc Nhật Minh",
+        "groupid":5,
+        "position":"Nhóm trưởng"
+    },
+
+    {
+        "id":10,
+        "name":"Lê Việt Dũng",
+        "groupid":1,
+        "position":"Nhóm trưởng"
+    },
+
+    {
+        "id":11,
+        "name":"Đỗ Chí Công",
+        "groupid":2,
+        "position":""
+    },
+
+    {
+        "id":12,
+        "name":"Trần Công Tâm",
+        "groupid":3,
+        "position":""
+    },
+
+    {
+        "id":13,
+        "name":"Trương Thanh Tùng",
+        "groupid":3,
+        "position":""
+    },
+
+    {
+        "id":14,
+        "name":"Tạ Đức Chiến",
+        "groupid":3,
+        "position":""
+    },
+
+    {
+        "id":15,
+        "name":"Nguyễn Trọng Vĩnh",
+        "groupid":3,
+        "position":""
+    },
+
+    {
+        "id":16,
+        "name":"Ngô Chung Á Âu",
+        "groupid":4,
+        "position":""
+    },
+
+    {
+        "id":17,
+        "name":"Trần Thị Khánh Linh",
+        "groupid":2,
+        "position":"Nhóm trưởng"
+    },
+
+    {
+        "id":18,
+        "name":"Phan Tiến Thành",
+        "groupid":4,
+        "position":""
+    },
+
+    {
+        "id":19,
+        "name":"Đỗ Văn Huy",
+        "groupid":4,
+        "position":""
+    },
+
+    {
+        "id":20,
+        "name":"Nguyễn Trung Đức",
+        "groupid":5,
+        "position":""
+    },
+
+    {
+        "id":21,
+        "name":"Nguyễn Trung Nam",
+        "groupid":5,
+        "position":""
+    },
+
+    {
+        "id":22,
+        "name":"Trần Quốc Toàn",
+        "groupid":5,
+        "position":""
+    }
+] 
