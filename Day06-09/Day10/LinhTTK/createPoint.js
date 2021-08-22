@@ -1,7 +1,7 @@
-import data from "./data2.json" assert { type: "json" };
+import data from "./listMember.json" assert { type: "json" };
 console.log(data);
-function autoPoints() {
-    //Tạo điểm và add vào data
+function createPoints() {
+    
     var addPoints = (id, dayName, point) => {
         var member = data.find((person) => person.id === id)
         if (!member.points) {
@@ -15,31 +15,32 @@ function autoPoints() {
     }
     for (var d = 1; d <= 5; d++) {
         for (var i = 1; i <= data.length; i++) {
-            addPoints(i, 'Ngay' + d, Math.floor(Math.random() * 10))
+            addPoints(i, 'Day' + d, Math.floor(Math.random() * 10))
         }
     }
     console.log(data)
-    //Thêm tổng điểm vào data
-    function addTotalPoints() {
+    
+    //Tính tổng điểm trong các ngày 
+    function createTotalPoints() {
         var copyList = data.slice();
         const tempArr = copyList.map((person) => {
             const totalPoints = person.points.reduce((total, item) => {
                 return total + item.point
                 return total
             }, 0);
-            // Add totalPoints vào danh sach
+           
             person.totalPoints = Math.ceil(totalPoints * 100) / 100
             return person;
         })
         return tempArr
     }
 
-    // Sắp xếp data
+    
     const shuffled = data.sort((a, b) => {
         return b.totalPoints - a.totalPoints;
     })
-    // Thêm rank vào data
-    function rank() {
+    
+    function rank() { //Xếp hạng điểm
         var copyList = data.slice();
         const tempArr = copyList.map((person) => {
             person.rank = copyList.indexOf(person) + 1;
@@ -47,7 +48,7 @@ function autoPoints() {
         })
         return tempArr
     }
-    addTotalPoints()
+    createTotalPoints()
     rank()
 }
-export default autoPoints;
+export default createPoints;
