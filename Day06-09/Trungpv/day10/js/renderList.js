@@ -60,6 +60,6 @@ function renderList(source){
         </div>`;
     }
 
-    return strHTML;
+    return HTML;
 }
 export default renderList
