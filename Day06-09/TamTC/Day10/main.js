@@ -13,7 +13,7 @@ const app = (() => {
 
     return {
         render(valueName) {
-            if (valueName !== '') {
+            if (valueName) {
                 let html = findStudentByName(valueName, listPointStudent).map(item => {
                     let dayPoint = item.points.map(s => s[0] + ": " + s[1] + " | ").join('')
                     return `<ul>
@@ -42,7 +42,7 @@ const app = (() => {
         },
         handleSearch(e) {
             e.preventDefault()
-            let valueName = search.value
+            let valueName = search.value.trim()
             this.render(valueName)
             search.value = null
             search.focus()
