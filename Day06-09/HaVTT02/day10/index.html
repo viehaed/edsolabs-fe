@@ -65,28 +65,30 @@
 			cursor: pointer;
 		}
 		.list {
-			border:1px solid;
+			border-bottom:1px solid;
 			margin-bottom: 30px;
 			padding-left: 20px;
+			padding-bottom: 20px;
 		}
 		.row {
 			display: flex;
 			height: 40px;
 			line-height: 40px;
 		}
-		.row .label {
+		.label {
 			padding-left: 10px;
 		}
 		table {
 			border-collapse: collapse;
 			margin-top: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
+			margin-left: 5px;
 		}
 		td {
 			text-align: center;
 			width: 100px;
-			height: 40px;
-			border: 1px solid grey;
+			height: 30px;
+			border: 1px solid;
 		}
     </style>
 </head>
@@ -103,60 +105,7 @@
             </div>
         </header>
         <footer>
-            <div class="list">
-                <div class="row">
-                    <div class="label">STT : </div>
-                    <div id="id"></div>
-                </div>
-                <div class="row">
-                    <div class="label">Họ và tên : </div>
-                    <div id="name"></div>
-                </div>
-                <div class="row">
-                    <div class="label">Nhóm : </div>
-                    <div id="groupId"></div>
-                </div>
-                <div class="row">
-                    <div class="label">Vị trí : </div>
-                    <div id="position"></div>
-                </div>
-                <div class="infor-table">
-                    <table>
-                        <tr>
-                            <td rowspan="2">Điểm</td>
-                            <td>Day01</td>
-                            <td>Day02</td>
-                            <td>Day03</td>
-                            <td>Day04</td>
-                            <td>Day05</td>
-                            <td>Day06</td>
-                            <td>Day06</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="row">
-                    <div class="label">Tổng điểm : </div>
-                    <div id="total"></div>
-                </div>
-    
-                <div class="row">
-                    <div class="label">Xếp hạng nhóm : </div>
-                    <div id="groupId"></div>
-                </div>
-                <div class="row">
-                    <div class="label">Xếp hạng lớp : </div>
-                    <div id="classId"></div>
-                </div>
-            </div>
+            
         </footer>
 		
     </main>

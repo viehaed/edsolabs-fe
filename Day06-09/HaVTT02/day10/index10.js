@@ -23,7 +23,8 @@ const listStudent = [
     {id: 22, name: "Trần Quốc Toàn", group : {groupId: 5, "position":"member"}}
 ]
 
-function pointStudent(student, dayID, point){
+//Tạo điểm
+function fakePoint(student, dayID, point){
     const pointInfo = {
       dayID: dayID,
       dayName: "Day " + dayID,
@@ -45,85 +46,88 @@ function pointStudent(student, dayID, point){
       }
     }
 }
-function groupPosition(student, source){
-    const arr = source.filter(item => item.group.groupId == student.group.groupId).sort((a,b) =>{
-    return b.total - a.total;
-  });
 
-  return arr.indexOf(student);
-}
-
-function classPosition(student, source){
-    const arr = source.sort((a,b) =>{
-    return b.total - a.total;
-  });
-
-  return arr.indexOf(student);
-}
-
-
-function pointsStudent(student){
+//tạo điểm cho 7 ngày
+function createPoints(student){
     let sum = 0
-    for(let i = 1; i < 8; i++){
+    for(let i = 0; i < 7; i++){
         const n = Math.floor(Math.random()*10);
-        pointStudent(student, i, n);
+        fakePoint(student, i, n);
         sum += n;
 
     }
-    student.total = sum;
-    student.groupPosition = -1;
+    student.totalPoint  = sum;
+    student.groups = -1;
     student.classPosition = -1;
 }
 
+// xếp hạng nhóm
+function groups(student){
+    const arr = listStudent.filter(item => item.group.groupId == student.group.groupId).sort((a,b) =>{
+    return b.totalPoint  - a.totalPoint ;
+  });
 
-function allPointsStudent(source){
-  
-    for (let student of source) {
-      pointsStudent(student);
-    }
+  return arr.indexOf(student);
+}
 
-    for (let student of source) {
-      student.groupPosition = groupPosition(student, source) + 1;   
-      student.classPosition = classPosition(student, source) + 1;
-    }
+// xếp hạng lớp
+function classPosition(student){
+    const arr = listStudent.sort((a,b) =>{
+    return b.totalPoint  - a.totalPoint ;
+  });
 
-    return source;
+  return arr.indexOf(student);
 }
 
 
-function search(key, source){
-    return source.filter(item => {
+function allsumPoint(listStudent){
+  
+    for (let student of listStudent) {
+        createPoints(student);
+    }
+
+    for (let student of listStudent) {
+      student.groups = groups(student) + 1;   
+      student.classPosition = classPosition(student, listStudent) + 1;
+    }
+
+    return listStudent;
+}
+
+
+function search(key){
+    return listStudent.filter(item => {
         return item.name.trim().toUpperCase().includes(key.trim().toUpperCase());
     });
 };
 
 
-function renderList(source){
-    let strHTML = '';
-    for (let student of source) {
+function render(listStudent){
+    let str = '';
+    for (let student of listStudent) {
 
-        strHTML +=
+        str +=
         `<div class="list">
             <div class="row">
-                <div class="label">STT : </div>&nbsp
-                <div id="id">${student.id}</div>
+                <p class="label">STT : </p>&nbsp
+                <p id="id">${student.id}</p>
             </div>
             <div class="row">
-                <div class="label">Họ và tên : </div>&nbsp
-                <div id="name">${student.name}</div>
+                <p class="label">Họ và tên : </p>&nbsp
+                <p id="name">${student.name}</p>
             </div>
             <div class="row">
-                <div class="label">Nhóm : </div>&nbsp
-                <div id="groupId">${student.group.groupId}</div>
+                <p class="label">Nhóm : </p>&nbsp
+                <p id="groupId">${student.group.groupId}</p>
             </div>
             <div class="row">
-                <div class="label">Vị trí : </div>&nbsp
-                <div id="position">${student.group.position}</div>
+                <p class="label">Vị trí : </p>&nbsp
+                <p id="position">${student.group.position}</p>
             </div>
             <div class="table">
+                <p class="label">Điểm : </p>
                 <table>
                     <tr>
-                        <td rowspan="2">Điểm</td>
                         <td>Day 01</td>
                         <td>Day 02</td>
                         <td>Day 03</td>
@@ -144,21 +148,21 @@ function renderList(source){
                 </table>
             </div>
             <div class="row">
-                <div class="label">Tổng điểm : </div>&nbsp
-                <div id="total">${student.total}</div>
+                <p class="label">Tổng điểm : </p>&nbsp
+                <p id="totalPoint ">${student.totalPoint }</p>
             </div>
             <div class="row">
-                <div class="label">Xếp hạng nhóm : </div>&nbsp
-                <div id="groupPosition">${student.groupPosition}</div>
+                <p class="label">Xếp hạng nhóm : </p>&nbsp
+                <p id="groups">${student.groups}</p>
             </div>
             <div class="row">
-                <div class="label">Xếp hạng lớp : </div>&nbsp
-                <div id="classPosition">${student.classPosition}</div>
+                <p class="label">Xếp hạng lớp : </p>&nbsp
+                <p id="classPosition">${student.classPosition}</p>
             </div>
         </div>`;
     }
 
-    return strHTML;
+    return str;
 }
 
 
@@ -167,14 +171,15 @@ let btnCreatePoints = document.getElementById("btnCreatePoints"),
     content = document.getElementsByTagName("footer")[0];
 var done = false;
 
+// button giả lập điểm
 console.log(listStudent);
 btnCreatePoints.addEventListener("click", () => {
-    allPointsStudent(listStudent);
+    allsumPoint(listStudent);
     done = true;
     alert("Giả lập điểm thành công");
-    console.log(listStudent);
 });
 
+//button tra cứu điểm
 btnCheck.addEventListener("click", () => {
     const keyValue = document.getElementById("search").value;
     if (!keyValue) {
@@ -182,17 +187,17 @@ btnCheck.addEventListener("click", () => {
         return;
     }
     else if (!done) {
-        alert("Điểm chưa được giả lập");
+        alert("Chưa giả lập điểm");
         return;
     }
     else{
         const result = search(keyValue, listStudent);
         if (result.length == 0) {
-            alert("Không tìm thấy bản ghi phù hợp");
+            alert("Không tìm thấy bản ghi phù hợp. Vui lòng nhập ký tự chữ cái.");
         }
         else
         {
-            content.innerHTML = renderList(result);
+            content.innerHTML = render(result);
         }
     }
 });
