@@ -23,6 +23,19 @@ import searchPerson from './modules/searchPerson.js';
 
 //  khai báo biến 
 const $ = document.querySelector(".wrapper");
+const alr = (string,active)=>{
+    alert.innerHTML= string;
+    if(active=="err"){
+        alert.classList.add("err");
+        alert.classList.remove("sucess");
+    }else if(active=="sucess"){
+        alert.classList.remove("err");
+        alert.classList.add("sucess");
+    }else if(active=="none"){
+        alert.classList.remove("err");
+        alert.classList.remove("sucess");
+    }
+}
 
 const scopeComulatorEvent = $.querySelector("#scopeComulator");
 const searchPersonEvent = $.querySelector("#searchPerson");
@@ -34,17 +47,13 @@ let checkscoreSimulator = false;
 
 scopeComulatorEvent.addEventListener('click', () => {
     scoreSimulator()
-    alert.classList.add("sucess");
-    alert.classList.remove("err");
     if (checkscoreSimulator) {
-        alert.innerHTML = "reset điểm";
         content.innerHTML = ""
+        alr("reset điểm","sucess");
     } else {
-        alert.innerHTML = "Giả lập đã được bật";
+        alr("Giả lập đã được bật","sucess");
     }
     checkscoreSimulator = true;
-    alert.classList.add("sucess");
-    alert.classList.remove("err");
 })
 
 
@@ -53,51 +62,14 @@ scopeComulatorEvent.addEventListener('click', () => {
 
 searchPersonEvent.addEventListener('click', () => {
     if (checkscoreSimulator) {
-        searchPerson(scopeSimulator(1, 5), valueIndex, content, alert);
+        searchPerson(scopeSimulator(1, 5), valueIndex, content, alr);
     }
     else if (Number(valueIndex.value)) {
-        alert.innerHTML = "Sao bạn lại nhập số";
-        alert.classList.add("err");
-        alert.classList.remove("sucess");
+        alr("Sao bạn lại nhập số","err");
     } else {
-        alert.innerHTML = "Bật giả lập lên";
-        alert.classList.add("err");
-        alert.classList.remove("sucess");
+        alr("Bật giả lập lên","err");
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

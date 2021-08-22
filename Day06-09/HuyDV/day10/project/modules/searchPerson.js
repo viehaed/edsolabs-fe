@@ -3,6 +3,7 @@ const searchPerson = (call, value,content,alert) => {
     let indexGroup;
     let indexClass;
     // let check;
+
     const findName = call.
         filter(item => item.name.
             toLocaleLowerCase() == value.value.toLocaleLowerCase() || item.name.split(" ").pop().
@@ -38,15 +39,13 @@ const searchPerson = (call, value,content,alert) => {
                 </div>
                 `
     })
-    if (findName.length == 0) {
-        alert.innerHTML = "Không có kết quả";
-        alert.classList.add("err");
-        alert.classList.remove("sucess");
+    if (findName.length == 0) { 
+        content.innerHTML =""
+        alert("Không có kết quả","err");
     }
     else {
         alert.innerHTML = "";
-        alert.classList.remove("err");
-        alert.classList.remove("sucess");
+        alert("","none");
         content.innerHTML = htmls.join(" ")
     }
 }
