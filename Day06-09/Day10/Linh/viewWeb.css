@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.input {
+    position: absolute;
+    width: 800px;
+    height: 74px;
+    left: 500px;
+    top: 100px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+}
+.icon {
+    position: absolute;
+    width: 13.04px;
+    height: 13.91px;
+    left: 21.87px;
+    top: 29.89px;
+    color: #ccc;
+}
+#user-text {
+    position: absolute;
+    width: 400px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 18px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+#voice{
+    margin-left: 750px;
+    margin-top: -28px;
+}
+.btn {
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: rgb(243, 232, 232);
+    top: 200px;
+}
+.btn1 {
+    position: absolute;
+    left: 700px;
+}
+.btn2 {
+    position: absolute;
+    left: 1000px;
+}
+#inforMember {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
