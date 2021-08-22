@@ -315,7 +315,7 @@ console.log("-----bài 29");
 
 function getGroup(arr) {
   let arrGroup = arr.map((data) => data.group);
-  return Array.from(new Set(arrGroup));
+  return Array.from(...new Set(arrGroup));
 }
 //group=[1,2,3,4,5]
 function gatherStudent(x, y) {
@@ -341,7 +341,7 @@ console.log("-----bài 30");
 const totalGroupPoint = (x, y) => {
   const totalPointArr = getTotalPointIn(x, y);
   const groups = getGroup(totalPointArr);
-  
+  console.log(groups);
   return groups.map((e) => {
     const groupMember = totalPointArr.filter((item) => item.group === e);
     const totalGroupPoint = groupMember.reduce(

@@ -1,57 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
-
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
 }
+
 main {
-  width: 60%;
+    width: 60%;
 }
+
 form {
-  margin: auto;
+    margin: auto;
 }
+
 form input {
-  border-radius: 37px;
-  line-height: 18px;
-  width: 100%;
-  padding: 10px 50px;
-  border: 1px solid #ccc;
+    border-radius: 37px;
+    line-height: 18px;
+    width: 100%;
+    padding: 10px 50px;
+    border: 1px solid #ccc;
 }
+
 form i {
-  position: relative;
-  color: #b6bbc0;
-  top: 30px;
-  left: 16px;
+    position: relative;
+    color: #b6bbc0;
+    top: 30px;
+    left: 16px;
 }
+
 form .btn {
-  display: flex;
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 form .btn #emulatorPoint {
-  margin-right: 10px;
-  padding: 10px;
-  border: none;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 37px;
 }
+
 form .btn #findPoint {
-  margin-left: 10px;
-  padding: 10px;
-  border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 37px;
 }
+
 form button {
-  cursor: pointer;
+    cursor: pointer;
 }
-li{
-    list-style-type: none  ;
+
+li {
+    list-style-type: none;
     padding: 10px 0px 10px 0px;
 }
