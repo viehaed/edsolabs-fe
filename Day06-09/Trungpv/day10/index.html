@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+        <title>Bài Tâp Quan ly Hoc vien</title>
+    </head>
+   
+    <body>
+        <div class="container">
+            <div class="container_lex">
+                <div class="header">
+                    <div class="seach">
+                        <i class="fas fa-search"></i>
+                        <input type="Text" name="" placeholder="Tên Học Viên">
+                    </div>
+                    <div class="input_seach">
+                        <button type="button" id="btnCreatePoints">Giả Lập điểm</button>
+                        <button type="button" id="btnCheck" >Tra cứu điểm</button>
+                    </div>
+                </div>
+                <div class="model"> 
+                    <div class="list-container">
+                        <div class="row">
+                            <div class="label">STT : </div>
+                            <div id="id"></div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Họ và tên : </div>
+                            <div id="name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Nhóm : </div>
+                            <div id="groupId"></div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Vị trí : </div>
+                            <div id="position"></div>
+                        </div>
+                        <div class="infor-table">
+                            <table>
+                                <tr>
+                                    <td rowspan="2">Điểm</td>
+                                    <td>Day01</td>
+                                    <td>Day02</td>
+                                    <td>Day03</td>
+                                    <td>Day04</td>
+                                    <td>Day05</td>
+                                    <td>Day06</td>
+                                    <td>Day07</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="label">Tổng điểm : </div>
+                            <div id="total"></div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="label">Xếp hạng nhóm : </div>
+                            <div id="groupId"></div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Xếp hạng lớp : </div>
+                            <div id="classId"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="module" src="./js/main.js"></script>
+
+    </body>
+    </html>
