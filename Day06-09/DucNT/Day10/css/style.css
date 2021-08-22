@@ -1,0 +1,98 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  margin:auto;
+  font-family:Arial, Helvetica, sans-serif;
+}
+ul li {
+  list-style: none;
+  line-height: 35px;
+  font-size: 15px;
+}
+.footer-screen {
+  
+  margin-bottom: 12px;
+   padding: 20px 60px;
+  height: 300px;
+  
+
+}
+.footer-screen>li {
+line-height: 32px;
+}
+p {
+  display: inline;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.section {
+  display: grid;
+  width: 100vw;
+  padding: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .section {
+    width: 60vw;
+  }
+}
+.form-input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+.form-input i {
+  margin: 0 1rem;
+}
+.input-name {
+  outline: none;
+  border: none;
+  font-size: 1em;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+.wrap-button {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-primary {
+  padding: 0.6rem;
+  border: none;
+  background-color: #e0e3e6;
+  border-radius: 10px;
+}
+.btn-primary:hover,
+btn-primary:focus {
+  background-color:#b4b4b4 ;
+  cursor: pointer;
+}
+#root {
+  display: grid;
+  gap: 1rem;
+}
+.student-points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+}
+.bold-name{
+  font-weight: 600;
+}
+.point-color {
+  color: red;
+}

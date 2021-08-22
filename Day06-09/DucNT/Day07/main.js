@@ -138,6 +138,25 @@ arrStudent.forEach(function(arr, index) {
 });
 // console.log(typeof arrStudent)
 console.log("-----------------------");
+// lặp qua từng phần tử của mảng
+// every kiểm tra điều kiện gì đó của 1 phần tử trả ra true or false
+// some kiểm tra chỉ 1 điều kiện thỏa mãn sẽ trả ra true or false
+// find tìm kiếm 1 phần tử thỏa mãn điều kiện cho trc chỉ trả về 1 đối tượng
+// filter tìm kiếm hết và trả về các kết quả thỏa mãn
+// map giúp copy 1 mảng cũ => thêm các giá trị bên trong để ra 1 mảng mới hoặc chỉ muốn copy ra 1 mảng khác chứa các phần tử cũ
+// var isEvery = arrStudent.some(function(arr1, index) {
+//     return arr1.groupNumber >= 0;
+// });
+// document.write("Every :", isEvery);
+// var isEvery = arrStudent.find(function(arr1, index) {
+//     return arr1.groupNumber === "3";
+// });
+// var isFilter = arrStudent.filter(function(arr1) {
+//     return arr1.position === "Trưởng nhóm";
+// });
+// console.log(isFilter);
+// console.log("====FIND-========")
+// console.log(isEvery);
 console.log("--Bài 2--");
 const objStudent = Object.assign({}, arrStudent);
 console.log(objStudent);
