@@ -8,8 +8,9 @@ let btnCreatePoints = document.getElementById("btnCreatePoints"),
     btnCheck = document.getElementById("btnCheck"),
     content = document.getElementsByTagName("footer")[0];
 var done = false;
-
 console.log(data);
+
+
 btnCreatePoints.addEventListener("click", () => {
     doAllStudentPoints(data);
     done = true;
