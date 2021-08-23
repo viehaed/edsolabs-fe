@@ -1,0 +1,129 @@
+html {
+    height: 100%;
+    /* max-height: 600px; */
+    width: 1000px;
+    background:  #E5B2CA;
+    background-image:   
+      url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+      url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+    background-repeat: repeat-x;
+    background-position: 
+      0 50%,
+      0 0;
+    background-size: 
+      500px 200px,
+      400px 260px;
+    animation: 50s para infinite linear;
+}
+  
+  @keyframes para {
+    100% {
+      background-position: 
+        500px 50%,
+        400px 0;
+      }
+    }
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.input {
+    position: absolute;
+    width: 800px;
+    height: 74px;
+    left: 670px;
+    top: 220px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+}
+.icon {
+    position: absolute;
+    width: 13.04px;
+    height: 13.91px;
+    left: 21.87px;
+    top: 29.89px;
+    color: #ccc;
+}
+#user-text {
+    position: absolute;
+    width: 400px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 18px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+#voice{
+    margin-left: 750px;
+    margin-top: -28px;
+}
+.btn {
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: rgb(243, 232, 232);
+    top: 550px;
+}
+.btn1 {
+    position: absolute;
+    left: 900px;
+}
+.btn2 {
+    position: absolute;
+    left: 1100px;
+}
+#inforMember {
+    position: absolute;
+    top: 600px;
+    left: 600px;
+}
+/*Slider*/
+.splide__list{
+    background-color: rgb(116, 160, 218);
+    height: 200px;
+    border: 1px solid #ccc;
+}
+.container{
+    width : 750px;
+    margin-left: 700px;
+    margin-top: 20px;
+    
+}
+
+/**/
+.manyfishs {
+  max-width: 10px;
+  margin-top: 380px;
+  margin-left: 400px;
+  display: flex;
+}
+
+.fish{
+  width: 200px;
+  height: 200px;
+  border-radius: 60px;
+  padding: 20px;
+  background-color:rgb(116, 160, 218);
+  color: white;
+  font-family: sans-serif;
+  touch-action: none;
+  box-sizing: border-box;
+  margin-left: 950px;
+    margin-top: 100px;
+}
+
+.draggable {
+  padding: 8px;
+  color: rgb(233, 53, 203);
+  font-size: 20px;
+
+  touch-action: none;
+  user-select: none;
+}
