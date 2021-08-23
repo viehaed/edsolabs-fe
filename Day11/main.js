@@ -54,7 +54,6 @@ $('#splide-list').innerHTML = render.map((item,index) => {
 
 pointSearch.onclick = () => {
     if (inputValue.value.length > 0) {
-        let str = '';
         let number = '';
         let indexClass = '';
         sortTeam.forEach(item => {
@@ -65,16 +64,11 @@ pointSearch.onclick = () => {
             })
         })
 
-        render.sort((a, b) => b.sums - a.sums).forEach((item, index) => {
+    
+        let str = render.map((item,index) => {
             if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
                 indexClass = `<p>Vị trí điểm trong lớp: ${index}</p>`
-            }
-        });
-    
-        render.forEach(item => {
-            if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                str += 
-                `<p>STT: ${item.id}</p>
+                return `<p>STT: ${item.id}</p>
                 <p>Tên đầy đủ: ${item.name}</p>
                 <p>Vị trí: ${item.group.position}</p>
                 <p>Tổng điểm: ${item.sums}</p>
@@ -82,7 +76,7 @@ pointSearch.onclick = () => {
                     return `<span> ${subItem.dayName}: ${subItem.point} điểm |</span>     `
                 })}</p>` + number + indexClass + '<p></p>';
             }
-        })
+        }).join('');
         status.classList.remove('searching');
         status.classList.add('simulating');
         listData.innerHTML = str;
@@ -99,7 +93,6 @@ pointFake.onclick = () => {
         let indexClass = '';
         sortTeam.forEach(item => {
             item.forEach((x, i) => {
-                console.log(item);
                 if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
                     number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
                 }
