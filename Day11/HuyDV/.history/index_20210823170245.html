@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3 class="heading heading--big text-white">Danh sách học viên</h3>
+        <div class="wrapper-slide">
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+
+                <div class="splide__track">
+                    <ul class="splide__list" id="">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="heading">Tìm thông tin học viên</h3>
+            <h4 class="alert" id="alert"></h4>
+            <form action="#">
+                <div class="form-control">
+                    <i class='bx bx-search-alt-2 icon icon-left'></i>
+                    <input type="text" id="valueInput" placeholder="Tên học viên">
+                    <div class="group-icon">
+                        <i class='bx bxs-keyboard icon'></i>
+                        <i class='bx bx-microphone icon'></i>
+                    </div>
+
+                </div>
+                <div class="group-btn">
+                    <button type="button" class="btn" id="scopeComulator">Giả lập điểm</button>
+                    <button type="button" class="btn" id="searchPerson">Tra cứu điểm</button>
+                </div>
+            </form>
+            <div class="content">
+            </div>
+
+        </div>
+        <style>
+            .wrapper--fish {
+                width: 1000px;
+                margin: 0 auto;
+                position: relative;
+                height: 700px;
+                position: relative;
+            }
+
+            .container-fish {
+                background: rgb(33, 60, 235);
+                background: linear-gradient(90deg, rgba(33, 60, 235, 1) 0%, rgba(229, 230, 232, 1) 52%, rgba(22, 8, 255, 1) 100%);
+                width: 100%;
+                height: 100%;
+            }
+
+            #outer-dropzone,
+            #inner-dropzone {
+                height: 140px;
+            }
+
+            .dropzone {
+                /* position: absolute; */
+                background-color: #bfe4ff;
+                border-radius: 4px;
+                width: 50%;
+                transition: background-color 0.3s;
+            }
+
+            .drop-active {
+                border-color: #aaa;
+            }
+
+            .drop-target {
+                background-color: #29e;
+                border-color: #fff;
+                border-style: solid;
+            }
+
+            .drag-drop {
+                background-image: url(./img/rTnr6oxac.gif);
+                display: inline-block;
+                min-width: 40px;
+                padding: 2em 0.5em;
+                margin: 1rem 0 0 1rem;
+
+                color: #fff;
+                /* background-color: #29e; */
+                border: solid 2px #fff;
+
+                touch-action: none;
+                transform: translate(0px, 0px);
+
+                transition: background-color 0.3s;
+            }
+
+            .drag-drop.can-drop {
+                color: #000;
+                background-color: #4e4;
+            }
+
+            .err {
+                background-color: #ff0;
+            }
+        </style>
+        <div class="wrapper--fish">
+            <div class="container-fish">
+                <div id="outer-dropzone" class="dropzone">
+                    <div id="inner-dropzone" class="dropzone">
+                        <h3 class="heading">lấy vào giở</h3>
+                    </div>
+                </div>
+                <div class="drag-drop">
+                    <p>
+                        đỗ văn huy
+                    </p>
+                </div>
+                <div class="drag-drop"> drop </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <script src="path-to-the-file/splide.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script type="module" src="./app.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script>
+        // const position = { x:x, y: x }
+        interact('.dropzone').dropzone({
+            // only accept elements matching this CSS selector
+            accept: '.drag-drop',
+            // Require a 75% element overlap for a drop to be possible
+            overlap: 0.75,
+            ondropactivate: function (event) {
+                // add active dropzone feedback
+                event.target.classList.add('drop-active')
+            },
+            ondragenter: function (event) {
+                var draggableElement = event.relatedTarget
+                var dropzoneElement = event.target
+                // feedback the possibility of a drop
+                dropzoneElement.classList.add('drop-target')
+                draggableElement.classList.add('can-drop')
+                // draggableElement.textContent = 'Dragged in'
+            },
+            ondragleave: function (event) {
+                // remove the drop feedback style
+                event.target.classList.remove('drop-target')
+                event.relatedTarget.classList.remove('can-drop')
+                // event.relatedTarget.textContent = 'Dragged out'
+            },
+            ondrop: function (event) {
+                // event.relatedTarget.textContent = 'Dropped'
+            },
+            ondropdeactivate: function (event) {
+                // remove active dropzone feedback
+                event.target.classList.remove('drop-active')
+                event.target.classList.remove('drop-target')
+            }
+        })
+
+        interact('.drag-drop')
+            .draggable({
+                inertia: true,
+                modifiers: [
+                    interact.modifiers.restrictRect({
+                        restriction: 'parent',
+                        endOnly: true
+                    })
+                ],
+                autoScroll: true,
+                // dragMoveListener from the dragging demo above
+                listeners: { move: dragMoveListener }
+            })
+        function dragMoveListener(event) {
+            var target = event.target
+            // keep the dragged position in the data-x/data-y attributes
+            var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+            var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+            // translate the element
+            target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+            // update the posiion attributes
+            target.setAttribute('data-x', x)
+            target.setAttribute('data-y', y)
+        }
+    </script>
+
+</body>
+
+</html>

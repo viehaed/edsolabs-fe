@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3 class="heading heading--big text-white">Danh sách học viên</h3>
+        <div class="wrapper-slide">
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+
+                <div class="splide__track">
+                    <ul class="splide__list" id="">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="heading">Tìm thông tin học viên</h3>
+            <h4 class="alert" id="alert"></h4>
+            <form action="#">
+                <div class="form-control">
+                    <i class='bx bx-search-alt-2 icon icon-left'></i>
+                    <input type="text" id="valueInput" placeholder="Tên học viên">
+                    <div class="group-icon">
+                        <i class='bx bxs-keyboard icon'></i>
+                        <i class='bx bx-microphone icon'></i>
+                    </div>
+
+                </div>
+                <div class="group-btn">
+                    <button type="button" class="btn" id="scopeComulator">Giả lập điểm</button>
+                    <button type="button" class="btn" id="searchPerson">Tra cứu điểm</button>
+                </div>
+            </form>
+            <div class="content">
+            </div>
+            <style>
+                .container-fish {
+                    width: 1000px;
+                    position: relative;
+                    height: 500px;
+                    border: 1px solid #ffff;
+                    background-color: #f00;
+                }
+
+                #outer-dropzone {
+                    height: 140px;
+                }
+
+                #inner-dropzone {
+                    height: 80px;
+                }
+
+                .dropzone {
+                    background-color: #bfe4ff;
+                    border: dashed 4px transparent;
+                    border-radius: 4px;
+                    margin: 10px auto 30px;
+                    padding: 10px;
+                    width: 80%;
+                    transition: background-color 0.3s;
+                }
+
+                .drop-active {
+                    border-color: #aaa;
+                }
+
+                .drop-target {
+                    background-color: #29e;
+                    border-color: #fff;
+                    border-style: solid;
+                }
+
+                .drag-drop {
+                    display: inline-block;
+                    min-width: 40px;
+                    padding: 2em 0.5em;
+                    margin: 1rem 0 0 1rem;
+
+                    color: #fff;
+                    background-color: #29e;
+                    border: solid 2px #fff;
+
+                    touch-action: none;
+                    transform: translate(0px, 0px);
+
+                    transition: background-color 0.3s;
+                }
+
+                .drag-drop.can-drop {
+                    color: #000;
+                    background-color: #4e4;
+                }
+
+                .err {
+                    background-color: #ff0;
+                }
+            </style>
+            <div class="wrapper--fish">
+                <div class="container-fish">
+                </div>
+                <div id="outer-dropzone" class="dropzone">
+                    <div id="inner-dropzone" class="dropzone">chỗ đựng cá</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    <!-- <script src="path-to-the-file/splide.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script type="module" src="./app.js"></script>
+
+    <!-- <script src="./js style/splide.js"></script>
+    <script src="./js style/splide.min.js"></script> -->
+    <!-- <script src="./splide.js"></script> -->
+
+
+    <!-- <script src="path-to-the-file/splide.min.js"></script> -->
+
+</body>
+
+</html>
