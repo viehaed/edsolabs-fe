@@ -1,11 +1,17 @@
-import scoreSimulator, { didSimulate } from "./scoreSimulator.js";
+import scoreSimulator from "./scoreSimulator.js";
 import renderList from "./renderList.js";
 import searchPerson from "./searchPerson.js";
 import { raiseAlert } from "./utils.js";
+import "./slide.js";
 
 const simulateBtn = document.querySelector(".simulate-simulator");
 const searchBtn = document.querySelector(".search-student");
 const input = document.querySelector(".student-name-input");
+const infoContainer = document.querySelector(".info-center");
+
+window.addEventListener("DOMContentLoaded", () => {
+  scoreSimulator();
+});
 
 simulateBtn.addEventListener("click", () => {
   scoreSimulator();
@@ -20,15 +26,11 @@ searchBtn.addEventListener("click", (e) => {
     raiseAlert("error", "Tên không được bỏ trống");
     return;
   }
-  if (!didSimulate) {
-    raiseAlert("error", "Điểm chưa được giả lập");
-    return;
-  }
 
   const result = searchPerson(term);
   if (result.length === 0) {
     raiseAlert("error", "Không tìm thấy bản ghi phù hợp");
   }
 
-  renderList(result);
+  renderList(infoContainer, result);
 });

@@ -1,12 +1,8 @@
 import data from "./data.json" assert { type: "json" };
 
-let didSimulate = false;
 const people = data.studentList;
 
 const addStudentScore = (curStudent, dayName, point) => {
-  if (!curStudent.points) {
-    curStudent.points = [];
-  }
   curStudent.points.push({
     dayID: new Date().getTime(),
     dayName,
@@ -31,10 +27,9 @@ const scoreSimulator = () => {
     person.points = [];
     createOneWeekScore(person);
   });
-  didSimulate = true;
   return people;
 };
 
-export { people, didSimulate };
+export { people };
 
 export default scoreSimulator;

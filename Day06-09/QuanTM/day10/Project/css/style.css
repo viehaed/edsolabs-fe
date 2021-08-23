@@ -20,7 +20,12 @@ p {
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  place-items: center;
+  justify-items: center;
+}
+.carousel {
+  width: 100vw;
+  margin-bottom: 2rem;
+  align-self: end;
 }
 .section-center {
   display: grid;
@@ -28,7 +33,8 @@ p {
   padding: 1rem;
 }
 @media screen and (min-width: 480px) {
-  .section-center {
+  .section-center,
+  .carousel {
     width: 60vw;
   }
 }
@@ -91,9 +97,16 @@ btn:focus {
   padding: 1rem;
   box-shadow: 0 1px 10px 0 rgb(0 0 0);
 }
+.splide__slide.item {
+  box-shadow: none;
+}
 .item ul {
   display: grid;
   gap: 1rem;
+}
+.splide__slide.item ul {
+  width: 80%;
+  margin: auto;
 }
 .info {
   background-color: rgb(70, 70, 196);
@@ -107,4 +120,15 @@ btn:focus {
 .info-item {
   margin: 0;
   background-color: rgb(221, 56, 50);
+}
+.pagination {
+  bottom: unset;
+}
+.page.is-active {
+  background-color: green;
+}
+.arrows button {
+  border-radius: 5px;
+  width: 2rem;
+  height: 4rem;
 }

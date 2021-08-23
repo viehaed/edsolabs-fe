@@ -1,8 +1,4 @@
-import searchPerson from "./searchPerson.js";
-
-const infoContainer = document.querySelector(".info-center");
-
-const renderList = (student) => {
+const renderList = (infoContainer, student) => {
   const list = student
     .map((item) => {
       const points = item.points

@@ -26,4 +26,5 @@ const searchPerson = (name) => {
   });
 };
 
+export { groupRank, classRank };
 export default searchPerson;
