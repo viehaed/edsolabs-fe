@@ -54,19 +54,18 @@ $('#splide-list').innerHTML = render.map((item,index) => {
 
 pointSearch.onclick = () => {
     if (inputValue.value.length > 0) {
-        let number = '';
         let indexClass = '';
-        sortTeam.forEach(item => {
-            item.forEach((x, i) => {
-                if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                    number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
-                }
-            })
-        })
 
-    
         let str = render.map((item,index) => {
             if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
+                let number = '';
+                sortTeam.forEach(a => {
+                    a.forEach((x, i) => {
+                        if (x.name.toLowerCase() === item.name.toLowerCase()) {
+                            number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
+                        }
+                    })
+                })
                 indexClass = `<p>Vị trí điểm trong lớp: ${index}</p>`
                 return `<p>STT: ${item.id}</p>
                 <p>Tên đầy đủ: ${item.name}</p>
@@ -88,27 +87,20 @@ pointFake.onclick = () => {
     let sortTeam = bai29(2, 6, 1)
     let reRender = sumPoint();
     if (inputValue.value.length > 0) {
-        let str = '';
-        let number = '';
         let indexClass = '';
-        sortTeam.forEach(item => {
-            item.forEach((x, i) => {
-                if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                    number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
-                }
-            })
-        })
 
-        reRender.sort((a, b) => b.sums - a.sums).forEach((item, index) => {
+        let str = reRender.map((item,index) => {
             if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
+                let number = '';
+                sortTeam.forEach(a => {
+                    a.forEach((x, i) => {
+                        if (x.name.toLowerCase() === item.name.toLowerCase()) {
+                            number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
+                        }
+                    })
+                })
                 indexClass = `<p>Vị trí điểm trong lớp: ${index}</p>`
-            }
-        });
-    
-        reRender.forEach(item => {
-            if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                str += 
-                `<p>STT: ${item.id}</p>
+                return `<p>STT: ${item.id}</p>
                 <p>Tên đầy đủ: ${item.name}</p>
                 <p>Vị trí: ${item.group.position}</p>
                 <p>Tổng điểm: ${item.sums}</p>
@@ -116,7 +108,7 @@ pointFake.onclick = () => {
                     return `<span> ${subItem.dayName}: ${subItem.point} điểm |</span>     `
                 })}</p>` + number + indexClass + '<p></p>';
             }
-        })
+        }).join('');
         status.classList.remove('simulating');
         status.classList.add('searching');
         listData.innerHTML = str;
