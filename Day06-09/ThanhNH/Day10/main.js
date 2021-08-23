@@ -11,7 +11,7 @@ const pointSearch = $('.pointSearch');
 const listData = $('.listData');
 const status = $('.status');
 
-const sortTeam = bai29(2, 6, 1);
+const sortTeam = bai29(2, 6, 1)
 const render = sumPoint();
 
 pointSearch.onclick = () => {
@@ -53,13 +53,15 @@ pointSearch.onclick = () => {
 
 
 pointFake.onclick = () => {
+    let sortTeam = bai29(2, 6, 1)
     let reRender = sumPoint();
     if (inputValue.value.length > 0) {
         let str = '';
         let number = '';
         let indexClass = '';
         sortTeam.forEach(item => {
-            let x = item.forEach((x, i) => {
+            item.forEach((x, i) => {
+                console.log(item);
                 if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
                     number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
                 }
@@ -84,6 +86,7 @@ pointFake.onclick = () => {
                 })}</p>` + number + indexClass + '<p></p>';
             }
         })
+        console.log(sortTeam);
         status.classList.remove('simulating');
         status.classList.add('searching');
         listData.innerHTML = str;
