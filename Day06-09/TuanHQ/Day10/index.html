@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quản lí học viên</title>
 
+    <!-- splide -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./asset/style/reset.css" />
     <link rel="stylesheet" href="./asset/style/style.css" />
+    <link rel="stylesheet" href="./asset/style/splideCustom.css" />
 
     <!-- font awesome -->
+
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+
     <title>Document</title>
   </head>
   <body>
@@ -52,7 +60,15 @@
       </form>
 
       <p id="notification"></p>
+
+      <!-- slide -->
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list"></ul>
+        </div>
+      </div>
     </section>
+
     <!-- output -->
     <div class="table-result" id="table-result">
       <table>
@@ -75,5 +91,7 @@
 
     <!--  -->
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./modules/slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </body>
 </html>

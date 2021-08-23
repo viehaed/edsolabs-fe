@@ -3,6 +3,37 @@ import data from "./data/data.json" assert { type: "json" };
 
 let listPointStudent = [];
 
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".splide", {
+    start: 0,
+    keyboard: true,
+    type: "loop",
+    rewindSpeed: 400,
+    focus: "center",
+    perPage: 2,
+    trimSpace: true,
+    autoplay: true,
+    interval: 2000,
+    height: "260",
+  }).mount();
+
+  const slide = document.querySelector(".splide__list");
+
+  let html = data
+    .map((item) => {
+      return `<li class="splide__slide splide--item">
+
+                  <p>Tên đầy đủ: ${item.name}</p>
+                  <p>Nhóm: ${item.group.groupID}</p>
+                  <p class="positionGroup">Vị trí: ${item.group.position}</p>
+
+            </li>`;
+    })
+    .join("");
+
+  if (slide) slide.innerHTML = html;
+});
+
 document
   .getElementById("generatorPoint")
   .addEventListener("click", function () {
