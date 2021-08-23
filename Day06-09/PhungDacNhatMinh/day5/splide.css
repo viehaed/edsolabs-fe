@@ -1,0 +1,16 @@
+body {
+    box-sizing: border-box;
+}
+
+.splide__arrows {
+    position: relative;
+    top: 100px;
+}
+
+.splide__track {
+    background-color: lightcoral;
+    width: 80%;
+    margin: 50px 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
