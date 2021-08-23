@@ -70,11 +70,15 @@
     background-color: #92a8d1;
 }
 .draggable {
-    width: 15%;
+    width: 80px;
     min-height: 10px;
     margin: 10px;
-    background-color: #29e;
-    color: white;
+    color: black;
     border-radius: 10px;
-    padding: 5px;
+    padding: 1px;
+    text-align: center;
+  }
+  .ball {
+      width: 80px;
+      height: 80px;
   }

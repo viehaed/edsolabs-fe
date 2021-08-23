@@ -5,7 +5,8 @@ function interactJs() {
         //Thay đổi html
         spliceHtml += `
         <div class="draggable">
-            <p>Tên:${user.name}</p>
+        <img src="./462cf26140a9d5c50ac89b5b940043a3.jpg" alt="" class="ball">
+            <p>${user.name}</p>
         </div>
         `
     })
