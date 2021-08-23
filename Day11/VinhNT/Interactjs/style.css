@@ -1,0 +1,23 @@
+h1{
+  margin-left: 320px;
+}
+.fish_tank{
+  background-color: aqua;
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+}
+.fish{
+  background-color: beige;
+  user-select: none;
+  touch-action: none;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 83px;
+}
+div{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
