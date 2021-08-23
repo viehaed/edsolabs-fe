@@ -1,0 +1,67 @@
+
+.splide__slide{
+    text-align: center;
+    border: solid 1px;
+    border-radius: 15px;
+    margin: 15px;
+    width: 250px !important;
+    padding-left: 10px;
+}
+.title {
+    text-align: center;
+}
+
+.splide__pagination {
+    display: none;
+}
+
+.draggable {
+    display: inline-block;
+    width: 150px;
+    min-height: 50px;
+    color: white;
+    border-radius: 0.75em;
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);
+    font-size: 10px;
+  }
+
+
+  .box-center {
+      text-align: center;
+      margin-top: 100px !important;
+      border: solid 1px;
+      width: 80%;
+      height: 500px;
+      margin: 0 auto;
+      background-color: blue !important;
+      animation-name: example;
+      animation-duration: 4s;
+  }
+
+  img {
+      width: 50px;
+      height: 50px;
+  }
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0);
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes example {
+    0%   {background-color:rgba(0,0,0,0); left:0px; top:0px;}
+    25%  {background-color:rgba(0,0,0,0); left:50px; top:0px;}
+    50%  {background-color:rgba(0,0,0,0); left:40px; top:40px;}
+    75%  {background-color:rgba(0,0,0,0); left:0px; top:100px;}
+    100% {background-color:rgba(0,0,0,0); left:0px; top:0px;}
+  }
