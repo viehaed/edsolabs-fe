@@ -1,0 +1,80 @@
+.input {
+    position: absolute;
+    width: 800px;
+    height: 74px;
+    left: 100px;
+    top: 200px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+}
+.icon {
+    position: absolute;
+    width: 13.04px;
+    height: 13.91px;
+    left: 21.87px;
+    top: 29.89px;
+    color: #ccc;
+}
+#user-text {
+    position: absolute;
+    width: 700px;
+    height: 18px;
+    left: 60px;
+    top: 28px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 18px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+.btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+    /* cursor: pointer; */
+}
+.btn1 {
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+.btn2 {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+}
+#showInfor {
+    position: absolute;
+    top: 400px;
+    left: 40px;
+}
+.interactJs {
+    position: absolute;
+    top: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content {
+    width: 200px;
+    height: 150px;
+    background-color: #92a8d1;
+    margin: 15px;
+}
+.infor {
+    width: 200px;
+    height: 150px;
+    margin: 15px;
+    background-color: #92a8d1;
+}
+.draggable {
+    width: 15%;
+    min-height: 10px;
+    margin: 10px;
+    background-color: #29e;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+  }
