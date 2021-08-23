@@ -3,16 +3,46 @@ import { updatePointByDay, sumPoint } from './modules/sumTotal.js' ;
 import { getSumPoint, getMaxCoin, bai28, bai29 } from './modules/action.js';
 
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
 const inputValue = $('input');
 const pointFake = $('.pointFake');
 const pointSearch = $('.pointSearch');
 const listData = $('.listData');
 const status = $('.status');
+const elms = document.getElementsByClassName('splide');
+const splideList = $('#splide-list')
+
 
 const sortTeam = bai29(2, 6, 1)
 const render = sumPoint();
+
+$('#splide-list').innerHTML = render.map((item,index) => {
+    return `
+      <li class="splide__slide id="splide01-list">
+      <h3>STT: ${index + 1}</h3>
+      <p>ID: ${item.id}</p>
+      <p>Họ Tên: ${item.name}</p>
+      <p>NHóm: ${item.group.groupId}</p>
+      <p>Chức Vụ: ${item.group.position}</p>
+     </li>`
+ }).join('');
+
+ new Splide( '#splide', {
+     type: 'loop',
+     perPage: 3,
+     gap: 20,
+     breakpoints: {
+
+         '640': {
+             perPage: 2,
+             gap    : '1rem',
+         },
+         '480': {
+             perPage: 1,
+             gap    : '1rem',
+         },
+     }
+ } ).mount();
 
 pointSearch.onclick = () => {
     if (inputValue.value.length > 0) {
@@ -20,7 +50,7 @@ pointSearch.onclick = () => {
         let number = '';
         let indexClass = '';
         sortTeam.forEach(item => {
-            let x = item.forEach((x, i) => {
+            item.forEach((x, i) => {
                 if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
                     number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
                 }
@@ -86,7 +116,6 @@ pointFake.onclick = () => {
                 })}</p>` + number + indexClass + '<p></p>';
             }
         })
-        console.log(sortTeam);
         status.classList.remove('simulating');
         status.classList.add('searching');
         listData.innerHTML = str;

@@ -9,8 +9,50 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
+<style>
+
+    .splide#splide {
+        margin-bottom: 10px;
+    }
+
+    li.splide__slide  {
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .splide__arrow--prev {
+       left: -50px;
+    }
+
+    .splide__arrow--next {
+        right: -50px;
+    }
+
+    .splide__arrow.splide__arrow--prev {
+        background-color: red;
+    }
+
+    .splide__arrow.splide__arrow--next {
+        background-color: blue;
+    }
+
+    .splide__pagination {
+        display: none;
+    } 
+
+</style>
 <body>
     <div class="container">
+        <div class="splide" id="splide">    
+            <div class="splide__track">
+                <ul class="splide__list" id="splide-list">
+                    
+                </ul>
+            </div>
+        </div>
         <div class="status"></div>
         <form>
             <div class="search">
