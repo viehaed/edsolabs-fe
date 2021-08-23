@@ -1,6 +1,7 @@
 // import data from "../day4/modules/data.json" assert { type: "json" };
-// lỗi save file tự xuống dòng không save được 
+// lỗi save file tự xuống dòng không save được
 import data from "../day4/modules/data.js";
+
 // const data = require("./day4/modules/data.json");
 console.log(data);
 import importPointAllStudent from "../day4/modules/pointInDay.js";
@@ -132,3 +133,4 @@ $findPoint.addEventListener("click", function(e) {
         $fm.dl.value = "";
     });
 });
+console.log(user);
