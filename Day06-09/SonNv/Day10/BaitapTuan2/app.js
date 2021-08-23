@@ -1,5 +1,6 @@
 import sumPoint from "./modules/sumTotal.js";
 import sortTeam from "./modules/locusPopint_class.js";
+
 let valueInput = document.getElementById("value");
 let root = document.querySelector(".root");
 
