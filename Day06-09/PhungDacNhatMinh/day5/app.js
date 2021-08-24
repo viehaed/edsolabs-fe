@@ -45,7 +45,7 @@ $emulatorPoint.addEventListener("click", function() {
 $findPoint.addEventListener("click", function(e) {
     let user = newSum.filter((e) => {
         let findName = $fm.dl.value;
-        if (e.name.toLowerCase().includes(findName.toLowerCase())) {
+        if (e.name.toLowerCase().split(" ").join("").includes(findName.toLowerCase().split(" ").join(""))) {
             return e;
         }
     });
