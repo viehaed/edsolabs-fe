@@ -1,0 +1,157 @@
+/* *{
+  box-sizing: border-box;
+} */
+body {
+  font-size: 15px;
+  margin:auto;
+  font-family:Arial, Helvetica, sans-serif;
+}
+ul li {
+  list-style: none;
+  line-height: 20px;
+  font-size: 15px;
+}
+.root {
+  
+  margin-bottom: 12px;
+   padding: 20px 60px;
+  height: 300px;
+  
+
+}
+.root>li {
+line-height: 20px;
+}
+
+/* .footer-container{
+    width : 750px;
+    margin-left: 700px;
+    margin-top: 20px;
+} */
+/* p {
+  display: inline;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+} */
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.section {
+  display: grid;
+  width: 100vw;
+  padding: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .section {
+    width: 60vw;
+  }
+}
+.form-input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+.form-input i {
+  margin: 0 1rem;
+}
+.input-name {
+  outline: none;
+  border: none;
+  font-size: 1em;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+.wrap-button {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-primary {
+  padding: 0.6rem;
+  border: none;
+  background-color: #e0e3e6;
+  border-radius: 10px;
+}
+.btn-primary:hover,
+btn-primary:focus {
+  background-color:#b4b4b4 ;
+  cursor: pointer;
+}
+.root {
+  width : 750px;
+  margin-top: 10px;
+  
+  gap: 1rem;
+}
+.splide{
+  
+  width:100%;
+  background-color: rgb(116, 160, 218);
+  /* border: 1px solid #ccc; */
+  
+}
+.splide__track{
+  
+ 
+  right:300px;
+ 
+ 
+}
+.student-points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+}
+.bold-name{
+  font-weight: 600;
+}
+.point-color {
+  color: red;
+}
+/* .infor-member{
+  position: relative;
+  top: 600px;
+  left: 600px;
+} */
+
+
+/*Fish*/
+.manyfishs {
+  max-width: 10px;
+  margin-top: 380px;
+  margin-left: 400px;
+  display: flex;
+}
+
+.fish{
+  width: 200px;
+  height: 200px;
+  border-radius: 60px;
+  padding: 20px;
+  background-color:rgb(116, 160, 218);
+  color: white;
+  font-family: sans-serif;
+  touch-action: none;
+  box-sizing: border-box;
+  margin-left: 950px;
+    margin-top: 100px;
+}
+
+.draggable {
+  padding: 8px;
+  color: rgb(233, 53, 203);
+  font-size: 20px;
+
+  touch-action: none;
+  user-select: none;
+}
