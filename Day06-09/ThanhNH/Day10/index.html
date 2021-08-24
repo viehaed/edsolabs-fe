@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form students</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+<style>
+
+    .splide#splide {
+        margin-bottom: 10px;
+    }
+
+    li.splide__slide  {
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    .splide__arrow--prev {
+       left: -50px;
+    }
+
+    .splide__arrow--next {
+        right: -50px;
+    }
+
+    .splide__arrow.splide__arrow--prev {
+        background-color: red;
+    }
+
+    .splide__arrow.splide__arrow--next {
+        background-color: blue;
+    }
+
+    .splide__pagination {
+        display: none;
+    } 
+
+</style>
+<body>
+    <div class="container">
+        <div class="splide" id="splide">    
+            <div class="splide__track">
+                <ul class="splide__list" id="splide-list">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="status"></div>
+        <form>
+            <div class="search">
+                <input type="text" placeholder="Tên học viên"/>
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-microphone-alt search-voice"></i>
+            </div>
+
+            <div class="btns">
+                <button type="button" class="pointFake">Giả lập điểm</button>
+                <button type="button" class="pointSearch">Tra cứu điểm</button>
+            </div>
+        </form>
+
+        <div class="listData">
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
