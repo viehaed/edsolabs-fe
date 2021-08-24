@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    padding: 100px 60px 60px 60px;
+    margin-top: 20px;
+    box-shadow: 5px 5px grey;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+.search {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    font-size: 10px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+.search i {
+    position: absolute;
+    font-size: 12px;
+    top: 11px;
+    color: grey;
+}
+
+.search .search-icon {
+    left: 14px;
+    cursor: pointer;
+}
+
+.search .search-voice {
+    right: 14px;
+    cursor: pointer;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btns button {
+    width: 125px;
+    height: 35px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(52, 82, 180);
+}
+
+:hover.pointFake, :hover.pointSearch ,:hover.input  {
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;;
+}
+p {
+    padding: 10px 0;
+}
+
+.status {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.simulating {
+    background-color: red;
+}
+
+.searching {
+    background-color: yellow;
+}
+
