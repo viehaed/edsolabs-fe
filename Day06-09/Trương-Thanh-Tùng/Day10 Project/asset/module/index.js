@@ -1,12 +1,16 @@
-// import { generatorPointClass ,days} from "./generatorPointClass.js";
-// import {totalPointClass} from "./totalPointClass.js"
-import { getRandomInt } from "./commonFn.js";
-import { generatorPointClass,totalPointInClass, getTopInGroup, getTopInClass, findStudentByName} from "./modules.js";
+import { getRandomInt } from "./getRandomInt.js";
+import { findStudentByName } from "./findStudentByName.js";
+import { getTopInClass } from "./getTopInClass.js";
+import { getTopInGroup } from "./getTopInGroup.js";
+import { generatorPointClass} from "./generatorPointClass.js";
+import { totalPointInClass } from "./totalPointInClass.js";
+import { days } from "./generatorPointClass.js";
 export const moduleFn = {
   generatorPointClass,
   getRandomInt,
   getTopInGroup,
   getTopInClass,
   totalPointInClass,
-  findStudentByName
+  findStudentByName,
+  days
 }
