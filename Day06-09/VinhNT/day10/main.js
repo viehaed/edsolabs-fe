@@ -1,16 +1,17 @@
 import { moduleFn } from "./modules/index.js";
 import data from "./data/data.json" assert { type: "json" };
-
-let listPointStudent = moduleFn.generatorPointClass(data);
-moduleFn.totalPointInClass(listPointStudent)
+// console.log(data)
+// let listPointStudent = moduleFn.generatorPointClass(data);
+// moduleFn.totalPointInClass(listPointStudent)
 // console.log(listPointStudent)
+let listPointStudent = []
 const findStudentByName = moduleFn.findStudentByName
 const handleSearch = () => {
     const search = document.querySelector('.searchbar')//class input
     const btnSearch = document.querySelector('.btn-search')//btn tra cuu diem
     const results = document.querySelector('.results')
     btnSearch.addEventListener('click', () => {
-        const valueName = search.value
+        const valueName = search.value.trim()
         if (valueName) {
             const html = findStudentByName(valueName, listPointStudent).map(item => {
                 console.log(item)
@@ -27,11 +28,13 @@ const handleSearch = () => {
                         </ul>`
             }
             ).join('')
-            if (results)
+            if (html){
                 results.innerHTML = html
-        }
-        else
-            results.innerHTML = ""
+            }else {
+                alert("Không tìm thấy kết quả")
+            }
+        }else
+            alert("Không tìm thấy kết quả")
     })
 }
 let randomPoints = () => {
@@ -46,3 +49,37 @@ let randomPoints = () => {
 }
 handleSearch()
 randomPoints()
+document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '.splide', {
+        type : 'loop',
+        // rewind: true,
+        perPage : 3,
+        perMove : 1,
+        focus : 'center',
+        // height: '110px',
+        start : 1,
+        // gap:'100em'
+        arrows: 'slider',
+        pagination: 'slider'
+
+    } ).mount();
+} );
+const list = document.querySelector('.splide__list')
+const displayList = () =>{
+    const info = data.map((e) => {
+        return `<li class="splide__slide">
+                    <div class="info">
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i><b>Id</b>: ${e.id}</li>
+                            <li><i class="fas fa-chevron-right"></i><b>Fullname</b>: ${e.name}</li>
+                            <li><i class="fas fa-chevron-right"></i><b>Group</b>: ${e.group.groupID}</li>
+                            <li><i class="fas fa-chevron-right"></i><b>Position</b>: ${e.group.position}</li>
+                        </ul>
+                    </div>
+                </li>`
+    }).join('')
+    if(info){
+        list.innerHTML = info
+    }
+}
+displayList();
