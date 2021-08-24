@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+p {
+  display: inline;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+}
+.carousel {
+  width: 100vw;
+  margin-bottom: 2rem;
+  align-self: end;
+}
+.section-center {
+  display: grid;
+  width: 100vw;
+  padding: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .section-center,
+  .carousel {
+    width: 60vw;
+  }
+}
+.alert {
+  display: none;
+  text-align: center;
+  line-height: 1.5rem;
+  border-radius: 2rem;
+}
+.alert.success {
+  display: block;
+  background-color: rgb(68, 190, 109);
+  color: rgb(247, 236, 236);
+}
+.alert.error {
+  display: block;
+  background-color: rgb(233, 73, 73);
+  color: rgb(247, 236, 236);
+}
+.form-input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+.form-input i {
+  margin: 0 1rem;
+}
+.student-name-input {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+.button-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.7rem;
+  border: none;
+  background-color: #e0e3e6;
+  border-radius: 10px;
+}
+.btn:hover,
+btn:focus {
+  background-color: #47b47e;
+}
+.info-center {
+  display: grid;
+  gap: 1rem;
+}
+.item {
+  padding: 1rem;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0);
+}
+.splide__slide.item {
+  box-shadow: none;
+}
+.item ul {
+  display: grid;
+  gap: 1rem;
+}
+.splide__slide.item ul {
+  width: 80%;
+  margin: auto;
+}
+.info {
+  background-color: rgb(70, 70, 196);
+}
+.student-points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+}
+.info-item {
+  margin: 0;
+  background-color: rgb(221, 56, 50);
+}
+.pagination {
+  bottom: unset;
+}
+.page.is-active {
+  background-color: green;
+}
+.arrows button {
+  border-radius: 5px;
+  width: 2rem;
+  height: 4rem;
+}
