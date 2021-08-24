@@ -139,3 +139,77 @@ btnCheck.addEventListener("click", () => {
         }
     }
 });
+
+//splide
+
+const list = document.querySelector('.splide__list')
+const listMember = () =>{
+    const infor = listStudent.map((e)=>{
+        return` <li class="splide__slide" style ="border: 2px solid #ccc;">
+                    <div class="infor" >
+                        <ul>
+                            <li> STT : ${e.id}</p>
+                            <li> Họ và tên : ${e.name}</p>
+                            <li> Nhóm : ${e.groupId}</p>
+                            <li> Vị trí : ${e.position}</p>
+                        </ul>
+                    </div>
+                </li>`
+    }).join('')
+    if(infor){
+        list.innerHTML = infor
+    }
+}
+listMember();
+document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '.splide',{
+          perPage: 3,
+          perMove:1,
+      }).mount();
+} );
+
+// interact
+document.addEventListener("DOMContentLoaded", function () {
+    const manyfishs = document.querySelector(".drag-drop");
+
+    let fishs = listStudent
+      .map((item) => {
+        let name = item.name.split(" ");
+        name = name[name.length - 1];
+        return ` <div class="draggable">
+                    <img src="https://i.pinimg.com/originals/52/b3/56/52b356b9a70fa0822645df3fba754036.gif">
+                    <p>${name}</p>
+                </div>`;
+      })
+      .join("");
+
+    if (manyfishs) manyfishs.innerHTML = fishs;
+  });
+
+  const draggable = interact(".draggable");
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+    draggable.draggable({
+      listeners: {
+        move(event) {
+          let x = (parseFloat(event.target.dataset.x) || 0) + event.dx;
+          let y = (parseFloat(event.target.dataset.y) || 0) + event.dy;
+
+          event.target.style.transform = `translate(${x}px, ${y}px)`;
+          Object.assign(event.target.dataset, { x, y });
+        },
+      },
+    });
+  });
+
+  //import thư viện
+  import interact from 'https://cdn.interactjs.io/v1.10.11/interactjs/index.js'
+
+  interact('.item').draggable({
+    listeners: {
+      move (event) {
+        console.log(event.pageX,
+                    event.pageY)
+      }
+    }
+  }) 
