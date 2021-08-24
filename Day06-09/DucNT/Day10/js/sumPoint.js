@@ -1,4 +1,4 @@
-import errPoint from "./errPoint.js";
+import errPoint from "./fakePoint.js";
 function sumPoint() {
     let listStudent = errPoint();
     listStudent.map((item) => {

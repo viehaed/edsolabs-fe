@@ -1,4 +1,3 @@
-// import {arrStudent} from "../Day08/data.js";
 import data from "./data.json" assert { type: "json" };
 import sumPoint from "./sumPoint.js";
 
@@ -11,7 +10,12 @@ let nameValue = document.getElementById("value");
 
 function exportData() {
   let newArr = sortClass();
-  return newArr.filter((el) => el.name.includes(nameValue.value));
+  // return newArr.filter(el => el.name.includes(nameValue.value))
+  return newArr.filter((e) => {
+    if (e.name.toLowerCase().includes(nameValue.value.toLowerCase().trim())) {
+      return e;
+    }
+  });
 }
 
 function rankTeam() {
@@ -31,15 +35,20 @@ function rankTeam() {
 }
 let trangthai = false;
 document.getElementById("fakePoint").addEventListener("click", () => {
+  // let x = document.getElementById("value").value;
+
   trangthai = true;
-  alert("Bạn vừa giả lập điểm hãy tra cứu điểm !");
+  alert("Bạn vừa giả lập điểm,hãy tra cứu điểm !");
 });
 document.getElementById("checkPoint").addEventListener("click", () => {
+  let x = document.getElementById("value").value;
+
   if (trangthai == false) {
-    alert("Vui lòng giả lập điểm trước !");
+    alert("Vui lòng giả lập điểm trước ! ");
   } else {
-    if (nameValue.value === "" && Number(nameValue.value)) {
-      alert("Xin hãy thử lại !");
+    if (nameValue.value == "" || Number(nameValue.value)) {
+      alert("Hãy vui lòng nhập dữ liệu hoặc xem lại dữ liệu bạn nhập !");
+      return;
     } else {
       let a = exportData();
       let b = sortClass();
@@ -66,43 +75,55 @@ document.getElementById("checkPoint").addEventListener("click", () => {
       });
       console.log(c);
       console.log(a);
-      document.querySelector(".splide__list").innerHTML = a
-        .map((el) => {
-          return `   
-          <li class="splide__slide">
-           <div style="padding-right:30px;width:calc(100% + 35px);">
-         <p>STT: ${el.id}</p>
-         <p>Tên đầy đủ: <span class="bold-name">${el.name}</span></p>
-         <p>Nhóm: ${el.groupNumber}</p>
-         <p>Vị trí: ${el.position}</p>
-         <p>Tổng điểm: <span class="point-color">${el.sums} Điểm</span></p>
-         <p>Vị trí lớp: ${el.rankClass}</p>
-    
-      </div>
-     </li>
-     `;
+      var generateHTML = (document.getElementById("root").innerHTML = a
+        .map((el, index) => {
+          return `  <table class="ui-table-footer" border="1" width="100%" style="border-collapse: collapse">
+                                        <tr>
+                                           <th>STT</th>
+                                           <td>${el.id}</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Tên đầy đủ</th>
+                                          <td><span class="bold-name">${
+                                            el.name
+                                          }</span></td>
+                                        </tr>
+                                         <tr>
+                                          <th>Nhóm</th>
+                                          <td>${el.groupNumber}</td>
+                                         </tr>
+                                         <tr>
+                                          <th>Vị trí</th>
+                                          <td>${el.position}</td>
+                                         </tr>
+                                         <tr>
+                                          <th>Tổng điểm</th>
+                                          <td><span class="red-point">${
+                                            el.sums
+                                          } Điểm</span></td>
+                                         </tr>
+                                         <tr>
+                                          <th>Ngày</th>
+                                          <td>${el.points
+                                            .map(
+                                              (e) =>
+                                                `Ngày ${e.dayName}: <span class="red-point">${e.point} Điểm</span>`
+                                            )
+                                            .join(", ")} </td>
+                                          
+                                          
+                                         </tr>                                       
+                                         <tr>
+                                          <th>Vị trí lớp</th>
+                                          <td>${el.rankClass}</td>
+                                         </tr>
+                                        
+                                        </table>`;
         })
-        .join(" ");
+        .join(" "));
+      if (generateHTML == "") {
+        alert("Không có kết quả tìm kiếm phù hợp !");
+      }
     }
   }
 });
-// document.addEventListener( 'DOMContentLoaded', function () {
-//   new Splide( '.splide',{
-//         perPage: 2,
-//         perMove:1,
-//     }).mount();
-// } );
-new Splide( '.splide', {
-	type     : 'loop',
-	height   : '9rem',
-	autoWidth: true,
-	focus    : 'center',
-} ).mount();
-
-
-
-
-
-// let newArrStd = (JSON.stringify(arrStudent));
-// console.log(newArrStd);
-// console.log(data);

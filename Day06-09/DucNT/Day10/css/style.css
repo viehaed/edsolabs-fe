@@ -1,16 +1,16 @@
-/* *{
+*{
   box-sizing: border-box;
-} */
+}
 body {
   font-size: 15px;
   margin:auto;
   font-family:Arial, Helvetica, sans-serif;
 }
-ul li {
+/* ul li {
   list-style: none;
-  line-height: 20px;
+  line-height: 25px;
   font-size: 15px;
-}
+} */
 .root {
   
   margin-bottom: 12px;
@@ -20,20 +20,25 @@ ul li {
 
 }
 .root>li {
-line-height: 20px;
+line-height: 25px;
+}
+h1{
+  text-align: center;
+   color: aquamarine;
+  margin-bottom:50px;
 }
 
-/* .footer-container{
+.footer-container{
     width : 750px;
     margin-left: 700px;
     margin-top: 20px;
-} */
-/* p {
+} 
+ p {
   display: inline;
   color: #fff;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
-} */
+}
 .container {
   width: 100vw;
   min-height: 100vh;
@@ -92,20 +97,6 @@ btn-primary:focus {
   
   gap: 1rem;
 }
-.splide{
-  
-  width:100%;
-  background-color: rgb(116, 160, 218);
-  /* border: 1px solid #ccc; */
-  
-}
-.splide__track{
-  
- 
-  right:300px;
- 
- 
-}
 .student-points {
   display: flex;
   flex-wrap: wrap;
@@ -115,43 +106,18 @@ btn-primary:focus {
 .bold-name{
   font-weight: 600;
 }
-.point-color {
+.red-point {
   color: red;
 }
-/* .infor-member{
-  position: relative;
-  top: 600px;
-  left: 600px;
-} */
-
-
-/*Fish*/
-.manyfishs {
-  max-width: 10px;
-  margin-top: 380px;
-  margin-left: 400px;
-  display: flex;
+.ui-table-footer {
+  outline: none;
+  margin-bottom: 12px;
+  padding: 20px 60px;
+  background-color: #D8BFD8;
 }
-
-.fish{
-  width: 200px;
-  height: 200px;
-  border-radius: 60px;
-  padding: 20px;
-  background-color:rgb(116, 160, 218);
-  color: white;
-  font-family: sans-serif;
-  touch-action: none;
-  box-sizing: border-box;
-  margin-left: 950px;
-    margin-top: 100px;
+table tr td{
+  line-height: 23px;
 }
-
-.draggable {
-  padding: 8px;
-  color: rgb(233, 53, 203);
-  font-size: 20px;
-
-  touch-action: none;
-  user-select: none;
+td{
+  padding-left:20px;
 }
