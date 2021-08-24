@@ -7,11 +7,11 @@ const router = express.Router();
 
 app.use(express.static(path.join(__dirname+'/test_lodash.js')))
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname+'/index.html'))
+  res.sendFile(path.join(__dirname+'/view/index.html'))
 })
 
 app.get('/trang_con', (req,res) => {
-    res.sendFile(path.join(__dirname+'/subindex.html'))
+    res.sendFile(path.join(__dirname+'/view/subindex.html'))
 })
 app.use('/', router);
 app.listen(port, () => {
