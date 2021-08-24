@@ -10,7 +10,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
 #form {
   width: 80%;
@@ -24,6 +24,12 @@ h1 {
   position: absolute;
   top: 50%;
   left: 20px;
+  transform: translateY(-50%);
+}
+.icon-keyboard {
+  position: absolute;
+  top: 50%;
+  right: 60px;
   transform: translateY(-50%);
 }
 .icon-voice {
@@ -74,18 +80,57 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
-ul {
+.info-students {
   width: 40%;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   padding: 40px;
+  list-style: none;
 }
-li {
+.info-students li {
   list-style: none;
   padding: 10px 10px;
   border: 1px solid rgba(82, 82, 82, 0.09);
+}
+table {
+  width: 100%;
+  border: 0.1px rgba(255, 255, 255, 0.267);
+}
+.points {
+  text-align: center;
+}
+td {
+  padding: 4px 6px;
 }
 @media (max-width: 414px) {
   .btn-search {
     margin-top: 40px;
   }
+  h1 {
+    font-size: 1.4rem;
+  }
+  .info-students {
+    width: 100%;
+  }
+}
+/* css slides */
+.splide.is-active .splide__list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.splide__pagination {
+  top: 94%;
+}
+
+.splide__slide {
+  padding: 30px;
+}
+.student-slide {
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  border-radius: 50px;
+  padding: 30px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }

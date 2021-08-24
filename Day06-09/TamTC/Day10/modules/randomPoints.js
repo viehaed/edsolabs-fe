@@ -8,7 +8,7 @@ export const randomPoints = data => data.map(item => ({
     points: [1, 2, 3, 4, 5, 6, 7].map(o => (
         {
             dayID: o,
-            dayName: "Day0" + o,
+            dayName: "Day 0" + o,
             point: Math.floor(Math.random() * 10)
         }))
 }))
