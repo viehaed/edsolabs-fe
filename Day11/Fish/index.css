@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+}
+.fish-container {
+  width: 100vw;
+  background-color: aqua;
+  min-height: 80vh;
+}
+.fish-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  align-items: center;
+  touch-action: none;
+  user-select: none;
+}
+.fish {
+  width: 100%;
+}
