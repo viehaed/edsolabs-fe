@@ -1,27 +1,18 @@
 import data from "./data2.json" assert { type: "json" };
 console.log(data);
 function inputName() {
-    // Lấy dữ liệu từ input
     const fullName = document.getElementById('user-text').value;
-    console.log(fullName)
     //Tìm theo tên
-    const findStudent = data.find((find9) => {
-        return find9.name === fullName;
+    const findStudent = data.filter((item) => {
+        return item.name.trim().toUpperCase().includes(fullName.trim().toUpperCase());
     })
-    //Thông báo
-    if(findStudent == undefined) {
-        alert("Vui Lòng nhập đầy đủ họ tên")
+    console.log(findStudent)
+    if (findStudent.length == 0) {
+        alert('Không tìm thấy kết quả')
     }
-    const users = []
-    users.push(findStudent)
-    console.log(users)
-
+    //Thông báo
     var listUserHtml = '';
-    users.forEach((user) => {
-        // Điểm theo  ngày
-        const pointPer = user.points.map((point) => {
-            return `Ngay ${point.dayID} : ${point.point} điểm `;
-        })
+    findStudent.forEach((user) => {
         // Tạo rank group
         var find23 = data.filter(function (find23, index) {
             return find23.groupid == user.groupid;
@@ -34,15 +25,19 @@ function inputName() {
         })) + 1;
         console.log(groupRank)
         //Thay đổi html
-        listUserHtml += `<p class="text">
-        STT: ${user.id}</p>
+        listUserHtml += `<div class="infor">
+        <p class="text">STT: ${user.id}</p>
         <p class="text">Tên: ${user.name}</p>
         <p class="text">Nhóm: ${user.groupid}</p>
         <p class="text">Vị trí: ${user.position}</p>
         <p class="text">Tổng điểm: ${user.totalPoints}</p>
-        <p class="text">${pointPer}</p>
+        <p class="text">Điểm ngày 1: <span>${user.points[0].point} điểm</span></p>
+        <p class="text">Điểm ngày 2: <span>${user.points[1].point} điểm</span></p>
+        <p class="text">Điểm ngày 3: <span>${user.points[2].point} điểm</span></p>
+        <p class="text">Điểm ngày 4: <span>${user.points[3].point} điểm</span></p>
+        <p class="text">Điểm ngày 5: <span>${user.points[4].point} điểm</span></p>
         <p class="text">Xếp hạng nhóm:${groupRank} </p>
-        <p class="text">Xếp hạng lớp: ${user.rank}</p>
+        <p class="text">Xếp hạng lớp: ${user.rank}</p></div>
         `
     });
     document.getElementById('showInfor').innerHTML = listUserHtml;

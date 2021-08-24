@@ -2,16 +2,27 @@ import data from "./data2.json" assert { type: "json" };
 console.log(data);
 function autoPoints() {
     //Tạo điểm và add vào data
-    var addPoints = (id, dayName, point) => {
+    var addPoints = (id, d, point) => {
         var member = data.find((person) => person.id === id)
+        var pointsInfo = {
+            dayID: d,
+            dayName: 'day' + d,
+            point: point,
+        };
         if (!member.points) {
             member.points = []
+            member.points.push(pointsInfo)
         }
-        member.points.push({
-            dayID: d,
-            dayName,
-            point,
-        })
+        else {
+            let po = member.points.find(p => p.dayID === d)
+            let res = member.points.includes(member.points.find(p => p.dayID === d))
+            if (!res) {
+                member.points.push(pointsInfo)
+            } else {
+                po.dayName = pointsInfo.dayName;
+                po.point = pointsInfo.point;
+            }
+        }
     }
     for (var d = 1; d <= 5; d++) {
         for (var i = 1; i <= data.length; i++) {
@@ -25,7 +36,6 @@ function autoPoints() {
         const tempArr = copyList.map((person) => {
             const totalPoints = person.points.reduce((total, item) => {
                 return total + item.point
-                return total
             }, 0);
             // Add totalPoints vào danh sach
             person.totalPoints = Math.ceil(totalPoints * 100) / 100

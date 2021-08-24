@@ -1,53 +1,74 @@
+.app {
+    position: relative;
+    width: 60%;
+    border: 1px solid black;
+}
+.banner {
+    text-align: center;
+}
 .input {
-    position: absolute;
-    width: 800px;
+    width: 50%;
+    margin: 0 auto;
     height: 74px;
-    left: 100px;
-    top: 100px;
     background: #FFFFFF;
     border: 1px solid #ccc;
     border-radius: 37px;
+    display: flex;
 }
 .icon {
-    position: absolute;
     width: 13.04px;
     height: 13.91px;
-    left: 21.87px;
-    top: 29.89px;
+    margin: 28px;
     color: #ccc;
 }
 #user-text {
-    position: absolute;
-    width: 700px;
-    height: 18px;
-    left: 60px;
-    top: 28px;
+    flex: 1;
+    min-width: 20px;
+    height: 68px;
     font-style: normal;
     font-size: 20px;
-    line-height: 18px;
+    border-radius: 37px;
     border: none;
     color: #3C3C43;
     outline: none;
+}
+.confirm {
+    margin: 30px;
+    text-align: center;
 }
 .btn {
     width: 120px;
     height: 30px;
     border: none;
     background-color: #ccc;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
-.btn1 {
-    position: absolute;
-    left: 300px;
-    top: 200px;
+.btn-score {
+    border-radius: 26px;
 }
-.btn2 {
-    position: absolute;
-    left: 500px;
-    top: 200px;
+.btn-search {
+    border-radius: 26px;
 }
 #showInfor {
-    position: absolute;
-    top: 300px;
-    left: 40px;
+    margin: 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.infor {
+    width: 200px;
+    min-height: 10px;
+    margin: 10px;
+    color: black;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #5b74a8;
+    opacity: 0.8;
+}
+.text {
+    
+}
+span {
+    background-color: rgb(143, 38, 38);
+    padding: 5px;
+    font-weight: bold;
 }

@@ -3,9 +3,20 @@ import inputName from './findPeople.js'
 import data from "./data2.json" assert { type: "json" };
 console.log(data);
 
-const btnSearch = document.querySelector('.btn2')
-const btnAutoPoint = document.querySelector('.btn1')
+
+const btnSearch = document.querySelector('.btn-search')
+const btnAutoPoint = document.querySelector('.btn-score')
 
 
-btnAutoPoint.addEventListener('click', autoPoints)
-btnSearch.addEventListener('click', inputName)
+btnAutoPoint.addEventListener('click', () => {
+    autoPoints();
+    alert('Giả lập điểm thành công !')
+})
+btnSearch.addEventListener('click', () => {
+    const fullName = document.getElementById('user-text').value;
+    if (fullName == 0) {
+        alert("Vui lòng nhập...")
+    } else {
+        inputName()
+    }
+})
