@@ -55,14 +55,13 @@ $('#splide-list').innerHTML = render.map((item,index) => {
 pointSearch.onclick = () => {
     if (inputValue.value.length > 0) {
         let indexClass = '';
-    
+
         let str = render.map((item,index) => {
             if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
                 let number = '';
-                console.log(sortTeam);
-                sortTeam.forEach(item => {
-                    item.forEach((x, i) => {
-                        if (x.name.toLowerCase().includes(inputValue.value)) {
+                sortTeam.forEach(a => {
+                    a.forEach((x, i) => {
+                        if (x.name.toLowerCase() === item.name.toLowerCase()) {
                             number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
                         }
                     })
@@ -88,25 +87,18 @@ pointFake.onclick = () => {
     let sortTeam = bai29(2, 6, 1)
     let reRender = sumPoint();
     if (inputValue.value.length > 0) {
-        let number = '';
         let indexClass = '';
-        sortTeam.forEach(item => {
-            item.forEach((x, i) => {
-                console.log(item);
-                if (x.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                    number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
-                }
-            })
-        })
 
-        reRender.sort((a, b) => b.sums - a.sums).forEach((item, index) => {
-            if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
-                indexClass = `<p>Vị trí điểm trong lớp: ${index}</p>`
-            }
-        });
-    
         let str = reRender.map((item,index) => {
             if (item.name.toLowerCase().includes(inputValue.value.toLowerCase())) {
+                let number = '';
+                sortTeam.forEach(a => {
+                    a.forEach((x, i) => {
+                        if (x.name.toLowerCase() === item.name.toLowerCase()) {
+                            number = `<p>Vị trí điểm trong nhóm: ${i}</p>`
+                        }
+                    })
+                })
                 indexClass = `<p>Vị trí điểm trong lớp: ${index}</p>`
                 return `<p>STT: ${item.id}</p>
                 <p>Tên đầy đủ: ${item.name}</p>
