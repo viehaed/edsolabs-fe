@@ -1,0 +1,17 @@
+.draggable {
+    display: inline-block;
+    width: 150px;
+    min-height: 50px;
+    color: white;
+    border-radius: 0.75em;
+    touch-action: none;
+    user-select: none;
+    font-size: 10px;
+  }
+  #list-fish {
+      width: 100%;
+      background: red;
+  }
+
+
+ 
