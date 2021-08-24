@@ -1,0 +1,66 @@
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+}
+.container {
+   width: 100%;
+   display: inline-block;
+  
+}
+.container_lex {
+    /* background: red; */
+    padding-top: 20%;
+}
+.header {
+    height: 120px;
+}
+.seach {
+    padding-top: 10px;
+}
+.seach input {
+    width: 470px;
+    padding: 11px;
+    margin-left: 80px;
+    position: relative;
+    padding-left: 59px;
+    border-radius: 24px;
+    outline:none;
+}
+.seach i {
+    width: 500px;
+    margin-left: 80px;
+    position: absolute;
+    z-index: 1;
+    padding-top: 12px;
+    /* margin-left: -9px; */
+    padding-left: 20px;
+}
+.input_seach {
+    margin-left: 219px;
+    padding-top: 22px;
+}
+.input_seach button {
+    border: none;
+    background: #f8f9fa;
+    text-decoration: none;
+    padding: 14px;
+    margin-left: 11px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    width: 16%;
+    float: left;
+    text-align: center;
+}
+#member {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
+#member li {
+    line-height: 36px;
+    list-style: none;
+}
+
