@@ -1,14 +1,15 @@
 import { moduleFn } from "./index.js";
 import data from "./data.json" assert { type: "json" };
 
-let listPointStudent = moduleFn.generatorPointClass(data);
+let listPointStudent = []
 const findStudentByName = moduleFn.findStudentByName
 const search = document.querySelector('.search')//class input
 const btnSearch = document.querySelector('.btn-search')//btn tra cuu diem
 const results = document.querySelector('.result')
 const handleSearch = () => {
     btnSearch.addEventListener('click', () => {
-        const valueName = search.value
+        const valueName = search.value.trim()
+        console.log(valueName)
         if (valueName) {
             const html = findStudentByName(valueName, listPointStudent).map(item => {
                 console.log(item)
@@ -30,12 +31,12 @@ const handleSearch = () => {
                 results.innerHTML = html
             } else {
                 alert("Không có kết quả phù hợp")
-                results.innerHTML = 'null'
+                results.innerHTML = '<h2> Chưa giả lập điểm hoặc không có kết quả phù hợp</h2>'
             }
         }
         else {
             alert("Vui lòng nhập tên tìm kiếm")
-            results.innerHTML = 'null'
+            results.innerHTML = '<h2>Không có kết quả phù hợp</h2>'
         }
     })
 }
