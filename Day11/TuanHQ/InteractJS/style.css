@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pick-fish {
+  max-width: 60%;
+  display: flex;
+}
+
+.fish-container {
+  width: 60%;
+  height: 300px;
+  border-radius: 0.75rem;
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(54, 166, 240, 0.253);
+  border: 3px solid #020077;
+  border-top: none;
+  overflow: hidden;
+
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  touch-action: none;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.draggable {
+  padding: 8px;
+  color: rgb(233, 53, 203);
+  font-size: 20px;
+
+  touch-action: none;
+  user-select: none;
+}
