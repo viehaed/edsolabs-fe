@@ -1,0 +1,98 @@
+#drag-1, #drag-2 {
+  width: 25%;
+  min-height: 6.5em;
+  margin: 1rem 0 0 1rem;
+  background-color: #29e;
+  color: white;
+  border-radius: 0.75em;
+  padding: 4%;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Wasser;
+}
+
+.box {
+    width: 1000px;
+    margin: 0 auto;
+}
+.box h2 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(58, 58, 121);
+}
+.btn-drag-fish {
+    text-align: center;
+    width: auto;
+}
+.btn-drag-fish button {
+    padding: 20px 50px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20%;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(99, 99, 161);
+    outline: none;
+    transition: 0.5s;
+}
+.btn-drag-fish button:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    background-color: rgb(63, 89, 235);
+    color: white
+}
+.aquarium-box {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-top: none;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.water {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(68, 96, 218);
+    bottom: 0;
+}
+.fish {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+.name {
+    position: absolute;
+    padding: 10px 30px;
+    background-color: tomato;
+    border-radius: 20px;
+}
+.name-tag {
+    position: relative;
+    margin-top: 5px;
+}
+.name::before {
+    position: absolute;
+    content: '';
+    border: 3px solid;
+    width: 20px;
+    margin-top: 5px;
+    left: -15px;
+}
+.water .fish {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+/* ------------------------ */
+@font-face {
+    font-family: Wasser;
+    src: url(./wasser.ttf);
+}
