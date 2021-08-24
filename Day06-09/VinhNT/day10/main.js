@@ -1,9 +1,10 @@
 import { moduleFn } from "./modules/index.js";
 import data from "./data/data.json" assert { type: "json" };
 // console.log(data)
-let listPointStudent = moduleFn.generatorPointClass(data);
-moduleFn.totalPointInClass(listPointStudent)
+// let listPointStudent = moduleFn.generatorPointClass(data);
+// moduleFn.totalPointInClass(listPointStudent)
 // console.log(listPointStudent)
+let listPointStudent = []
 const findStudentByName = moduleFn.findStudentByName
 const handleSearch = () => {
     const search = document.querySelector('.searchbar')//class input
@@ -27,11 +28,13 @@ const handleSearch = () => {
                         </ul>`
             }
             ).join('')
-            if (results)
+            if (html){
                 results.innerHTML = html
-        }
-        else
-            alert("Không tìm thấy học viên, vui lòng nhập lại")
+            }else {
+                alert("Không tìm thấy kết quả")
+            }
+        }else
+            alert("Không tìm thấy kết quả")
     })
 }
 let randomPoints = () => {
@@ -63,7 +66,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 const list = document.querySelector('.splide__list')
 const displayList = () =>{
-    const info = listPointStudent.map((e) => {
+    const info = data.map((e) => {
         return `<li class="splide__slide">
                     <div class="info">
                         <ul>
