@@ -15,14 +15,14 @@ const handleSearch = () => {
                 let dayPoint = item.points.map(s => s[0].bold() + ": " + s[1] + " | ").join('')
                 return `<h2>Kết quả tìm kiếm</h2>
                         <ul>
-                            <li><b>STT: </b>${item.stt}</li>
-                            <li><b>Tên đầy đủ: </b>${item.name}</li>
-                            <li><b>Nhóm: </b>${item.group}</li>
-                            <li><b>Vị trí: </b>${item.position}</li>
-                            <li><b>Tổng điểm: </b>${item.totalPoint}</li>
-                            <li>${dayPoint}</li>
-                            <li><b>Xếp hạng nhóm: </b>${item.groupRank}</li>
-                            <li><b>Xếp hạng lớp: </b>${item.classRank}</li>
+                            <li class="list"><b>STT: </b>${item.stt}</li>
+                            <li class="list"><b>Tên đầy đủ: </b>${item.name}</li>
+                            <li class="list"><b>Nhóm: </b>${item.group}</li>
+                            <li class="list"><b>Vị trí: </b>${item.position}</li>
+                            <li class="list"><b>Tổng điểm: </b>${item.totalPoint}</li>
+                            <li class="list">${dayPoint}</li>
+                            <li class="list"><b>Xếp hạng nhóm: </b>${item.groupRank}</li>
+                            <li class="list"><b>Xếp hạng lớp: </b>${item.classRank}</li>
                         </ul>`
             }
             ).join('')
@@ -51,3 +51,31 @@ const randomPoints = () => {
 }
 handleSearch()
 randomPoints()
+
+
+document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '.splide', {
+        perPage:1,
+        // type:'loop',
+        start:11,
+        rewind:true
+    }).mount();
+} );
+
+const getList = document.querySelector('.splide__list')
+function displayList() {
+    const html = data.map((st) => {
+        return `<li class="splide__slide">
+                    <ul class="list-student-slide">
+                        <li class="list"><b>STT:</b> ${st.id}</li>
+                        <li class="list"><b>Họ và tên:</b> ${st.name}</li>
+                        <li class="list"><b>Nhóm:</b> ${st.group.groupID}</li>
+                        <li class="list"><b>Vị trí:</b> ${st.group.position}</li>
+                    </ul>
+                </li>`
+    }).join('');
+    if(html) {
+        getList.innerHTML = html
+    }
+}
+displayList();
