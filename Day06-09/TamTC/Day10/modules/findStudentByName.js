@@ -13,5 +13,5 @@ export const findStudentByName = ((nameStudent, list) => {
                 groupRank: moduleFn.groupRank(list, o.group.groupID, o.id),
                 classRank: moduleFn.classRank(list, o.id)
             }
-        ))
+        )).sort((a, b) => a.stt - b.stt)
 })
