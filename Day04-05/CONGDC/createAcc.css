@@ -1,0 +1,342 @@
+html{
+    background-color: #f8f1df;
+}
+.app{
+    position: relative;
+    width: 414px;
+    height: 896px;
+    background: rgba(244, 248, 253, 1);
+    margin: auto;
+}
+.StatusBar{
+    position: absolute;
+    height: 44px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 44px/2 - 426px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.Bar__time{   
+    width: 54px;
+    height: 21px;    
+}
+.Bar__time span{
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 17.9px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    
+}
+.Bar__img img{
+    margin-left: 5px;
+}
+.logo{
+    position: absolute;
+    width: 328.92px;
+    height: 176.26px;
+    left: 63px;
+    top: 62.74px;
+}
+.text__login{
+    position: absolute;
+    width: 192px;
+    height: 60px;
+    left: 36px;
+    top: 283px;
+}
+.text__login2{
+    position: absolute;
+    width: 190px;
+    height: 34px;   
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #0F2D52;
+    margin-top: 20px;
+}
+.text__login2:hover{
+    color: #6b7886;
+}
+.text__login1{
+    position: absolute;
+    width: 135px;
+    height: 18px;    
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(15, 45, 82, 0.45);
+}
+.btn__link{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 342px;
+    height: 56px;
+    left: 36px;
+    top: 369px;
+}
+.btn__link button i{
+    font-size: 18px;
+    margin-right: 5px;
+    color: rgba(15, 45, 82, 0.6);;
+}
+.btn__link button span{
+    position: static;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11.5px;
+    line-height: 14px;
+    color: rgba(15, 45, 82, 0.6);
+}
+.btn__gg-btn{
+    position: static;
+    width: 168px;
+    height: 56px;
+    left: 0px;
+    top: 0px;
+    background: rgba(38, 115, 209, 0.03);
+    border: 1px solid rgba(38, 115, 209, 0.08);
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.btn__ap-btn{
+    position: static;
+    width: 162px;
+    height: 56px;
+    left: 180px;
+    top: 0px;
+    background: rgba(38, 115, 209, 0.03);
+    border: 1px solid rgba(38, 115, 209, 0.08);
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 12px;
+    cursor: pointer;
+}
+.textUsing{
+    position: absolute;
+    width: 122px;
+    height: 14px;
+    left: 146px;
+    top: 451px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(15, 45, 82, 0.65);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 342px;
+    height: 252px;
+    left: 36px;
+    top: 491px;
+}
+.form__input-user{
+    position: static;
+    width: 342px;
+    height: 74px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+    border: 1px solid rgba(38, 115, 209, 0.4);
+    box-sizing: border-box;
+}
+.input__user{
+    position: absolute;
+    margin: 10px 10px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    outline: none;
+}
+.form__input-user i{
+    position: absolute;
+    width: 12.33px;
+    height: 13.17px;
+    left: 293.87px;
+    top: 32.25px;
+    color: rgba(15, 45, 82, 0.45);
+}
+.form__input-email{
+    position: static;
+    width: 342px;
+    height: 74px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid rgba(38, 115, 209, 0.4);
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.input__email{
+    position: absolute;
+    margin: 10px 10px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    outline: none;
+    
+}
+.form__input-email i{
+    position: absolute;
+    width: 16.17px;
+    height: 12.62px;
+    margin: 28px 291px;
+    color: #2673D1;
+}
+.form__input-email span{
+    position: absolute;
+    width: 0.72px;
+    height: 28.03px;
+    margin: 21px 226px;
+    background: #0F2D52;
+}
+.form__input-password{
+    position: static;
+    width: 342px;
+    height: 74px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+    border: 1px solid rgba(38, 115, 209, 0.4);
+    box-sizing: border-box;
+}
+.form__input-password i{
+    position: absolute;
+    width: 19.86px;
+    height: 12.45px;
+    margin: 30px 292px;
+    color: rgba(15, 45, 82, 0.45);
+}
+.input__password{
+    position: absolute;
+    margin: 10px 10px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    outline: none;
+}
+.form__btn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 342px;
+    height: 64px;
+    left: 0px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 20px -10px;
+}
+.form__btn-continue{
+    position: static;
+    width: 226px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    background: #2673D1;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 8px;
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 2px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+.form__btn-touchid{
+    position: static;
+    width: 108px;
+    height: 64px;
+    left: 234px;
+    top: 0px;
+    background: #DFEBF9;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+    border: none;
+    cursor: pointer;
+}
+.text__noAcc{
+    position: absolute;
+    width: 204px;
+    height: 16px;
+    left: 125px;
+    top: 830px;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(15, 45, 82, 0.65);
+}
+.text__noAcc span:last-child{
+    color: #2673D1;
+    margin-right: 3px;
+    font-weight: 600;
+}
+
+
