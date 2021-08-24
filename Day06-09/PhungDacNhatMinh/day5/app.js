@@ -3,20 +3,8 @@
 import data from "../day4/modules/data.js";
 
 // const data = require("./day4/modules/data.json");
-console.log(data);
 import importPointAllStudent from "../day4/modules/pointInDay.js";
-import fullName from "../day4/modules/fullName.js";
-const arrFullName = fullName();
-console.log(arrFullName);
 let $fm = document.getElementById("fm");
-let $id = document.getElementById("STT");
-let $name = document.getElementById("name");
-let $group = document.getElementById("group");
-let $position = document.getElementById("position");
-let $sumPoint = document.getElementById("sumPoint");
-let $pointByDay = document.getElementById("pointByDay");
-let $rankInGroup = document.getElementById("rankInGroup");
-let $rankInClass = document.getElementById("rankInClass");
 let $findPoint = document.getElementById("findPoint");
 let $emulatorPoint = document.getElementById("emulatorPoint");
 
@@ -56,12 +44,13 @@ $emulatorPoint.addEventListener("click", function() {
 
 $findPoint.addEventListener("click", function(e) {
     let user = newSum.filter((e) => {
-        let fullName = e.name.toLowerCase() == $fm.dl.value.toLowerCase();
-        return fullName;
+        let findName = $fm.dl.value;
+        if (e.name.toLowerCase().split(" ").join("").includes(findName.toLowerCase().split(" ").join(""))) {
+            return e;
+        }
     });
     console.log(user);
-    // rank in class
-    console.log(newSum);
+    // rank in group
     const getGroup = () => {
         const groups = newSum.map((person) => person.group.groupId);
         return [...new Set(groups)];
@@ -87,19 +76,16 @@ $findPoint.addEventListener("click", function(e) {
         return groupRank;
     });
 
-    console.log(num);
-    console.log(user[0].name);
-    let numNew =
+    let rankInGroup =
         num[0].indexOf(
             num[0].find((y) => {
                 return y.name == user[0].name;
             })
         ) + 1;
-
-    console.log(numNew);
-
-    user.forEach((u) => {
-        // tạo rank group
+    const result = document.querySelector("#result");
+    let html;
+    user.map((u) => {
+        // tạo rank class
         var rankClass = newSum
             .filter((o) => {
                 return o.group.groupID == u.group.groupID;
@@ -107,29 +93,33 @@ $findPoint.addEventListener("click", function(e) {
             .sort((a, b) => {
                 return b.totalPoint - a.totalPoint;
             });
-        console.log(rankClass);
         var classRank =
             rankClass.indexOf(
                 newSum.find((y) => {
                     return y.name == u.name;
                 })
             ) + 1;
-        console.log(classRank);
-        console.log(u);
-        $id.innerHTML = `STT: ${u.id}`;
-        $name.innerHTML = `Tên Đầy đủ: ${u.name}`;
-        $group.innerText = `Nhóm: ${u.group.groupId}`;
-        $position.innerText = `Nhóm: ${u.group.position}`;
         let sum = "";
         for (let i = 0; i < 7; i++) {
             let x = ` Day ${i + 1} : ${u.points[i].point} |`;
             sum += x;
             // console.log(x);
         }
-        $sumPoint.innerText = `Tổng điểm :${u.totalPoint}`;
-        $pointByDay.innerText = sum;
-        $rankInGroup.innerText = `Xếp hạng nhóm: ${numNew}`;
-        $rankInClass.innerText = `Xếp hạng lớp: ${classRank}`;
-        $fm.dl.value = "";
-    });
+
+        return (html = `<ul>
+
+                            <li>STT: ${u.id}</li>
+                            <li>Tên đầy đủ: ${u.name}</li>
+                            <li>Nhóm: ${u.group.groupId}</li>
+                            <li>Vị trí: ${u.group.position}</li>
+                            <li>Tổng điểm: ${u.totalPoint}</li>
+                            <li>${sum}</li>
+                            <li>Xếp hạng nhóm: ${rankInGroup}</li>
+                            <li>Xếp hạng lớp:  ${classRank}</li>
+                        </ul>`);
+    }).join("");
+    if (html) {
+        result.innerHTML = html;
+    }
+    $fm.dl.value = "";
 });
