@@ -67,8 +67,8 @@ main.search .container {
     line-height: 27px;
 }
 
-.functions-c .fc__giaLapDiem,
-.functions-c .fc__traCuuDiem:hover {
+.functions-c .emulotorPoints,
+.functions-c .searchPoins:hover {
     cursor: pointer;
 }
 
