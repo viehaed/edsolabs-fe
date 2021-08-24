@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý học viên</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+  		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      	crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="content">
+		<div class="wrapper-slide">
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+
+                <div class="splide__track">
+                    <ul class="splide__list" id="">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="search">
+				<i class="fas fa-search"></i>
+				<input type="search" name="search" id="search" placeholder="Tên học viên">
+			</div>
+            <div class="btn">
+                <button type="button" id="btnCreatePoints">Giả lập điểm</button>
+                <button type="button" id="btnCheck">Tra cứu điểm</button>
+            </div>
+        </header>
+		<div class="wrapper--fish">
+            <div class="container-fish">
+                <div id="outer-dropzone" class="dropzone">
+                    <h3 class="heading">Bể cá</h3>
+                    <div id="inner-dropzone" class="dropzone">
+                    </div>
+                </div> 
+                <div class="drag-drop">
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+            
+        </footer>
+    </div>
+
+</body>
+</html>

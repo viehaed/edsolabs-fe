@@ -1,0 +1,208 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.content{
+    margin: 0 auto;
+    width: 900px;
+    padding-top:30px;
+}
+header{
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom:20px;
+    margin-top: 30px;
+}
+.search{
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border: 1px solid ;
+    border-radius: 50px;
+    align-items: center;
+    background: #fff;
+    outline: none;
+
+  
+    justify-content: center;
+}
+#search{
+    height: 40px;
+    padding-left: 15px;
+    font-size: 16px;
+    border-radius: 50px;
+    background:none;
+    border: none;
+}
+#search:focus{
+    border: none;
+}
+i{padding-left: 15px;}
+.btn {
+    margin-top: 10px;
+    text-align: center;
+    padding-top:30px;
+}
+.btn button {
+    margin: 0px 15px;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.btn button:hover {
+    background-color: #808080;
+    color: #fff;
+    border: 1px solid;
+    cursor: pointer;
+}
+.list {
+    border-bottom:1px solid;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.row {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+}
+.label {
+    padding-left: 10px;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+td {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+}
+
+/* slide */
+li{
+    list-style: none;
+    font-weight: bold;
+}
+.splide__slide {
+    padding: 20px 20px;
+    /* border: 1px solid #3c3c3c; */
+    background: rgba(22, 8, 255, 0.4);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #fff;
+    border-radius: 10px;
+}
+.splide__slide p {
+    position: relative;
+    padding-left: 140px;
+    margin-bottom: 3px;
+}
+.splide__slide span {
+    display: inline-block;
+    padding: 2px 2px;
+}
+.splide__slide .title {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+}
+.splide__slide .info--content {
+    min-width: 160px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #000;
+}
+.splide__arrow {
+    text-decoration: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    background: rgba(202, 202, 202, 0.6);
+    opacity: 1;
+}
+.splide__arrow i {
+    font-size: 30px;
+    color: rgb(22, 16, 16);
+}
+.splide__arrow--prev {
+    left: 5px;
+}
+.splide__arrow--next {
+    right: 5px;
+}
+/* interactjs */
+.wrapper--fish {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 500px;
+    position: relative;
+}
+
+.container-fish {
+    width: 100%;
+    height: 100%;
+}
+
+
+#inner-dropzone {
+    background: url("https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-color: #fff;
+    height: 330px;
+    border: 2px solid ;
+}
+
+.dropzone {
+    border-radius: 4px;
+    width: 600px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.drop-active {
+    border-color: #aaa;
+}
+
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.drag-drop {
+    display: flex;
+    background-position: left 100%;
+    background-size: cover;
+    min-width: 100px;
+    text-align: center;
+    width: 180px;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+}
+
+.drag-drop p {
+    color: #000;
+}
+.drag-drop img{
+    width: 50px;
+}
+
+.drag-drop.can-drop {
+    color: #000;
+}
+.drag-drop.can-drop img {
+    transform: rotate(180deg);
+}
+
