@@ -20,6 +20,7 @@ myFunction(myCallback);
 - Promise là một cơ chế trong JavaScript giúp thực thi các tác vụ bất đồng bộ mà không rơi vào callback hell , là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng.
 - Sử dụng promise khi chúng ta cần lập trình đồng bộ, để khi ta lấy được data1, thì ta dùng data 1 đó để lấy ra data2
 - 
+```javascript
 var promise = new Promise((resolve, reject) => {
 	Thành công: Resolve()
 	Thất bại: reject()
@@ -33,7 +34,12 @@ reject()
 })
 	finally(function() {
 })
+```
 -	VD:
+```javascript
+
+echo ("highlight code");
+
 	let sach = new Promise(function (resolve, reject){
 	  if(!true) {
 	    resolve();
@@ -49,11 +55,13 @@ reject()
 	    console.log('error')
 	})
 
+```
 
 
 5.	Promise All là gì? Ví dụ tình huống về trường hợp sử dụng Promise All
 -	Giúp chạy song song các promise, hợp nhất các promise trả về 1 mảng là kết quả của các promise đầu vào
 -	VD: 
+```javascript
 	var promise1 = new Promise(
 	    function (resolve) {
 	        setTimeout(function () {
@@ -70,4 +78,4 @@ reject()
 	    .then(function(result) {
 	        console.log(result);
 	    })
-
+```
