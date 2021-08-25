@@ -6,29 +6,31 @@
 ## 2.	Destructuring assignment
 Là cú pháp đặc biệt trong ES6, cho phép tách dữ liệu trong mảng hoặc đối tượng rồi gán cho một biến khác
 Ví dụ:
+-	Tách dữ liệu từ đối tượng
 <html>
 <head>
 </head>
--	Tách dữ liệu từ đối tượng
 
     const me = { first: 'Âu', last: 'Ngô' };
     const {first, last} = me;
     console.log(first, last); // Âu Ngô
 
+
+-	Tách dữ liệu và gán cho biến khác từ đối tượng
 <html>
 <head>
 </head>
--	Tách dữ liệu và gán cho biến khác từ đối tượng
 
     let me = {first: 'Âu', last: 'Ngô', from: 'VN'};
     let {first: ten, last: ho, from: que } = me;
     console.log(ten, ho, que); // Âu Ngô VN
 
+
+-	Tách dữ liệu và gán cho biến khác từ đối tượng lồng nhau
 <html>
 <head>
 </head>
--	Tách dữ liệu và gán cho biến khác từ đối tượng lồng nhau
-    
+
     const me = {
       Âu: { 
         age: 21,
@@ -38,20 +40,22 @@ Ví dụ:
     const { Âu: { age, from }} = me;
     console.log(age, from); // 21 "Thanh Hoá"
 
+
+-	Tách dữ liệu từ một mảng
 <html>
 <head>
 </head>
--	Tách dữ liệu từ một mảng
 
     const [a, b] = [1, 2, 3, 4, 5, 6];
     console.log(a, b);// 1 2
     const [c,d,,,e] = [1, 2, 3, 4, 5, 6];
     console.log(c, d, e);
 
+
+-	Biến đối tượng thành một tham số của hàm
 <html>
 <head>
 </head>
--	Biến đối tượng thành một tham số của hàm
 
     const me = {
       name: "Âu",
@@ -94,10 +98,10 @@ Callback là một hàm sẽ được gọi bởi một hàm khác. Hiểu phứ
 
 -	Nhược điểm: nếu lồng nhiều hàm callback với nhau sẽ gây ra hell callback => treo máy, lỗi giao diện
 
+-	Ví dụ:
 <html>
 <head>
 </head>
--	Ví dụ:
 
     function doSomething(first, action){
       console.log(first);
@@ -116,10 +120,10 @@ Promise có 3 trạng thái:
 
 Khi promise ở trả về resolve() nó sẽ gọi hàm callback của hàm then() với tham số truyền vào là value. Ngược lại nó gọi hàm callback của hàm catch() khi nó trả về reject() với tham số truyền vào là error. Sau tất cả, mặc kệ là thành công hay thất bại nó đều gọi tới callback của hàm finally().
 
+Ví dụ:
 <html>
 <head>
 </head>
-Ví dụ:
 
     function checkEven(x){
       return new Promise((resolve, reject) => {
@@ -136,10 +140,10 @@ Ví dụ:
 ## 7.	Promise.all()
 Xử lý nhiều promise cùng một lúc và trả về kết quả resolve(value) với value là một array chứa các kết quả của các quá trình bất đồng bộ đã gọi tương ứng. Promise.all sẽ reject khi một promise truyền vào trả về reject(error).
 
+Ví dụ:
 <html>
 <head>
 </head>
-Ví dụ:
 
     const promise1 = Promise.resolve(3);
     const promise2 = 42;
