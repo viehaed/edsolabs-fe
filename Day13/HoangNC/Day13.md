@@ -22,7 +22,7 @@ myFunction(myCallback);
 - 
 ```javascript
 var promise = new Promise((resolve, reject) => {
-	Thành công: Resolve()
+	Thành công: resolve()
 	Thất bại: reject()
 }
 promise
@@ -37,8 +37,6 @@ reject()
 ```
 -	VD:
 ```javascript
-
-echo ("highlight code");
 
 	let sach = new Promise(function (resolve, reject){
 	  if(!true) {
