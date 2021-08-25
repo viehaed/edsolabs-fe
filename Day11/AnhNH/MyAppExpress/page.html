@@ -1,0 +1,146 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="website_style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    <title>page</title>
+        function scrollto(div) {
+            $('html,body').animate(
+                {
+                    scrollTop: $("#" + div).offset().top
+                }, 'slow');
+        }
+    </script>
+</head>
+<style>
+    body {
+        margin: 0px auto;
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+        background-color: #A9D0F5;
+    }
+
+    #header {
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px;
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    #header li {
+        display: inline-block;
+        margin-right: 25px;
+        font-size: 17px;
+        color: #084B8A;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #header #site_name {
+        text-align: left;
+        width: 680px;
+        font-size: 35px;
+        margin-left: 20px;
+    }
+
+    #home,
+    #about,
+    #contact {
+        margin-top: 100px;
+        width: 90%;
+        height: 400px;
+        margin-left: 5%;
+        padding: 50px;
+        box-sizing: border-box;
+        background-color: #084B8A;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home p {
+        font-size: 20px;
+    }
+
+    #about p {
+        font-size: 20px;
+    }
+
+    #contact input[type="text"] {
+        width: 250px;
+        height: 35px;
+        padding-left: 10px;
+        float: left;
+        margin-left: 80px;
+        border: none;
+    }
+
+    #contact textarea {
+        float: left;
+        width: 250px;
+        height: 35px;
+        margin-left: 20px;
+        border: none;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    #contact input[type="submit"] {
+        float: left;
+        margin-left: 20px;
+        height: 35px;
+        width: 100px;
+        background: none;
+        color: white;
+        border: 1px solid white;
+    }
+</style>
+
+<body>
+
+    <div id="header">
+        <li id="site_name">TalkersCode.com</li>
+        <li onclick="scrollto('home');"><a href="/">HOME</a></li>
+        <li onclick="scrollto('about');"><a href="/about">About</a></li>
+        <li onclick="scrollto('contact');"><a href="/contact">contact</a></li>
+    </div>
+    <div id="home">
+        <h1>copy nhanh trên gg<p>nha anh</p>
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet
+            consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
+    </div>
+
+    <div id="about">
+        <p>In this tutorial we will show you how to create One Page Website Template Using HTML, CSS And jQuery.Now you
+            can build simple and beautiful website quickly.</p>
+        <p>TalkersCode.com is a complete destination to learn Web Development with Best, Fast and Easy Methods for those
+            who is a novice and wants to be the Xpert in Web Development.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet
+            consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet
+            consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
+    </div>
+
+    <div id="contact">
+        <h1>If you have any question or query you can contact us at <br>talkerscode@gmail.com <br><br>or you can fill
+            the form below</h1>
+        <input type="text" placeholder="Name">
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="SEND">
+    </div>
+
+</body>
+
+</html>
