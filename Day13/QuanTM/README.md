@@ -21,7 +21,7 @@
 
 - Callback function là một function được truyền vào một function, cái mà sẽ được gọi ở bên trong function phía ngoài nó vào tại một thời điểm nào đó trong tương lai.
 - Hạn chế: Lạm dụng có thể gây ra callback hell (khi mà các callback function được lồng vào nhau thành nhiều lớp)
-- Ví dụ: array.map((value)=>1)
+- Ví dụ: `array.map((value)=>1)`
 
 ### 4. Promise
 
@@ -30,14 +30,12 @@
 - Các thành phần của Promise bao gồm: 1 callback function, bên trong callback funtion đấy bao gồm 2 callback funtion khác tạm gọi là resolve và reject
 
 - Ví dụ Promise:
-  Const promise = new Promise((resolve,reject)=>{
-  resolve(“Always resolve Promise”)
-  })
+  `Const promise = new Promise((resolve,reject)=>{ resolve(“Always resolve Promise”) })`
 
 ### 5. Promise.all():
 
 - Chạy nhiều quá trình bất đồng bộ cùng lúc và trả về kết quả là một Promise với resolve value là một array chứa các kết quả của các quá trình bất đồng bộ đã gọi tương ứng. Promise.all sẽ reject khi một quá trình được trình được truyền vào reject
-- Ví dụ: Promise.all([Promise1,Promise2]).then(([value1,value2])=>{ //do something })
+- Ví dụ: `Promise.all([Promise1,Promise2]).then(([value1,value2])=>{ //do something })`
 
 ### 6. Async, Await
 
@@ -47,14 +45,10 @@
 * Async function chỉ thực sự được coi là bất đồng bộ khi mà nó có sử dụng từ khóa await, nếu ko sử dụng await bên trong, async sẽ được coi như là hàm đồng bộ thông thường
 
 - Cú pháp:
-  const myFunc = async () => {
-  const res = await new Promise((resolve,reject)=>{
-  resolve(“Always resolve Promise”)
-  })
-  }
+  `const myFunc = async () => { const res = await new Promise((resolve,reject)=>{ resolve(“Always resolve Promise”) }) }`
 - Ưu điểm so với Promise: Code gọn và dễ debug hơn
 - Nhược điểm so với Promise: Không có
 
 ### 7. Thực hành
 
-![Ảnh thực hành](/ThucHanh.png)
+![Ảnh thực hành](ThucHanh.png)
