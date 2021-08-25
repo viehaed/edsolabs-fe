@@ -3,7 +3,7 @@
 ## Đồng bộ là gì? Bất đồng bộ là gì? Ưu và nhược điểm của chúng?
 
 - Đồng bộ (sync) : chương trình chạy từng dòng từ trên xuống dưới
--- Ưu điểm: dễ kiểm soát luồng chạy vì các câu lệnh được chạy lần lượt
+Ưu điểm: dễ kiểm soát luồng chạy vì các câu lệnh được chạy lần lượt
 -- Nhược điểm: nếu 1 nhóm lệnh mất thời gian chạy quá lâu thì sẽ dẫn đến hiệu quả kém do việc chờ đợi
 - Bất đồng bộ (async) : chạy tất cả các lệnh cùng lúc
 -- Ưu điểm: tối ưu thời gian chạy
@@ -63,7 +63,6 @@ myPromise.then(function(value) {
 
 # Thực hành
 ![Screenshot (131).png](https://www.dropbox.com/s/rndl5clkw9oueh8/Screenshot%20%28131%29.png?dl=0&raw=1)
-
 
 
 
