@@ -1,0 +1,74 @@
+.app {
+    position: relative;
+    width: 60%;
+    border: 1px solid black;
+}
+.banner {
+    text-align: center;
+}
+.input {
+    width: 50%;
+    margin: 0 auto;
+    height: 74px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 37px;
+    display: flex;
+}
+.icon {
+    width: 13.04px;
+    height: 13.91px;
+    margin: 28px;
+    color: #ccc;
+}
+#user-text {
+    flex: 1;
+    min-width: 20px;
+    height: 68px;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 37px;
+    border: none;
+    color: #3C3C43;
+    outline: none;
+}
+.confirm {
+    margin: 30px;
+    text-align: center;
+}
+.btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.btn-score {
+    border-radius: 26px;
+}
+.btn-search {
+    border-radius: 26px;
+}
+#showInfor {
+    margin: 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.infor {
+    width: 200px;
+    min-height: 10px;
+    margin: 10px;
+    color: black;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #5b74a8;
+    opacity: 0.8;
+}
+.text {
+    
+}
+span {
+    background-color: rgb(143, 38, 38);
+    padding: 5px;
+    font-weight: bold;
+}
