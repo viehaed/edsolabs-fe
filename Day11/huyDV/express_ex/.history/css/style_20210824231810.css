@@ -1,0 +1,41 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+header{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+head a{
+    display: inline-block;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+nav{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+}
+nav a{
+    padding: 5px 10px;
+}
+nav a:hover{
+    text-decoration: none;
+}
