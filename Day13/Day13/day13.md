@@ -6,39 +6,61 @@
 ## 2.	Destructuring assignment
 Là cú pháp đặc biệt trong ES6, cho phép tách dữ liệu trong mảng hoặc đối tượng rồi gán cho một biến khác
 Ví dụ:
+<html>
+<head>
+</head>
 -	Tách dữ liệu từ đối tượng
-```const me = { first: 'Âu', last: 'Ngô' };
-const {first, last} = me;
-console.log(first, last); // Âu Ngô```
 
+    const me = { first: 'Âu', last: 'Ngô' };
+    const {first, last} = me;
+    console.log(first, last); // Âu Ngô
+
+<html>
+<head>
+</head>
 -	Tách dữ liệu và gán cho biến khác từ đối tượng
-'let me = {first: 'Âu', last: 'Ngô', from: 'VN'};
-let {first: ten, last: ho, from: que } = me;
-console.log(ten, ho, que); // Âu Ngô VN'
+
+    let me = {first: 'Âu', last: 'Ngô', from: 'VN'};
+    let {first: ten, last: ho, from: que } = me;
+    console.log(ten, ho, que); // Âu Ngô VN
+
+<html>
+<head>
+</head>
 -	Tách dữ liệu và gán cho biến khác từ đối tượng lồng nhau
-'const me = {
-  Âu: { 
-    age: 21,
-    from: 'Thanh Hoá'
-  }
-};
-const { Âu: { age, from }} = me;
-console.log(age, from); // 21 "Thanh Hoá"'
+    
+    const me = {
+      Âu: { 
+        age: 21,
+        from: 'Thanh Hoá'
+      }
+    };
+    const { Âu: { age, from }} = me;
+    console.log(age, from); // 21 "Thanh Hoá"
 
+<html>
+<head>
+</head>
 -	Tách dữ liệu từ một mảng
-'const [a, b] = [1, 2, 3, 4, 5, 6];
-console.log(a, b);// 1 2
-const [c,d,,,e] = [1, 2, 3, 4, 5, 6];
-console.log(c, d, e);'
--	Biến đối tượng thành một tham số của hàm
-'const me = {
-  name: "Âu",
-  age: 21,
-  year: 2021
-};
 
-const numb = ({ age, year }) => age + year;
-console.log(numb(me));// 2042'
+    const [a, b] = [1, 2, 3, 4, 5, 6];
+    console.log(a, b);// 1 2
+    const [c,d,,,e] = [1, 2, 3, 4, 5, 6];
+    console.log(c, d, e);
+
+<html>
+<head>
+</head>
+-	Biến đối tượng thành một tham số của hàm
+
+    const me = {
+      name: "Âu",
+      age: 21,
+      year: 2021
+    };
+
+    const numb = ({ age, year }) => age + year;
+    console.log(numb(me));// 2042
 
 ## 3.	Javascript là ngôn ngữ lập trình bất đồng bộ
 Hàm sẽ không bao giờ được gọi xử lí trực tiếp, nó sẽ được giải quyết thông qua các message.
@@ -72,14 +94,17 @@ Callback là một hàm sẽ được gọi bởi một hàm khác. Hiểu phứ
 
 -	Nhược điểm: nếu lồng nhiều hàm callback với nhau sẽ gây ra hell callback => treo máy, lỗi giao diện
 
+<html>
+<head>
+</head>
 -	Ví dụ:
 
-'function doSomething(first, action){
-  console.log(first);
-  action();
-};
+    function doSomething(first, action){
+      console.log(first);
+      action();
+    };
 
-doSomething("Nấu cơm", () => console.log("Ăn cơm"));'
+doSomething("Nấu cơm", () => console.log("Ăn cơm"));
 
 ## 6.	Promise
 Promise là một cơ chế trong JavaScript giúp thực thi các tác vụ bất đồng bộ mà không rơi vào callback hell (tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng). 
@@ -91,34 +116,40 @@ Promise có 3 trạng thái:
 
 Khi promise ở trả về resolve() nó sẽ gọi hàm callback của hàm then() với tham số truyền vào là value. Ngược lại nó gọi hàm callback của hàm catch() khi nó trả về reject() với tham số truyền vào là error. Sau tất cả, mặc kệ là thành công hay thất bại nó đều gọi tới callback của hàm finally().
 
+<html>
+<head>
+</head>
 Ví dụ:
-'function checkEven(x){
-  return new Promise((resolve, reject) => {
-    if(x%2 === 0) resolve(x);
-    else reject("Không phải số chẵn");
-  })  
-}
 
-checkEven(3)
-  .then(x => console.log(x+" chia hết cho 2"))
-  .catch(error => console.log(error))
-  .finally(() => console.log("Done!"))'
+    function checkEven(x){
+      return new Promise((resolve, reject) => {
+        if(x%2 === 0) resolve(x);
+        else reject("Không phải số chẵn");
+      })  
+    }
+
+    checkEven(3)
+      .then(x => console.log(x+" chia hết cho 2"))
+      .catch(error => console.log(error))
+      .finally(() => console.log("Done!"))
 
 ## 7.	Promise.all()
 Xử lý nhiều promise cùng một lúc và trả về kết quả resolve(value) với value là một array chứa các kết quả của các quá trình bất đồng bộ đã gọi tương ứng. Promise.all sẽ reject khi một promise truyền vào trả về reject(error).
 
+<html>
+<head>
+</head>
 Ví dụ:
 
-'const promise1 = Promise.resolve(3);
-const promise2 = 42;
-const promise3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'foo');
-});
+    const promise1 = Promise.resolve(3);
+    const promise2 = 42;
+    const promise3 = new Promise((resolve, reject) => {
+      setTimeout(resolve, 100, 'foo');
+    });
 
-Promise.all([promise1, promise2, promise3]).then((values) => {
-  console.log(values);
-});
-'
+    Promise.all([promise1, promise2, promise3]).then((values) => {
+      console.log(values);
+    });
 
 ## 8. Học trên freecodecam
 ![ES6](./ES6.png)
