@@ -15,7 +15,7 @@
 - JS là ngôn ngữ đồng bộ. Vì nó thực thi các câu lệnh từ trên xuống dưới theo trình tự
 - Tuy nhiên cũng những trường hợp bất đồng bộ khi thao tác với API như: setTimeout, setInterval,...
 
-## 3. callback
+## 3. Callback
 
 - là hàm được truyền qua đối số
 - được gọi trong hàm khác
@@ -32,10 +32,11 @@
 * Khó bảo trì
 * Dễ gây ra tình trạng các callback lồng nhau (callback hell)
 
-- Vd:
-  const myFun = (callback) => callback('Hello')
-  const myCallback = (a) => console.log(a)
-  myFun(myCallback)
+#### Vd:
+
+const myFun = (callback) => callback('Hello')
+const myCallback = (a) => console.log(a)
+myFun(myCallback)
 
 ## 4. Promise
 
@@ -48,39 +49,41 @@
 * then() nhận callback được thực thi khi resolve(có thể có nhiều then())
 * catch() nhận callback được thực thi khi reject
 * finally() nhận callback trả về cuối cùng chỉ cần có resolve hoặc reject
-  VD:
-  const promise = (value) => new Promise((resolve, reject) => {
-  if (value !== "muộn")
-  setTimeout(resolve, 1000)
-  else
-  reject("nghỉ")
-  })
-  promise()
-  .then(() => {
-  console.log("thức dậy")
-  return promise()
-  })
-  .then(() => {
-  console.log("đánh răng")
-  return promise()
-  })
-  .then(() => {
-  console.log("ăn sáng")
-  return promise("muộn")
-  })
-  .then(() => {
-  console.log("đi làm")
-  })
-  .catch((result) => {
-  console.log(result)
-  })
-  .finally(() => console.log("nghèo"))
 
-  ### PromiseAll
+#### VD:
 
-* Chạy song song các promise
-* Các promise không ảnh hưởng đến nhau
-  VD:
+const promise = (value) => new Promise((resolve, reject) => {
+if (value !== "muộn")
+setTimeout(resolve, 1000)
+else
+reject("nghỉ")
+})
+promise()
+.then(() => {
+console.log("thức dậy")
+return promise()
+})
+.then(() => {
+console.log("đánh răng")
+return promise()
+})
+.then(() => {
+console.log("ăn sáng")
+return promise("muộn")
+})
+.then(() => {
+console.log("đi làm")
+})
+.catch((result) => {
+console.log(result)
+})
+.finally(() => console.log("nghèo"))
+
+### PromiseAll
+
+- Chạy song song các promise
+- Các promise không ảnh hưởng đến nhau
+  #### VD:
   const promise1 = new Promise(resolve => setTimeout(() => resolve(['a', 'b']), 1000))
   const promise2 = new Promise(resolve => setTimeout(() => resolve(['c', 'd']), 3000))
   Promise.all([promise1, promise2])
@@ -124,4 +127,4 @@
 
 ## 6. Kết quả thực hành Freecodecamp
 
-![kết quả es6 freecodecamp](/freecodecamp.png)
+![kết quả es6 freecodecamp](./freecodecamp.png)
