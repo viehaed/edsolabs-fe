@@ -61,6 +61,12 @@ chỉ có thể được sử dụng trong các hàm async
 async: đặt trước function\
 await: đặt trước promise
 
+# Ưu và nhược điểm của Asyns - Await với Promise.
+- Ưu điểm :\
+dễ học, dễ đọc, dễ nhìn hơn\
+có ích trong các trường hợp chạy các promise tuần tự
+- Nhược điểm:\
+với các trường hợp muốn chạy các promise cùng lúc thì nên dùng promise.all()
 # Thực hành
 ![Screenshot (131).png](https://www.dropbox.com/s/rndl5clkw9oueh8/Screenshot%20%28131%29.png?dl=0&raw=1)
 
