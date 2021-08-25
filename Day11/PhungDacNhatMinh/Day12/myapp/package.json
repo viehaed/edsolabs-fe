@@ -1,0 +1,30 @@
+{
+    "name": "day11",
+    "version": "1.0.0",
+    "description": "week3,Express",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "nodemon --inspect src/main.js",
+        "watch": "node-sass --watch src/resources/scss/ --output src/public/css/ ",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pdnm20091998/edsolabs-fe.git"
+    },
+    "author": "pdnm1998",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pdnm20091998/edsolabs-fe/issues"
+    },
+    "homepage": "https://github.com/pdnm20091998/edsolabs-fe#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.3",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "node-sass": "^6.0.1",
+        "nodemon": "^2.0.12"
+    }
+}
