@@ -6,7 +6,7 @@
   > - CallBack function là gì, ưu điểm, hạn chế của CallBack Function? Cho ví dụ về CallBack function.
   > - Promise là gì, ví dụ tình huống về trường hợp nên sử dụng Promise. Các thành phần của của 1 Promise, ví dụ về Promise.
   > - Promise All là gì? Ví dụ tình huống về trường hợp sử dụng Promise All.
-  > **Phần nâng cao**
+- **Phần nâng cao**
   > - Async - Await là gì? Cú pháp của Asyns-Await ra sao?
   > - Ưu và nhược điểm của Asyns - Await với Promise.
 - Hình thức nộp bài:
