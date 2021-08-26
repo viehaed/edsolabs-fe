@@ -1,4 +1,0 @@
-Tổng hợp tất cả các câu hỏi của thành viên trong nhóm A.
-1. Javascript là gì?
-2. Var và let khác nhau như thế nào?
-....
