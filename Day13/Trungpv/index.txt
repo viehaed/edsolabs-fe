@@ -1,0 +1,213 @@
++ var
+với từ khóa var chúng ta có thể khai báo đa dạng các kiểu biến như number, string, boolean, etc. 
+Trừ trường hợp được khai báo bên trong 1 function (khi đó biến var sẽ có scope là function/locally scoped),
+biến var sẽ có scope là globally scoped. Đặc biệt, biến var còn có thêm tính chất hoisting:
+nghĩa là dù khai báo ở đâu thì biến đều sẽ được đem lên đầu scope trước khi code được thực hiện.
+var greeting;
+    console.log(greeting); // greeting is undefined
+    greeting = "say hello";
+
+
++ let 
+biến let được khai báo sẽ có scope là block scoped chứ không phải globally hay locally scoped.
+đối với biến có scope là block scoped nếu ra khỏi scope được khai báo thì sẽ không thể sử dụng được nữa.
+let cho phép chúng ta cập nhật giá trị của biến chứ không cho phép chúng ta tái khái báo lại biến đó.
+Giống với var, let cũng có tính hoisting tuy nhiên lại khác nhau ở chỗ thay vì var được khởi tạo với 
+giá trị là undefined thì let sẽ không có bất kỳ giá trị khởi tạo nào. Điều này dẫn đến việc nếu 
+chúng ta sử dụng biến let trước khi khai báo thì sẽ gặp lỗi Reference Error.
+
+ let greeting = "say Hi";
+   let times = 4;
+
+   if (times > 3) {
+        let hello = "say Hello instead";
+        console.log(hello); // "say Hello instead"
+    }
+   console.log(hello); // hello is not defined
+
+
++ const
+Tương tự với let cũng có scope là block scoped, và hoisting thì chúng ta có thêm 1 kiểu 
+khai báo biến nữa là const. Trong biến const nếu trường hợp kiểu của biến là 
+primitive (bao gồm string, number, boolean, null, và undefined) thì chúng ta sẽ không thể
+ tái khai báo hay cập nhật giá trị mới để thay thế cho giá trị trước đó của biến.
+
+  const greeting = "say Hi";
+    greeting = "say Hello instead"; // error : Assignment to constant variable. 
+
+    ------------------------------------------------
+
+    const greeting = "say Hi";
+    const greeting = "say Hello instead"; // error : Identifier 'greeting' has already been declared
+
+
++ JS là ngôn ngữ đồng bộ hay bất đồng bộ
+Javascript là ngôn ngữ lập trình bất đồng bộ và chỉ chạy trên một luồng. Sự bất đồng bộ
+trong javascript xuất hiện khi nó thao tác với các WebAPI (ajax, setTimeout(), … ). 
+Khi một câu lệnh thao tác với WebAPI, nó sẽ mất một khoảng thời gian để chờ các dữ liệu trả về 
+từ WebAPI, do đó ở trong luồng chính của javascript, nó sẽ ở trong trạng thái chờ. 
+Tuy nhiên chương trình sẽ không bỏ trống khoảng thời gian chờ đó, chương trình sẽ tiếp tục 
+thực hiện các câu lệnh tiếp theo. Đó là lý do Javascript là ngôn ngữ bất đồng bộ.
+
++Tìm hiểu về promise 
+Promise là một cơ chế trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào
+callback hell hay pyramid of doom, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng.
+Các tác vụ bất đồng bộ có thể là gửi AJAX request, gọi hàm bên trong setTimeout, setInterval 
+hoặc requestAnimationFrame, hay thao tác với WebSocket hoặc Worker…
+ - Cơ bản về Promise
+ let promise = readFile("example.txt");
+- Fulfilled: Đoạn mã xử lý bất đồng bộ thành công
+- Rejected: Đoạn mã xử lý bất đồng bộ thất bại
+let promise = readFile("example.txt");
+
+    promise.then(function(contents) {
+    // fulfillment
+    console.log(contents);
+    }, function(err) {
+    // rejection
+    console.error(err.message);
+    });
+
+    promise.then(function(contents) {
+    // fulfillment
+    console.log(contents);
+    });
+
+    promise.then(null, function(err) {
+    // rejection
+    console.error(err.message);
+    });
+   - Promise cũng còn có method catch() dùng để xử lý các Promise ở trạng thái Rejected
+   promise.catch(function(err) {
+ // rejection
+ console.error(err.message);
+});
+
+// Tương tự như
+promise.then(null, function(err) {
+ // rejection
+ console.error(err.message);
+});
+
++ Promise All là gì? Ví dụ tình huống về trường hợp sử dụng Promise All.
+-Promise All là gì
+Phương thức này nhận vào một mảng các promises và chỉ resolve khi tất cả các promises này hoàn thành, 
+hoặc reject khi một trong số chúng xảy ra lỗi. Trong trường hợp có lỗi xảy ra, tất cả các promise khác
+dù đã kết thúc hay chưa thì đều không được quan tâm nữa.
+
+-Ví dụ tình huống về trường hợp sử dụng Promise All. 
+//Lấy thông tin chi tiết của page
+function getDetailPage(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            resolve('Thông tin chi tiết của page tips javascript')
+        }, 300)
+    })
+}
+
+//Lấy thông tin giới thiệu về page 
+function getInfoPage(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            resolve('lấy thông tin giới thiệu của page tips javascript')
+        }, 400)
+    })
+}
+
+//Lấy những bài viết mới nhất của page 
+function getArticlesPage(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            resolve('Lấy những bài viết mới nhất của page tips javascript')
+        }, 500)
+    })
+}
+
+function initLoad(){
+    // loading.show() //hiên thị icon loading lên :D 
+    Promise.all([ getDetailPage(), getInfoPage(), getArticlesPage()]).then(res=>{
+        console.log(res)
+        // loading.hide() //Sau khi có data rồi thì hide nó và hiện thị lên thôi
+    }).catch(err=>{
+        console.log(err)
+        // loading.hide()// Lỗi cũng hide nó đi
+    })
+}
+//init load    
+initLoad()
+
++ destructurning trong JS
+Destructuring là một cú pháp cho phép bạn gán các thuộc tính của một Object hoặc một Array. 
+Điều này có thể làm giảm đáng kể các dòng mã cần thiết để thao tác dữ liệu trong các cấu trúc này. 
+Có hai loại Destructuring: Destructuring Objects và Destructuring Arrays.
+
+var a, b;
+[a, b] = [1, 2]
+console.log(a, b); //1 2
+
+//or 
+
+const [a, b] = [1, 2]
+console.log(a, b); //1 2
+
+Trong dòng 1, chúng ta có 2 biến a và b trong array. Trong dòng tiếp theo, chúng ta thiết lập chúng 
+và set chúng bằng với một arrays tương ứng. Trong các dòng tiếp theo, chúng tôi in các giá trị 
+của a & b và chúng tôi nhận được 1 và 1 tương ứng là các phần tử trong mảng phía bên phải. 
+Đó chính là Destructuring javascript. 
++Destructuring assignment trong es6
+
+const obj = await Model.getObject({name: 'anonystick', blog: 'javascript'});
+//model.js
+modules.export = {
+  getObject: async({name, blog}){
+	console.log(name, blog)	
+  }
+}
+Trên ví dụ đó có sử dụng async/await trong es6. 
+
++Callback là gì?
+Callback là một hàm sẽ được thực hiện sau khi một hàm khác đã thực hiện xong 
+vì thế nó có tên là callback.
+callback tức là ta truyền một đoạn code (Hàm A) này vào một đoạn code khác (Hàm B). 
+Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback). Javascript là một 
+ngôn ngữ lập trình hướng sự kiện và bất đồng bộ nên callback function đóng vai trò rất quan trọng, 
+bạn sẽ truyền một callback function vào các sự kiện và xử lý bất đồng bộ đó..
+
+$('#test').click(function(){
+    // đây là callback function
+});
+
++Đồng bộ là gì? Bất đồng bộ là gì? Ưu và nhược điểm của chúng?
+- Xử lý đồng bộ (Synchronous)
+Synchronous (đồng bộ / tuần tự) tức là code chương trình sẽ chạy tuần tự từ trên xuống dưới. 
+Khi nào lệnh trên hoàn thành thì lệnh dưới mới được chạy.  Đây là cách viết code rất thường dùng.
+Cái hay của nó là dễ kiểm soát quá trình xử lý. Cái hay thứ hai là dễ kiểm soát lỗi phát sinh. 
+Còn điểm không hay của xử lý đồng bộ là gì?  Đó là do chạy theo thứ tự nên sẽ có trạng thái chờ, 
+lệnh trên chạy quá lâu sẽ làm ảnh hướng đến các lệnh dưới.
+
+<script>
+    console.log("Đời đẹp lắm");
+    console.log("Em có biết không");
+    /*Kết quả:
+         Đời đẹp lắm
+         Em có biết không
+    */
+</script>
+
+-Xử lý bất đồng bộ (Asynchronous) 
+Asynchronous (bất đồng bộ/bất tuần tự): tức là code chương trình không hẳn tuần tự nữa, 
+nhiều lệnh có thể thực hiện cùng lúc. Có khi lệnh dưới cho kết thúc và cho kết quả trước cả 
+lệnh phía trên.
+Cái hay của xử lý bất đồng bộ là gì? Đó là nó có thể tối ưu được sức mạnh của hệ thống, 
+thứ hai giúp giảm thời gian chờ, giúp code chạy nhanh hơn.  Còn điểm không tốt của bất đồng bộ?  
+Không phải hệ thống nào cũng dùng bất đồng bộ được, thứ hai là khó làm quen xử lý và kiểm soát lỗi phát sinh.
+Trong javascript, các hàm setTimeout, setInterval, fetch… là tiêu biểu cho các hàm xử lý bất đồng bộ 
+trong javascript 
+<script>
+    setTimeout( () => {console.log("Đời đẹp lắm");} , 1000);    
+    console.log("Em có biết không");
+    /*Kết quả:
+        Em có biết không
+        Đời đẹp lắm
+    */
+</script>
