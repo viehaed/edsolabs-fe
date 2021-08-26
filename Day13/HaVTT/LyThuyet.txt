@@ -1,0 +1,235 @@
+•	Var, let, const
+    - Var
+          - Phạm vi: var có phạm vi ảnh hưởng trong một function và khi nó ra khỏi function thì var sẽ không còn tồn tại
+              var x = 10;
+              function run() {
+                if (false) {
+                  var y = 20;
+                }
+                console.log(y); // y = undefined
+                console.log(x); // x = 10
+              }
+              run();
+              console.log(x); // x = 10
+              console.log(y); // y is not defined
+          - var là function scope và cho phép khai báo nhiều lần trong cùng scope, nó có thể gán lại giá trị
+              var x = 10;
+              var x = “a”; //Khai báo lại
+              if (true) {
+                  var x = 20; //gán lại
+              }
+              console.log(x); // x = 20;
+              	Giá trị khởi tạo là undefined
+              console.log(y); // y = undefined
+              var y = 20;
+    -	Let
+          - Phạm vi: let là block scope (phạm vi khối). block scope được đánh dấu trong phạm vi cặp ngoặc nhọn {}. Và khi thoát khỏi block scope thì nó cũng bị mất đi.
+              let x = 10;
+              if (true) {
+                  let x = 5; // đây là biến x khác 
+                  console.log(x); //5
+              }
+              console.log(x); // 10
+          - Ngoài ra, khi khai báo ở global scope, thì từ khóa var tạo thuộc tính mới cho global object, còn từ khóa let thì không.
+              var x = 'global';
+              let y = 'global';
+              console.log(this.x); // global
+              console.log(this.y); // undefined
+
+          - let cho phép chúng ta thay đổi giá trị của biến tuy nhiên không cho phép người dùng khai báo hai lần trong cùng 1 scope,
+            TH1:
+              let x = "hello";
+              let x = "xin chào";
+              console.log(x); // Identifier 'x' has already been declared
+
+            TH2:
+              let x = "hello";
+              x = "xin chào";
+              console.log(x); // xin chào
+              	Biến let không được khởi tạo
+              console.log(x);
+              let x = 10; // "Cannot access 'x' before initialization"
+    - Const
+        - Tương tự với let
+
+•	Đồng bộ là gì? Bất đồng bộ là gì? Ưu nhược điểm của chúng
+    -	Đồng bộ là một quy trình xử lý các công việc theo một thứ tự đã được lập sẵn
+        -	Ưu điểm là chương trình sẽ chạy theo đúng thứ tự từ trên xuống, và sẽ phát dừng lại ngay khi gặp một câu lệnh lỗi. Điều này sẽ khiến chương trình dễ kiểm soát và dễ phát hiện ra lỗi hơn.
+        -	Nhược điểm là hiệu suất chương trình sẽ chậm.
+    -	Bất đồng bộ là nhiều công việc có thể được thực hiện cùng lúc
+        -	Ưu điểm: Tối ưu được thời gian chạy của các câu lệnh
+        -	Nhược điểm: Khó kiểm soát cũng như fixbug code
+
+•	JS là ngôn ngữ đồng bộ hay bất đồng bộ
+    -	Javascript là ngôn ngữ lập trình bất đồng bộ và chỉ chạy trên một luồng. Sự bất đồng bộ trong javascript xuất hiện khi nó thao tác với các WebAPI (ajax, setTimeout(), … ). 
+    -	Khi một câu lệnh thao tác với WebAPI, nó sẽ mất một khoảng thời gian để chờ các dữ liệu trả về từ WebAPI, do đó ở trong luồng chính của javascript, nó sẽ ở trong trạng thái chờ.
+    -	Xử lý bất đồng bộ (https://www.tma.vn/Hoi-dap/Cam-nang-nghe-nghiep/Xu-ly-bat-dong-bo-trong-JavaScript/31575)
+        -	Callback: là một hàm được truyền vào một hàm khác với tư cách như một tham số của hàm đó.
+        -	Promise:  là một đối tượng bao hàm một hàm chứa các đoạn code không đồng bộ. Hàm này chứa 2 tham số là hai hàm callback để giải quyết sau khi mã đồng bộ thực hiện thành công hay thất bại
+        -	Asyn/Await: Await là một tính năng ngôn ngữ là một phần của tiêu chuẩn ES8. Từ khóa Async để khai báo rằng hàm này sẽ xử lý các hàm bất đồng bộ, nó sẽ chờ kết quả của các hàm bất đồng bộ được trả về sau đó mới thực hiện tiếp. Hàm bất đồng bộ đó phải trả về một Promise và được khai báo với từ khóa Await
+
+
+•	Callback function là gì, ưu điểm, hạn chế của Callback Function? Cho ví dụ
+
+    -	Callback là một hàm sẽ được thực hiện sau khi một hàm khác đã thực hiện xong
+        Cụ thể: Trong JavaScript, hàm là đối tượng. Do đó, các hàm có thể lấy các hàm làm đối số và có thể được trả về bởi các hàm khác. Các hàm thực hiện điều này được gọi là higher - order function (Hàm bậc cao hơn). Bất kỳ hàm nào được truyền dưới dạng đối số được gọi là hàm callback.
+          function A(){
+            // code
+          }
+          // Hàm B có một tham số callback
+          function B(callback){
+              callback();
+          }
+          // Gọi hàm B và truyền tham số là hàm A
+          B(A);
+    -	Ví Dụ
+          function doHomework(subject){
+            console.log(`Bắt đầu làm bài tập ${subject}`);
+            callback();
+          }
+          doHomework('Javascript', function(){
+            console.log('Làm xong bài tập'  );
+          })
+          //Làm xong bài tập Javascript
+            
+        VD2:
+          function xinChao(hoTen) {
+              console.log("Xin Chào Bạn " + hoTen);
+          }
+
+          function layTen(ho, ten, callback) {
+            let hoTen = ho + ' ' + ten;
+            callback(hoTen);
+          }
+
+          /*Gọi hàm xin chào như một tham số (callback)*/
+          layTen("Vũ", "Hà", xinChao);
+
+          //Xin Chào Bạn Vũ Hà
+
+•	Promise là gì, ví dụ tình huống về trường hợp nên sử dụng Promise. Các thành phần của 1 Promise, ví dụ về Promise
+
+    -	Promise sinh ra để xử lý kết quả của một hành động cụ thể, kết quả của mỗi hành động sẽ là thành công hoặc thất bại và Promise sẽ giúp chúng ta giải quyết câu hỏi "Nếu thành công thì làm gì? Nếu thất bại thì làm gì?". Cả hai câu hỏi này ta gọi là một hành động gọi lại (callback action)
+    -	Các trạng thái của promise
+        -	Fulfilled: hành động xử lý xong và thành công
+        -	Rejected: hành động xử lý xong và thất bại
+        -	Pending: hành động đang chờ xử lý hoặc bị từ chối
+
+          Trong đó hai trạng thái Reject và Fulfilled ta gọi là Settled, tức là đã xử lý xong.
+    -	Cách tạo 1 promise
+
+          var promise = new Promise(function(resolve, reject){
+                      resolve('Success');
+                      // OR
+                      reject('Error');
+                  });
+
+                    promise.then(
+                          function(success){
+                              // Success
+                          },
+                          function(error){
+                              // Error
+                          }
+            );
+
+          Trong đó:
+
+          * `resolve` là một hàm callback xử lý cho hành động thành công.
+          * `reject` là một hàm callback xử lý cho hành động thất bại.
+    -	Catch: được dùng để bắt lỗi
+          var promise = new Promise(function(resolve, reject){
+          reject('Error!');
+          });
+
+          promise.then(function(message){
+                console.log(message);
+          })
+          .catch(function(message){
+                console.log(message);
+          });
+
+•	Promise All là gì? Ví dụ tình huống về trường hợp sử dụng Promise All
+
+    -	Promise.all: nhận vào một mảng các promises và chỉ resolve khi tất cả các promises này hoàn thành, hoặc reject khi một trong số chúng xảy ra lỗi. Trong trường hợp có lỗi xảy ra, tất cả các promise khác dù đã kết thúc hay chưa thì đều không được quan tâm nữa.
+    -	Ví dụ
+        const promisesWithoutReject = [
+          Promise.resolve('🍎 #1'),
+          '🍎 #2',
+          new Promise((resolve, reject) => setTimeout(resolve, 100, '🍎 #3'))
+        ]
+
+        Promise.all(promisesWithoutReject)
+          .then(apples => console.log(`We can sell all these good apples`, apples))
+        const promisesWithOneReject = [
+          Promise.resolve('🍎 #1'),
+          '🍎 #2',
+          new Promise((_, reject) => setTimeout(reject, 100, 'Bad 🍏'))
+        ]
+
+        Promise.all(promisesWithOneReject)
+          .then(console.log)
+          .catch(badApple => 
+            console.error(`Threw out all apples because of this`, badApple))
+
+        // We can sell all these good apples [ '🍎 #1', '🍎 #2', '🍎 #3' ]
+        //Threw out all apples because of this Bad 🍏
+
+•	Tìm hiểu về destructurning trong JS (https://viblo.asia/p/destructuring-assignment-in-es6-xlbRBNQgRDM)
+    -	Destructuring là một cú pháp cho phép tách dữ liệu được lưu trữ bên trong (nested) Objects hoặc Arrays (tổng quát hơn là các iterable values) và gán chúng cho các biến riêng biệt.
+    -	Object Destructuring
+        const person = { first: 'Foo', last: 'Bar' };
+        const {first, last} = person;
+
+        console.log(first); // Foo
+        console.log(last);  // Bar
+
+        //------------------------------------------
+        // Aliases
+
+        let characters = {a: 'a', b: 'b', c: 'c'};
+        let {a: d, b: e, c: f} = characters;
+
+        console.log(d, e, f); // a b c
+        console.log(a);       // Uncaught ReferenceError: a is not defined
+
+        //------------------------------------------
+        // Vue Resource - Fetching notifications from API endpoint
+
+        this.$http.get('/api/notifications')
+          .then(({data}) => {
+            let {counter, notifications} = data;
+            
+            this.unreadCounter = counter;
+            this.notifications = notifications;
+          });
+    -	Array Destructuring
+        let characters = ['a', 'b', 'c'];
+        let [d, e, f] = characters;
+
+        console.log(d, e, f); // a b c
+
+•	Async – Await là gì? Cú pháp của Async – Await ra sao?
+    -	Async / Await là một tính năng của JavaScript giúp chúng ta làm việc với các hàm bất đồng bộ theo cách thú vị hơn và dễ hiểu hơn. Nó được xây dựng trên Promises và tương thích với tất cả các Promise dựa trên API. 
+    -	Async - khai báo một hàm bất đồng bộ (async function someName(){...}).
+        o	Tự động biến đổi một hàm thông thường thành một Promise.
+        o	Khi gọi tới hàm async nó sẽ xử lý mọi thứ và được trả về kết quả trong hàm của nó.
+        o	Async cho phép sử dụng Await.
+    -	Await - tạm dừng việc thực hiện các hàm async. (Var result = await someAsyncCall ()
+        o	Khi được đặt trước một Promise, nó sẽ đợi cho đến khi Promise kết thúc và trả về kết quả.
+        o	Await chỉ làm việc với Promises, nó không hoạt động với callbacks.
+        o	Await chỉ có thể được sử dụng bên trong các function async.
+
+    -	Cú pháp của Async – Await
+        async function hello() {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          console.log('Hello World!');
+        }
+        hello();
+
+•	Ưu nhược điểm của Asyns – Await so với Promise
+    -	Ưu điểm: Code ngắn gọn hơn promise, dễ fixbug hơn promise
+    -	Nhược điểm
+
+
+
