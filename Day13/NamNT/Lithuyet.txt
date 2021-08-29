@@ -1,0 +1,131 @@
+Lí Thuyết
+- Đồng bộ và bất đồng bộ là gì? ưu và nhược điểm của chúng?
++ Synchronous (đồng bộ / tuần tự) tức là code chương trình sẽ chạy tuần tự từ trên xuống dưới. Khi nào lệnh trên hoàn thành thì lệnh dưới mới được chạy
++ Asynchronous (bất đồng bộ/bất tuần tự): tức là code chương trình không hẳn tuần tự nữa, nhiều lệnh có thể thực hiện cùng lúc. Có khi lệnh dưới cho kết thúc và cho kết quả trước cả lệnh phía trên.
+
+Ưu điểm và nhược điểm
++ Lập trình đồng bộ có ưu điểm là chương trình sẽ chạy theo đúng thứ tự từ trên xuống, và sẽ phát dừng lại ngay khi gặp một câu lệnh lỗi. Điều này sẽ khiến chương trình dễ kiểm soát và dễ phát hiện ra lỗi hơn.
++ Lập trình đồng bộ cũng có một nhược điểm là hiệu suất chương trình sẽ chậm
+
+- Javascript là ngôn ngữ đồng bộ hay bất đồng bộ
++ Javascript là ngôn ngữ lập trình bất đồng bộ và chỉ chạy trên một luồng. Sự bất đồng bộ trong javascript xuất hiện khi nó thao tác với các WebAPI (ajax, setTimeout(), … ). 
+
+- Callback function là gì? Ưu điểm và hạn chế của callback function? Cho ví dụ?
++ Callback function có thể được hiểu nôm na như sau: callback tức là ta truyền một đoạn code (Hàm A) này vào một đoạn code khác (Hàm B). Tới một thời điểm nào đó, Hàm A sẽ được hàm B gọi lại (callback). Javascript là một ngôn ngữ lập trình hướng sự kiện và bất đồng bộ nên callback function đóng vai trò rất quan trọng, bạn sẽ truyền một callback function vào các sự kiện và xử lý bất đồng bộ đó..
+
+Ưu điểm
++ Callback function là một cách thức phổ biến, dễ hiểu, dễ triễn khai. Nhược điểm là các callback nếu lồng nhau nhiều quá dễ dẫn đến tình trạng CallbackHell (sẽ được đề cập đến ở bài tới) – gây khó khăn khi sửa lỗi và bảo trì.
+Nhược điểm
++ Callback hell (Callback hell là trạng thái code lồng nhau nhiều cấp dẫn đến hình thành hình kim tự tháp code, nhìn rất phức tạp, khó hiểu, khó debug lỗ,i khó maintain)
+
+Ví dụ:
+$('#test').click(function(){
+    // đây là callback function
+});
+
+
+- Promise là gì, ví dụ tình huống về trường hợp nên sử dụng Promise. Các thành phần của của 1 Promise, ví dụ về Promise
+1. Promise là gì?
++ Promise là một cơ chế trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào callback hell hay pyramid of doom, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng. Các tác vụ bất đồng bộ có thể là gửi AJAX request, gọi hàm bên trong setTimeout, setInterval hoặc requestAnimationFrame, hay thao tác với WebSocket hoặc Worker…
+
+Ví dụ về promise
+api.getUser('pikalong')
+  .then(user => api.getPostsOfUser(user))
+  .then(posts => api.getCommentsOfPosts(posts))
+  .catch(err => { throw err }) 
+
+2. Cách tạo promise
+const p = new Promise( function(resolve, reject) {
+  // Thực thi các tác vụ bất đồng bộ ở đây, và gọi `resolve(result)` khi tác
+  // vụ hoàn thành. Nếu xảy ra lỗi, gọi đến `reject(error)`.
+})
+
+3. Catch trong Promise
+then có hai tham số callbacks đó là success và error. Tuy nhiên bạn cũng có thể sử dụng phương thức catch để bắt lỗi.
+promise.then().catch();
+
+Ví dụ:
+var promise = new Promise(function(resolve, reject){
+    reject('Error!');
+});
+ 
+ 
+promise
+        .then(function(message){
+            console.log(message);
+        })
+        .catch(function(message){
+            console.log(message);
+        });
+
+4. Async / Await là gì?
+Async / Await là một tính năng của JavaScript giúp chúng ta làm việc với các hàm bất đồng bộ theo cách thú vị hơn và dễ hiểu hơn. Nó được xây dựng trên Promises và tương thích với tất cả các Promise dựa trên API. Trong đó:
+
+Async - khai báo một hàm bất đồng bộ (async function someName(){...}).
+
+Tự động biến đổi một hàm thông thường thành một Promise.
+Khi gọi tới hàm async nó sẽ xử lý mọi thứ và được trả về kết quả trong hàm của nó.
+Async cho phép sử dụng Await.
+Await - tạm dừng việc thực hiện các hàm async. (Var result = await someAsyncCall ().
+
+Khi được đặt trước một Promise, nó sẽ đợi cho đến khi Promise kết thúc và trả về kết quả.
+Await chỉ làm việc với Promises, nó không hoạt động với callbacks.
+Await chỉ có thể được sử dụng bên trong các function async.
+
+Ví dụ:
+
+// cách 1: 
+    function getJSON() {
+
+        // To make the function blocking we manually create a Promise.
+        return new Promise( function(resolve) {
+            axios.get('https://tutorialzine.com/misc/files/example.json')
+                .then( function(json) {
+
+                    // The data from the request is available in a .then block
+                    // We return the result using resolve.
+                    resolve(json);
+                });
+        });
+    }
+    // cách 2:
+    // Async/Await approach
+
+    // The async keyword will automatically create a new Promise and return it.
+    async function getJSONAsync() {
+
+        // The await keyword saves us from having to write a .then() block.
+        let json = await axios.get('https://tutorialzine.com/misc/files/example.json');
+
+        // The result of the GET request is available in the json variable.
+        // We return it just like in a regular synchronous function.
+        return json;
+    }
+
+5. Xử lý lỗi trong Async / Await
+Async / Await là nó cho phép chúng ta bắt các lỗi không mong đợi bằng cách sử dụng try / catch. Chúng ta chỉ cần để các await call của chúng ta vào trong khối try/catch
+ví dụ
+ async function doSomethingAsync(){
+        try {
+            // This async call may fail.
+            let result = await someAsyncCall();
+        }
+        catch(error) {
+            // If it does we will catch the error here.
+        }  
+    }
+
+Một số câu hỏi:
+Promise
+1. Việc sử dụng promise liệu có thay thế hoàn toàn cho callback hay không? Tại sao?
+2. Sử dụng promise all có ưu điểm gì hơn so với promise ?
+3. Phân biệt .then(resolve, reject) và .then(resolve).catch(reject) ?
+4. Ngoài promise dùng để khắc phục callback hell thì còn gì để khắc phục tình trạng đó không?
+
+Đồng bộ và bất đồng bộ
+1. Cơ chết hoạt động của Event Loop được thực hiện như thế nào?
+2. Ưu nhược điểm của lập trình đồng bộ và bất đồng bộ? Các cách để xử lí?
+
+Asyn/await
+1. Việc sử dụng Asyn/ await thì có làm hạn chế đi việc sử dụng Promise hay không? Tại sao ?
+2. Có thể  dùng await bên trong một hàm thông thường hay không ? Tại sao ?
