@@ -1,0 +1,224 @@
+
+@font-face {
+  font-family: sfPro;
+  src: url(../../font/SF-Pro-Text-Heavy.otf);
+}
+@font-face {
+  font-family: sfProText;
+  src: url(../../font/SF-Pro-Text-Bold.otf);
+}
+@font-face {
+  font-family: sfProTextThin;
+  src: url(../../font/SF-Pro-Text-Light.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "sfPro";
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  font-family: "sfProText";
+  border: 0px solid;
+  width: 342px;
+  height: 70px;
+  border-radius: 37px;
+  color: #ffffff;
+  animation: moveInBottom 0.5s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+.btn__custom {
+  text-decoration: none;
+  padding: 26px 0 25px 0;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.28);
+}
+.btn__custom:hover {
+  background-color: #FFFFE747;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.btn__create {
+  background: #52439a;
+}
+.btn__create:hover {
+  background-color: #5243CC;
+}
+.btn__continue {
+  background: #78258b;
+}
+.btn__continue:hover {
+  background-color: #78259F;
+}
+
+.form__unline {
+  margin: 32px 0 32px 0;
+}
+
+/* ------- Sign Up ---------- */
+.container__signup .btn {
+  box-shadow: 0px 25px 45px rgba(82, 67, 154, 0.25);
+}
+
+/*  --------- Sign In ------------ */
+.container__signin .btn {
+  box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+}
+
+/* -------------animation --------------------- */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.form {
+  margin: 0 36px 45px 36px;
+  text-align: center;
+}
+.form__user {
+  display: flex;
+  align-items: center;
+  width: 342px;
+  background: #ffffff;
+  border-radius: 37px;
+  border: 0px solid;
+  overflow: hidden;
+  margin-bottom: 14px;
+  animation: moveInRight 1s ease-out;
+  height: 74px;
+}
+.form__user:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.form__pass {
+  display: flex;
+  align-items: center;
+  width: 342px;
+  background: #ffffff;
+  border-radius: 37px;
+  border: 0px solid;
+  overflow: hidden;
+  margin-bottom: 14px;
+  animation: moveInLeft 1s ease-out;
+  height: 72px;
+}
+.form__pass:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.form__icon {
+  padding: 30px 25px 30px 22px;
+  color: #3c3c43;
+}
+.form--input {
+  background: #ffffff;
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
+::placeholder {
+  font-family: "sfProText";
+  color: #3c3c43;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600px;
+  line-height: 18px;
+}
+
+.header__image {
+  margin: 10px 30px 5px 31px;
+}
+.header__image1 {
+  margin: 10px 66px 5px 66px;
+}
+.header__title {
+  margin: 0px auto 37px;
+  text-align: center;
+  padding: 0px;
+  animation: moveInTop 0.5s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+.header__title h4 {
+  font-family: "sfProTextThin";
+  font-size: 20px;
+  font-weight: 600px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.header__title h2 {
+  font-size: 34px;
+  font-weight: 800px;
+  line-height: 41px;
+  margin: 6px 0;
+  color: #ffffff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 414px;
+  min-width: 320px;
+  width: 100%;
+  height: 896px;
+}
+.container__signin {
+  background: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+}
+.container__signup {
+  background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+}
+
+/*# sourceMappingURL=styles.css.map */

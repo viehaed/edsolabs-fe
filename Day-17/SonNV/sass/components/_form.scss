@@ -1,0 +1,45 @@
+.form {
+  margin: 0 36px 45px 36px;
+  text-align: center;
+
+  &__user {
+    @include form;
+    animation: moveInRight 1s ease-out;
+    height: 74px;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    }
+  }
+
+  &__pass {
+    @include form;
+    animation: moveInLeft 1s ease-out;
+    height: 72px;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba($color-black, 0.2);
+    }
+  }
+
+  &__icon {
+    padding: 30px 25px 30px 22px;
+    color: $color-grey-form;
+  }
+
+  &--input {
+    background: $color-white;
+    border: none;
+    outline: none;
+    width: 220px;
+  }
+}
+
+::placeholder {
+  font-family: "sfProText";
+  color: $color-grey-form;
+  font-style: normal;
+  @include font(15px, 600px, 18px);
+}

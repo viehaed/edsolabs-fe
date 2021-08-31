@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  max-width: 414px;
+  min-width: 320px;
+  width: 100%;
+  height: 896px;
+
+  &__signin {
+    background: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+  }
+
+  &__signup {
+    background: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+  }
+}

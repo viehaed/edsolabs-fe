@@ -1,0 +1,17 @@
+@mixin form {
+    display: flex;
+    align-items: center;
+    width: 342px;
+    background: $color-white;
+    border-radius: $boder-radius;
+    border: 0px solid;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+@mixin font ($size, $weight , $height) {
+    font-size:  $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
