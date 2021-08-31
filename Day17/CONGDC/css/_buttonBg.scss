@@ -1,0 +1,5 @@
+@import "./variables";
+@mixin btn-background($bgColor, $bsColor) {
+  background: map-get($button-colors, $bgColor);
+  box-shadow: 0px 25px 45px $bsColor;
+}

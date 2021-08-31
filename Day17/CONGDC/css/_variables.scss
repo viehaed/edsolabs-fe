@@ -1,0 +1,19 @@
+$signin-primary-color: linear-gradient(180deg, #e5b2ca 0%, #cd82de 100%);
+$signup-primary-color: linear-gradient(180deg, #9183de 0%, #a094e3 100%);
+$button-colors: (
+  "signin-submit-color": #78258b,
+  "signin-nav-color": rgba(255, 255, 255, 0.28),
+  "signup-submit-color": #52439a,
+  "signup-nav-color": rgba(255, 255, 255, 0.28),
+);
+$font-sizes: (
+  "small": 1.2rem,
+  "medium": 1.3rem,
+  "large": 2rem,
+);
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 800,
+);
+$border-radius: 1.5rem;

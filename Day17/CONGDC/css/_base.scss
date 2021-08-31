@@ -1,0 +1,28 @@
+@import "./variables";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: "SF Pro Display", "Arial";
+}
+h1 {
+  font-size: map-get($font-sizes, large);
+}
+h2 {
+  font-size: map-get($font-sizes, medium);
+}
+a {
+  text-decoration: none;
+  font-size: 13.3333px;
+}
+i {
+  font-size: map-get($font-sizes, small);
+}
+input::placeholder {
+  color: #000;
+}

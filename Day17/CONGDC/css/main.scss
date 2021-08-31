@@ -1,0 +1,33 @@
+@ -0,0 +1,32 @@
+@import "./base";
+@import "./layout";
+@import "./module";
+@import "./state";
+@import "./theme";
+@import "./variables";
+@import "./buttonBg";
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include btn-background("signin-submit-color", rgba(120, 37, 139, 0.25));
+}
+.nav-btn {
+  @include btn-background("signin-nav-color", rgba(120, 37, 139, 0.25));
+}
+
+.separator-container {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: grid;
+  margin: 2rem 0;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.line-separator {
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+}
+.text-separator {
+  padding: 0 0.5rem;
+}
