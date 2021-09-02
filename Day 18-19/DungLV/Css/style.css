@@ -37,6 +37,10 @@ body {
   font-weight: 400 !important;
 }
 
+input:focus {
+  box-shadow: none !important;
+}
+
 .container {
   z-index: 1;
   position: relative;
