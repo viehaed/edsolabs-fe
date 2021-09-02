@@ -1,0 +1,30 @@
+@import '../variables/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../images/bg-boot.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input, button {
+    border-color: transparent;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryColor;
+}
