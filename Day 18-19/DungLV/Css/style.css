@@ -94,10 +94,11 @@ input:focus {
 .layout__right {
   position: relative;
   width: 651px;
-  height: 886px;
+  height: 885px;
 }
 .layout__right--img {
   width: 651px;
+  transform: scale(0.989);
   z-index: 2;
 }
 .layout__right--blur {
@@ -242,7 +243,7 @@ input:focus {
 
 /* RESPONSIVE DEVICE*/
 .form {
-  margin-bottom: 96px;
+  margin-bottom: 119px;
 }
 .form__input {
   position: relative;

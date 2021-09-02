@@ -49,10 +49,10 @@
     &__right {
         position: relative;
         width: 651px;
-        height: 886px;
+        height: 885px;
         &--img {
             width: 651px;
-            // height: 884px;
+            transform: scale(0.989);
             z-index: 2;
         }
         &--blur {
