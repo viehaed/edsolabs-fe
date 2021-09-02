@@ -1,0 +1,92 @@
+/*// ICON to ANIMATE //*/
+
+.layout {
+    &__right {
+        &--img {
+            animation: image 1s;
+        }
+        &--icon {
+            &-like {
+                animation: slide 1.5s;
+            }
+            &-ring {
+                animation: slideRing 1.9s;
+            }
+            &-celen {
+                animation: slideCelen 1.9s;
+            }
+            &-chin {
+                animation: slideChin 1.9s;
+            }
+            &-heart {
+                animation: slideHeart 1.9s;
+            }
+        }
+    }
+}
+@keyframes image {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(50px);
+    }
+    100% {
+        transform: scale(100px);
+    }
+}
+@keyframes slide {
+    0% {
+        transform: translateX(500px);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideRing {
+    0% {
+        transform: translateX(-1000px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideCelen {
+    0% {
+        transform: translateY(-1000px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes slideChin {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes slideHeart {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(50px);
+    }
+    100% {
+        transform: scale(400px);
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Css/reset.css">
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+    <div class="container layout">
+        <nav class="navbar navbar-expand-lg
+        navbar-light ">
+            <div class="container-fluid layout__box">
+                <a class="navbar-brand layout__logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="9" cy="20" r="1" stroke="#ED9B59" stroke-width="1.5" />
+                        <circle cx="15" cy="20" r="1" stroke="#ED9B59" stroke-width="1.5" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.00001 3.00006C5.30446 4.91189 3.97163 8.68865 9.00001 12C10.4142 9.55054 10.416 5.95789 6.00001 3.00006Z"
+                            stroke="#ED9B59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3 21C3 16.0294 7.02944 12 12 12C16.9706 12 21 16.0294 21 21" stroke="#ED9B59"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18 2.99997C16.4418 4.30789 12.301 6.618 15 11.9999C17.4495 10.5857 20.3455 7.76954 18 2.99997Z"
+                            stroke="#ED9B59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="layout__content-header">Datify</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end layout__nav" id="navbarNav">
+                    <ul class="navbar-nav col-lg-7 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-end">
+                        <li class="nav-item layout__nav--item">
+                            <a class="nav-link item-menu active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item layout__nav--item">
+                            <a class="nav-link item-menu" href="#">Members</a>
+                        </li>
+                        <li class="nav-item layout__nav--item">
+                            <a class="nav-link item-menu" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item layout__nav--item">
+                            <a class="nav-link item-menu" href="#">Privacy</a>
+                        </li>
+                        <li class="nav-item layout__nav--item">
+                            <a class="nav-link item-menu" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div
+                        class="text-center login col-lg-4 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-between align-items-center layout__login">
+                        <a href="#" class="btn btn--login pageBtn">Log In</a>
+                        <a href="#" class="btn btn--register pageBtn activeBtn">Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="layout__left col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <span class="layout__text layout__text--header">Because you deserve better!</span>
+                <h1 class="layout__title">Get noticed for <span class="layout__text">who</span> you are, <span
+                        class="layout__text">not
+                        what</span> you look like.</h1>
+                <p class="layout__content layout__content--res">You’re more than just a photo. You have stories to tell,
+                    and passions to
+                    share, and things to talk
+                    about that are more interesting than the weather. Because you deserve what dating deserves: better.
+                </p>
+                <form action="" method="POST" class="form">
+                    <div class="form__input">
+                        <svg class="form__input--icon" xmlns="http://www.w3.org/2000/svg" width="24" height="34"
+                            viewBox="0 0 24 34" fill="none">
+                            <g opacity="0.3">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M2 7C2 5.34315 3.34315 4 5 4H19C20.6569 4 22 5.34315 22 7V17C22 18.6569 20.6569 20 19 20H5C3.34315 20 2 18.6569 2 17V7ZM5 5.5H19C19.6497 5.5 20.203 5.91311 20.4114 6.49101L12.6934 11.6364C12.2735 11.9163 11.7265 11.9163 11.3066 11.6364L3.58857 6.491C3.79701 5.91311 4.35026 5.5 5 5.5ZM3.5 8.23473V17C3.5 17.8284 4.17157 18.5 5 18.5H19C19.8284 18.5 20.5 17.8284 20.5 17V8.23474L13.5254 12.8845C12.6017 13.5003 11.3983 13.5003 10.4746 12.8845L3.5 8.23473Z"
+                                    fill="#1A1D32" />
+                            </g>
+                        </svg>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Enter your email">
+                        <button type="submit" class="btn btn--get">
+                            Get Started
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-between info">
+                    <div class="info__dates">
+                        <h1 class="info__dates--points">15k+</h1>
+                        <p class="info__dates--desc">Dates and matches made everyday</p>
+                    </div>
+                    <div class="info__dates">
+                        <h1 class="info__dates--points info__dates--bold">1,456</h1>
+                        <p class="info__dates--desc">New members signup every day</p>
+                    </div>
+                    <div class="info__dates">
+                        <h1 class="info__dates--points">1M+</h1>
+                        <p class="info__dates--desc">Members from around the world</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="layout__right">
+                    <img class="layout__right--img" src="./image/avatar.png" alt="">
+                    <div class="layout__right--blur"></div>
+                    <div class="layout__right--icon layout__right--icon-chin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.46436 6.87628L13.1236 9.4645L7.25871 12.0341L5.70579 17.8296L7.63765 18.3473"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.77393 17.312L6.6717 18.0885" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.46436 6.87628L7.25871 12.0341" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.3302 11.134L19.3302 16.3301L17.5981 17.3301" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21.0623 15.3301L18.4642 16.8301" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.3302 11.134L18.6603 5.16986L15 7" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="layout__right--icon layout__right--icon-ring">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path
+                                d="M12.8333 21.4172C11.6749 23.1594 11 25.2509 11 27.4998C11 33.5749 15.9249 38.4998 22 38.4998C28.0751 38.4998 33 33.5749 33 27.4998C33 25.2509 32.325 23.1594 31.1667 21.4172"
+                                stroke="#EE0F32" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.8333 11L18.3333 5.5H25.6667L31.1667 11L22 22L12.8333 11Z" stroke="#EE0F32"
+                                stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="22" cy="12.8333" r="1.83333" fill="#EE0F32" />
+                        </svg>
+                    </div>
+                    <div class="layout__right--icon layout__right--icon-heart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.5512 6.43929C8.99526 4.85357 6.47866 4.85357 4.92276 6.43929C3.35908 8.03295 3.35908 10.6226 4.92276 12.2162L11.1078 18.5198C11.5978 19.0192 12.4022 19.0192 12.8922 18.5198L19.0772 12.2162C20.6409 10.6226 20.6409 8.03295 19.0772 6.43929C17.5213 4.85357 15.0047 4.85357 13.4489 6.43929L12.5353 7.37031C12.3943 7.51405 12.2014 7.59504 12 7.59504C11.7986 7.59504 11.6057 7.51405 11.4647 7.37031L10.5512 6.43929ZM11.6218 5.38875L12 5.77416L12.3782 5.38875C14.5221 3.20375 18.004 3.20375 20.1479 5.38875C22.284 7.5658 22.284 11.0897 20.1479 13.2668L13.9629 19.5703C12.8849 20.669 11.1151 20.669 10.0371 19.5703L3.85208 13.2668C1.71597 11.0897 1.71597 7.5658 3.85208 5.38875C5.99598 3.20375 9.47793 3.20375 11.6218 5.38875Z"
+                                fill="#EE0F32" />
+                        </svg>
+                    </div>
+                    <div class="layout__right--icon layout__right--icon-like">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.2 10.306L9.4577 7.08071C9.81067 6.57646 10 5.97584 10 5.36033V3.79626C10 2.57115 11.2002 1.70607 12.3625 2.09348C14.4572 2.79173 15.7326 4.91012 15.3696 7.08811L15 9.30599L20.4394 9.30832C21.7402 9.30888 22.6944 10.5315 22.3788 11.7935L20.5682 19.0338C20.2343 20.3692 19.0344 21.306 17.6578 21.306H5C3.34315 21.306 2 19.9628 2 18.306V13.306C2 11.6491 3.34315 10.306 5 10.306H7.2ZM13.5204 9.05939C13.4479 9.49421 13.5704 9.9389 13.8553 10.2753C14.1401 10.6117 14.5585 10.8058 14.9994 10.806L20.4388 10.8083C20.764 10.8085 21.0025 11.1141 20.9236 11.4296L19.113 18.6699C18.946 19.3376 18.3461 19.806 17.6578 19.806H8V11.7788L10.6865 7.94091C11.216 7.18453 11.5 6.2836 11.5 5.36033V3.79626C11.5 3.59498 11.6972 3.45286 11.8881 3.51651C13.2826 3.98134 14.1317 5.39159 13.8901 6.84151L13.5204 9.05939ZM6.5 11.806H5C4.17157 11.806 3.5 12.4776 3.5 13.306V18.306C3.5 19.1344 4.17157 19.806 5 19.806H6.5V11.806Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div class="layout__right--icon layout__right--icon-celen">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                            <path
+                                d="M13.8542 6.33334C13.8542 5.6775 13.3225 5.14584 12.6667 5.14584C12.0108 5.14584 11.4792 5.6775 11.4792 6.33334H13.8542ZM11.4792 11.0833C11.4792 11.7392 12.0108 12.2708 12.6667 12.2708C13.3225 12.2708 13.8542 11.7392 13.8542 11.0833H11.4792ZM26.5208 6.33334C26.5208 5.6775 25.9892 5.14584 25.3333 5.14584C24.6775 5.14584 24.1458 5.6775 24.1458 6.33334H26.5208ZM24.1458 11.0833C24.1458 11.7392 24.6775 12.2708 25.3333 12.2708C25.9892 12.2708 26.5208 11.7392 26.5208 11.0833H24.1458ZM14.9777 21.5107L14.1534 22.3655L14.1597 22.3715L14.9777 21.5107ZM19 18.4444L18.0548 19.1633C18.2794 19.4586 18.629 19.6319 19 19.6319C19.371 19.6319 19.7206 19.4586 19.9452 19.1633L19 18.4444ZM22.9547 21.5736L22.1621 20.6893C22.1534 20.6971 22.1449 20.7049 22.1365 20.7129L22.9547 21.5736ZM19 25.3333L18.1819 26.1941C18.6404 26.6298 19.3599 26.6297 19.8182 26.194L19 25.3333ZM11.4792 6.33334V11.0833H13.8542V6.33334H11.4792ZM24.1458 6.33334V11.0833H26.5208V6.33334H24.1458ZM15.802 20.6559C15.5636 20.426 15.4375 20.1369 15.4375 19.8357H13.0625C13.0625 20.8347 13.4904 21.7261 14.1534 22.3655L15.802 20.6559ZM15.4375 19.8357C15.4375 19.2399 15.9878 18.6042 16.8625 18.6042V16.2292C14.8515 16.2292 13.0625 17.7594 13.0625 19.8357H15.4375ZM16.8625 18.6042C17.3815 18.6042 17.8105 18.842 18.0548 19.1633L19.9452 17.7255C19.2439 16.8035 18.1105 16.2292 16.8625 16.2292V18.6042ZM19.9452 19.1633C20.1895 18.842 20.6185 18.6042 21.1375 18.6042V16.2292C19.8895 16.2292 18.7561 16.8035 18.0548 17.7255L19.9452 19.1633ZM21.1375 18.6042C22.0122 18.6042 22.5625 19.2399 22.5625 19.8357H24.9375C24.9375 17.7594 23.1485 16.2292 21.1375 16.2292V18.6042ZM22.5625 19.8357C22.5625 20.1511 22.4239 20.4546 22.1621 20.6893L23.7473 22.4578C24.4665 21.8131 24.9375 20.8845 24.9375 19.8357H22.5625ZM22.1365 20.7129L18.1818 24.4727L19.8182 26.194L23.7729 22.4342L22.1365 20.7129ZM19.8181 24.4726L15.7958 20.6499L14.1597 22.3715L18.1819 26.1941L19.8181 24.4726ZM7.91667 34.4375H30.0833V32.0625H7.91667V34.4375ZM30.0833 34.4375C32.4881 34.4375 34.4375 32.4881 34.4375 30.0833H32.0625C32.0625 31.1764 31.1764 32.0625 30.0833 32.0625V34.4375ZM34.4375 30.0833V12.6667H32.0625V30.0833H34.4375ZM34.4375 12.6667C34.4375 10.2619 32.4881 8.3125 30.0833 8.3125V10.6875C31.1764 10.6875 32.0625 11.5736 32.0625 12.6667H34.4375ZM30.0833 8.3125H7.91667V10.6875H30.0833V8.3125ZM7.91667 8.3125C5.51193 8.3125 3.5625 10.2619 3.5625 12.6667H5.9375C5.9375 11.5736 6.8236 10.6875 7.91667 10.6875V8.3125ZM3.5625 12.6667V30.0833H5.9375V12.6667H3.5625ZM3.5625 30.0833C3.5625 32.4881 5.51194 34.4375 7.91667 34.4375V32.0625C6.82359 32.0625 5.9375 31.1764 5.9375 30.0833H3.5625Z"
+                                fill="#EE0F32" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
