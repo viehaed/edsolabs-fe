@@ -21,10 +21,26 @@
         background: #fff;
         padding-left: 65px;
         border-radius: 40px;
+        border-color: transparent;
 
         &::placeholder { 
             color: #BABBC2;
         }
+
+        &:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+        
+        box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px #00000004,
+        0px 8.148148536682129px 6.518518447875977px 0px #00000007,
+        0px 20px 13px 0px #00000009,
+        0px 38.51852035522461px 25.481481552124023px 0px #0000000B,
+        0px 64.81481170654297px 46.85185241699219px 0px #0000000E,
+        0px 100px 80px 0px #00000012;
+
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
     }
 
     .formBtn {
