@@ -1,0 +1,149 @@
+@import '../variables/variables';
+.header {
+    margin-top: 37px;
+    margin-bottom: 18px;
+
+    &__logo {
+        position: relative;
+
+        span {
+            position: absolute;
+            margin-left: 10px;
+            top: 4px;
+            font-weight: 700;
+        }
+    }
+}
+
+.contentLeft {
+    margin-top: 117px;
+
+    &__title {
+        color: $secondaryColor;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+    &__notice {
+        margin-top: 13px;
+        font-size: 57px;
+        font-weight: 700;
+        line-height: 59px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        margin-bottom: 37px;
+
+        span {
+            color: $secondaryColor;
+        }
+    }
+
+    &__details {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        opacity: 70%;
+        margin-bottom: 22px;
+    }
+}
+
+.parameter {
+    display: flex;
+    margin-top: 119px;
+
+    &__item {
+        &:first-child {
+            margin-right: 77px;
+        }
+
+        &:last-child {
+            margin-left: 86px;
+        }
+    }
+
+    &__header {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -4px;
+
+        &--mid {
+            color: $secondaryColor;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        margin-top: 8px;
+    }
+}
+
+.images {
+    position: relative;
+
+    .couple {
+        margin-left: 50px;
+        filter: drop-shadow(20px 20px 30px rgb(238, 178, 178));
+        position: absolute;
+        z-index: 1;
+    }
+
+    .group-icons {
+        position: absolute;
+        left: 80px;
+        top: 20px;
+        animation: move-icon 2s ;
+    }
+
+    .true-love {
+        position: absolute;
+        right: 60px;
+        top: 480px;
+        animation: move-true-love 2s;
+    }
+}
+
+.display--none {
+    display: none;
+}
+
+a.activeItemMenu {
+    color: $secondaryColor !important;
+    
+    &::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: $secondaryColor;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4px;
+        position: absolute;
+    }
+}
+
+.activeBtn {
+    color: #F4EBE6 !important;
+    background-color: $secondaryColor !important;
+}
+
+@keyframes move-icon {
+    0% {top: -200px}
+    50% {top: 60px}
+    100% {top: 20px}
+}
+
+@keyframes move-true-love {
+    0% {right: 100px;}
+    50% {right: 30px;}
+    100% {right: 60px;}
+}

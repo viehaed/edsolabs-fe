@@ -1,0 +1,28 @@
+@import '../variables/variables';
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        position: relative;
+        margin-left: 44px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:nth-child(2) {
+            margin-left: 39px;
+        }
+    }
+
+    a {
+        color: $menuColor;
+        font-weight: 700;
+
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+}
