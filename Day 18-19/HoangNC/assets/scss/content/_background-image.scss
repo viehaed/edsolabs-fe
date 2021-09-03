@@ -1,0 +1,47 @@
+.bg {
+    position: relative;
+    display: flex;
+    align-items: end;
+    &--calendar {
+        position: absolute;
+        max-width: 77px;
+        height: 77px;
+        left: 542px;
+        top: 486px;
+    }
+    &--cup {
+        position: absolute;
+        max-width: 35px;
+        height: 35px;
+        left: 16px;
+        top: 253px;
+    }
+    &--heart {
+        position: absolute;
+        max-width: 69px;
+        height: 69px;
+        left: 566px;
+        top: 236px;
+    }
+    &--like {
+        position: absolute;
+        max-width: 44px;
+        height: 44px;
+        left: 388px;
+        top: 66px;
+    }
+    &--location {
+        position: absolute;
+        max-width: 91px;
+        height: 91px;
+        left: 46px;
+        top: 44px;
+    }
+    &--img {
+        position: absolute;
+        // max-width: 651px;
+        height: 892px;
+        left: -10px;
+        top: 18px;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Dating</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar--padding navbar navbar-light navbar-expand-lg">
+      <div class="navbar-brand d-flex align-items-center flex-grow-1">
+        <img src="./assets/img/logo.png"/>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navContent">
+        <ul class="navbar-nav navbar__list me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Member</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="container">
+          <div class="row justify-content-end navbar__account">
+            <a href="#" class="navbar__log-in col-lg-6 p-3">Log In</a>
+            <a href="#" class="navbar__register col-lg-6 p-2 ms-md-2 btn">Register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="content ">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content__description">
+            <p class="content__description--first">Becaue you deserve better!</p>
+            <p class="content__description--second">Get noticed for<span class="primary-color"> who</span>
+              you are,<span class="primary-color"> not what</span> you look like.</p>
+            <p class="content__description--third">You’re more than just a photo. You have stories to tell,
+              and passions to share, and things to
+              talk about that are more interesting than the weather. Because you deserve what dating
+              deserves: better.</p>
+          </div>
+          <form method="POST" class="form bg-white d-flex align-items-center">
+            <i class="form__icon far fa-envelope"></i>
+            <input type="text" class="form__input form-control" placeholder="Enter your email" />
+            <button class="form__btn btn text-nowrap flex-sm-shrink-0 flex-md-shrink-1 flex-lg-shrink-0">
+              Get Started
+            </button>
+          </form>
+          <div class="statistic">
+            <div class="row">
+              <article class="statistic__item col-sm-4">
+                <h3 class="statistic__header">15k+</h3>
+                <p class="statistic__description">Dates and matches made everyday</p>
+              </article>
+              <article class="statistic__item col-sm-4">
+                <h3 class="primary-color statistic__header">1,456</h3>
+                <p class="statistic__description">New members signup every day</p>
+              </article>
+              <article class="statistic__item col-sm-4">
+                <h3 class="statistic__header">1M+</h3>
+                <p class="statistic__description">Members from around the world</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg">
+            <img src="./assets/img/calendar.png" alt="" class="bg--calendar">
+            <img src="./assets/img/cup.png" alt="" class="bg--cup">
+            <img src="./assets/img/heart.png" alt="" class="bg--heart">
+            <img src="./assets/img/like.png" alt="" class="bg--like">
+            <img src="./assets/img/location.png" alt="" class="bg--location">
+            <img src="./assets/img/image 1.png" alt="" class="bg--img">
+            <div class="candidate">
+              <div class="candidate__header">
+                <span class="candidate__header--gender"><i class="gender-icon fas fa-mars"></i>
+                  Male</span>
+                <span class="candidate__header--age"><i class="age-icon far fa-calendar-plus"></i> 30-35
+                  Years</span>
+                <span class="candidate__header--locate"><img src="./assets/img/drop.svg" class="locate-icon">New York</span>
+              </div>
+              <div class="candidate__content">
+                <div class="candidate__content--first">
+                  <img src="./assets/img/girl.png" alt="" class="candidate__content--img">
+                  <div class="candidate__content--infor">
+                    <p class="candidate__content--infor-name">Angela Taylor</p>
+                    <p class="candidate__content--infor-address">Cincinati, OH</p>
+                  </div>
+                  <button type="button" class="candidate-btn btn">Select</button>
+                </div>
+                <div class="candidate__content--second">
+                  <img src="./assets/img/boy.png" alt="" class="candidate__content--img">
+                  <div class="candidate__content--infor">
+                    <p class="candidate__content--infor-name">Mike Johnson</p>
+                    <p class="candidate__content--infor-address">NY City, NY</p>
+                  </div>
+                  <button type="button" class="candidate-btn btn">Select</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

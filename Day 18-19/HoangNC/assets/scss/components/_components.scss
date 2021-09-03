@@ -1,0 +1,45 @@
+body {
+    background: url("../img/Frame\ 583.png");
+    background-size: cover;
+    font-family: "Google Sans";
+    font-weight: 400;
+    line-height: 24px;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.gender-icon {
+    margin-right: 15px;
+}
+.age-icon {
+    margin-right: 6px;
+}
+.locate-icon {
+    margin-right: 11px;
+}
+.primary-color {
+    color: $primary;
+}
+@mixin gray-lighten {
+    color: $grayColor;
+    opacity: 0.5;
+}
+@mixin button {
+    font-weight: 700;
+    background: $primary;
+    box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08),
+        0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407),
+        0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926),
+        0px 20px 26.1625px rgba(245, 155, 90, 0.04),
+        0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074),
+        0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+    border-radius: $borderRadius;
+    line-height: 20px;
+    color: #f4ebe6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}

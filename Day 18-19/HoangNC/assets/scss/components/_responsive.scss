@@ -1,0 +1,36 @@
+  @media screen and (min-width: 992px) {
+    .navbar {
+      &__list {
+        gap: $nav-gaps-lg;
+        .nav-link.active::after {
+          display: block;
+        }
+      }
+  
+      &__account {
+        gap: $nav-gaps-lg;
+      }
+      &__log-in {
+        width: auto !important;
+      }
+  
+      &__register {
+        width: 146px;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .navbar {
+      &__list {
+        gap: $nav-gaps-xl;
+        .nav-link.active::after {
+          display: block;
+        }
+      }
+  
+      &__account {
+        gap: $nav-gaps-xl;
+      }
+    }
+  }
