@@ -3,8 +3,8 @@
 @import "./font-faces";
 @import "./base";
 
-.button {
-  @include globalFont;
+.btn--modified {
+  @include globalFont(bold);
   background: $primary-color;
   box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08),
     0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407),
@@ -12,15 +12,12 @@
     0px 20px 26.1625px rgba(245, 155, 90, 0.04),
     0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074),
     0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
-  border-radius: 40px;
-  line-height: 20px;
+  border-radius: #{toRem(40)} !important;
+  line-height: #{toRem(20)};
   color: #f4ebe6;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.primary-align-text {
-  text-align: center;
 }
 
 // navbar
@@ -35,7 +32,7 @@
   }
 
   &__title {
-    @include globalFont;
+    @include globalFont(bold);
     margin: 0;
     font-style: normal;
     line-height: #{toRem(24)};
@@ -43,11 +40,12 @@
   }
 
   &__list {
-    @include globalFont;
-    @extend .primary-align-text;
+    @include globalFont(bold);
+
     line-height: #{toRem(20)};
 
     .nav-link {
+      @include globalFont(bold);
       color: #7d8790 !important;
       &:hover {
         color: $primary-color !important;
@@ -71,10 +69,11 @@
   }
 
   &__account {
-    @include globalFont;
+    @include globalFont(bold);
   }
 
   &__log-in {
+    @include globalFont(bold);
     color: #7d8790 !important;
     line-height: #{toRem(20)};
     text-align: center;
@@ -84,7 +83,6 @@
   }
 
   &__register {
-    @extend .button;
     height: #{toRem(36)};
     line-height: #{toRem(20)};
   }
@@ -99,7 +97,7 @@
 }
 .hero {
   &__intro {
-    @include globalFont;
+    @include globalFont(bold);
     color: $primary-color;
     line-height: #{toRem(24)};
     font-size: #{toRem(14)};
@@ -107,7 +105,7 @@
   }
 
   &__h2 {
-    @include globalFont;
+    @include globalFont(bold);
     font-size: #{toRem(58)};
     color: $secondary-color;
     letter-spacing: -0.01em;
@@ -143,21 +141,24 @@
 
   &__input {
     line-height: #{toRem(68)};
-    outline: none;
     border: none;
+    padding-left: #{toRem(6)};
+    padding-right: #{toRem(6)};
+
+    &::placeholder {
+      line-height: #{toRem(20)};
+      color: $secondary-color;
+      opacity: 0.3;
+    }
   }
 
   &__submit {
-    @extend .button;
     height: #{toRem(50)};
-    font-size: $font-size-primary;
-    width: #{toRem(180)};
   }
 }
 
 .statislic {
   &__header {
-    @extend .primary-align-text;
     font-weight: bold;
     font-size: #{toRem(56)};
     line-height: #{toRem(71)};
@@ -166,9 +167,8 @@
   }
 
   &__para {
-    @extend .primary-align-text;
+    @include globalFont;
     color: $secondary-color;
-    font-size: $font-size-primary;
     line-height: #{toRem(24)};
   }
 

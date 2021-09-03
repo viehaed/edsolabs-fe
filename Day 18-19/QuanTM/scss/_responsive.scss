@@ -1,6 +1,17 @@
 @import "./configs";
 @import "./variables";
 
+@include media-xs {
+  html {
+    font-size: 16px;
+  }
+  .form {
+    &__submit {
+      width: #{toRem(180)};
+    }
+  }
+}
+
 @include media-md {
   body {
     padding: 0rem 2rem 0 2rem;

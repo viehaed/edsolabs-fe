@@ -4,9 +4,15 @@
   @return math.div($roundedValue, 1000) + "rem";
 }
 
-@mixin globalFont {
-  font-weight: bold;
+@mixin globalFont($weight: normal) {
+  font-weight: $weight;
   font-size: $font-size-primary;
+}
+
+@mixin media-xs {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
 }
 
 @mixin media-md {

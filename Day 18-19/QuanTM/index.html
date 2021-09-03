@@ -51,7 +51,7 @@
         class="collapse navbar-collapse justify-content-between"
         id="navContent"
       >
-        <ul class="navbar-nav navbar__list">
+        <ul class="navbar-nav text-center navbar__list">
           <li class="nav-item">
             <a href="#" class="nav-link active">Home</a>
           </li>
@@ -63,7 +63,9 @@
         <div class="container">
           <div class="row justify-content-end navbar__account">
             <a href="#" class="col-md-6 p-2 navbar__log-in">Log In</a>
-            <a href="#" class="col-md-6 p-2 ms-md-2 btn navbar__register"
+            <a
+              href="#"
+              class="col-md-6 p-2 ms-md-2 btn btn--modified navbar__register"
               >Register</a
             >
           </div>
@@ -75,13 +77,13 @@
       <div class="row gx-0 m-0 hero__center">
         <section
           class="
-            col-md-6
+            col-lg-6
             p-0
             pe-md-4
             d-flex
             flex-column
             justify-content-center
-            align-items-center
+            align-items-center align-items-lg-start
             hero__content
           "
         >
@@ -100,7 +102,10 @@
               deserves: better.
             </p>
           </article>
-          <form method="POST" class="form bg-white d-flex align-items-center">
+          <form
+            method="POST"
+            class="form input-group bg-white align-items-center"
+          >
             <img
               src="./assets//images/mail.png"
               alt="mail icon"
@@ -111,35 +116,36 @@
               class="form-control form__input"
               placeholder="Enter your email"
             />
-            <button
-              class="
-                btn
-                text-nowrap
-                flex-sm-shrink-0 flex-md-shrink-1 flex-lg-shrink-0
-                form__submit
-              "
-            >
-              Get Started
-            </button>
+            <button class="btn btn--modified form__submit">Get Started</button>
           </form>
-          <div class="statistic">
+          <div class="container statistic">
             <div class="row">
               <article class="statislic__item col-sm-4">
-                <h3 class="statislic__header">15k+</h3>
-                <p class="statislic__para">Dates and matches made everyday</p>
+                <h3 class="text-center text-sm-start statislic__header">
+                  15k+
+                </h3>
+                <p class="text-center text-sm-start statislic__para">
+                  Dates and matches made everyday
+                </p>
               </article>
               <article class="statislic__item center col-sm-4">
-                <h3 class="statislic__header">1,456</h3>
-                <p class="statislic__para">New members signup every day</p>
+                <h3 class="text-center text-sm-start statislic__header">
+                  1,456
+                </h3>
+                <p class="text-center text-sm-start statislic__para">
+                  New members signup every day
+                </p>
               </article>
               <article class="statislic__item col-sm-4">
-                <h3 class="statislic__header">1M+</h3>
-                <p class="statislic__para">Members from around the world</p>
+                <h3 class="text-center text-sm-start statislic__header">1M+</h3>
+                <p class="text-center text-sm-start statislic__para">
+                  Members from around the world
+                </p>
               </article>
             </div>
           </div>
         </section>
-        <section class="col-md-6 d-flex align-items-center">
+        <section class="col-lg-6 d-flex align-items-end">
           <img
             src="./assets/images/hero-image.png"
             alt="dating couple"
