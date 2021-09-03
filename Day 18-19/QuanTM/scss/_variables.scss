@@ -1,0 +1,9 @@
+@import "./configs";
+$primary-color: #ed9b59;
+$secondary-color: #1a1d32;
+$font-size-primary: #{toRem(16)};
+
+// nav
+$link-gap: auto;
+$nav-gaps-lg: #{toRem(20)};
+$nav-gaps-xl: #{toRem(39)};

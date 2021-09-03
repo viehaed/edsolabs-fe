@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/ProductSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../assets/fonts/ProductSans-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/ProductSans-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/ProductSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/ProductSans-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/ProductSans-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: 100;
+  src: url("../assets/fonts/ProductSans-ThinItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../assets/fonts/ProductSans-LightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../assets/fonts/ProductSans-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../assets/fonts/ProductSans-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../assets/fonts/ProductSans-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Google Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../assets/fonts/ProductSans-BlackItalic.woff") format("woff");
+}
+body {
+  font-family: "Google Sans", Arial, Helvetica, sans-serif;
+  background-image: url("../assets/images/heroBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 1rem 1rem 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button, .form__submit, .navbar__register {
+  font-weight: bold;
+  font-size: 1rem;
+  background: #ed9b59;
+  box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+  border-radius: 40px;
+  line-height: 20px;
+  color: #f4ebe6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-align-text, .statislic__para, .statislic__header, .navbar__list {
+  text-align: center;
+}
+
+.navbar--padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.navbar__logo {
+  position: relative;
+  gap: 0.625rem;
+}
+.navbar__title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: #1a1d32;
+}
+.navbar__list {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.navbar__list .nav-link {
+  color: #7d8790 !important;
+}
+.navbar__list .nav-link:hover {
+  color: #ed9b59 !important;
+}
+.navbar__list .nav-link.active {
+  position: relative;
+  color: #ed9b59 !important;
+}
+.navbar__list .nav-link.active::after {
+  content: " ";
+  background-color: #ed9b59;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0.625rem);
+}
+.navbar__account {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.navbar__log-in {
+  color: #7d8790 !important;
+  line-height: 1.25rem;
+  text-align: center;
+}
+.navbar__log-in:hover {
+  color: #ed9b59 !important;
+}
+.navbar__register {
+  height: 2.25rem;
+  line-height: 1.25rem;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.hero__intro {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ed9b59;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.813rem;
+}
+.hero__h2 {
+  font-weight: bold;
+  font-size: 1rem;
+  font-size: 3.625rem;
+  color: #1a1d32;
+  letter-spacing: -0.01em;
+  margin-bottom: 2.313rem;
+}
+.hero__h2--color-primary {
+  color: #ed9b59;
+}
+.hero__para {
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #1a1d32;
+  opacity: 0.7;
+}
+
+.form {
+  max-width: 515px;
+  width: 100%;
+  border-radius: 2.5rem;
+  padding: 0 0.688rem 0 1.375rem;
+  gap: 1rem;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+  margin-bottom: 7.5rem;
+}
+.form__input {
+  line-height: 4.25rem;
+  outline: none;
+  border: none;
+}
+.form__submit {
+  height: 3.125rem;
+  font-size: 1rem;
+}
+
+.statislic__header {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 4.438rem;
+  letter-spacing: -4px;
+  color: #1a1d32;
+}
+.statislic__para {
+  color: #1a1d32;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.statislic__item.center .statislic__header {
+  color: #b35e21;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0rem 2rem 0 2rem;
+  }
+
+  .navbar__list .nav-link.active::after {
+    display: block;
+  }
+  .navbar__log-in {
+    width: auto !important;
+  }
+  .navbar__register {
+    width: 9.125rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    padding: 0rem 3rem 0 3rem;
+  }
+
+  .navbar__list {
+    gap: 1.25rem;
+  }
+  .navbar__list .nav-link.active::after {
+    display: block;
+  }
+  .navbar__account {
+    gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 1rem 4.375rem 0 4.375rem;
+  }
+
+  .navbar__list {
+    gap: 2.438rem;
+  }
+  .navbar__list .nav-link.active::after {
+    display: block;
+  }
+  .navbar__account {
+    gap: 2.438rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
