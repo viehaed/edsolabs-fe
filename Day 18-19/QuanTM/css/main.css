@@ -212,6 +212,7 @@ a {
 .form__submit {
   height: 3.125rem;
   font-size: 1rem;
+  width: 11.25rem;
 }
 
 .statislic__header {

@@ -23,6 +23,7 @@
   text-align: center;
 }
 
+// navbar
 .navbar--padding {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -150,6 +151,7 @@
     @extend .button;
     height: #{toRem(50)};
     font-size: $font-size-primary;
+    width: #{toRem(180)};
   }
 }
 
