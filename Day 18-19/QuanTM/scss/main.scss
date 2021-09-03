@@ -104,7 +104,7 @@
     margin-bottom: #{toRem(13)};
   }
 
-  &__h2 {
+  &__h1 {
     @include globalFont(bold);
     font-size: #{toRem(58)};
     color: $secondary-color;

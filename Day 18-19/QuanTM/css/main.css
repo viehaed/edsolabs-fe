@@ -181,7 +181,7 @@ a {
   font-size: 0.875rem;
   margin-bottom: 0.813rem;
 }
-.hero__h2 {
+.hero__h1 {
   font-weight: bold;
   font-size: 1rem;
   font-size: 3.625rem;
@@ -189,7 +189,7 @@ a {
   letter-spacing: -0.01em;
   margin-bottom: 2.313rem;
 }
-.hero__h2--color-primary {
+.hero__h1--color-primary {
   color: #ed9b59;
 }
 .hero__para {
