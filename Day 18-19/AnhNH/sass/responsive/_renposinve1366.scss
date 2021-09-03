@@ -1,0 +1,62 @@
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .container {
+        .login__register {
+            width: 100px;
+        }
+        .currve2 {
+            top: -84px;
+            right: -341px;
+        }
+        .currve {
+            bottom: -156px;
+            left: -657px;
+        }
+        .nui {
+            right: -500px;
+            top: 390px;
+        }
+        .content {
+            &__left {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+            &__right {
+                &-item {
+                    &-img {
+                        transform: translateY(40px);
+                    }
+                    &-imgBlur {
+                        position: absolute;
+                        top: 35px;
+                        left: 52px;
+                        transform: scale(0.9);
+                    }
+                }
+                &-icon {
+                    &Diamond {
+                        top: 100px;
+                        left: 100px;
+                    }
+                    &Like {
+                        top: 75px;
+                        left: 420px;
+                    }
+                    &612 {
+                        top: 270px;
+                        left: 60px;
+                    }
+                    &Tym {
+                        top: 294px;
+                        left: 588px;
+                    }
+                    &599 {
+                        top: 464px;
+                        left: 563px;
+                        z-index: -3;
+                    }
+                }
+            }
+        }
+    }
+}

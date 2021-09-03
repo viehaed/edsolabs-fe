@@ -1,0 +1,32 @@
+@import "../../base/variable";
+.login {
+    font-size: $fontSz16;
+    &__login {
+        color: $coloTextNav;
+        font-weight: bold;
+        transition: 0.5s all ease-in-out;
+        &:hover {
+            transition: 0.5s all ease-in-out;
+            color: $colorHover;
+        }
+    }
+    &__register {
+        width: 146px;
+        height: 52px;
+        line-height: 40px;
+        background: $colorHover;
+        box-shadow: $colorBoxShBtn;
+        border-radius: 40px;
+        color: $colorHoverBtn;
+        transition: 0.5s all ease-in-out;
+        &:hover {
+            transition: 0.5s all ease-in-out;
+            color: $colorHover;
+            background-color: $colorHoverBtn;
+            border: 1px solid $colorHover;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

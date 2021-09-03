@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Datify</title>
+</head>
+
+<body>
+    
+    <div class="jumbotron">
+        <div class="container" >
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light" id="navbar" style="margin: 0;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand logo col-lg-3 col-md-3 col-sm-3 col-xs-3" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" class="logo__img">
+                                <circle cx="9" cy="20" r="1" stroke="#ED9B59" stroke-width="1.5" />
+                                <circle cx="15" cy="20" r="1" stroke="#ED9B59" stroke-width="1.5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.00001 3.00006C5.30446 4.91189 3.97163 8.68865 9.00001 12C10.4142 9.55054 10.416 5.95789 6.00001 3.00006Z"
+                                    stroke="#ED9B59" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3 21C3 16.0294 7.02944 12 12 12C16.9706 12 21 16.0294 21 21" stroke="#ED9B59"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18 2.99997C16.4418 4.30789 12.301 6.618 15 11.9999C17.4495 10.5857 20.3455 7.76954 18 2.99997Z"
+                                    stroke="#ED9B59" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="logo__text">Datify</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse col-lg-9 col-md-9 col-sm-9 col-xs-9 navbar-collapse justify-content-between"
+                            id="navbarNav">
+                            <ul class="navbar-nav menu col-lg-7 col-md-12 col-sm-12 col-xs-12 d-flex mb-1">
+                                <li class="nav-item flex-fill">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item flex-fill">
+                                    <a class="nav-link " href="#">Member</a>
+                                </li>
+                                <li class="nav-item flex-fill">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item flex-fill">
+                                    <a class="nav-link" href="#">Privacy</a>
+                                </li>
+                                <li class="nav-item flex-fill">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <div action="#" method="POST"
+                                class="text-center login col-lg-3 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-between align-items-center">
+                                <a href="#" class="login__login">Login</a>
+                                <a href="#" class="btn login__register">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- col bên trái -->
+            <div class="row content">
+                <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 content__left" id="content__left">
+                    <h6 id="h6">Becaue you deserve better!</h6>
+                    <h1 id="h1">Get noticed for <span>who</span>
+                        you are, <span>not what</span>
+                        you look like.
+                    </h1>
+                    <p id="text" style="display: none;" class="content__left-text">You’re more than just a photo. You have stories to tell, and passions
+                        to
+                        share, and things to talk
+                        about that are more interesting than the weather. Because you deserve what dating deserves:
+                        better.
+                    </p>
+                    <form class="content__left-send align-items-center justify-content-between" id="content__left-send">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="20" height="16" viewBox="0 0 20 16"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 3C0 1.34315 1.34315 0 3 0H17C18.6569 0 20 1.34315 20 3V13C20 14.6569 18.6569 16 17 16H3C1.34315 16 0 14.6569 0 13V3ZM3 1.5H17C17.6497 1.5 18.203 1.91311 18.4114 2.49101L10.6934 7.63638C10.2735 7.91629 9.72651 7.91629 9.30663 7.63638L1.58857 2.491C1.79701 1.91311 2.35026 1.5 3 1.5ZM1.5 4.23473V13C1.5 13.8284 2.17157 14.5 3 14.5H17C17.8284 14.5 18.5 13.8284 18.5 13V4.23474L11.5254 8.88445C10.6017 9.50027 9.39831 9.50027 8.47458 8.88445L1.5 4.23473Z"
+                                fill="#1A1D32" />
+                        </svg>
+                        <input type="email" class="" id="inputPassword2" placeholder="Enter your email">
+                        <button type="submit" class="btn">Get Started</button>
+                    </form>
+                    <div class="content__left-sublike " id="content__left-sublike">
+                        <div class="content__left-sublike-item flex-fill">
+                            <h2>15k+</h2>
+                            <p>Dates and matches made everyday</p>
+                        </div>
+                        <div class="content__left-sublike-item flex-fill">
+                            <h2><span>1,456</span></h2>
+                            <p>New members signup every day</p>
+                        </div>
+                        <div class="content__left-sublike-item flex-fill">
+                            <h2>1M+</h2>
+                            <p>Members from around the world</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- col bên phải -->
+                <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-xs-12 content__right">
+                    <div class="content__right-item">
+                        <img src="img/image 1.png" alt="" class="content__right-item-imgBlur">
+                    </div>
+                    <div class="content__right-item">
+                        <img src="img/image 1.png" alt="" class="content__right-item-img">
+                    </div>
+                    <img src="img/Group 599.png" alt="" class="content__right-icon content__right-icon599" id="content__right-icon599">
+                    <img src="img/Group 611.png" alt="" class="content__right-icon content__right-iconDiamond" id="content__right-iconDiamond">
+                    <img src="img/Group 612.png" alt="" class="content__right-icon content__right-icon612" id="content__right-icon612">
+                    <img src="img/Group 616.png" alt="" class="content__right-icon content__right-iconTym">
+                    <img src="img/Group 617.png" alt="" class="content__right-icon content__right-iconLike" id="content__right-iconLike">
+                </div>
+            </div>
+            <div class="nui">
+                <img src="img/Vector.png" alt="">
+            </div>
+            <div class="curve2">
+                <img src="img/Group 12k9.png" alt="">
+            </div>
+            <div class="curve">
+                <img src="img/Group 129.png" alt="">
+            </div>
+        </div>
+        <span id="back-to-top" onclick="backTop()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            </svg>
+        </span>
+
+    </div>
+    <script src="js/bactotop.js"></script>
+    <script src="js/activeMenu.js"></script>
+    <script src="js/moveicon.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

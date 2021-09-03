@@ -1,0 +1,105 @@
+@import "../../base/variable";
+@import "../../abstracts/keyframes.scss";
+.content__left {
+    padding-top: 106px;
+    position: relative;
+    overflow: hidden;
+    h6 {
+        color: $colorHover;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 13px;
+        animation: blockShowText 1s ease-in-out;
+        display: none;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 58px;
+        color: $colorLogo;
+        letter-spacing: -1px;
+        margin-bottom: 37px;
+        display: none;
+        span {
+            color: $colorHover;
+        }
+        animation: blockShowText 1s ease-in-out;
+    }
+    &-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: $colorLogo;
+        opacity: 0.7;
+        text-align: justify;
+        letter-spacing: -1px;
+        margin-bottom: 22px;
+        animation: blockShowText 1s ease-in-out;
+    }
+    &-send {
+        background-color: $colorWhile;
+        padding: 8px 11px 10px 22px;
+        border-radius: 40px;
+        display: flex;
+        margin-bottom: 119px;
+        animation: blockShowForm 1s ease-in-out;
+        display: none;
+        box-shadow: $colorBoxShBtn;
+        svg {
+            margin-right: 10px;
+        }
+        button {
+            height: 50px;
+            background: $colorHover;
+            box-shadow: $colorBoxShBtn;
+            border-radius: 40px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: $colorHoverBtn;
+            transition: 1s all ease-in-out;
+            &:hover {
+                transition: 1s all ease-in-out;
+                background: $colorHoverBtn;
+                color: $colorHover;
+                border: 1px solid $colorHover;
+            }
+        }
+        input {
+            border: none;
+            flex-grow: 1;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &-sublike {
+        animation: blockShowSubLike 1s ease-in-out;
+        display: none;
+        &-item {
+            padding: 10px;
+            span {
+                color: $colorHover;
+            }
+            h2 {
+                font-weight: bold;
+                font-size: 56px;
+                line-height: 71px;
+                letter-spacing: -4px;
+                color: $colorLogo;
+                text-align: left;
+            }
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: $colorLogo;
+                text-align: left;
+            }
+        }
+    }
+}

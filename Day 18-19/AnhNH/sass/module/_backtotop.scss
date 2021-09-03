@@ -1,0 +1,15 @@
+@import "../base/variable";
+#back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: #ee0f32;
+    border-radius: 50%;
+    transition: .5s all ease-in-out;
+    display: none;
+    &:hover{
+        transition: .5s all ease-in-out;
+        color: $colorWhile;
+        background-color: #ee0f306e;
+    }
+}
