@@ -1,47 +1,74 @@
 .bg {
     position: relative;
-    display: flex;
-    align-items: end;
-    &--calendar {
-        position: absolute;
-        max-width: 77px;
-        height: 77px;
-        left: 542px;
-        top: 486px;
-    }
-    &--cup {
-        position: absolute;
-        max-width: 35px;
-        height: 35px;
-        left: 16px;
-        top: 253px;
-    }
-    &--heart {
-        position: absolute;
-        max-width: 69px;
-        height: 69px;
-        left: 566px;
-        top: 236px;
-    }
-    &--like {
-        position: absolute;
-        max-width: 44px;
-        height: 44px;
-        left: 388px;
-        top: 66px;
-    }
-    &--location {
-        position: absolute;
-        max-width: 91px;
-        height: 91px;
-        left: 46px;
-        top: 44px;
-    }
     &--img {
-        position: absolute;
-        // max-width: 651px;
-        height: 892px;
-        left: -10px;
-        top: 18px;
     }
+}
+.candidate {
+    position: absolute;
+    top: 540px;
+    left: 0px;
+    &__header{
+        height: 44px;
+        margin-top: 10px;
+        &--gender {
+            padding: 12px 44px 12px 11px;
+            margin-right: 12px;
+            background-color: $whiteColor;
+            border-radius: 10px;
+            color: $primary;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &--age {
+            @extend .candidate__header--gender;
+            background-color: $primary;
+            padding: 12px 12px 12px 11px;
+            color: $whiteColor;
+        }
+        &--locate {
+            @extend .candidate__header--gender;
+            padding: 12px 22px 12px 9px;
+        }
+
+    }
+    &__content {
+        margin-top: 36px;
+        &--first {
+            display: flex;
+            background: $whiteColor;
+            width: 365px;
+            height: 98px;
+            padding: 11px 17px 10px 11px;
+            border-radius: $borderRadius-small;
+            .candidate__content--img {
+                margin-right: 26px;
+            }
+        }
+        &--infor {
+            &-name {
+                font-weight: 700;
+                color: $grayColor;
+                margin-top: 16px;
+                margin-bottom: 0;
+            }
+            &-address {
+                font-size: 14px;
+                @include gray-lighten;
+            }
+        }
+        &--second {
+            @extend .candidate__content--first;
+            margin-top: 18px;
+            margin-left: 26px;
+        }
+    }
+}
+
+.candidate-btn {
+    @include button;
+    margin-left: 50px;
+    margin-top: 16px;
+    width: 76px;
+    height: 44px;
+    border-radius: $borderRadius-small;
 }

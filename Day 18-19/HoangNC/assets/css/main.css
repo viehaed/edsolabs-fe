@@ -13,7 +13,7 @@
   font-display: swap;
 }
 body {
-  background: url("../img/Frame 583.png");
+  background: url("../img/background.png");
   background-size: cover;
   font-family: "Google Sans";
   font-weight: 400;
@@ -41,6 +41,11 @@ a {
   color: #ED9B59;
 }
 
+@media screen and (max-width: 991px) {
+  .candidate {
+    display: none;
+  }
+}
 @media screen and (min-width: 992px) {
   .navbar__list {
     gap: 20px;
@@ -153,7 +158,6 @@ a {
 
 .form {
   max-width: 515px;
-  width: 100%;
   border-radius: 40px;
   padding: 0 11px 0 22px;
   gap: 1rem;
@@ -197,58 +201,13 @@ a {
 
 .bg {
   position: relative;
-  display: flex;
-  align-items: end;
 }
-.bg--calendar {
-  position: absolute;
-  max-width: 77px;
-  height: 77px;
-  left: 542px;
-  top: 486px;
-}
-.bg--cup {
-  position: absolute;
-  max-width: 35px;
-  height: 35px;
-  left: 16px;
-  top: 253px;
-}
-.bg--heart {
-  position: absolute;
-  max-width: 69px;
-  height: 69px;
-  left: 566px;
-  top: 236px;
-}
-.bg--like {
-  position: absolute;
-  max-width: 44px;
-  height: 44px;
-  left: 388px;
-  top: 66px;
-}
-.bg--location {
-  position: absolute;
-  max-width: 91px;
-  height: 91px;
-  left: 46px;
-  top: 44px;
-}
-.bg--img {
-  position: absolute;
-  height: 892px;
-  left: -10px;
-  top: 18px;
-}
-
 .candidate {
   position: absolute;
-  top: 581px;
-  left: -10px;
+  top: 540px;
+  left: 0px;
 }
 .candidate__header {
-  width: 400px;
   height: 44px;
   margin-top: 10px;
 }
@@ -260,7 +219,6 @@ a {
   color: #ED9B59;
   font-size: 14px;
   line-height: 24px;
-  font-weight: 400;
 }
 .candidate__header--age {
   background-color: #ED9B59;

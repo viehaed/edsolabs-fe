@@ -26,8 +26,7 @@
 }
 .form {
     max-width: 515px;
-    width: 100%;
-    border-radius: 40px;
+    border-radius: $borderRadius;
     padding: 0 11px 0 22px;
     gap: 1rem;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
