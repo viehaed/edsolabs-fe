@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Datify</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <!-- brand -->
+          <div class="navbar__brand">
+            <img src="./assets/img/Icon_rabbit.png" alt="Datify" />
+            <a class="navbar-brand" href="#">Datify</a>
+          </div>
+
+          <!-- hamburger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <img src="./assets/img/hamburger-solid.svg" alt="" />
+            </span>
+          </button>
+
+          <!-- nav link tabs -->
+          <div
+            class="collapse navbar-collapse navbar__links"
+            id="navbarSupportedContent"
+          >
+            <!-- link tab -->
+            <ul class="navbar-nav m-auto justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Members</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Privacy</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Contact</a>
+              </li>
+            </ul>
+
+            <!-- form button -->
+            <form class="d-flex justify-content-center">
+              <button class="btn rounded-pill btn--login" type="submit">
+                Log in
+              </button>
+              <button class="btn rounded-pill btn--register" type="submit">
+                Register
+              </button>
+            </form>
+            <!-- end form -->
+          </div>
+          <!-- end nav links -->
+        </div>
+      </nav>
+      <!-- end nav bar -->
+
+      <!-- content -->
+      <div class="container">
+        <div class="row flex-column flex-md-row">
+          <!-- content -->
+          <div id="content" class="content col-lg-6 col-xl-5">
+            <!-- detail -->
+            <article class="content__detail">
+              <p class="content__detail__subheader">
+                Because you deserve better!
+              </p>
+
+              <h2 class="content__detail__header">
+                Get noticed for <span class="text-datify">who</span> you are,
+                <span class="text-datify">not what</span> you look like.
+              </h2>
+
+              <p class="content__detail__detail">
+                You’re more than just a photo. You have stories to tell, and
+                passions to share, and things to talk about that are more
+                interesting than the weather. Because you deserve what dating
+                deserves: better.
+              </p>
+            </article>
+
+            <!-- form -->
+            <form
+              class="
+                form
+                d-flex
+                flex-column flex-md-row
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div>
+                <input
+                  type="text"
+                  class="form-control-plaintext form__input"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div>
+                <button type="submit" class="btn rounded-pill form__button">
+                  Get Started
+                </button>
+              </div>
+            </form>
+
+            <!-- quantity -->
+            <div id="quantity" class="row quantity mt-5">
+              <div class="col-md-4 mt-lg-5 text-center text-md-start">
+                <p class="quantity__number">15k+</p>
+                <p class="quantity__detail">Dates and matches made everyday</p>
+              </div>
+              <div class="col-md-4 mt-lg-5 text-center text-md-start">
+                <p class="quantity__number quantity__number--color">1,456</p>
+                <p class="quantity__detail">New members signup every day</p>
+              </div>
+              <div class="col-md-4 mt-lg-5 text-center text-md-start">
+                <p class="quantity__number">1M+</p>
+                <p class="quantity__detail">Members from around the world</p>
+              </div>
+            </div>
+          </div>
+          <!-- banner -->
+          <div
+            id="banner"
+            class="banner col-lg-6 col-xl-7 d-flex align-items-end"
+          >
+            <div class="">
+              <img
+                src="./assets/img/image 1.png"
+                class="img-fluid"
+                alt="Datify"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- bundle bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js -->
+    <script src="./assets/js/animation.js"></script>
+  </body>
+</html>
