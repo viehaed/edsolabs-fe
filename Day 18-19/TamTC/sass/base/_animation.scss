@@ -1,0 +1,20 @@
+@include fadeIn(goDown, Y, -220);
+@include classNameFadeIn(go-to-down, goDown);
+
+@include fadeIn(goUp, Y, 220);
+@include classNameFadeIn(go-to-up, goUp);
+
+@include fadeIn(goRight, X, -600);
+@include classNameFadeIn(go-to-right, goRight);
+
+@include fadeIn(goLeft, X, 1000);
+@include classNameFadeIn(go-to-left, goLeft);
+
+@keyframes shaking {
+  50% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}

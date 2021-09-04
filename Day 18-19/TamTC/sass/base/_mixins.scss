@@ -1,0 +1,154 @@
+@mixin font(
+  $style,
+  $weight,
+  $size,
+  $lineHeight,
+  $align: left,
+  $color: $textColor
+) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size + rem;
+  line-height: $lineHeight + rem;
+  text-align: $align;
+  color: $color;
+}
+@mixin input($x, $y) {
+  background: $backgroundInput;
+  padding: $x + rem $y + rem;
+  border-radius: $borderRadius;
+  @include font(normal, normal, 1.6, 2, left, $textBoldColor);
+  box-shadow: $boxShaDownInput;
+}
+
+@mixin btn($x, $y) {
+  background: #ed9b59;
+  border: none;
+  padding: $x + rem $y + rem;
+  border-radius: $borderRadius;
+  box-shadow: $boxShaDownBtn;
+  @include font(normal, bold, 1.6, 2, center, $textColor);
+  position: relative;
+}
+
+@mixin btnHover {
+  &:hover {
+    transform: translateY(-3px);
+    animation: identifier 0.4s ease-in-out;
+    -webkit-animation: identifier 0.4s ease-in-out;
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    z-index: -1;
+    background-color: rgba(216, 118, 118, 0.294);
+  }
+}
+
+@mixin absolute($top, $left, $right) {
+  position: absolute;
+  @if $left {
+    $right: null;
+    top: $top + rem;
+    left: $left + rem;
+  } @else {
+    $left: null;
+    top: $top + rem;
+    right: $right + rem;
+  }
+}
+@mixin iconCircle($x, $y, $bg) {
+  width: $x + rem;
+  height: $y + rem;
+  @extend %centerFlex;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: $bg;
+}
+
+@mixin centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fadeIn($type, $x, $y) {
+  @keyframes #{$type} {
+    from {
+      opacity: 0;
+      transform: translate + $x + "(" + $y + "px)";
+      -webkit-transform: translate + $x + "(" + $y + "px)";
+      -moz-transform: translate + $x + "(" + $y + "px)";
+      -ms-transform: translate + $x + "(" + $y + "px)";
+      -o-transform: translate + $x + "(" + $y + "px)";
+    }
+    to {
+      opacity: 1;
+      transform: translate + $x + "(0)";
+      -webkit-transform: translate + $x + "(0)";
+      -moz-transform: translate + $x + "(0)";
+      -ms-transform: translate + $x + "(0)";
+      -o-transform: translate + $x + "(0)";
+    }
+  }
+}
+
+@mixin classNameFadeIn($name, $type) {
+  .#{$name} {
+    animation: $type 2s ease;
+    -webkit-animation: $type 2s ease;
+    opacity: 1 !important;
+  }
+}
+
+@mixin banner {
+  background-image: $banner;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin hoverNav($display) {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: $orangeColor;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    display: $display;
+  }
+}

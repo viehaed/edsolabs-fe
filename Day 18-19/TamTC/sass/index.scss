@@ -1,0 +1,68 @@
+@import "./base/import";
+@import "./layout/import";
+@import "./theme/import";
+@import "./state/import";
+@import "./module/import";
+
+.email {
+  position: relative;
+  max-width: 51.5rem;
+  margin-top: 2.2rem;
+  opacity: 0;
+  &__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    @include input(2.4, 6.5);
+    padding-right: 40%;
+    &:focus {
+      box-shadow: boxShaDownFocus;
+    }
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 13%;
+    right: 2%;
+    outline: none;
+    border: 0;
+    &:hover {
+      background-color: $orangeColor;
+      box-shadow: $boxShaDownBtn;
+      opacity: 0.7;
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transition: 0.4s;
+      -o-transition: 0.4s;
+    }
+    &:focus {
+      background: $orangeColor;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 38%;
+    left: 6%;
+    opacity: 0.3;
+  }
+}
+.counter {
+  &__item {
+    margin-top: 12rem;
+    max-width: 14rem;
+  }
+  &__title {
+    opacity: 0;
+    @include font(normal, bold, 5.6, 7.1, left, $textBoldColor);
+    letter-spacing: -0.4rem;
+    &--primary {
+      color: $primaryColor;
+    }
+  }
+  &__desc {
+    @include font(normal, normal, 1.6, 2.4, left, $textBoldColor);
+  }
+}

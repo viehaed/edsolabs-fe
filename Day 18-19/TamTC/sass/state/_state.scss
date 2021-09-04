@@ -1,0 +1,4 @@
+.is-active {
+  @include hoverNav(block);
+  color: $orangeColor !important;
+}

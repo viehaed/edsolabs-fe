@@ -1,0 +1,65 @@
+.main {
+  max-width: 129.2rem;
+}
+
+.banner {
+  @include banner;
+  position: relative;
+  opacity: 0;
+
+  &__icons {
+    position: relative;
+    height: 100%;
+
+    &:hover {
+      .banner__calendar {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__icon {
+    opacity: 0;
+
+    &:hover {
+      animation: shaking 0.3s linear;
+      animation-iteration-count: 3;
+    }
+  }
+
+  &__ring {
+    @include iconCircle(9.1, 9.1, $backgroundInput);
+    @include absolute(2, 7, null);
+  }
+
+  &__heart {
+    @include iconCircle(6.9, 6.9, $backgroundInput);
+    @include absolute(22, null, 4);
+  }
+
+  &__chin {
+    @include iconCircle(3.5, 3.5, $primaryColor);
+    @include absolute(22, 2, null);
+  }
+
+  &__like {
+    @include iconCircle(4.4, 4.4, $primaryColor);
+    @include absolute(4, null, 20);
+  }
+
+  &__calendar {
+    @include iconCircle(7.7, 7.7, $backgroundInput);
+    @include absolute(44, null, 2);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include banner;
+    @include absolute(0, 2, null);
+    z-index: -1;
+    filter: blur(6.4rem);
+    -webkit-filter: blur(6.4rem);
+    opacity: 0.5;
+  }
+}
