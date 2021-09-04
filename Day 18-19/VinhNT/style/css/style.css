@@ -18,12 +18,12 @@ button {
 
 @font-face {
   font-family: sans;
-  src: url(/font/ProductSans-Regular.ttf);
+  src: url(../../font/ProductSans-Regular.ttf);
 }
 .bg {
   background: #FEEFE3;
   position: relative;
-  background-image: url(/assest/noise.png);
+  background-image: url(../../assest/noise.png);
   background-blend-mode: lighten;
 }
 .bg__vector {
@@ -162,7 +162,7 @@ button {
   font-weight: 400;
 }
 .main__right {
-  background-image: url(/assest/image2.png);
+  background-image: url(../../assest/image2.png);
   background-size: 100%;
 }
 .main__right img {

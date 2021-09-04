@@ -27,7 +27,7 @@ $bg: #FEEFE3;
 //font
 @font-face {
     font-family: sans;
-    src: url(/font/ProductSans-Regular.ttf);
+    src: url(../../font/ProductSans-Regular.ttf);
 }
 
 //font-size
@@ -56,7 +56,7 @@ $bo4: 40px;
 .bg {
     background: $bg;
     position: relative;
-    background-image: url(/assest/noise.png);
+    background-image: url(../../assest/noise.png);
     background-blend-mode: lighten;
     &__vector {
         @include vector(bottom, right)
@@ -194,7 +194,7 @@ $bo4: 40px;
         }
     }
     &__right {
-        background-image: url(/assest/image2.png);
+        background-image: url(../../assest/image2.png);
         background-size: 100%;
         img {
             height: 100%;
