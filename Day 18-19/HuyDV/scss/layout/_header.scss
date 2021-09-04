@@ -1,0 +1,169 @@
+.header {
+    &--menu-mobile {
+        position: fixed;
+        padding-top: 37px;
+        width: 100vw;
+        height: 100vh;
+        @include responsive($lg-width) {
+            height: auto;
+            background-color: transparent;
+        }
+        left: 0;
+        top: 0;
+        z-index: 100;
+        background-color: $color-white;
+    }
+    &--scroll {
+        position: fixed;
+        width: 100vw;
+        padding-top: 15px;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        background-color: $color-white;
+        transition: padding-top 0.3s ease-in-out;
+    }
+
+    .logo {
+        @include flexbox(end, center);
+        gap: 10px;
+    }
+}
+.menu {
+    margin: 50px 0 30px 0;
+    @include responsiveHeight($sm-height) {
+        margin-top: 0;
+    }
+
+    @include responsiveHeight($md-height) {
+        width: auto;
+    }
+    @include responsive($md-width) {
+        margin: 70px 0 100px 0;
+        @include responsiveHeight($sm-height) {
+            margin-top: 0;
+        }
+    }
+    @include responsive($lg-width) {
+        margin: 0;
+        gap: 10px;
+    }
+
+    .nav-link {
+        @include fontREM(20);
+        @include responsive($md-width) {
+            @include fontREM(26);
+        }
+        @include responsive($lg-width) {
+            @include fontREM(16);
+        }
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 150px;
+            @include responsive($md-width) {
+                width: 400px;
+            }
+            height: 2px;
+            background-color: $color-black;
+            left: 0;
+            bottom: 0;
+            // transform: scale(0);
+            transition: width 0.3s ease-in-out;
+        }
+        &.active::before {
+            background-color: $color-orange;
+            width: 200px;
+            @include responsive($md-width) {
+                width: 500px;
+            }
+            color: $color-orange;
+        }
+    }
+    .nav-link.active {
+        color: $color-orange !important;
+    }
+}
+.group-btn-login {
+    @include flexbox(start, center);
+    gap: 20px;
+    @include responsiveHeight(568px) {
+        width: 100%;
+    }
+    @include responsive($lg-width) {
+        gap: 0;
+    }
+    .btn {
+        width: 100%;
+        @include responsive($md-width) {
+            max-width: 400px;
+            text-align: center;
+        }
+        @include responsive($lg-width) {
+            width: auto;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &--active {
+            background: $color-orange;
+            border-color: $color-orange;
+            color: $color-white;
+        }
+    }
+}
+
+.navbar {
+    @include responsive($lg-width) {
+        & > div {
+            @include flexbox(center, space-between, row);
+        }
+        .logo {
+        }
+        .nav-link {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            &::before {
+                content: none;
+            }
+            &.active::before {
+                left: 50%;
+                transform: translateX(-50%);
+                content: "";
+                width: 3px;
+                height: 3px;
+                border-radius: 100%;
+            }
+        }
+    }
+    &-toggler {
+        padding: 0;
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    &-collapse {
+        @include responsiveHeight($sm-height) {
+            margin-top: 0 !important;
+        }
+        @include responsiveHeight($md-height) {
+            @include flexbox(center, space-between, row);
+        }
+        @include responsiveHeight(568px) {
+            @include flexbox(start, space-between, column);
+        }
+        @include responsive($lg-width) {
+            @include flexbox(center, space-between, row);
+            max-width: 678px;
+        }
+        @include responsive($xl-width) {
+            @include flexbox(center, space-between, row);
+            max-width: 856px;
+            gap: 150px;
+        }
+    }
+}

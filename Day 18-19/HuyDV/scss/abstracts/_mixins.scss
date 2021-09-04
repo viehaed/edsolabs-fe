@@ -1,0 +1,32 @@
+@mixin fontREM($num) {
+    font-size: $num + px;
+    font-size: $num / 16 + rem;
+}
+@mixin flexbox($align: stretch, $justify: flex-start, $flex-direction: row, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+}
+
+@mixin responsive($res) {
+        @media only screen and (min-width: $res) {
+            @content;
+        }
+}
+
+@mixin responsiveHeight($res){
+
+    @if ($res == 568px){
+        @media screen and (height:$res) {
+            @content;
+        }
+    }
+    @else{
+        @media screen and (max-height:$res) {
+            @content;
+        }
+    }
+    
+}

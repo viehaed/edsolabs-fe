@@ -1,0 +1,17 @@
+.main{
+    position: relative;
+    /* max-width: 1440px; */
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-image: url('../image/bg-main.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 37px;
+
+}
+.header, .section{
+    max-width: 100%;
+    margin: 0 auto;
+}

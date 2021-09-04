@@ -1,0 +1,9 @@
+.section{
+    padding-bottom: 40px;
+    @include responsive($lg-width){
+        padding-bottom: 0;
+    }
+    &--banner{
+        
+    }
+}
