@@ -1,5 +1,6 @@
 @media (min-width: 992px) and (max-width: 1399px) {
     .menu {
+   
         margin-top: 2px;
     }
 
@@ -35,16 +36,18 @@
 
     .statistical {
         margin-top: 50px;
-
-        &__header {
-            font-size: 40px;
-            line-height: 50px;
+        &__item{
+            &--header {
+                font-size: 40px;
+                line-height: 50px;
+            }
+    
+            &--title {
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
 
-        &__title {
-            font-size: 14px;
-            line-height: 22px;
-        }
     }
 
     .images {
@@ -87,8 +90,14 @@
         }
     }
 
-    .form__btn {
-        padding: 6px 18px;
+
+    .form {
+        width: 450px;
+        height: 58px;
+        &__btn {
+            padding: 11px 30px;
+            right: 8px;
+        }
     }
     .images__couple {
         width: 380px;
@@ -102,14 +111,14 @@
         }
 
         &__notice {
-            font-size: 30px;
-            line-height: 40px;
-            margin-bottom: 15px;
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 10px;
         }
     }
 
     .contentLeft__details {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .form {
@@ -128,15 +137,16 @@
 
     .statistical {
         margin-top: 30px;
-
-        &__header {
-            font-size: 35px;
-            line-height: 45px;
-        }
-
-        &__title {
-            font-size: 12px;
-            line-height: 18px;
+        &__item{
+            &--header {
+                font-size: 35px;
+                line-height: 45px;
+            }
+    
+            &--title {
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
     }
     .images {
@@ -152,8 +162,8 @@
 
 // mobile
 
-@media (max-width: 575px) {
-    @include mobile-device;
+@media (min-width: 320px) and (max-width: 575px) {
+    @include screen320;
 }
 
 // sm library
