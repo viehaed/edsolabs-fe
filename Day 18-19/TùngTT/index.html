@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./assets/app/css/style.css" rel="stylesheet" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Dating Bootstrap</title>
+</head>
+<body>
+    <div class="container">
+      <div class="abstract">
+        <img class="img-fluid" src="./assets/img/border_circll.png">
+      </div>
+      <header class="header-main">
+        <nav class="navbar navbar-expand-lg navbar-light nav-header ">
+          <div class="container align-items-baseline mg-top back-light">
+            <a class="navbar-brand me-auto" href="#">
+              <img src="./assets/img/Group 605_x1.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll" aria-expanded="true">
+              <ul class="navbar-nav my-2 m-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active" id="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-link" href="#">Members</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-link" href="#">Privacy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <button class="btn" type="button">Log In</button>
+                <button class="btn rounded-pill btn-res" type="button">Register</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="row">
+        <div class="col-lg-6 col-left-modify">
+          <div class="get-started">
+            <div class="jumbotron jumbotron-fluid intro">
+              <div class="container">
+                <p>Becaue you deserve better!</p>
+                <h1 class="display-5">Get noticed for <span>who</span> you are, <span>not watch</span> you look like.</h1>
+                <p class="h6 h6-mod">You’re more than just a photo. You have stories to tell, and passions to share, and things to talk about that are more interesting than the weather. Because you deserve what dating deserves: better.</p>
+                <form class="input-group mb-3">
+                  <div class="email-icon">
+                    <img class="email-icon-pos" src="./assets/img/mail.png">
+                  </div>
+                  <input type="text" class="form-control" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <div class="btn-get-started rounded-pill">
+                    <button class="btn rounded-pill btn-res" type="submit" id="button-addon2">Get Started</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="infor-number">
+              <div class="col-sm-4 jumbotron jumbotron-fluid number-mod">
+                <div class="container">
+                  <h1 class="display-4">
+                    <span class="count">15</span>k+</h1>
+                  <p class="h6">Dates and matches made everyday</p>
+                </div>
+              </div>
+              <div class="col-sm-4 jumbotron jumbotron-fluid number-mod">
+                <div class="container">
+                  <h1 class="display-4 active-color">
+                    1,<span class="count">456</span>
+                  </h1>
+                  <p class="h6">New members signup every day</p>
+                </div>
+              </div>
+              <div class="col-sm-4 jumbotron jumbotron-fluid number-mod">
+                <div class="container">
+                  <h1 class="display-4">
+                    <span class="count">1</span> M+</h1>
+                  <p class="h6">Members from around the world</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-img" id="img-animation">
+          <div class="logo-main">
+            <div class="img-main img-fluid">
+              <img class="logo-main-no-blur" src="./assets/img/couple.png" alt="couple">
+              <img class="logo-main-blur" src="./assets/img/couple_blur.png" alt="couple">
+            </div>
+            <img class="icon-frame pos-cup" src="./assets/img/double-cup.png" alt="icon">
+            <img class="icon-frame pos-ring" src="./assets/img/ring.png" alt="icon">
+            <img class="icon-frame pos-like" src="./assets/img/like.png" alt="icon">
+            <img class="icon-frame pos-heart" src="./assets/img/heart.png" alt="icon">
+            <img class="icon-frame pos-canlendar" src="./assets/img/canlendar.png" alt="icon">
+            <form class="choice-form">
+              <button type="submit" class="btn btn-hover">Male</button>
+              <button type="submit" class="btn btn-hover btn-active">30 - 35 Years</button>
+              <button type="submit" class="btn btn-hover">New York</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

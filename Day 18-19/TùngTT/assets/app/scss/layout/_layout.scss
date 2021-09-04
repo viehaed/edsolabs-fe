@@ -1,0 +1,60 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    .row {
+        position: relative;
+    }
+}
+.header-main {
+    position: relative;
+}
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.logo-main {
+    @include flexCenter;
+}
+.infor-number {
+    display: flex;
+    justify-content: space-between;
+}
+.choice-form {
+    position: absolute;
+    top: 65%;
+    @include flexCenter;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+@media screen and (max-width:575px) {
+    .container {
+        .row {
+            position: relative;
+            top:108px
+        }
+        .col {
+            flex:none;
+            padding: 0;
+        }
+        .col-img {
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+        }
+    }
+    .infor-number {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 994px) {
+    .nav-header {
+        position: relative;
+    }
+    .infor-number {
+        flex-wrap: nowrap;
+    }
+}
