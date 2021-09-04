@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Dating</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-2">
+                    <div class="header__logo">
+                        <img src="./img/logo.png" alt="">
+                        <span>Datify</span>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-md-6 col-sm-6">
+                    <ul class="menu">
+                        <li><a href="#" class="item-menu activeItemMenu">Home</a></li>
+                        <li><a href="#" class="item-menu">Members</a></li>
+                        <li><a href="#" class="item-menu">Blog</a></li>
+                        <li><a href="#" class="item-menu">Privacy</a></li>
+                        <li><a href="#" class="item-menu">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-5 col-md-4">
+                    <div class="header__btn" method="GET">
+                        <button type="button" class="btn">Log In</button>
+                        <button type="button" class="btn activeBtn">Register</button>
+                    </div>
+                </div>
+                <!--mobile menu-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light display--none">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler menu__mobile--icon" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="dropdown">
+                        <ul class="navbar-nav mobile--menu">
+                              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                        <form class="d-flex mobile-btn">
+                            <button type="button" class="btn">Log In</button>
+                            <button type="button" class="btn activeBtn">Register</button>
+                        </form>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5">
+                    <div class="content__left">
+                        <p class="content__left--title">Because you deserve better!</p>
+                        <p class="content__left--notice">Get noticed for <span>who</span> you are, <span>not what</span> you look like.</p>
+                        <p class="content__left--details">You’re more than just a photo. You have stories to tell, and passions to share, and things to talk about that are more interesting than the weather. Because you deserve what dating deserves: better.</p>
+                        <form class="form">
+                            <i class="email-icon far fa-envelope"></i>
+                            <input class="form-control" type="email" placeholder="Enter your email">
+                            <button type="button" class="btn formBtn">Get Started</button>
+                        </form>
+                    </div>
+                    <div class="row quantity">
+                        <div class="col-4 quantity__item">
+                            <p class="quantity__header"> 15K+</p>
+                            <p class="quantity__title">Dates and matches made everyday</p>
+                        </div>
+                        <div class="col-4 quantity__item">
+                            <p class="quantity__header quantity__header--mid">1,456</p>
+                            <p class="quantity__title">New members signup every day</p>
+                        </div>
+                        <div class="col-4 quantity__item">
+                            <p class="quantity__header">1M+</p>
+                            <p class="quantity__title">Members from around the world</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7">
+                    <div class="images">
+                        <img class="couple" src="./img/cp.png" alt="">
+                        <img class="group-icons" src="./img/groupIcon.png" alt="">
+                        <!-- mobile -->
+                        <img class="couplemobile display--none" src="./img/people.png" alt="">
+                    </div>
+                    <div class="select">
+                        <div class="select__header">
+                            <span class="select__header--gender"><i class="gender-icon fas fa-mars"></i>Male</span>
+                            <span class="select__header--age"><i class="age-icon far fa-calendar-plus"></i> 30-35 Years</span>
+                            <span class="select__header--city"><img src="./img/drop.svg" class="city-icon">New York</span>
+                        </div>
+                        <div class="select__content">
+                            <div class="select__content--first">
+                                <img src="./img/girl.png" alt="" class="select__content--img">
+                                <div class="select__content--infor">
+                                    <p class="select__content--infor-name">Angela Taylor</p>
+                                    <p class="select__content--infor-address">Cincinati, OH</p>
+                                </div>
+                                <button type="button" class="select__content--btn btn">Select</button>
+                            </div>
+                            <div class="select__content--second">
+                                <img src="./img/boy.png" alt="" class="select__content--img">
+                                <div class="select__content--infor">
+                                    <p class="select__content--infor-name">Mike Johnson</p>
+                                    <p class="select__content--infor-address">NY City, NY</p>
+                                </div>
+                                <button type="button" class="select__content--btn btn">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

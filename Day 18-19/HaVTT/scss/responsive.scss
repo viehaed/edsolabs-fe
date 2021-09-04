@@ -1,0 +1,123 @@
+@import './variables';
+@import './mixin';
+
+@media (min-width: 992px) and (max-width: 1399px){
+    .btn {
+        padding: 12px 30px;
+        margin-top: -10px;
+    }
+    .couple {
+        width: 450px;
+    }
+    .content__left {
+        margin-top: 50px;
+        &__notice {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+    }
+    .content__left--details {
+        font-size: 16px;
+    }
+    .form {
+        width: 450px;
+        height: 58px;
+
+        .formBtn {
+            padding: 11px 30px;
+            right: 8px;
+        }
+    }
+    .quantity {
+        margin-top: 50px;
+        &__header {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .images .group-icons {
+        left: 30px;
+        width: 550px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .menu {
+        margin-top: 4px;
+
+        li {
+            margin-left: 25px;
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+    .btn {
+        padding: 6px 18px;
+        margin-top: -6px;
+    }
+    .couple {
+        width: 380px;
+    }
+    .content__left {
+        margin-top: 20px;
+
+        &__title {
+            font-size: 12px;
+        }
+
+        &__notice {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+    }
+    .content__left--details {
+        font-size: 14px;
+    }
+    .form {
+        width: 350px;
+        height: 50px;
+
+        .formBtn {
+            padding: 10px 25px;
+            right: 3px;
+        }
+
+        input {
+            font-size: 14px;
+        }
+    }
+    .quantity {
+        margin-top: 30px;
+        display: block;
+
+        &__header {
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        &__title {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .select{display: none;}
+}
+
+// mobile
+@media (max-width: 575px){
+    @include mobile-device;
+    .select{display: none;}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    @include mobile-device;
+    .select{display: none;}
+}
