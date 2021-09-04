@@ -78,6 +78,30 @@ body {
   font-family: "googleSans";
 }
 
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
 .btnList {
   display: flex;
   justify-content: flex-end;
@@ -95,6 +119,19 @@ body {
 .form__btn:hover {
   color: #F4EBE6;
   background: #f88538;
+}
+
+.activeBtn {
+  color: #fff !important;
+}
+.activeBtn::after {
+  background-color: #ED9B59 !important;
+}
+
+.btn:hover::after {
+  background-color: #ED9B59;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .form {
@@ -274,14 +311,6 @@ a.activeItemMenu::after {
   transform: translateX(-50%);
   margin-top: 4px;
   position: absolute;
-}
-
-.activeBtn {
-  color: #F4EBE6 !important;
-  background-color: #ED9B59 !important;
-}
-.activeBtn:hover {
-  background: #f88538 !important;
 }
 
 @media (min-width: 992px) and (max-width: 1399px) {
