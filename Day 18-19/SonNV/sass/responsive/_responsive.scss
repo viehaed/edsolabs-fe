@@ -1,0 +1,163 @@
+@media (min-width: 992px) and (max-width: 1399px) {
+    .menu {
+        margin-top: 2px;
+    }
+
+
+    .images__couple {
+        width: 450px;
+    }
+
+    .contentLeft {
+        margin-top: 50px;
+
+        &__notice {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        &__details {
+            font-size: 16px;
+        }
+    }
+
+
+    .form {
+        width: 450px;
+        height: 58px;
+
+        .form__btn {
+            padding: 11px 30px;
+            right: 8px;
+        }
+    }
+
+    .statistical {
+        margin-top: 50px;
+
+        &__header {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    .images {
+        &__icon-icons {
+            left: 30px;
+            width: 550px;
+        }
+
+    }
+
+    img.images__love {
+        right: 30px !important;
+        width: 60px;
+        top: 350px !important;
+    }
+
+    @keyframes moveTop {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu {
+        margin-top: 4px;
+
+        li {
+            margin-left: 25px;
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .form__btn {
+        padding: 6px 18px;
+    }
+    .images__couple {
+        width: 380px;
+    }
+
+    .contentLeft {
+        margin-top: 20px;
+
+        &__title {
+            font-size: 12px;
+        }
+
+        &__notice {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .contentLeft__details {
+        font-size: 14px;
+    }
+
+    .form {
+        width: 350px;
+        height: 50px;
+
+        &__btn {
+            padding: 10px 25px;
+            right: 3px;
+        }
+
+        input {
+            font-size: 14px;
+        }
+    }
+
+    .statistical {
+        margin-top: 30px;
+
+        &__header {
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        &__title {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .images {
+        &__icon {
+            display: none;
+        }
+        &__love {
+            display: none;
+        }
+    }
+
+}
+
+// mobile
+
+@media (max-width: 575px) {
+    @include mobile-device;
+}
+
+// sm library
+
+@media (min-width: 576px) and (max-width: 767px) {
+    @include mobile-device;
+}

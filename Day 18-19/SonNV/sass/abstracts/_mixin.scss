@@ -1,0 +1,131 @@
+
+
+@mixin mobile-device {
+    .header {
+        margin-top: 5px;
+        &__logo {
+            img {
+                width: 15px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    .menu, .btnList  {
+        display: none;
+    }
+
+    .images__couple {
+        display: none;
+    }
+
+    .contentLeft {
+        margin-top: 0px;
+
+        &__title {
+            font-size: 10px;
+        }
+
+        &__notice {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .contentLeft__details {
+        font-size: 12px;
+    }
+
+    .form {
+        width: 100%;
+        height: 40px;
+
+        .form__btn {
+            padding: 8px 16px;
+            right: 4px;
+            font-size: 12px;
+        }
+
+        input {
+            font-size: 12px;
+        }
+
+        &__icon {
+            width: 15px;
+        }
+    }
+
+    .a {
+        display: block;
+        margin-top: 40px;
+        text-align: center;
+
+        &__item {
+            margin-top: 30px;
+
+            &:first-child {
+                margin-right: 0;
+            }
+    
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+
+        &__header {
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+
+    // mobile menu
+
+    nav.navbar {
+        display: block;
+        top: 20px;
+        background-color: #FEF3E7 !important;
+    }
+
+    .mobile--menu {
+        text-align: center;
+        border-bottom: 1px solid $secondaryColor;
+    }
+
+    .menu__mobile--icon {
+        position: absolute;
+        top: -45px;
+        right: 5px;
+    }
+
+    .nav-link {
+        &:focus {
+            color: $secondaryColor !important;
+        }
+    }
+
+    .mobile-btn {
+        margin-top: 30px;
+        justify-content: space-around;
+    }
+
+    .form__btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .images__icon {
+        display: none;
+    }
+
+    .images__love {
+        display: none;
+    }
+}

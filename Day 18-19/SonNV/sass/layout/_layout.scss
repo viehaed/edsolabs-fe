@@ -1,0 +1,125 @@
+.header {
+    margin-top: 37px;
+    margin-bottom: 18px;
+
+    &__logo {
+        position: relative;
+
+        span {
+            position: absolute;
+            margin-left: 10px;
+            top: 4px;
+            font-weight: 700;
+        }
+    }
+}
+
+.contentLeft {
+    margin-top: 117px;
+
+    &__title {
+        @include size(14px, 700, 24px, 0px);
+        color: $secondaryColor;
+    }
+    &__notice {
+        @include size(57px, 700, 59px, -0.01em);
+        margin-top: 13px;
+        text-align: left;
+        margin-bottom: 37px;
+
+        span {
+            color: $secondaryColor;
+        }
+    }
+    &__details {
+        @include size(20px, 400, 30px, 0em);
+        text-align: left;
+        opacity: 70%;
+        margin-bottom: 22px;
+    }
+}
+
+.statistical {
+    display: flex;
+
+    margin-top: 119px;
+
+    &__item {
+        &:first-child {
+            margin-right: 77px;
+        }
+
+        &:last-child {
+            margin-left: 88px;
+        }
+
+        &--header {
+            @include size(56px, 700, 71px, -4px);
+
+            &--mid {
+                color: $secondaryColor;
+            }
+        }
+
+        &--title {
+            @include size(16px, 400, 24px, 0);
+            margin-top: 8px;
+        }
+    }
+
+
+}
+
+.images {
+    position: relative;
+    
+    &__couple {
+        margin-left: 50px;
+        filter: drop-shadow(20px 20px 30px rgb(238, 178, 178));
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 80px;
+        top: 20px;
+        animation: moveBottom 2s;
+    }
+
+    &__love {
+        position: absolute;
+        right: 60px;
+        top: 480px;
+        animation: moveTop 2s;
+    }
+}
+
+.display--none {
+    display: none;
+}
+
+a.activeItemMenu {
+    color: $secondaryColor !important;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: $secondaryColor;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4px;
+        position: absolute;
+    }
+}
+
+.activeBtn {
+    &:hover {
+        background: rgb(248, 133, 56) !important;
+    }
+    color: #F4EBE6 !important;
+    background-color: $secondaryColor !important;
+}
