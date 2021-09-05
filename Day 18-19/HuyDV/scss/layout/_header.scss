@@ -27,6 +27,13 @@
     .logo {
         @include flexbox(end, center);
         gap: 10px;
+        &__text {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-black;
+            transform: translateY(3px);
+        }
     }
 }
 .menu {
@@ -51,6 +58,7 @@
 
     .nav-link {
         @include fontREM(20);
+        color: #7d8790;
         @include responsive($md-width) {
             @include fontREM(26);
         }
@@ -109,7 +117,7 @@
         &--active {
             background: $color-orange;
             border-color: $color-orange;
-            color: $color-white;
+            color: $color-gray;
         }
     }
 }

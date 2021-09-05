@@ -1,6 +1,8 @@
 .btn{
     padding: 7px 10px 7px 10px;
     border-radius:10px ;
+    font-weight: 700;
+    color: #7D8790;
     border: 1px solid $color-black;
     background-color: $color-white;
     @include responsive($lg-width){
@@ -14,7 +16,7 @@
     }
     &--orange{
         background-color: $color-orange;
-        color:$color-white;
+        color:$color-gray;
         border: none;
     } 
     &--btn--input{

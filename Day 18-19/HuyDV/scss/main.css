@@ -206,6 +206,15 @@ body {
   gap: 10px;
 }
 
+.header .logo__text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1d32;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
 .menu {
   margin: 50px 0 30px 0;
 }
@@ -244,6 +253,7 @@ body {
 .menu .nav-link {
   font-size: 20px;
   font-size: 1.25rem;
+  color: #7d8790;
   position: relative;
 }
 
@@ -351,7 +361,7 @@ body {
 .group-btn-login .btn--active {
   background: #ed9b59;
   border-color: #ed9b59;
-  color: #ffffff;
+  color: #F4EBE6;
 }
 
 @media only screen and (min-width: 992px) {
@@ -758,6 +768,7 @@ body {
 }
 
 .info-contact__text {
+  opacity: 0.7;
   -webkit-animation: textTop 1.5s ease-in-out 1;
           animation: textTop 1.5s ease-in-out 1;
   font-size: 18px;
@@ -765,10 +776,13 @@ body {
 }
 
 .info-contact__text--small {
+  opacity: 1;
   -webkit-animation: none;
           animation: none;
   font-size: 14px;
   font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 24px;
   margin-bottom: 13px;
 }
 
@@ -814,6 +828,7 @@ body {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  opacity: 0.3;
 }
 
 @media only screen and (min-width: 768px) {
@@ -856,6 +871,34 @@ body {
           transform: translateY(-2px);
   -webkit-box-shadow: 0 10px 10px rgba(26, 29, 50, 0.3) !important;
           box-shadow: 0 10px 10px rgba(26, 29, 50, 0.3) !important;
+}
+
+.form-contact__input input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1d32;
+  opacity: 0.3;
+}
+
+.form-contact__input input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1d32;
+  opacity: 0.3;
+}
+
+.form-contact__input input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1d32;
+  opacity: 0.3;
+}
+
+.form-contact__input input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1d32;
+  opacity: 0.3;
 }
 
 .form-contact__input input:focus ~ .btn--input,
@@ -940,6 +983,10 @@ body {
   }
 }
 
+.group-number__number--orange {
+  color: #B25E21;
+}
+
 .group-number__text {
   font-weight: normal;
   font-size: 16px;
@@ -950,6 +997,8 @@ body {
 .btn {
   padding: 7px 10px 7px 10px;
   border-radius: 10px;
+  font-weight: 700;
+  color: #7D8790;
   border: 1px solid #1a1d32;
   background-color: #ffffff;
 }
@@ -971,7 +1020,7 @@ body {
 
 .btn--orange {
   background-color: #ed9b59;
-  color: #ffffff;
+  color: #F4EBE6;
   border: none;
 }
 /*# sourceMappingURL=main.css.map */
