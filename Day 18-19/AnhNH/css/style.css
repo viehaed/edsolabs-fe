@@ -307,9 +307,6 @@ a {
 .content__left-sublike-item {
   padding: 10px;
 }
-.content__left-sublike-item span {
-  color: #ed9b59;
-}
 .content__left-sublike-item h2 {
   font-weight: bold;
   font-size: 56px;
@@ -317,6 +314,10 @@ a {
   letter-spacing: -4px;
   color: #1a1d32;
   text-align: left;
+}
+.content__left-sublike-item h2 span {
+  color: #B25E21;
+  font-weight: bold;
 }
 .content__left-sublike-item p {
   font-style: normal;

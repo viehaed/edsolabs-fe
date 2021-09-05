@@ -85,9 +85,7 @@
         display: none;
         &-item {
             padding: 10px;
-            span {
-                color: $colorHover;
-            }
+
             h2 {
                 font-weight: bold;
                 font-size: 56px;
@@ -95,6 +93,10 @@
                 letter-spacing: -4px;
                 color: $colorLogo;
                 text-align: left;
+                span {
+                    color: #B25E21;
+                    font-weight: bold;
+                }
             }
             p {
                 font-style: normal;
