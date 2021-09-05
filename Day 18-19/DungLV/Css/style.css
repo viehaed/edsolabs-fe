@@ -6,6 +6,10 @@
   font-family: fontAll;
   src: url(../Fonts/GoogleSans-Medium.ttf);
 }
+@font-face {
+  font-family: font400;
+  src: url(../Fonts/GoogleSans-Regular.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -31,6 +35,7 @@ body {
 }
 
 ::placeholder {
+  font-family: font400;
   color: #1a1d32;
   font-size: 16px !important;
   opacity: 0.3 !important;
@@ -56,6 +61,7 @@ input:focus {
   color: #ed9b59;
 }
 .layout__text--header {
+  font-family: fontBold;
   display: block;
   margin-bottom: 13px;
   font-size: 14px;
@@ -77,6 +83,7 @@ input:focus {
   display: flex;
 }
 .layout__content {
+  font-family: font400;
   max-width: 520px;
   opacity: 0.7;
   font-size: 20px;
@@ -86,9 +93,10 @@ input:focus {
   margin-bottom: 22px;
 }
 .layout__content-header {
+  font-family: fontBold;
+  color: #1a1d32;
   font-size: 16px;
   font-weight: 700;
-  color: #1a1d32;
   margin-left: 12px;
 }
 .layout__right {
@@ -162,6 +170,7 @@ input:focus {
   width: 150px;
 }
 .info__dates--points {
+  font-family: fontBold;
   font-size: 56px;
   color: #1a1d32;
   line-height: 71.23px;
@@ -171,6 +180,7 @@ input:focus {
   margin-bottom: 8px;
 }
 .info__dates--desc {
+  font-family: font400;
   font-size: 16px;
   color: #1a1d32;
   font-weight: 400;
@@ -194,11 +204,12 @@ input:focus {
 }
 
 .btn {
+  font-family: fontBold;
   display: block !important;
   color: #7d8790;
   height: 52px;
   width: 146px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 39px;
   border-radius: 40px;
 }
@@ -226,7 +237,9 @@ input:focus {
 }
 
 .nav-link {
-  font-weight: 600;
+  font-family: fontBold;
+  color: #7d8790 !important;
+  font-weight: 700;
   margin-left: 28px;
   position: relative;
 }

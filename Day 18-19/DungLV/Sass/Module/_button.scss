@@ -4,11 +4,12 @@
     color: $colorTextBtn !important;
 }
 .btn {
+    font-family: fontBold;
     display: block !important;
     color: $colorNav;
     height: 52px;
     width: 146px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 39px;
     border-radius: 40px;
     &--login {
@@ -34,7 +35,9 @@
     background-color: $colorPrimary;
 }
 .nav-link {
-    font-weight: 600;
+    font-family: fontBold;
+    color: rgba(125, 135, 144, 1) !important;
+    font-weight: 700;
     margin-left: 28px;
     position: relative;
     &:hover {

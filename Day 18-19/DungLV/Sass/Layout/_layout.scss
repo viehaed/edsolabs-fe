@@ -10,6 +10,7 @@
     &__text {
         color: $colorPrimary;
         &--header {
+            font-family: fontBold;
             display: block;
             margin-bottom: 13px;
             font-size: 14px;
@@ -33,11 +34,15 @@
     }
     &__content {
         &-header {
+            font-family: fontBold;
+            color: rgba(26, 29, 50, 1);
+
             font-size: 16px;
             font-weight: 700;
-            color: $colorText;
+            // color: $colorText;
             margin-left: 12px;
         }
+        font-family: font400;
         max-width: 520px;
         opacity: 0.7;
         font-size: 20px;
@@ -116,6 +121,7 @@
 .info__dates {
     width: 150px;
     &--points {
+        font-family: fontBold;
         font-size: 56px;
         color: $colorText;
         line-height: 71.23px;
@@ -125,6 +131,7 @@
         margin-bottom: 8px;
     }
     &--desc {
+        font-family: font400;
         font-size: 16px;
         color: $colorText;
         font-weight: 400;
