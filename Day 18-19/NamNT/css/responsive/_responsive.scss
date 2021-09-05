@@ -1,0 +1,16 @@
+@media screen and (max-width: 992px) {
+    .container {
+        .header {
+            .nav__mobile {
+                margin-top: 20px;
+                display: block;
+            }
+            .header__nav {
+                display: none;
+            }
+            .header__login {
+                display: none;
+            }
+        }
+    }
+}

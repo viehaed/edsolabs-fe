@@ -1,0 +1,80 @@
+@mixin navbar {
+    color: #7D8790;
+    display: block;
+    margin-right: 39px;
+    font-size: 1.6rem;
+    font-family: "Google Sans Bold";
+    font-weight: 700;
+}
+
+.container {
+    .header {
+        margin-top: 37px;
+        &__logo {
+            display: flex;
+            align-items: center;
+            padding: 15px 0 1px 0;
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+            span {
+                font-size: 1.6rem;
+                font-family: "Google Sans Bold";
+                width: 48px;
+            }
+        }
+        &__nav {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 15px 0 0 0;
+            &--item {
+                a {
+                    @include navbar;
+                }
+            }
+        }
+        &__login {
+            display: flex;
+            justify-content: flex-end;
+            a {
+                word-wrap: normal;
+                padding: 15px 0 0 0;
+                @include navbar;
+            }
+            button {
+                color: #F4EBE6;
+                line-height: 20px;
+                font-size: 1.6rem;
+                width: 146px;
+                font-family: "Google Sans Bold";
+                background: #ED9B59;
+                box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+                border-radius: 40px;
+                padding: 17px 40px 15px 41px;
+            }
+        }
+        .nav__mobile {
+            display: none;
+            .header__nav--mobile {
+                display: unset;
+                .navbar-toggler:focus {
+                    outline: none;
+                }
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+.header__nav .header__nav--item:nth-child(1) a {
+    color: #ED9B59;
+}
+
+.header__nav .header__nav--item:nth-child(1) img {
+    margin: 0 0 0 18px;
+}
