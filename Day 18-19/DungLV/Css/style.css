@@ -98,7 +98,7 @@ input:focus {
 }
 .layout__right--img {
   width: 651px;
-  transform: scale(0.989);
+  transform: scale(0.9838);
   z-index: 2;
 }
 .layout__right--blur {
@@ -177,6 +177,14 @@ input:focus {
 }
 .info__dates--bold {
   color: #b25e21;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .activeBtn {

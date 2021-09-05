@@ -52,7 +52,7 @@
         height: 885px;
         &--img {
             width: 651px;
-            transform: scale(0.989);
+            transform: scale(0.9838);
             z-index: 2;
         }
         &--blur {
@@ -132,4 +132,10 @@
     &--bold {
         color: $colorBold;
     }
+}
+.navbar-toggler {
+    border: 0 !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
 }
