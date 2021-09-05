@@ -1,0 +1,153 @@
+.text-color {
+    color: $primaryColor;
+}
+
+.number-color {
+    color: $numberColor;
+}
+
+.contentText {
+    padding-top: 100px;
+    padding-bottom: 22px;
+    @include size($maxWidth: 583px);
+    font-weight: 700;
+
+    &__intro {
+        font-size: 14px;    
+        color: $primaryColor;
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        margin-bottom: 37px;
+        @include size($minHeight: 177px);
+        font-size: 58px;
+        color: $textColor;
+    }
+
+    &__description {
+        margin: 0px;
+        @include size($maxWidth: 520px);
+        font-size: 20px;
+        font-weight: 400;
+        color: $textColor;
+        opacity: 70%;
+    }
+}
+
+.contentForm {
+    @include size($maxWidth: 515px, $height: 68px);
+    border-radius: 40px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    box-shadow: $boxShadow;
+
+    &__input {
+        display: flex;
+        align-items: center;
+        
+    
+        &__icon {
+            @include size($width: 20px, $height: 16px);
+            padding-left: 24px;
+            padding-right: 21px;
+            color: $textColor;
+            font-weight: 400px;
+            opacity: 30%;       
+        }
+    
+        &__field {
+            margin-right: 5px;
+            @include size($height: 40px);
+            outline: none;
+            border: 0px;
+            
+    
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */    
+                @include placeHolder();
+            }
+              
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                @include placeHolder();
+            }
+              
+            &::-ms-input-placeholder { /* Microsoft Edge */
+                @include placeHolder();
+            }
+        }
+    }
+
+    &__email {
+        margin-right: 11px;
+        @include size($width: 180px, $height: 50px);
+
+        &:hover {
+            color: $menuColor !important;
+            @include hoverButton($primaryColor, 0.6);
+        }
+    }
+}
+
+
+.contentIndex {
+    margin-top: 119px;
+    margin-bottom: 76px;
+    @include size($maxWidth: 551px, $height: 127px);
+    display: flex;
+    color: $textColor;
+
+    &__item{
+        // width: 139px;
+        @include size($width: 139px);
+        margin-right: 77px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &__number {
+            @include size($maxHeight: 71px); 
+            font-size: 56px;
+            font-weight: 700;
+        }
+
+        &__description {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &-new {
+            @include size($width: 127px);
+        }
+
+        &-member {
+            @include size($width: 125px);
+        }
+    }
+}
+
+.image {
+    position: relative;
+    @include size($maxWidth: 651px, $height: 910px);
+    
+    &__big {
+        @include size($width: 100%, $height: 100%);
+    }
+
+    &__small {
+        position: absolute;
+        top: 26px;
+        left: 26px;
+        @include size($maxWidth: 600px, $maxHeight: 261px);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 468px;
+        right: 18px;
+        @include size($maxWidth: 77px, $maxHeight: 77px);
+    }
+}
+

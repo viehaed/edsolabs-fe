@@ -1,0 +1,105 @@
+.header {
+    margin: auto;
+    margin-top: 37px;
+    margin-bottom: 18px;
+    @include size ($maxWidth: 1292px, $minHeight: 53px);
+}
+
+.brand {
+    display: inline-block;
+    @include size ($minWidth: 82px, $height: 26px);
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 27% !important;
+}
+
+.menu {
+    @include size ($minHeight: 53px);
+
+    &__item {
+        @include size ($maxHeight: 53px);
+        padding-right: 39px;
+
+        &__link {
+            @include size ($maxHeight: 53px);
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+
+        &__title {
+            margin-top: 8px;
+            margin-bottom: 10px;
+            @include size ($maxHeight: 20px);
+            font-size: 16px;
+            font-weight: 700;
+            color: $menuColor;
+        }
+
+        &__dot {
+            display: none;
+            margin: auto;
+            @include size($width: 7px, $height: 7px);
+            background-image: url('../images/dot.png');
+            background-size: cover;
+        }
+
+        &--active {
+            & .menu__item__title {
+                color: $primaryColor;
+            }
+
+            & .menu__item__dot {
+                display: block;
+            }
+        }
+
+        &:hover {
+            & .menu__item__title {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+.navForm {
+    @include size($height: 53px);
+    display: flex;
+}
+
+
+#but {
+    background-color: $primaryColor;
+    border-radius: 40px;
+    color: #F4EBE6;
+    font-size: 16px;
+    font-weight: 700;
+    @include size($minWidth: 146px);
+    box-shadow: $boxShadow !important;
+
+    &:focus {
+        border: 1px solid blue;
+    }
+}
+
+.btn {
+    &-login {
+        @include size($height: 52px);
+        background-color: transparent !important;
+        color: $menuColor !important;
+        
+        &:hover {
+            @include hoverButton($primaryColor, 0.5);
+        }
+    }
+    
+    &-register {
+        @include size($height: 52px);
+
+        &:hover {
+            color: $menuColor !important;
+            @include hoverButton($primaryColor, 0.6);
+        }
+    }
+}
+

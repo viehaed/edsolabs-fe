@@ -1,0 +1,18 @@
+@mixin hoverButton ($color, $alpha) {
+    background-color: rgba($color, $alpha) !important;
+}
+
+@mixin placeHolder {
+    color: $textColor;
+    font-weight: 400px;
+    opacity: 30%;
+}
+
+@mixin size ($maxWidth: none, $maxHeight: none, $minWidth: none, $minHeight: none, $width: none, $height: none) {
+    max-width: $maxWidth;
+    max-height: $maxHeight;
+    min-width: $minWidth;
+    min-height: $minHeight;
+    width: $width;
+    height: $height;
+}

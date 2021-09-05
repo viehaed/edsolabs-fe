@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <div class="row">
+                <div class="col noPadding">
+                    <nav class="navbar navbar-expand-lg navbar-light noPadding">
+                        <div class="container-fluid noPadding">
+                            <a class="navbar-brand brand" href="#" tabindex="1"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menuBar">
+                                <ul class="navbar-nav menu">
+                                    <li class="nav-item menu__item menu__item--active">
+                                        <a class="nav-link menu__item__link" href="#" tabindex="2">
+                                            <div class="menu__item__title">Home</div>
+                                            <div class="menu__item__dot"></div>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item menu__item">
+                                        <a class="nav-link menu__item__link" href="#" tabindex="3">
+                                            <div class="menu__item__title">Members</div>
+                                            <div class="menu__item__dot"></div>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item menu__item">
+                                        <a class="nav-link menu__item__link" href="#"  tabindex="4">
+                                            <div class="menu__item__title">Blog</div>
+                                            <div class="menu__item__dot"></div>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item menu__item">
+                                        <a class="nav-link menu__item__link" href="#"  tabindex="5">
+                                            <div class="menu__item__title">Privacy</div>
+                                            <div class="menu__item__dot"></div>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item menu__item">
+                                        <a class="nav-link menu__item__link" href="#"  tabindex="6">
+                                            <div class="menu__item__title">Contact</div>
+                                            <div class="menu__item__dot"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <form class="navForm ms-auto">
+                                    <button id="but" class="btn btn-login" tabindex="7">Login</button>
+                                    <button id="but" class="btn btn-register" tabindex="8">Register</button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- main -->
+        <div class="main">
+            <div class="row">
+                <div class="content col-xl-6 col-lg-6 col-sm-12 noPadding">
+                    <article class="contentText jumbotron">
+                        <p class="contentText__intro">Because you deserve better!</p>
+
+                        <h2 class="contentText__title">
+                            Get noticed for <span class="text-color">who </span>you are,
+                            <span class="text-color">not what </span>you look like.</h2>
+            
+                        <p class="contentText__description">
+                        You’re more than just a photo. You have stories to tell, and
+                        passions to share, and things to talk about that are more
+                        interesting than the weather. Because you deserve what dating
+                        deserves: better.
+                        </p>
+                    </article>
+
+                    <form class="contentForm">
+                        <div class="contentForm__input">
+                            <i class="contentForm__input__icon far fa-envelope"></i>
+                            <input type="email" class="contentForm__input__field" placeholder="Enter your email" tabindex="9">
+                        </div>
+                        <button id="but" class="btn contentForm__email ms-auto" tabindex="10">Get started</button>
+                    </form>
+
+                    <div class="contentIndex">
+                        <div class="contentIndex__item contentIndex__item-dating">
+                            <div class="contentIndex__item__number">15K+</div>
+                            <div class="contentIndex__item__description">Dates and matches made everyday</div>
+                        </div>
+                        <div class="contentIndex__item contentIndex__item-new">
+                            <div class="contentIndex__item__number number-color">1,456</div>
+                            <div class="contentIndex__item__description">New members signup every day</div>
+                        </div>
+                        <div class="contentIndex__item contentIndex__item-member">
+                            <div class="contentIndex__item__number">1M+</div>
+                            <div class="contentIndex__item__description">Members from around the world</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-sm-12 noPadding">
+                    <div class="image">
+                        <img class="image__big" src="./images/people.png" alt="couple">
+                        <img class="image__small"src="./images/Group 621.png" alt="group icons">
+                        <img class="image__icon" src="./images/Group 599.png" alt="icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
