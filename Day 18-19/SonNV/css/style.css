@@ -260,15 +260,15 @@ body {
   line-height: 71px;
   letter-spacing: -4px;
 }
-.statistical__item--header--mid {
-  color: #ED9B59;
-}
 .statistical__item--title {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
   margin-top: 8px;
+}
+.statistical__item--mid {
+  color: #B25E21 !important;
 }
 
 .images {
