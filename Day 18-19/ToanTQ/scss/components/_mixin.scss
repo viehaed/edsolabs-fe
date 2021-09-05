@@ -1,0 +1,31 @@
+@mixin corner-icon($name, $position, $width, $height) {
+  background: url("/assets/images/#{$name}.png") no-repeat $position;
+  width: $width;
+  height: $height;
+  display: inline-block;
+}
+
+@mixin flex(
+  $align: flex-start,
+  $justify: flex-start,
+  $wrap: nowrap,
+  $direction: row
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+
+@mixin icon-banner($name, $top, $left, $width, $height, $zIndex:10) {
+  .icon-#{$name} {
+    position: absolute;
+    background: url("/assets/images/#{$name}.svg");
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    z-index: $zIndex;
+  }
+}

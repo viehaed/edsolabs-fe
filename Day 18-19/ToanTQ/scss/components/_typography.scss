@@ -1,0 +1,54 @@
+@use "../base/custom" as*;
+
+.txt-skin-b {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+}
+head {
+  .btn-rounded {
+    color: $gray-color;
+  }
+}
+
+.content {
+  .jumbotron {
+    .txt-slogan {
+      @extend .txt-skin-b;
+      font-size: $font-size-sm;
+    }
+
+    h1 {
+      font-weight: $font-weight-bold;
+      letter-spacing: -0.01em;
+      margin-bottom: 2.3rem;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-normal;
+      opacity: 0.7;
+    }
+  }
+}
+
+.statistic {
+  li {
+    h2 {
+      font-weight: $font-weight-bold;
+      letter-spacing: -4px;
+    }
+
+    p {
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+    }
+  }
+}
+
+.member {
+  li {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-normal;
+  }
+}

@@ -1,0 +1,86 @@
+@use "../base/custom" as*;
+@use "../components/mixin" as*;
+
+.member {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+}
+.group-info {
+  justify-content: space-between;
+  align-items: center;
+  li {
+    position: relative;
+    width: 125px;
+
+    @include icon-banner(male, auto, 5px, 20px, 20px);
+    @include icon-banner(event-add, auto, 5px, 18px, 18px);
+    @include icon-banner(dropp, auto, 5px, 20px, 20px);
+
+    &:nth-child(odd) {
+      background: $white-color;
+      color: $orange-color;
+    }
+  }
+}
+
+.member-info {
+  //   position: absolute;
+  @include flex(center, space-between);
+  background: $white-color;
+  width: 365px;
+  padding: 10px;
+  border-radius: 10px;
+  &:nth-child(odd) {
+    margin-right: 0;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .member-info {
+    width: 340px;
+    &:nth-child(odd) {
+      float: left;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .group-info {
+    @include flex(self-start, space-between, wrap, column);
+    position: relative;
+    li {
+      // position: absolute;
+      display: block;
+      margin-bottom: 1rem;
+      &:nth-child(2) {
+        margin-left: 20%;
+      }
+      &:nth-child(3) {
+        margin-left: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .member {
+    left: 0;
+    bottom: 120px;
+    .group-info {
+      @include flex(center, space-between, nowrap, row);
+
+      li {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .member {
+    position: unset;
+  }
+}

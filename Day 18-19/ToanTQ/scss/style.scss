@@ -1,0 +1,20 @@
+@use "./base/custom";
+@use "./base/base";
+
+// IMPORT THE COMPONENTS
+
+@use "./components/animation";
+@use "./components/button";
+@use "./components/mixin";
+@use "./components/typography";
+
+//IMPORT THE SECTIONS
+
+@use "./sections/banner";
+@use "./sections/content";
+@use "./sections/navbar";
+@use "./sections/statistic";
+@use "./sections/member";
+
+
+
