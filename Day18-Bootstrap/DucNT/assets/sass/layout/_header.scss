@@ -1,0 +1,44 @@
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * 1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.nav-item {
+  margin-left: 2rem !important;
+
+
+}
+
+.nav-link {
+  transition: color 0.4s;
+  color: #7D8790 !important;
+}
+
+.nav-link:hover {
+  color: $color !important;
+
+}
+
+.navbar__link--bold {
+  font-weight: normal;
+  color: rgba(125, 135, 144, 1);
+}
+
+.navbar__link--button {
+  border-radius: 3.7rem;
+  background: $color;
+  width: 15rem;
+  color: #F4EBE6;
+  cursor: pointer;
+  font-weight: bold;
+  width: 14.6rem;
+  height: 5.2rem;
+  border: 0;
+  transition: background-color 0.5s;
+
+}

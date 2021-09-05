@@ -1,0 +1,47 @@
+.footer {
+  position: absolute;
+  left: 2.5rem;
+  max-width: 43%;
+  top: 54rem;
+
+  &__item h3:nth-child(1) {
+
+    -webkit-text-stroke: 0.2rem #1A1D32;
+    animation: animate 3s ease-in-out infinite;
+  }
+
+  &__title--color:nth-child(1) {
+    -webkit-text-stroke: 0.2rem #B25E21;
+    animation: animate 3s ease-in-out infinite;
+  }
+
+  &__title,
+  &__title--color {
+    font-weight: 700;
+    color: rgba(26, 29, 50, 1);
+    font-size: 5.6rem;
+  }
+
+  &__title--color {
+    color: rgba(178, 94, 33, 1);
+  }
+
+  &__para {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 1.5rem;
+  }
+
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: circle(90% at 50% 50%);
+  }
+
+  50% {
+    clip-path: circle(50% at 50% 100%);
+  }
+}
