@@ -1,0 +1,236 @@
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .brand {
+        margin-right: 18% !important;
+    }
+
+    .image {
+        &__small {
+            @include size ($maxWidth: 500px);
+        }
+    
+        &__icon {
+            @include size ($maxWidth: 55px, $maxHeight: 55px);
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .brand {
+        margin-right: 12% !important;
+    }
+
+    .image {
+        height: 980px;
+
+        &__big {
+            margin-left: 20px;
+        }
+
+        &__small {
+            top: 40px;
+            left: 46px;
+            @include size ($maxWidth: 400px);
+        }
+    
+        &__icon {
+            top: 468px;
+            right: 0px;
+            @include size ($maxWidth: 45px, $maxHeight: 45px);
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #menuBar {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        @include size($width: 100%);
+        z-index: 100;
+        padding-bottom: 20px;
+    }
+
+    .menu {
+         
+        &__item {
+            padding-left: 10px;
+                       
+            &:hover {
+                background-color: #ED9B59;
+                
+                & .menu__item__title {
+                    color: #F4EBE6;
+                }
+            }
+
+            &--active {
+                & .menu__item__dot {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .content {
+        &Text {
+            margin-left: 56px;
+        }
+
+        &Index {
+            margin-left: 56px;
+            
+            &__item {
+                margin-right: 70px;
+            }
+        }
+
+        &Form {
+            margin-left: 56px;
+        }
+    }
+
+    .image {
+        height: auto;
+
+        &__small {
+            top: 26px;
+            left: 26px;
+            @include size ($maxWidth: 600px);
+        }
+    
+        &__icon {
+            top: 468px;
+            right: 18px;
+            @include size ($maxWidth: 77px, $maxHeight: 77px);
+        }
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    #menuBar {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        @include size($width: 100%);
+        z-index: 100;
+        padding-bottom: 20px;
+    }
+
+    .menu {         
+        &__item {
+            padding-left: 10px;
+                       
+            &:hover {
+                background-color: #ED9B59;
+                
+                & .menu__item__title {
+                    color: #F4EBE6;
+                }
+            }
+
+            &--active {
+                & .menu__item__dot {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .contentIndex__item {
+        margin-right: 57px;
+    }
+
+    .image {
+        &__small {
+            top: 36px;
+            left: 14px;
+            @include size ($maxWidth: 55px);
+        }
+    
+        &__icon {
+            top: 468px;
+            right: 18px;
+            @include size ($maxWidth: 55px, $maxHeight: 55px);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    #menuBar {
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        z-index: 100;
+        @include size($width: 100%);
+        padding-bottom: 20px;
+    }
+
+    .menu {         
+        &__item {
+            padding-left: 10px;
+                       
+            &:hover {
+                background-color: #ED9B59;
+                
+                & .menu__item__title {
+                    color: #F4EBE6;
+                }
+            }
+
+            &--active {
+                & .menu__item__dot {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .contentForm {
+        display: block;
+
+        &__input {
+            padding-top: 15px;
+        }
+
+
+        &__email {
+            margin-top: 18px;
+            @include size($width: 100%);
+        }
+    }
+
+    .contentIndex {
+        display: block;
+        @include size($height: 100%);
+
+        &__item {
+            width: 140px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-right: auto;
+            }
+        }
+    }
+
+    .image {
+        &__small {
+            top: 20%px;
+            left: 8%;
+            @include size ($maxWidth: 80%);
+        }
+    
+        &__icon {
+            top: 468px;
+            right: 1%;
+            @include size ($maxWidth: 10%, $maxHeight: 10%);
+        }
+    }
+}

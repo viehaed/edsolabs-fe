@@ -1,0 +1,25 @@
+.noMargin {
+    margin: 0 !important;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: GoogleSans;
+    background-image: url(../images/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+    align-items: center;
+}
