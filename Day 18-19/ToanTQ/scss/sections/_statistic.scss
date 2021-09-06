@@ -1,0 +1,33 @@
+@use "../base/custom" as*;
+
+.statistic {
+  position: absolute;
+  left: 0;
+  bottom: 4.75rem;
+  z-index: 10;
+
+  .number-list {
+    justify-content: space-between;
+    li {
+      max-width: 140px;
+      max-height: 130px;
+      overflow: hidden;
+
+      &:nth-child(even) {
+        h2 {
+          color: $brown-2-color;
+        }
+      }
+
+      p,
+      h2 {
+        color: $black-color;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .statistic {
+    position: unset;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../base/custom" as*;
+
+.btn-rounded {
+  padding: 1rem 2.5rem;
+  background: $orange-color;
+  color: $btn-color;
+  border: none;
+  border-radius: $border-radius;
+}
+
+.btn-select {
+  padding: 10px 20px;
+  background: $orange-color;
+  color: $white-color;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.member-btn {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-option-member {
+  // width: 1.5rem;
+  // height: 1.5rem;
+  // border-radius: 50%;
+  // background-color: $orange-color;
+}

@@ -1,0 +1,49 @@
+@use "../base/custom" as*;
+@use "../components/mixin" as*;
+
+.content {
+  padding-top: 5rem;
+  .jumbotron {
+    span {
+      color: $orange-color;
+    }
+    h1,
+    p {
+      color: $black-color;
+    }
+    p {
+      max-width: 520px;
+    }
+  }
+
+  .email {
+    position: relative;
+    @include flex(center);
+
+    max-width: 520px;
+    border-radius: $border-radius;
+
+    &-input {
+      position: relative;
+      padding: 24px 0 24px 60px;
+      opacity: 0.6;
+      &::placeholder {
+        color: $gray-color;
+      }
+    }
+
+    .btn-rounded {
+      position: absolute;
+      right: 10px;
+    }
+
+    .icon-email {
+      position: absolute;
+      left: 22px;
+      background: url("/assets/images/email.svg");
+      width: 20px;
+      height: 16px;
+      z-index: 10;
+    }
+  }
+}

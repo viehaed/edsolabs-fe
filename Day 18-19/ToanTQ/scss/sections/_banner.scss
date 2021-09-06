@@ -1,0 +1,38 @@
+@use "../components/mixin" as*;
+
+.banner {
+  &-bg {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: calc(100% - 57px);
+      height: calc(100% - 60px);
+
+      background: url("/assets/images/image\ 1.png") no-repeat;
+      background-size: cover;
+      opacity: 0.5;
+      filter: blur(64px);
+    }
+    img {
+      position: relative;
+      object-fit: cover;
+      width: 100%;
+      z-index: 2;
+    }
+    @include icon-banner(chin-chin, 10rem, 1rem, 35px, 35px);
+    @include icon-banner(ring, -3rem, 3rem, 91px, 91px);
+    @include icon-banner(thumbs-up, -1.7rem, 60%, 44px, 44px);
+    @include icon-banner(heart, 9rem, 80%, 69px, 69px);
+    @include icon-banner(calendar-add, 20rem, 85%, 77px, 77px, 1);
+  }
+}
+
+@media screen and (max-width: 576px){
+  .banner{
+    margin-top: 5rem;
+  }
+}

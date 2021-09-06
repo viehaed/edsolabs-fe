@@ -1,0 +1,26 @@
+@use "../components/mixin" as*;
+@use "../base/custom" as*;
+
+header {
+
+  .logo {
+    @include flex(center, flex-start);
+    &-bg {
+      @include corner-icon(Icon_rabbit, 0, 24px, 24px);
+      padding: 3px;
+    }
+    a {
+      padding-left: 0.625rem;
+    }
+  }
+  .btn-aligin {
+    @extend .logo;
+    float: right;
+    button {
+      margin-left: 1.25rem;
+    }
+  }
+  li > a {
+    padding: 0 1.25rem !important;
+  }
+}
