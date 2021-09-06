@@ -1,0 +1,261 @@
+//reset -- base
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button {
+    border-color: transparent;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+//var
+//color
+$black: #1A1D32;
+$active: #ED9B59;
+$gray: #7D8790;
+$white: #F4EBE6;
+$bg: #FEEFE3;
+//font
+@font-face {
+    font-family: sans;
+    src: url(../../font/ProductSans-Regular.ttf);
+}
+
+//font-size
+$normal: 16px;
+$small: 14px;
+$sm-sup-big: 30px;
+$sup-big: 58px;
+$big: 20px;
+$bigger: 56px;
+//font-weight
+$bold: 700;
+$nor: 400;
+//size
+$dot: 7px;
+//border-radius
+$full: 100%;
+$bo4: 40px;
+//back ground
+@mixin vector($top-or-bottom, $left-or-right) {
+    position: absolute;
+    #{$top-or-bottom}: 0;
+    #{$left-or-right}: 0;
+    z-index: -1;
+}
+
+.bg {
+    background: $bg;
+    position: relative;
+    background-image: url(../../assest/noise.png);
+    background-blend-mode: lighten;
+    &__vector {
+        @include vector(bottom, right)
+    }
+    &__top-vector {
+        @include vector(top, right)
+    }
+    &__bot-vector {
+        @include vector(bottom, left)
+    }
+}
+
+@mixin text-style($color, $size, $weight) {
+    color: $color!important;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.header {
+    padding-top: 37px;
+    font-family: sans;
+    &__nav {
+        &__brand {
+            img {
+                vertical-align: sub;
+            }
+            span {
+                @include text-style($black, $normal, $bold)
+            }
+        }
+        &__button {
+            &:focus {
+                box-shadow: 0 0 0 0.25rem transparent;
+            }
+        }
+        &__bar {
+            &__center {
+                gap: 25px;
+                &__item {
+                    position: relative;
+                    &__link {
+                        @include text-style($gray, $normal, $bold);
+                        &--active {
+                            color: $active!important;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                background: $active;
+                                width: $dot;
+                                height: $dot;
+                                border-radius: $full;
+                                top: 35px;
+                                left: calc(50% - #{$dot*0.5})
+                            }
+                        }
+                    }
+                }
+            }
+            &__right {
+                &__btn {
+                    border-radius: $bo4;
+                    box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+                    padding: 15px 40px;
+                    text-decoration: none;
+                    @include text-style($gray, $normal, $bold);
+                    &:hover {
+                        background-color: darken($white, 10%);
+                    }
+                    &:focus {
+                        box-shadow: 0 0 0 0.25rem transparent;
+                    }
+                    &--acitve {
+                        background-color: $active;
+                        @include text-style($white, $normal, $bold);
+                        &:hover {
+                            background-color: darken($active, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    font-family: sans;
+    &__left {
+        &__jumpbotron {
+            &__lead {
+                @include text-style($active, $small, $bold)
+            }
+            &__display {
+                letter-spacing: 0.05em;
+                @include text-style($black, $sup-big, $bold);
+                span {
+                    color: $active;
+                }
+            }
+            &__des {
+                @include text-style($black, $big, $nor);
+                opacity: 0.7;
+                width: 90%;
+            }
+            &__form {
+                width: 90%;
+                border-radius: $bo4;
+                box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+                &__icon {
+                    opacity: 0.3;
+                }
+                &__input {
+                    border: none;
+                    background-color: inherit;
+                    @extend .main__left__jumpbotron__form__icon;
+                    &:focus {
+                        box-shadow: 0 0 0 0.25rem transparent;
+                    }
+                }
+                &__btn {
+                    @extend .header__nav__bar__right__btn--acitve;
+                    @extend .header__nav__bar__right__btn;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &__bot {
+            &__item {
+                h1 {
+                    @include text-style($black, $bigger, $bold)
+                }
+                p {
+                    @include text-style($black, $normal, $nor)
+                }
+            }
+        }
+    }
+    &__right {
+        background-image: url(../../assest/image2.png);
+        background-size: 100%;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+#active {
+    color: $active!important;
+}
+
+#big-img {
+    opacity: 0;
+}
+
+@media(max-width:1200px) {
+    .header__nav__bar__right {
+        padding: 0!important;
+        margin: 0!important;
+    }
+}
+
+@media(max-width:992px) {
+    .header__nav__bar__center {
+        gap: 0;
+    }
+    .header__nav__bar__center__item__link--active::before {
+        top: 16px;
+        left: 70px;
+    }
+    .main__left__jumpbotron {
+        margin-top: 10px!important;
+    }
+    .main__right img {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:576px) {
+    .main__left__jumpbotron {
+        padding: 0!important;
+    }
+    .main__left__jumpbotron__display {
+        font-size: $sm-sup-big;
+    }
+    .main__left__jumpbotron__form {
+        width: 100%;
+    }
+    .main__left__jumpbotron__form__icon {
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+        margin-left: .25em!important;
+    }
+    .header__nav__bar__right__btn,
+    .main__left__jumpbotron__form__btn {
+        padding: 0 10px;
+    }
+    .main__left__bot__item h1 {
+        font-size: $sm-sup-big;
+    }
+    .main__left__bot__item p {
+        font-size: $small;
+    }
+}
