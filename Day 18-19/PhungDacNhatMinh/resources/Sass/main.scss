@@ -1,0 +1,411 @@
+@use "sass:math";
+@import './variable.scss';
+// FontFace
+@font-face {
+    font-family: "google sans";
+    src: url("../font/GoogleSans-Bold.otf");
+}
+
+@font-face {
+    font-family: "google sans";
+    src: url("../font/GoogleSans-Black.otf");
+}
+
+@font-face {
+    font-family: "google sans";
+    src: url("../font/GoogleSans-Light.otf");
+}
+
+@font-face {
+    font-family: "google sans";
+    src: url("../font/GoogleSans-Medium.otf");
+}
+
+@font-face {
+    font-family: "google sans";
+    src: url("../font/GoogleSans-Regular.otf");
+}
+
+* {
+    font-family: 'google sans';
+}
+
+// Body Style
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'google sans';
+    font-size: 16px;
+}
+
+.main {
+    background-image: url(../img/Frame\ 583.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Heading  
+.headings {
+    padding-top: math.div(29, 16) + rem;
+    &--pad {
+        padding-left: math.div(50, 16) + rem;
+        padding-right: math.div(50, 16) + rem;
+    }
+}
+
+//mobie heading 
+@media screen and (max-width: 991px) {
+    .mobie-header {
+        justify-content: end !important;
+        &__button {
+            margin-right: math.div(20, 16)+rem;
+        }
+    }
+}
+
+// Logo
+.logo {
+    &__img {
+        padding-bottom: math.div(6, 16) + rem;
+    }
+    &__text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1A1D32;
+    }
+}
+
+// Navbar
+.nav-link {
+    // Form
+    a {
+        text-decoration: none;
+    }
+    &--login {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #7D8790 !important;
+    }
+    &--register {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #F4EBE6 !important;
+        background: $colorOrange;
+        box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+        border-radius: $borderRadius;
+        padding: 17px 40px 15px 41px;
+        border: none;
+    }
+}
+
+.menu {
+    justify-content: space-between;
+    &__space {
+        min-width: math.div(170, 16) + rem;
+    }
+    &__list {
+        max-width: math.div(466, 16) + rem;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #7D8790;
+    }
+}
+
+// Content
+.content {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    &__right {
+        position: relative;
+        top: math.div(-30, 16)+rem;
+        //img center
+        .center {
+            position: relative;
+            @media screen and (max-width: 991px) {
+                top: math.div(50, 16) + rem;
+            }
+            &__icon {
+                position: absolute;
+                max-width: 100%;
+                z-index: 10;
+                left: math.div(37, 16) + rem;
+            }
+            &__img {
+                top: math.div(10, 16) + rem;
+                max-width: 100%;
+                z-index: 9;
+                position: absolute;
+            }
+            &__shadow {
+                position: relative;
+                align-items: center;
+                max-width: 84%;
+                opacity: 0.5;
+                filter: blur(64px);
+                top: math.div(60, 16) + rem;
+                left: math.div(57, 16) + rem;
+            }
+        }
+        //infor center
+        .people {
+            position: absolute;
+            bottom: math.div(-55, 16) +rem;
+            &__listbtn {
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                margin-bottom: math.div(36, 16)+ rem;
+                .active,
+                .btn:hover {
+                    background-color: $colorOrange !important;
+                    color: white !important;
+                }
+                .icon {
+                    background: url(../img/Group\ 609.png);
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 30;
+                    &--mail {
+                        background-position: 0px 0px;
+                        top: 10px;
+                        left: 14px;
+                    }
+                    &--event {
+                        background-position: 155px 0px;
+                        top: 12px;
+                        left: 7px;
+                    }
+                    &--drop {
+                        background-position: 20px 0px;
+                        top: 11px;
+                        left: 10px;
+                    }
+                }
+            }
+            .button {
+                z-index: 20;
+                border-radius: 10px;
+                max-width: 100%;
+                width: math.div(123, 16)+rem;
+                height: math.div(44, 16)+rem;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                color: $colorOrange;
+                background: #FFFFFF;
+                &--left {
+                    box-shadow: -20px 14px 24px rgba(0, 0, 0, 0.05);
+                    backdrop-filter: blur(30px);
+                }
+                &--mid {
+                    box-shadow: -20px 14px 24px rgba(0, 0, 0, 0.05);
+                    padding-left: 34px;
+                }
+                &--right {
+                    backdrop-filter: blur(30px);
+                    box-shadow: -20px 14px 24px rgba(0, 0, 0, 0.05);
+                    padding-left: 40px;
+                }
+            }
+            &__data {
+                display: flex;
+                flex-direction: column;
+                width: math.div(391, 16)+rem;
+                height: math.div(214, 16)+rem;
+                justify-content: space-between;
+                div {
+                    width: math.div(365, 16)+rem;
+                    height: math.div(98, 16)+rem;
+                    background: rgba(255, 255, 255);
+                    border-radius: 10px;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    z-index: 21;
+                }
+                &--up {}
+                &--down {
+                    margin-left: math.div(26, 16)+rem;
+                }
+                &--img {
+                    margin: 11px;
+                }
+                .people-info {
+                    &__text {
+                        margin-left: math.div(-23, 16)+rem;
+                        p {
+                            margin-bottom: 0px;
+                        }
+                        &--name {
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #333333;
+                        }
+                        &--address {
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #333333;
+                            opacity: 0.5;
+                        }
+                    }
+                    &__btn {
+                        width: math.div(76, 16)+rem;
+                        height: math.div(44, 16)+rem;
+                        background: $colorOrange;
+                        border-radius: 10px;
+                        margin-right: 17px;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+    &__left {
+        padding-left: math.div(32, 16) + rem;
+        .text {
+            padding-top: math.div(117, 16) + rem;
+            &__title {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 24px;
+                color: $colorOrange;
+            }
+            &__subTitle {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 58px;
+                line-height: 101.8%;
+                letter-spacing: -0.01em;
+                color: #1A1D32;
+                &--orange {
+                    color: $colorOrange;
+                }
+            }
+            &__content {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 150%;
+                color: #1A1D32;
+                opacity: 0.7;
+            }
+            .form-row {
+                position: relative;
+                &__input {
+                    max-width: 100%;
+                    height: 68px;
+                    left: 72px;
+                    top: 600px;
+                    background: #FFFFFF;
+                    border-radius: $borderRadius;
+                    padding-left: math.div(52, 16) + rem;
+                    opacity: 0.6;
+                    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+                }
+                &__icon {
+                    position: absolute;
+                    background-image: url(../img/mail.png);
+                    width: 1.5rem;
+                    height: 2rem;
+                    display: inline-block;
+                    top: math.div(22, 16) + rem;
+                    left: math.div(22, 16) + rem;
+                }
+                &__button {
+                    &:hover {
+                        background-color: rgb(237, 155, 89, 0.8);
+                    }
+                    @media screen and (min-width: 992px) {
+                        position: absolute;
+                        top: 0.5rem;
+                        right: math.div(11, 16) + rem;
+                    }
+                    @media screen and (max-width: 992px) {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            &__infor {
+                display: flex;
+                justify-content: space-between;
+                padding-top: math.div(96, 16)+rem;
+                h1 {
+                    margin-top: math.div(23, 16)+rem;
+                    margin-bottom: math.div(10, 16)+rem;
+                }
+                .title {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 56px;
+                    line-height: 71px;
+                    letter-spacing: -4px;
+                }
+                .comment {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #1A1D32;
+                }
+                &--left {
+                    width: math.div(139, 16)+rem;
+                }
+                &--mid {
+                    width: math.div(125, 16)+rem;
+                    color: #B35E21;
+                }
+                &--right {
+                    width: math.div(124, 16)+rem;
+                }
+            }
+        }
+    }
+}
+
+// button
+button {
+    border: none !important;
+}
+
+.form-row {
+    &__button {
+        background-color: $colorOrange;
+        box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+        border-radius: $borderRadius;
+        width: math.div(180, 16)+rem;
+        height: math.div(50, 16)+rem;
+    }
+}
