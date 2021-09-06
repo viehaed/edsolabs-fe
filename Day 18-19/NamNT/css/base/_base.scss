@@ -1,0 +1,25 @@
+$text-size:10px;
+* {
+    font-size: $text-size;
+    font-family: "Google Sans";
+}
+
+body {
+    background-image: url('/NamNT/images/bgr.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

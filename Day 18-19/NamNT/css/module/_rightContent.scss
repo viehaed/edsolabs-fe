@@ -1,0 +1,96 @@
+@mixin infoDetail {
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 17px 10px 11px;
+    width: 365px;
+    height: 98px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    img {
+        margin-right: 26px;
+    }
+    .person--name {
+        margin-right: 54px;
+        b {
+            font-family: "Google Sans Bold";
+            font-size: 1.6rem;
+        }
+        span {
+            font-size: 1.4rem;
+        }
+    }
+    .btn {
+        color: #ffffff;
+        width: 76px;
+        height: 44px;
+        padding: 10px 18px;
+        font-size: 1.4rem;
+        line-height: 24px;
+        background: #F59B5A;
+        border-radius: 10px;
+    }
+}
+
+.right {
+    position: relative;
+    height: 882px;
+    padding: 18px 0 0 0;
+    .images__icon {
+        position: relative;
+        padding: 26px 26px 0 25px;
+        .images__person {
+            &--shadow {
+                position: absolute;
+                top: 34px;
+                height: 818px;
+            }
+            &--img {
+                top: 0;
+                position: absolute;
+                z-index: 9999;
+            }
+            .images__calendar {
+                position: absolute;
+                top: 468px;
+                left: 580px;
+            }
+        }
+    }
+    .info {
+        position: absolute;
+        z-index: 99999;
+        bottom: 0;
+        &__select {
+            .btn {
+                font-size: 1.4rem;
+                color: #F59B5A;
+                margin-right: 12px;
+                width: 123px;
+                height: 44px;
+                background: #FFFFFF;
+                box-shadow: -20px 14px 24px rgba(0, 0, 0, 0.05);
+                backdrop-filter: blur(30px);
+                border-radius: 10px;
+                img {
+                    margin-left: -15px;
+                    margin-right: 6px;
+                }
+            }
+            .btn--color {
+                color: #FFFFFF;
+                background-color: #F59B5A;
+            }
+        }
+        &__person {
+            &--first {
+                margin: 36px 0 18px 0;
+                @include infoDetail;
+            }
+            &--second {
+                margin-left: 20px;
+                @include infoDetail;
+            }
+        }
+    }
+}
