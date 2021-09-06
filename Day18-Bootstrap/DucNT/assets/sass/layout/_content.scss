@@ -1,0 +1,213 @@
+.jumbotron {
+  padding: 2.5rem 2.5rem;
+  margin-bottom: 2.2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.content {
+  position: relative;
+  display: $display;
+  top: 3rem;
+  justify-content: space-evenly;
+  align-items: baseline;
+  min-height: 100vh;
+  max-width: 100%;
+
+  &__right {
+    position: relative;
+    transition: transform 2s;
+
+    &--img {
+      position: $position;
+      max-width: 100%;
+      right: 3rem;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(0.98);
+    }
+
+    &--text {
+      padding-top: 0.7rem;
+
+    }
+
+    &--shadow {
+      position: $position;
+      max-width: 100%;
+      right: 5rem;
+      opacity: 0.5;
+      filter: blur(6.4rem);
+      z-index: -1;
+    }
+
+    &--icon {
+      position: $position;
+      right: 4rem;
+      max-width: 100%;
+      z-index: 2;
+    }
+
+    &--group {
+      position: $position;
+      top: 42rem;
+      right: 21rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      width: 39rem;
+      height: auto;
+      background: none;
+      z-index: 100;
+
+      &--first {
+        height: 4.4rem;
+      }
+
+      &--title {
+        width: 12.3rem;
+        margin-left: 1rem;
+        height: 4.4rem;
+        border-radius: 10px;
+        color: $color;
+        background: #FFFFFF;
+        box-shadow: -0.2rem 1.4rem 2.4rem rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(3rem);
+
+        // background-radius:2rem;
+        &--2 {
+          background-color: $color;
+          color: white;
+        }
+      }
+
+      &--second {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(3rem);
+        border-radius: 1rem;
+        width: 36.5rem;
+        height: 9.8rem;
+        margin: 10% 0 0 3%;
+
+        &-title {
+          color: rgba(51, 51, 51, 1);
+          padding-right: 2rem;
+        }
+
+        &-text {
+          padding-right: 4.5rem;
+          line-height: 3rem;
+          opacity: 0.5;
+        }
+
+        &-button {
+          border-radius: 1rem;
+          background: $color;
+          width: 15rem;
+          color: rgba(244, 235, 230, 1);
+          cursor: pointer;
+          font-weight: 700;
+          width: 7.6rem;
+          height: 4.4rem;
+          transition: background-color 0.5s;
+        }
+      }
+
+      &--third {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(3rem);
+        border-radius: 1rem;
+        width: 36.5rem;
+        height: 9.8rem;
+        margin: 5% 0 0 10%;
+      }
+    }
+  }
+
+  &__intro {
+    position: $position;
+    top: 4rem;
+    left: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $color;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__h2 {
+    position: $position;
+    top: 7rem;
+    left: 1.8rem;
+    max-width: 42%;
+    font-weight: bold;
+    font-size: 5rem;
+    color: #1a1d32;
+    margin-bottom: 2.313rem;
+
+    &--color-primary {
+      color: $color;
+    }
+  }
+
+  &__para {
+    position: $position;
+    top: 27rem;
+    left: 2rem;
+    max-width: 36%;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #1A1D32;
+    opacity: 0.6;
+  }
+
+}
+
+.form {
+  position: absolute;
+  top: 38rem;
+  left: 2rem;
+  max-width: 51.5rem;
+  width: 35%;
+  border-radius: 2.5rem;
+  padding: 0 0.688rem 0 1.375rem;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+  margin-bottom: 7.5rem;
+
+  &__icon {
+    margin-top: 1rem;
+  }
+
+  &__input {
+    line-height: 4.25rem;
+    outline: none;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: unset;
+    }
+  }
+
+  &__submit {
+    border-radius: 4rem;
+    background: $color;
+    color: rgba(244, 235, 230, 1) !important;
+    cursor: pointer;
+    font-weight: 700;
+    width: 15rem;
+    height: 4rem;
+    border: 0;
+    transition: background-color 0.5s;
+  }
+
+  &__input::placeholder {
+    position: $position;
+    top: 1.7rem;
+    opacity: 0.3;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Google Sans";
+
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.main {
+  background-image: url("../images/Frame\ 583.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: pink;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: pink;
+}
