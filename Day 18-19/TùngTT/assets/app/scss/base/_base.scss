@@ -1,0 +1,38 @@
+$backgroundColor: #feefe3;
+$textColorNavbarActive: #ED9B59;
+$textColorNavbar: #7D8790;
+$noiseImg: url(/assets/img/noise.png);
+@font-face {
+    font-family: google sans;
+    src: url(/assets/font/ProductSans-Regular.ttf);
+}
+@mixin resetCss {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    font-family: google sans;
+}
+@mixin posAbsolute {
+    position: absolute;
+}
+@mixin posRelative {
+    position: relative;
+}
+body {
+    @include resetCss;
+    background-image: $noiseImg;
+    background-blend-mode: lighten;
+    background-color: $backgroundColor;
+    @include posRelative; 
+    font-size: 16px;
+    font-weight: bold;
+}
+button {
+    font-family: google sans!important;
+    font-weight: 600!important;
+    color: $textColorNavbar!important;
+}
+p {
+    font-weight: 600;
+}
+

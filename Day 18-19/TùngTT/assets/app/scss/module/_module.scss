@@ -1,0 +1,358 @@
+$backgroundColor: #feefe3;
+$textColorNavbarActive: #ED9B59;
+$textColorNavbar: #7D8790;
+$textColorWhite: #ffffff;
+$textColorBtn:#F4EBE6;
+$noiseImg: url(/assets/img/noise.png);
+$fontWeight-600:600;
+$textBlackMod: #1A1D32;
+@mixin btn-modify {
+    width: 146px;
+    height: 52px;
+}
+@mixin posAbsolute {
+    position: absolute;
+}
+@mixin posRelative {
+    position: relative;
+}
+@mixin active-li {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: $textColorNavbarActive;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 44%;
+}
+.abstract {
+    @include posAbsolute;
+    left: 40%;
+}
+@media screen and (min-width:320px){
+    .btn-res {
+        color: $textColorWhite!important;
+        font-weight: 500!important;
+    }
+}
+@media screen and (max-width:990px) {
+    .back-light {
+        background-image: $noiseImg;
+        background-blend-mode: lighten;
+        background-color: $backgroundColor;
+        form {
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border-top: 1px solid white;
+        }
+        .collapse {
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+        }
+    }
+    .mg-top {
+        margin-top: 0!important;
+        padding-top: 10px;
+    }
+    .infor-number {
+        margin: 50px 0;
+    }
+    .email-icon {
+        border-right: none!important;
+    }
+    .input-group {
+        .form-control {
+            border-left :none!important;
+            border-right: none!important;
+        }
+        .btn-get-started {
+            border-left: none!important;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width:1400px) {
+    .infor-number {
+        margin-top: 119px;
+        width: 104%!important;
+    }
+}
+
+@media screen and (min-width: 516px) {
+    .choice-form {
+        justify-content: space-between!important;
+        width: 80%!important;
+    }
+    .input-group {
+        .form-control {
+            border-left :none!important;
+            border-right: none!important;
+        }
+        .btn-get-started {
+            border-left: none!important;
+        }
+    }
+}
+@media (min-width:575px) and (max-width:990px){
+    .input-group {
+        .btn-res {
+            width: 137px;
+            height: 40px;
+            margin-right: 5px;
+        }
+    }
+}
+@media screen and (max-width:575px) {
+    body {
+        font-size: 14px;
+    }
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .input-group {
+        align-items: center;
+        justify-content: flex-end;
+        .btn-res {
+            width: 105px;
+            height: 40px;
+            box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08), 0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407), 0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926), 0px 20px 26.1625px rgba(245, 155, 90, 0.04), 0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074), 0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+            margin-right: 5px;
+            font-weight: 500!important;
+        }
+        .form-control {
+            height: 52px;
+        }
+    }
+    .infor-number {
+        .container {
+            width: 60%;
+            text-align: center;
+        }
+        .display-1 {
+            font-weight: 600;
+        }
+    }
+    .choice-form {
+        top: 50%!important;
+        .btn-hover {
+            margin: 5px 0;
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    .nav-header {
+        position: relative;
+    }
+    .col-left-modify {
+        padding-top: 99px;
+        position: relative;
+    }
+    .intro {
+        .display-5 {
+            width: 79%;
+        }
+        .h6-mod {
+            margin-top: 37px!important;
+            width: 85%!important;
+            font-size: 20px!important;
+        }
+        .input-group {
+            margin-top: 22px;
+            width:85%;
+        }
+        .email-icon {
+            width: 68px;
+            height: 68px;
+        }
+    }
+    .input-group {
+        .btn-get-started {
+            height: 68px!important;
+        }
+        .btn-res {
+            margin-top: 7px!important;
+            margin-right: 7px;
+        }
+    }
+    .infor-number {
+        margin-top: 119px;
+        width: 85%;
+        .display-4 {
+            font-weight: 700;
+        }
+    }
+    .choice-form {
+        width: 100%!important;
+    }
+    .active::before {
+        @include active-li;
+    }
+    .nav-link:hover {
+        color: $textColorNavbarActive!important;
+    }
+    .nav-link {
+        @include posRelative;
+    }
+    .navbar-nav {
+        @include posRelative;
+    }
+}
+.nav-link {
+    color: $textColorNavbar;
+}
+.active {
+    color: $textColorNavbarActive!important;
+}
+.nav-item {
+    padding: 0 15px;
+}
+.mg-top {
+    margin-top: 37px;
+}
+.btn-res {
+    background: $textColorNavbarActive;
+    @include btn-modify;
+    color: $textColorBtn!important;
+}
+.nav-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 99;
+}
+.navbar {
+    padding-top: 0; 
+}
+.get-started p {
+    color: $textColorNavbarActive;
+}
+.get-started {
+    .h6 {
+    color: $textBlackMod;
+    font-size: 16px;
+    opacity: 70%;
+    font-weight: 400;
+    }
+}
+.display-5 {
+    font-weight: $fontWeight-600;
+    color: $textBlackMod;
+    span {
+        color: $textColorNavbarActive;
+    }
+}
+.email-icon {
+    width: 52px;
+    height: 52px;
+    background-color: $textColorWhite;
+    position: relative;
+    border: 1px solid #ced4da;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.input-group {
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+    border-radius: 40px;
+    .form-control {
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+        border-left: none;
+        padding-left: 0;
+    }   
+    .email-icon-pos {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 5px;
+    }
+    .btn-get-started {
+        height: 52px;
+        background-color: #ffffff;
+        position: relative;
+        border: 1px solid #ced4da;
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+    }
+    .btn-res {
+        margin-top: 4.5px;
+    }
+}
+.active-color {
+    color: $textColorNavbarActive;
+}
+.logo-main {
+    @include posRelative;
+    .btn-hover {
+        color: $textColorNavbarActive!important;
+        font-weight: normal!important;
+        width: 123px;
+        height: 44px;
+        background-color: $textColorWhite;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .btn-hover:hover {
+        color: $textColorWhite!important;
+        background-color: $textColorNavbarActive;
+        transition: 0.5s;
+    }
+}
+.logo-main-no-blur {
+    width: 100%;
+}
+.logo-main-blur {
+    width: 100%;
+    position: absolute;
+    left: 4%;
+    z-index: -9;
+}
+.pos-cup {
+    top: 27%;
+    left: 0%;
+}
+.pos-ring {
+    left: 5%;
+    width: 18%;
+}
+.pos-like {
+    right: 28%;
+    width: 10%;
+    top: 3%;
+}
+.pos-heart {
+    right: 0;
+    width: 12%;
+    top: 24%;
+}
+.pos-canlendar{
+    top: 55%;
+    width: 12%;
+    right: 3%;
+    z-index: -1;
+}
+.icon-frame {
+    @include posAbsolute;
+    animation: zoom-in-zoom-out 2s ease-in-out infinite;
+}
+#img-animation {
+    opacity: 0;
+}
+// ======================Animation===============
+
+@keyframes zoom-in-zoom-out {
+    0% {
+    transform: scale(1, 1);
+    }
+    50% {
+    transform: scale(1.25, 1.25);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+}
