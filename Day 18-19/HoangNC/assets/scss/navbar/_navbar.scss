@@ -1,0 +1,47 @@
+.navbar--padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .navbar {
+    &__list {
+      font-weight: 700;
+      text-align: center;
+      line-height: 20px;
+      .nav-link {
+        color: $grayColor !important;
+        &:hover {
+          color: $primary !important;
+        }
+      }
+    }
+    &__log-in {
+      color: $grayColor;
+      line-height: 20px;
+      font-weight: 700;
+      text-align: center;
+      &:hover {
+        color: $primary;
+      }
+    }
+  
+    &__register {
+      @include button;
+      height: 52px;
+      line-height: 20px;
+    }
+  }
+  .nav-link.active {
+    position: relative;
+    color: $primary !important;
+    &::after {
+      content: " ";
+      background-color: $primary;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 10px);
+    }
+  }

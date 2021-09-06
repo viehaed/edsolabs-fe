@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Regular.otf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Google Sans";
+    src: url("../fonts/GoogleSans-Bold.otf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+// Color
+$primary: #ED9B59;
+$whiteColor: #fff;
+$blackColor: #1A1D32;
+$grayColor: #7d8790;
+// nav
+$link-gap: auto;
+$nav-gaps-lg: 20px;
+$nav-gaps-xl: 39px;
+// BorderRadius
+$borderRadius: 40px;
+$borderRadius-small: 10px;

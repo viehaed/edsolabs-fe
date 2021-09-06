@@ -1,0 +1,75 @@
+.bg {
+    position: relative;
+    &--img {
+        height: 100%;
+    }
+}
+.candidate {
+    position: absolute;
+    top: 540px;
+    left: 0px;
+    &__header{
+        height: 44px;
+        margin-top: 10px;
+        &--gender {
+            padding: 12px 44px 12px 11px;
+            margin-right: 12px;
+            background-color: $whiteColor;
+            border-radius: 10px;
+            color: $primary;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &--age {
+            @extend .candidate__header--gender;
+            background-color: $primary;
+            padding: 12px 12px 12px 11px;
+            color: $whiteColor;
+        }
+        &--locate {
+            @extend .candidate__header--gender;
+            padding: 12px 22px 12px 9px;
+        }
+
+    }
+    &__content {
+        margin-top: 36px;
+        &--first {
+            display: flex;
+            background: $whiteColor;
+            width: 365px;
+            height: 98px;
+            padding: 11px 17px 10px 11px;
+            border-radius: $borderRadius-small;
+            .candidate__content--img {
+                margin-right: 26px;
+            }
+        }
+        &--infor {
+            &-name {
+                font-weight: 700;
+                color: $grayColor;
+                margin-top: 16px;
+                margin-bottom: 0;
+            }
+            &-address {
+                font-size: 14px;
+                @include gray-lighten;
+            }
+        }
+        &--second {
+            @extend .candidate__content--first;
+            margin-top: 18px;
+            margin-left: 26px;
+        }
+    }
+}
+
+.candidate-btn {
+    @include button;
+    margin-left: 50px;
+    margin-top: 16px;
+    width: 76px;
+    height: 44px;
+    border-radius: $borderRadius-small;
+}
