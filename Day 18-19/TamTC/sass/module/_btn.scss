@@ -1,0 +1,4 @@
+.btn--primary {
+  @include btn(1.6, 4.232);
+  @include btnHover;
+}

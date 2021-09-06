@@ -1,0 +1,74 @@
+.navbar {
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: 129.2rem;
+  }
+
+  &__img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+  }
+
+  &__logo {
+    @include font(normal, bold, 1.6, 2.4, center, $textBoldColor);
+  }
+  &__title {
+    display: inline-block;
+    transform: translateY(0.4rem);
+    -webkit-transform: translateY(0.4rem);
+    -moz-transform: translateY(0.4rem);
+    -ms-transform: translateY(0.4rem);
+    -o-transform: translateY(0.4rem);
+  }
+
+  &__list {
+    margin-right: -19rem;
+  }
+
+  &__item {
+    @include font(normal, bold, 1.6, 2, null, $navColor);
+    margin-left: 3.4rem;
+  }
+
+  &__link {
+    position: relative;
+    min-height: 5.2rem;
+    @extend %centerFlex;
+    @include hoverNav(none);
+
+    &:hover {
+      color: $orangeColor !important;
+    }
+
+    &:hover::after {
+      display: block;
+    }
+  }
+
+  &__login {
+    @extend %centerFlex;
+  }
+
+  &__register {
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+      color: $textColor;
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transition: 0.4s;
+      -o-transition: 0.4s;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

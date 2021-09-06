@@ -1,0 +1,116 @@
+@media screen and (max-width: 992px) {
+  .navbar {
+    &__container {
+      padding: 0;
+    }
+
+    &__list.navbar-nav {
+      margin-right: 0;
+      margin-top: 2rem;
+    }
+
+    &__item.item {
+      margin-left: 0;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &__item .navbar__link:hover::after {
+      display: none;
+    }
+
+    &__item .navbar__link {
+      color: $navColor;
+      background-color: $navColorMobile;
+      width: 100%;
+
+      &:hover {
+        border-bottom: 1px $orangeColor solid;
+      }
+    }
+
+    &__register {
+      text-align: center;
+      display: none;
+      &--mobile.item {
+        display: block;
+      }
+    }
+  }
+  .email {
+    margin-right: auto;
+    margin-left: auto;
+    &__input {
+      padding-right: 14% !important;
+    }
+  }
+  .counter {
+    &__row {
+      margin-top: -10rem;
+    }
+    &__col {
+      @include centerFlex;
+      margin-bottom: -10rem;
+    }
+  }
+  .banner {
+    min-height: 37rem;
+    background-position: center center;
+    padding-top: 14rem;
+
+    &-main {
+      padding-top: 10rem;
+    }
+
+    &__icon {
+      transform: scale(0.5);
+      -webkit-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      -o-transform: scale(0.5);
+
+      &.banner__like {
+        top: -10%;
+        left: 2%;
+      }
+
+      &.banner__calendar {
+        z-index: 1;
+        top: 4%;
+      }
+
+      &.banner__heart {
+        top: 50%;
+      }
+
+      &.banner__chin {
+        top: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    &__icon {
+      transform: scale(0.5);
+      -webkit-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      -o-transform: scale(0.5);
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .email {
+    &__icon {
+      top: 20% !important;
+    }
+    &__btn.btn--primary {
+      position: unset;
+      display: flex;
+      margin: 2rem auto;
+      position: relative;
+    }
+  }
+}
