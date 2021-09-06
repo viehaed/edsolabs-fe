@@ -1,0 +1,60 @@
+.activeBtn {
+    box-shadow: none !important;
+    background-color: $colorPrimary !important;
+    color: $colorTextBtn !important;
+}
+.btn {
+    font-family: fontBold;
+    display: block !important;
+    color: $colorNav;
+    height: 52px;
+    width: 146px;
+    font-weight: 700;
+    line-height: 39px;
+    border-radius: 40px;
+    &--login {
+        background-color: transparent;
+        margin-left: 57px;
+    }
+    &--login:hover {
+        background-color: $colorPrimary;
+    }
+    &--register:hover {
+        background-color: $colorPrimary;
+    }
+}
+.btn--get {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    line-height: 0;
+    color: #f4ebe6;
+    top: 8px;
+    bottom: 10px;
+    right: 11px;
+    background-color: $colorPrimary;
+}
+.nav-link {
+    font-family: fontBold;
+    color: rgba(125, 135, 144, 1) !important;
+    font-weight: 700;
+    margin-left: 28px;
+    position: relative;
+    &:hover {
+        color: $colorPrimary !important;
+    }
+}
+.active {
+    color: $colorPrimary !important;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 7px;
+        width: 7px;
+        background-color: $colorPrimary;
+        border-radius: 50%;
+        top: 45px;
+        left: 26px;
+    }
+}

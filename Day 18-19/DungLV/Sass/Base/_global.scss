@@ -1,0 +1,31 @@
+@import "../Base/variable";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: $colorNav;
+    font-size: 16px;
+    font-weight: 700;
+}
+body {
+    background-image: url(../image/bg-boot.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+::placeholder {
+    font-family: font400;
+    color: $colorText;
+    font-size: 16px !important;
+    opacity: 0.3 !important;
+    font-weight: 400 !important;
+}
+input:focus {
+    box-shadow: none !important;
+}

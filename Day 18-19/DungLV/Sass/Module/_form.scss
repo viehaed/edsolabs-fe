@@ -1,0 +1,23 @@
+.form {
+    margin-bottom: 119px;
+    &__input {
+        position: relative;
+        max-width: 515px;
+        height: 68px;
+    }
+    &__input--icon {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        bottom: 12.47px;
+    }
+    &__input input {
+        padding: 24px 200px 24px 65px;
+        max-width: 515px;
+        height: 68px;
+        border-radius: 40px;
+        border: none;
+        outline: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
