@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "sans--bold";
+  src: url(../font/GoogleSans-Bold.ttf);
+}
+@font-face {
+  font-family: "sans";
+  src: url('../font/GoogleSans-Regular.ttf');
+}
+
+
+//import
+@import '../abstracts/variables'; 
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family:"sans";  
+}
+
+.text-orange{
+  color: $color-orange;
+}

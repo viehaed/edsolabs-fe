@@ -1,0 +1,25 @@
+.btn{
+    padding: 7px 10px 7px 10px;
+    border-radius:10px ;
+    font-weight: 700;
+    color: #7D8790;
+    border: 1px solid $color-black;
+    background-color: $color-white;
+    @include responsive($lg-width){
+        padding: 10px 20px 10px 20px;
+        border-radius:$border-radius ;
+        background-color: transparent;
+        border: none;
+    }
+    @include responsive($xl-width){
+        padding: 17px 40px 15px 41px;
+    }
+    &--orange{
+        background-color: $color-orange;
+        color:$color-gray;
+        border: none;
+    } 
+    &--btn--input{
+
+    }
+}

@@ -1,0 +1,184 @@
+.image-banner {
+    position: relative;
+    z-index: 1;
+    @include responsive($md-width) {
+        margin-top: 70px;
+    }
+    @include responsive($lg-width) {
+        margin-top: 40px;
+    }
+    &__img {
+        width: auto;
+        img {
+            animation-name: imgLeft;
+            animation-duration: .6s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            @include responsive($lg-width){
+                animation-name: imgRight;
+            }
+            display: block;
+            @include responsive($md-width) {
+                margin: 0 auto;
+            }
+            @include responsive($lg-width) {
+                margin: 0;
+            }
+        }
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background-image: url("../image/image\ 1.png");
+            width: 100%;
+            max-width: 651px;
+            height: 100%;
+            background-size: cover;
+            background-position: -20px 110%;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            filter: blur(64px);
+            z-index: -1;
+        }
+    }
+}
+
+.group-icon {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    padding: 0 12px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    @include flexbox(center, space-between);
+    @include responsive($md-width) {
+        display: block;
+        height: 100%;
+        z-index: -1;
+    }
+    &__item {
+        @include flexbox(center, center);
+        background-color: #ee0f32;
+        border-radius: 50%;
+        padding: 5px;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &--light {
+        background-color: $color-white;
+    }
+    @include responsive($md-width) {
+        &__chin {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            left: 29px;
+            top: 250px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__ring {
+            position: absolute;
+            width: 91px;
+            height: 91px;
+            left: 95px;
+            top: 26px;
+            svg {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        &__like {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            left: 424px;
+            top: 40px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__heart {
+            position: absolute;
+            width: 69px;
+            height: 69px;
+            left: 576px;
+            top: 218px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__calendar {
+            position: absolute;
+            width: 69px;
+            height: 69px;
+            left: 576px;
+            bottom: 347px;
+            svg {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
+    @include responsive($lg-width) {
+        &__chin {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            left: 0px;
+            top: 250px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__ring {
+            left: 50px;
+            top: 17px;
+        }
+        &__like {
+            left: 398px;
+            top: 48px;
+        }
+        &__heart {
+            left: 456px;
+            top: 188px;
+        }
+        &__calendar {
+            left: 456px;
+            bottom: 307px;
+        }
+    }
+    @include responsive($xl-width) {
+        &__chin {
+            left: 25px;
+            top: 250px;
+        }
+        &__ring {
+            left: 79px;
+            top: 26px;
+        }
+        &__like {
+            left: 398px;
+            top: 48px;
+        }
+        &__heart {
+            left: 556px;
+            top: 218px;
+        }
+        &__calendar {
+            left: 556px;
+            bottom: 347px;
+        }
+    }
+}

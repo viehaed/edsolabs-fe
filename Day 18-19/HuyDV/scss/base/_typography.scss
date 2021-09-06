@@ -1,0 +1,21 @@
+.heading {
+  color: $color-black;
+  &--primary {
+    font-family: "sans--bold";
+    font-weight: bold;
+    @include fontREM(35);
+    @include responsive($lg-width) {
+      @include fontREM(39);
+      line-height: 101.8%;
+      letter-spacing: -0.01em;
+    }
+    @include responsive($xl-width) {
+      @include fontREM(58);
+      line-height: 101.8%;
+      letter-spacing: -0.01em;
+    }
+  }
+  span {
+    font-size: inherit;
+  }
+}
