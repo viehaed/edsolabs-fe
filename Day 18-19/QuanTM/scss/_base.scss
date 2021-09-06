@@ -1,0 +1,16 @@
+@import "./configs";
+html {
+  font-size: 14px;
+}
+body {
+  font-family: "Google Sans", Arial, Helvetica, sans-serif;
+  background-image: url("../assets/images/heroBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 1rem 1rem 0 1rem;
+}
+a {
+  @include globalFont;
+  text-decoration: none;
+}

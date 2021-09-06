@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Datify</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="
+        navbar navbar-light
+        bg-transparent
+        navbar-expand-md
+        justify-content-between
+        navbar--padding
+      "
+    >
+      <div
+        class="
+          navbar-brand
+          d-flex
+          align-items-center
+          navbar__logo
+          flex-md-grow-1
+        "
+      >
+        <img src="./assets/images/logo.png" class="img-fluid align-middle" />
+        <a class="navbar__title stretched-link" href="#">Datify</a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navContent"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navContent"
+      >
+        <ul class="navbar-nav text-center navbar__list">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Member</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="container">
+          <div class="row justify-content-end navbar__account">
+            <a href="#" class="col-md-6 p-2 navbar__log-in">Log In</a>
+            <a
+              href="#"
+              class="col-md-6 p-2 ms-md-2 btn btn--modified navbar__register"
+              >Register</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- hero -->
+    <main class="container-fluid jumbotron bg-transparent m-0 p-0 hero">
+      <div class="row gx-0 m-0 hero__center">
+        <section
+          class="
+            col-lg-6
+            p-0
+            pe-md-4
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center align-items-lg-start
+            hero__content
+          "
+        >
+          <article class="hero__article">
+            <p class="hero__intro">Becaue you deserve better!</p>
+            <h1 class="hero__h1">
+              Get noticed for
+              <span class="hero__h1--color-primary">who</span> you are,
+              <span class="hero__h1--color-primary">not what</span>
+              you look like.
+            </h1>
+            <p class="hero__para">
+              You’re more than just a photo. You have stories to tell, and
+              passions to share, and things to talk about that are more
+              interesting than the weather. Because you deserve what dating
+              deserves: better.
+            </p>
+          </article>
+          <form
+            method="POST"
+            class="form input-group bg-white align-items-center"
+          >
+            <img
+              src="./assets//images/mail.png"
+              alt="mail icon"
+              class="form__icon"
+            />
+            <input
+              type="text"
+              class="form-control form__input"
+              placeholder="Enter your email"
+            />
+            <button class="btn btn--modified form__submit">Get Started</button>
+          </form>
+          <div class="container statistic">
+            <div class="row">
+              <article class="statislic__item col-sm-4">
+                <h3 class="text-center text-sm-start statislic__header">
+                  15k+
+                </h3>
+                <p class="text-center text-sm-start statislic__para">
+                  Dates and matches made everyday
+                </p>
+              </article>
+              <article class="statislic__item center col-sm-4">
+                <h3 class="text-center text-sm-start statislic__header">
+                  1,456
+                </h3>
+                <p class="text-center text-sm-start statislic__para">
+                  New members signup every day
+                </p>
+              </article>
+              <article class="statislic__item col-sm-4">
+                <h3 class="text-center text-sm-start statislic__header">1M+</h3>
+                <p class="text-center text-sm-start statislic__para">
+                  Members from around the world
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="col-lg-6 d-flex align-items-end">
+          <img
+            src="./assets/images/hero-image.png"
+            alt="dating couple"
+            class="hero__image img-fluid"
+          />
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

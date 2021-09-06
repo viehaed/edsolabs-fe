@@ -1,0 +1,182 @@
+@import "./variables";
+@import "./configs";
+@import "./font-faces";
+@import "./base";
+
+.btn--modified {
+  @include globalFont(bold);
+  background: $primary-color;
+  box-shadow: 0px 100px 161px rgba(245, 155, 90, 0.08),
+    0px 64.8148px 94.2894px rgba(245, 155, 90, 0.0607407),
+    0px 38.5185px 51.2815px rgba(245, 155, 90, 0.0485926),
+    0px 20px 26.1625px rgba(245, 155, 90, 0.04),
+    0px 8.14815px 13.1185px rgba(245, 155, 90, 0.0314074),
+    0px 1.85185px 6.33565px rgba(245, 155, 90, 0.0192593);
+  border-radius: #{toRem(40)} !important;
+  line-height: #{toRem(20)};
+  color: #f4ebe6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// navbar
+.navbar--padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.navbar {
+  &__logo {
+    position: relative;
+    gap: #{toRem(10)};
+  }
+
+  &__title {
+    @include globalFont(bold);
+    margin: 0;
+    font-style: normal;
+    line-height: #{toRem(24)};
+    color: #1a1d32;
+  }
+
+  &__list {
+    @include globalFont(bold);
+
+    line-height: #{toRem(20)};
+
+    .nav-link {
+      @include globalFont(bold);
+      color: #7d8790 !important;
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+    .nav-link.active {
+      position: relative;
+      color: $primary-color !important;
+    }
+    .nav-link.active::after {
+      content: " ";
+      background-color: $primary-color;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, #{toRem(10)});
+    }
+  }
+
+  &__account {
+    @include globalFont(bold);
+  }
+
+  &__log-in {
+    @include globalFont(bold);
+    color: #7d8790 !important;
+    line-height: #{toRem(20)};
+    text-align: center;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+
+  &__register {
+    height: #{toRem(36)};
+    line-height: #{toRem(20)};
+  }
+}
+
+// hero
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+.hero {
+  &__intro {
+    @include globalFont(bold);
+    color: $primary-color;
+    line-height: #{toRem(24)};
+    font-size: #{toRem(14)};
+    margin-bottom: #{toRem(13)};
+  }
+
+  &__h1 {
+    @include globalFont(bold);
+    font-size: #{toRem(58)};
+    color: $secondary-color;
+    letter-spacing: -0.01em;
+    margin-bottom: #{toRem(37)};
+
+    &--color-primary {
+      color: $primary-color;
+    }
+  }
+
+  &__para {
+    font-weight: normal;
+    font-size: #{toRem(20)};
+    line-height: #{toRem(30)};
+    color: $secondary-color;
+    opacity: 0.7;
+  }
+}
+
+.form {
+  max-width: 515px;
+  width: 100%;
+  border-radius: #{toRem(40)};
+  padding: 0 #{toRem(11)} 0 #{toRem(22)};
+  gap: 1rem;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185),
+    0px 20px 13px rgba(0, 0, 0, 0.035),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+  margin-bottom: #{toRem(120)};
+
+  &__input {
+    line-height: #{toRem(68)};
+    border: none;
+    padding-left: #{toRem(6)};
+    padding-right: #{toRem(6)};
+
+    &::placeholder {
+      line-height: #{toRem(20)};
+      color: $secondary-color;
+      opacity: 0.3;
+    }
+  }
+
+  &__submit {
+    height: #{toRem(50)};
+  }
+}
+
+.statislic {
+  &__header {
+    font-weight: bold;
+    font-size: #{toRem(56)};
+    line-height: #{toRem(71)};
+    letter-spacing: -4px;
+    color: $secondary-color;
+  }
+
+  &__para {
+    @include globalFont;
+    color: $secondary-color;
+    line-height: #{toRem(24)};
+  }
+
+  &__item.center {
+    .statislic__header {
+      color: #b35e21;
+    }
+  }
+}
+
+@import "./responsive";

@@ -1,0 +1,72 @@
+@import "./configs";
+@import "./variables";
+
+@include media-xs {
+  html {
+    font-size: 16px;
+  }
+  .form {
+    &__submit {
+      width: #{toRem(180)};
+    }
+  }
+}
+
+@include media-md {
+  body {
+    padding: 0rem 2rem 0 2rem;
+  }
+  .navbar {
+    &__list {
+      .nav-link.active::after {
+        display: block;
+      }
+    }
+
+    &__log-in {
+      width: auto !important;
+    }
+
+    &__register {
+      width: #{toRem(146)};
+    }
+  }
+}
+
+@include media-lg {
+  body {
+    padding: 0rem 3rem 0 3rem;
+  }
+  .navbar {
+    &__list {
+      gap: $nav-gaps-lg;
+
+      .nav-link.active::after {
+        display: block;
+      }
+    }
+
+    &__account {
+      gap: $nav-gaps-lg;
+    }
+  }
+}
+
+@include media-xl {
+  body {
+    padding: #{toRem(16)} #{toRem(70)} 0 #{toRem(70)};
+  }
+  .navbar {
+    &__list {
+      gap: $nav-gaps-xl;
+
+      .nav-link.active::after {
+        display: block;
+      }
+    }
+
+    &__account {
+      gap: $nav-gaps-xl;
+    }
+  }
+}
