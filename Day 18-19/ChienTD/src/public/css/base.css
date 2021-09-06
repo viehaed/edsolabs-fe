@@ -1,0 +1,34 @@
+@font-face {
+    src: url(../../../assets/font/GoogleSansOTF/GoogleSans-Medium.otf);
+    font-family: GoogleSans;
+}
+
+* {
+    font-family: GoogleSans;
+}
+
+.display--none {
+    display: none;
+}
+
+.display--block{
+    display: block;
+}
+
+@keyframes icon_animation {
+    0%   {width: 50%;}
+    100% {width: 100%;}
+  }
+
+@keyframes display-custom-top {
+    0%   { opacity:0.0; top: -100px;}
+    50%  { opacity:0.5; }
+    100% { opacity:1.0; top: 0px}
+}
+
+@keyframes display-custom-left {
+    0%   { opacity:0.0; left: -100px;}
+    50%  { opacity:0.5; }
+    100% { opacity:1.0; left: 0px}
+}
+

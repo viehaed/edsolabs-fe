@@ -1,0 +1,203 @@
+body {
+  background-image: url(../../../assets/img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper__loading {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+  width: 100%;
+  height: 1000px;
+  z-index: 10;
+  top: -34px;
+  display: flex;
+}
+.wrapper__loading .spinner-border {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.wrapper__header {
+  margin-top: 34px;
+  height: 53px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.wrapper__header .header__logo {
+  display: flex;
+}
+.wrapper__header .header__logo .header__logo__icon {
+  line-height: 50px;
+}
+.wrapper__header .header__logo .header__logo__icon img {
+  width: 24px;
+  margin-right: 10px;
+  margin-top: -7px;
+}
+.wrapper__header .header__logo .header__logo__name {
+  color: #1A1D32;
+  line-height: 53px;
+}
+.wrapper__header .header__nav {
+  color: #7D8790;
+  text-align: center;
+  z-index: 5;
+}
+.wrapper__header .header__nav .nav-item--custom {
+  margin-right: 20px;
+}
+.wrapper__header .header__nav .nav-item--custom .point {
+  width: 5px;
+  height: 5px;
+  background-color: #ED9B59;
+  border-radius: 100%;
+  margin: auto;
+}
+.wrapper__header .header__nav .navbar-nav {
+  width: 100%;
+}
+.wrapper__header .header__nav .btn-toggle {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.wrapper__header .header__nav .link--custom {
+  text-decoration: none;
+  color: #7D8790;
+  line-height: 35px;
+}
+.wrapper__header .header__nav .link--custom:hover {
+  color: #ED9B59 !important;
+}
+.wrapper__header .header__nav .activeMenu {
+  color: #ED9B59;
+}
+.wrapper__header .header__btn {
+  display: flex;
+  margin: auto;
+  margin-top: -10px;
+}
+.wrapper__header .header__btn .header__btn--custom {
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  color: #7D8790;
+}
+.wrapper__header .header__btn .header__btn--custom:hover {
+  background-color: #ED9B59;
+  color: #F4EBE6;
+  transition: 0.5s;
+}
+
+.wrapper__content .content__left {
+  margin-top: 117px;
+  max-width: 583px;
+}
+.wrapper__content .content__left .content__left__custom1 {
+  color: #ED9B59;
+  font-weight: 700;
+  font-size: 14px;
+}
+.wrapper__content .content__left h1 {
+  font-weight: bold;
+}
+.wrapper__content .content__left h1 .content__left__custom2 {
+  color: #ED9B59;
+}
+.wrapper__content .content__left .content__left__custom3 {
+  color: #1A1D32;
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 70%;
+}
+.wrapper__content .content__left .content__left__form {
+  animation-duration: 4s;
+  position: absolute;
+  animation: display-custom-left 2s linear 0.5s 1 normal forwards;
+}
+.wrapper__content .content__left .form--custom {
+  background-color: white;
+  max-width: 515px;
+  height: 68px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  color: #1A1D32;
+  position: relative;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+}
+.wrapper__content .content__left .form--custom .email__icon {
+  opacity: 30%;
+  width: 24px;
+  margin-left: 22px;
+  margin-right: 19px;
+}
+.wrapper__content .content__left .form--custom .email__content {
+  min-width: 100px;
+  opacity: 30%;
+  border: none;
+  outline: none;
+}
+.wrapper__content .content__left .form--custom .form__btn {
+  position: absolute;
+  background-color: #ED9B59;
+  width: 150px;
+  height: 50px;
+  color: #F4EBE6;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 40px;
+  right: 20px;
+}
+.wrapper__content .content__left .content__left__number {
+  margin-top: 119px;
+  margin-bottom: 76px;
+}
+.wrapper__content .content__left .content__left__number .left__number--custom1 {
+  color: #1A1D32;
+  font-weight: 700;
+}
+.wrapper__content .content__left .content__left__number .left__number--custom2 {
+  color: #1A1D32;
+  font-weight: 400;
+}
+.wrapper__content .content__right {
+  position: relative;
+  animation-duration: 4s;
+  animation: display-custom-top 2s linear 0.5s 1 normal forwards;
+}
+.wrapper__content .content__right .content__righ__nhan {
+  position: absolute;
+  top: 2%;
+  left: 11%;
+}
+.wrapper__content .content__right .content__righ__tim {
+  position: absolute;
+  top: 25%;
+  left: 82%;
+}
+.wrapper__content .content__right .content__righ__like {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+}
+.wrapper__content .content__right .content__righ__chen {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.wrapper__content .content__right .content__righ__lich {
+  position: absolute;
+  top: 55%;
+  left: 85%;
+}
+
+/*# sourceMappingURL=home.css.map */

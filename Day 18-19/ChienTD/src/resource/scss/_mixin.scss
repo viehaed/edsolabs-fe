@@ -1,0 +1,9 @@
+@mixin position-icon($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+ @mixin styleText($weight, $size) {
+     font-weight: $weight;
+     font-size: $size;
+ }

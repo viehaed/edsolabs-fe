@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạ Đức Chiến</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="../src/public/css/reset-css.css">
+    <!-- Link css Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- link base css -->
+    <link rel="stylesheet" href="../src/public/css/base.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="../src/public/css/home.css">
+    <!-- link media -->
+    <link rel="stylesheet" href="../src/public/css/media.css">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="wrapper__loading">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Header -->
+    <div class="wrapper__header">
+      <div class="container">
+        <div class="row">
+          <div class="header__logo col-4">
+            <div class="header__logo__icon">
+              <img src="../assets/icon/Icon_rabbit.png" alt="this is logo">
+            </div>
+            <div class="header__logo__name">
+              Datify
+            </div>
+          </div>
+          <div class="header__nav col-8">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <button class="navbar-toggler btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse custom--list" id="navbarNav">
+                  <ul class="navbar-nav" id="nav">
+                    <li class="nav-item nav-item--custom">
+                      <a class="link--custom item-menu activeMenu" aria-current="page" href="#">
+                        Home
+                        <div class="point"></div>
+                      </a>
+                      
+                    </li>
+                    <li class="nav-item nav-item--custom">
+                      <a class="link--custom item-menu" aria-current="page" href="#">Member
+                        <div class="point display--none"></div>
+                      </a>
+                      
+                    </li>
+                    <li class="nav-item nav-item--custom">
+                      <a class="link--custom item-menu" aria-current="page" href="#">Blog
+                        <div class="point display--none"></div>
+                      </a>
+                      
+                    </li>
+                    <li class="nav-item nav-item--custom">
+                      <a class="link--custom item-menu" aria-current="page" href="#">Privacy
+                        <div class="point display--none"></div>
+                      </a>
+                     
+                    </li>
+                    <li class="nav-item nav-item--custom">
+                      <a class="link--custom item-menu" aria-current="page" href="#">Contact
+                        <div class="point display--none"></div>
+                      </a>
+                    </li>
+                      <div class="header__btn">
+                        <button type="button" class="btn header__btn--custom">Login</button>
+                        <button type="button" class="btn header__btn--custom">Register</button>
+                      </div>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Content -->
+    <div class="wrapper__content">
+      <div class="container">
+        <div class="row">
+          <div class="content__left col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+            <div class="jumbotron jumbotron--display">
+              <p class="content__left__custom1">Because you deserve better!</p>
+              <h1 class="display-4">
+                Get noticed for <span class="content__left__custom2">who </span> you are, <span class="content__left__custom2"> not what &nbsp; </span> you look like
+              </h1>
+              <p class="lead content__left__custom3">You’re more than just a photo. You have stories to tell, and passions to share, and things to talk about that are more interesting than 
+                the weather. Because you deserve what dating deserves: better.</p>
+            </div>
+            <form class="content__left__form form--custom">
+              <i class="far fa-envelope email__icon"></i>
+              <div class="form-group">
+                <input type="email" class="form-control email__content" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+              <button type="submit" class="btn form__btn">Get Started</button>
+            </form>
+            <div class="content__left__number">
+              <div class="container">
+                <div class="row">
+                  <div class="left__number_first col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <h1 class="left__number--custom1">15k+</h1>
+                    <p class="left__number--custom2">Dates and matches made everyday</p>
+                  </div>
+                  <div class="left__number_second col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <h1 class="left__number--custom1" style="color: #B25E21;">1,456</h1>
+                    <p class="left__number--custom2">New members signup every day</p>
+                  </div>
+                  <div class="left__number_third col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <h1 class="left__number--custom1">1M+</h1>
+                    <p class="left__number--custom2">Members from around the world</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__right col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+            <div class="content__right__img">
+              <img src="../assets/img/person.png" alt="đây là ảnh nền" class="img-fluid">
+            </div>
+            <div class="content__righ__nhan">
+              <img src="../assets/img/nhan.png" alt="ảnh nhẫn" class="img--resize">
+            </div>
+            <div class="content__righ__tim">
+              <img src="../assets/img/tim.png" alt="ảnh tim" class="img--resize">
+            </div>
+            <div class="content__righ__like">
+              <img src="../assets/img/like.png" alt="ảnh like" class="img--resize">
+            </div>
+            <div class="content__righ__chen">
+              <img src="../assets/img/chen.png" alt="ảnh chén rượu" class="img--resize">
+            </div>
+            <div class="content__righ__lich">
+              <img src="../assets/img/lich.png" alt="ảnh lich" class="img--resize">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+    <!-- /Content -->
+    <!-- Link js Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../src/script/app.js"></script>
+</body>
+</html>

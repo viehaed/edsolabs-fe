@@ -1,0 +1,197 @@
+@import "./mixin";
+@import "./variables";
+
+body{
+    background-image: url(../../../assets/img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper__loading{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-color: white;
+    width: 100%;
+    height: 1000px;
+    z-index: 10;
+    top: -34px;
+    display: flex;
+    .spinner-border{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+    }
+}
+.wrapper__header{
+    margin-top: 34px;
+    height: 53px;
+    @include styleText(bold,16px);
+    .header__logo {
+        display: flex;
+        .header__logo__icon{
+            line-height: 50px;
+            img {
+                width: 24px;
+                margin-right: 10px;
+                margin-top: -7px;
+            }
+        }
+        .header__logo__name {
+            color: $colerText1;
+            line-height: 53px;
+        }
+    }
+    .header__nav {
+        color: $colerText2;
+        text-align: center;
+        z-index: 5;
+        .nav-item--custom {
+            margin-right: 20px; 
+            .point {
+                width: 5px;
+                height: 5px;
+                background-color: $colorPrimary;
+                border-radius: 100%;
+                margin: auto;
+            }   
+        }
+
+        .navbar-nav {
+            width: 100%;
+        }
+        
+        .btn-toggle {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        .link--custom {
+            text-decoration: none;
+            color: $colerText2;
+            line-height: 35px;
+        }
+        .link--custom:hover {
+            color: $colorPrimary !important;
+        }
+
+        .activeMenu {
+            color: $colorPrimary;
+        }
+
+        
+    }
+    .header__btn {
+        display: flex;
+        margin: auto;
+        margin-top: -10px;
+        // margin-left: 100px;
+        .header__btn--custom {
+            width: 100%;
+            height: 56px;
+            border-radius: 40px;
+            color: $colerText2;
+        }
+        .header__btn--custom:hover {
+            background-color: $colorPrimary;
+            color: $colerText3;
+            transition: 0.5s;
+        }
+    }
+}
+
+.wrapper__content{
+    .content__left {
+        margin-top: 117px;
+        max-width: 583px;
+        .content__left__custom1{
+            color: $colorPrimary;
+            @include styleText(700,14px);
+        }
+        h1 {
+            font-weight: bold;
+            .content__left__custom2{
+                color: $colorPrimary;
+            }
+        }
+        .content__left__custom3{
+            color: $colerText1;
+            @include styleText(400,20px);
+            opacity: 70%;
+        }
+        .content__left__form{
+            animation-duration: 4s;
+            position: absolute;
+            animation: display-custom-left 2s linear 0.5s 1 normal forwards;
+        }
+        .form--custom{
+            background-color: white;
+            max-width: 515px;
+            height: 68px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            color: $colerText1;
+            position: relative;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+            .email__icon {
+                opacity: 30%;
+                width: 24px;
+                margin-left: 22px;
+                margin-right: 19px;
+            }
+            .email__content{
+                min-width: 100px;
+                opacity: 30%;
+                border: none;
+                outline: none;
+            }
+            .form__btn {
+                position: absolute;
+                background-color: $colorPrimary;
+                width: 150px;
+                height: 50px;
+                color: $colerText3;
+                @include styleText(700,16px);
+                border-radius: 40px;
+                right: 20px;
+            }
+        }
+        .content__left__number {
+            margin-top: 119px;
+            margin-bottom: 76px;
+            .left__number--custom1 {
+                color: $colerText1;
+                font-weight: 700;
+            }
+            .left__number--custom2 {
+                color: $colerText1;
+                font-weight: 400;
+            }
+        }
+    }
+    .content__right {
+        position: relative;
+        animation-duration: 4s;
+        animation: display-custom-top 2s linear 0.5s 1 normal forwards;
+        .content__righ__nhan {
+            @include position-icon(2%,11%)
+        }
+        .content__righ__tim {
+            @include position-icon(25%, 82%)
+        }
+        .content__righ__like {
+            @include position-icon(5%, 60%)
+        }
+        .content__righ__chen {
+            @include position-icon(30%, 5%)
+        }
+        .content__righ__lich {
+            @include position-icon(55%, 85%)
+        }
+    }
+}
