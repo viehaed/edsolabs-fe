@@ -1,0 +1,24 @@
+@import './variables';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'google sans';
+    background-image: url('../img/bg.png');
+    background-size: cover;
+}
+input, button {
+    border: none;
+    outline: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $primaryColor;
+    font-size: 16px;
+    &:hover{color: $Color;}
+}
