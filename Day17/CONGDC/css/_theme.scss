@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./buttonBg";
+.l-signup-theme {
+  background: $signup-primary-color;
+
+  .submit-btn {
+    @include btn-background("signup-submit-color", rgba(82, 67, 154, 0.25));
+  }
+
+  .nav-btn {
+    @include btn-background("signup-nav-color", rgba(82, 67, 154, 0.25));
+  }
+}

@@ -1,0 +1,10 @@
+@import "./variables";
+.l-login-theme {
+  background-image: $signin-primary-color;
+}
+#container {
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 414px;
+  padding: 0.5rem 1.5rem;
+}

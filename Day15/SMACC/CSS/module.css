@@ -1,0 +1,145 @@
+.header__time {
+    width: 54px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 21px;
+  }
+  
+  .header__icon {
+    margin-right: 14px;
+  }
+  
+  .header__icon > img {
+    width: 24px;
+    height: 11px;
+    padding-left: 2px;
+  }
+  
+  .banner-login {
+    width: calc(100% - 62px);
+    max-height: 290px;
+  }
+  
+  .banner-login > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .title-login > p {
+    height: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 24px;
+    margin: 6px 0px;
+  }
+  
+  .title-login > h2 {
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 41px;
+    margin: 6px 0px;
+    text-align: center;
+  }
+  
+  /*FORM*/
+  .form-login input:focus {
+    border: 1px solid #78258b;
+  }
+  
+  .input-form {
+    width: 100%;
+    height: 74px;
+    color: #3c3c43;
+    background: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 37px;
+    outline: none;
+    border: 0px;
+    padding-left: 60px;
+    margin-bottom: 14px;
+  }
+  
+  .input-form::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: #3c3c43;
+  }
+  
+ /*ICON*/
+ .icon {
+    background-repeat: no-repeat;
+    background-position: 28px 28px;
+    background-size: 14px;
+  }
+  
+  .icon-user {
+    background-image: url("../Images/user.svg");
+  }
+  
+  .icon-key {
+    background-image: url("../Images/key.svg");
+  }
+
+  .icon-continue {
+    padding-left: 4px;
+  }
+
+   /*BUTTON*/
+  .btn {
+    width: 100%;
+    height: 74px;
+    color: #ffffff;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0px;
+    border-radius: 37px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .btn-continue {
+    margin-bottom: 32px;
+    background: #78258b;
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  }
+  
+  .btn-continue:hover {
+    opacity: 0.8;
+    transition: all 800ms ease;
+  }
+  
+  .btn-create {
+    display: block;
+    height: 74px;
+    line-height: 74px;
+    margin: 32px auto 0px;
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 25px 45px rgba(120, 37, 139, 0.25);
+  }
+  
+  .btn-create:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transition: all 800ms ease;
+  }
+  
+  .line {
+    border: 1px solid transparent;
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .line legend {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 16px;
+  }
