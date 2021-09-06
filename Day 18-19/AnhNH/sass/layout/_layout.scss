@@ -1,0 +1,44 @@
+@import "../base/variable";
+@import "../base/font";
+body {
+    background: $bgBody;
+    font-family: $font;
+    // position: relative;
+    background-image: url("../../img/noise.png");
+}
+a {
+    text-decoration: none;
+}
+.fiexed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($colorWhile, 0.9);
+    border-bottom: 1px solid lighten($coloTextNav, 30%);
+    z-index: 999;
+    transition: 1s all ease-in-out;
+}
+.container {
+    padding-top: 37px;
+    position: relative;
+    overflow: hidden;
+    .nui {
+        position: absolute;
+        right: -406px;
+        top: 354px;
+        z-index: -88;
+    }
+    .curve2 {
+        position: absolute;
+        top: -72px;
+        right: -215px;
+        z-index: -7;
+    }
+    .curve {
+        position: absolute;
+        bottom: -87px;
+        left: -657px;
+        z-index: -6;
+    }
+}

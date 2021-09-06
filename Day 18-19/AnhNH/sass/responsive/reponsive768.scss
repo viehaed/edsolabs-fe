@@ -1,0 +1,112 @@
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .container {
+        .navbar {
+            .nav-link {
+                text-align: left;
+            }
+            .active {
+                position: static;
+            }
+            .active::before {
+                position: static;
+                padding-right: 30px;
+            }
+            .login__register {
+                border-radius: 0;
+                width: auto;
+                height: 40px;
+                line-height: 40px;
+                padding: 0px 12px;
+            }
+        }
+        .curve,
+        .curve2 {
+            display: none;
+        }
+        .nui {
+            display: none;
+        }
+        .content {
+            &__left {
+                padding: 30px;
+                h1 {
+                    font-size: 70px;
+                    margin-bottom: 20px;
+                }
+                &-text {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+                &-send {
+                    margin-bottom: 30px;
+                    input {
+                        width: 60%;
+                        font-size: 18px;
+                        &::placeholder {
+                            font-size: 16px;
+                        }
+                    }
+                    button {
+                        width: 40%;
+                    }
+                    svg {
+                        display: block;
+                    }
+                }
+                &-sublike {
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                    &-item {
+                        display: inline-block;
+                        h2 {
+                            text-align: center;
+                            margin: 0;
+                            font-size: 50px;
+                            letter-spacing: normal;
+                            margin-bottom: 10px;
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                        p {
+                            text-align: center;
+                            font-size: 24px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &__right {
+                padding: 0;
+
+                &-item-imgBlur {
+                    top: 50px;
+                }
+                &-icon {
+                    &Diamond {
+                        top: 29px;
+                        left: 73px;
+                    }
+                    &Like {
+                        top: 350px;
+                        left: 591px;
+                    }
+                    &612 {
+                        top: 150px;
+                        left: 16px;
+                    }
+                    &Tym {
+                        top: 20px;
+                        left: 384px;
+                    }
+                    &599 {
+                        top: 429px;
+                        left: 559px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}

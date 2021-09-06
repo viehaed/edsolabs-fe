@@ -1,0 +1,109 @@
+@media only screen and (max-width: 320px) {
+    .container {
+        .navbar{
+            .nav-link{
+                text-align: left;
+            }
+            .active{
+                position: static;
+            }
+            .active::before{
+                position: static;
+                padding-right: 30px;
+            }
+            .login__register{
+                border-radius: 0;
+                width: auto;
+                height: 40px;
+                line-height: 40px;
+                padding:0px 12px;
+            }
+        }
+        .curve,
+        .curve2 {
+            display: none;
+        }
+        .nui {
+            display: none;
+        }
+        .content {
+            &__left {
+                padding: 30px;
+                h1 {
+                    font-size: 29px;
+                    margin-bottom: 20px;
+                }
+                &-text {
+                    font-size: 14px;
+                }
+                &-send {
+                    margin-bottom: 10px;
+                    input {
+                        width: 60%;
+                        font-size: 14px;
+                        &::placeholder {
+                            font-size: 12px;
+                        }
+                    }
+                    button {
+                        width: 40%;
+                        padding: 0px 5px;
+                    }
+                    svg {
+                        display: none;
+                    }
+                }
+                &-sublike {
+                    display: none;
+                    flex-direction: column;
+                    &-item {
+                        display: inline-block;
+                        h2 {
+                            text-align: center;
+                            margin: 0;
+                            font-size: 24px;
+                            letter-spacing: normal;
+                        }
+                        p {
+                            text-align: center;
+                            font-size: 14px;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &__right {
+                padding: 0;
+                &-item-imgBlur {
+                    top: 50px;
+                }
+                &-icon {
+                    &Diamond {
+                        top: 5px;
+                        transform: scale(0.5);
+                        left: 1px;
+                    }
+                    &Like {
+                        top: 95px;
+                        left: 253px;
+                    }
+                    &612 {
+                        top: 100px;
+                        left: 6px;
+                    }
+                    &Tym {
+                        top: -1px;
+                        left: 180px;
+                        transform: scale(0.4);
+                    }
+                    &599 {
+                        top: 200px;
+                        left: 251px;
+                        transform: scale(0.6);
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}

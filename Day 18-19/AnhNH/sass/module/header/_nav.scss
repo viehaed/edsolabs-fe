@@ -1,0 +1,32 @@
+@import "../../base/variable";
+.menu {
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $fontSz16;
+    line-height: 20px;
+    .nav-item {
+        text-align: center;
+        .nav-link {
+            color: $coloTextNav !important;
+            transition: 0.5s all ease-in-out;
+            &:hover {
+                transition: 0.5s all ease-in-out;
+                color: $colorHover !important;
+                position: relative;
+            }
+        }
+        .active {
+            color: $colorHover !important;
+            position: relative;
+            &::before {
+                content: ".";
+                position: absolute;
+                bottom: -1px;
+                right: 0;
+                left: 0;
+                font-size: 34px;
+            }
+        }
+    }
+}

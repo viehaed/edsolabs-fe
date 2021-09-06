@@ -1,0 +1,16 @@
+@import "../../base/variable";
+
+.logo {
+    &__img{
+        transform: translateY(-4px);
+    }
+    &__text {
+        font-family: $fontBold;
+        color: $colorLogo;
+        font-weight: bold;
+        font-size: $fontSz16;
+        line-height: 24px;
+        transform: translateY(5px);
+        
+    }
+}

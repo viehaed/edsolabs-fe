@@ -1,0 +1,58 @@
+@import "../../base/variable";
+@import "../../abstracts/keyframes.scss";
+.content__right {
+    position: relative;
+    padding-left: 60px;
+    overflow: hidden;
+    &-item {
+        &-img {
+            max-width: 100%;
+            object-fit: cover;
+            transform: translateY(10px);
+            animation: moveImg 3s ease-in-out;
+        }
+        &-imgBlur {
+            position: absolute;
+            top: 32px;
+            left: 104px;
+            transform: scale(0.9);
+            max-width: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            filter: blur(65px);
+            z-index: -1;
+        }
+    }
+    &-icon {
+        position: absolute;
+        &Diamond {
+            top: 30px;
+            left: 135px;
+            animation: like 3s ease-in-out;
+            transform: rotate(0deg) scale(1);
+            transition: 0.5s all ease-in-out;
+        }
+        &Like {
+            top: 50px;
+            left: 470px;
+            transform: translateX(0px);
+            animation: like 3s ease-in-out;
+        }
+        &612 {
+            top: 230px;
+            left: 90px;
+            animation: like 3s ease-in-out;
+        }
+        &Tym {
+            top: 244px;
+            left: 625px;
+            animation: Tym 3s infinite;
+        }
+        &599 {
+            top: 464px;
+            left: 612px;
+            z-index: -3;
+            animation: icon599 3s ease-in-out;
+        }
+    }
+}
