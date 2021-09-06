@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-xl-4 col-lg-2 col-md-2">
+                    <div class="header__logo">
+                        <img src="./css/img/Icon_rabbit.png" alt="img_logo">
+                           <span>Datify</span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light display--none">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler menu__mobile--icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mobile--menu" style="--bs-scroll-height: 100px;">
+                              <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Members</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Privacy</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                        </ul>
+                        <form class="d-flex mobile-btn">
+                            <button type="button" class="btn btn-light pageBtn">Log In</button>
+                            <button type="button" class="btn btn-light pageBtn">Register</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                    <ul class="menu">
+                        <li><a href="#" class="item-menu activeItemMenu">Home</a></li>
+                        <li><a href="#" class="item-menu">Members</a></li>
+                        <li><a href="#" class="item-menu">Blog</a></li>
+                        <li><a href="#" class="item-menu">Privacy</a></li>
+                        <li><a href="#" class="item-menu">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-3 col-lg-5 col-md-4">
+                    <div class="btnList" method="GET">
+                        <button type="button" class="btn btn-light pageBtn">Log In</button>
+                        <button type="button" class="btn btn-light pageBtn activeBtn">Register</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-5">
+                <div class="leftContent">
+                   <div class="leftContent__title">
+                        Because you deserve better!
+                   </div>
+
+                   <div class="leftContent__main">
+                        Get noticed for <span>who</span> you are, <span>not what</span> you look like.
+                   </div>
+
+                   <div class="leftContent__sub">
+                        You’re more than just a photo. You have stories to tell, and passions to share, and things to talk about that are more interesting than the weather. Because you deserve what dating deserves: better.
+                   </div>
+
+
+                   <form class="submit_mail" method="#POST">
+                        <svg class="icon__mail" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                        </svg>
+                        <input class="form-control form-control-lg" type="email" placeholder="Enter your email" aria-label=".form-control-lg example">
+                        <button type="submit" class="pageBtn formBtn">Get Started</button>
+                    </form>
+                </div>
+
+                <div class="access">
+                    <div class="access__item">
+                        <div class="access__header">
+                            15K+
+                        </div>
+                        <div class="access__title">
+                            Dates and matches made everyday
+                        </div>
+                    </div>
+
+                    <div class="access__item">
+                        <div class="access__header access__header--midle">
+                            1,456
+                        </div>
+                        <div class="access__title">
+                            New members signup every day
+                        </div>
+                    </div>
+
+                    <div class="access__item">
+                        <div class="access__header">
+                            1M+
+                        </div>
+                        <div class="access__title">
+                            Members from around the world
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-7 col-lg-7 col-md-7">
+                <div class="images">
+                    <img class="couple" src="./css/img/couple_blur.png" alt="couple">
+                    <img class="couple" src="./css/img/people.png" alt="couple">
+                    <img class="group-icons" src="./css/img/group-icon.png" alt="group icons">
+                    <img class="love-icon" src="./css/img/yt-icon.png" alt="true love icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./scss/app.js"></script>
+  </body>
+</html> 
